@@ -6,9 +6,9 @@ target 'Delirium_Example' do
   target 'Delirium_Tests' do
     inherit! :search_paths
 
-    pod 'Quick', '~> 0.8'
-  pod 'Nimble', '~> 3.0'
-  pod 'FBSnapshotTestCase'
-  pod 'Nimble-Snapshots'
+    # The test frameworks
+    pod 'Quick',            '~> 0.8'
+    pod 'Nimble',           '~> 3.0'
+    pod 'Nimble-Snapshots', '~> 4.1'
   end
 end
