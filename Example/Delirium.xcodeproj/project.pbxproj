@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3159B9457127320BB125790C /* Pods_Delirium_Delirium_tvExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDECC17C57FF6D594DAFE335 /* Pods_Delirium_Delirium_tvExample.framework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
@@ -15,6 +16,11 @@
 		627E02AD1D0AC6C000B7529E /* ShakeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 627E02AC1D0AC6C000B7529E /* ShakeViewController.swift */; };
 		627E02AF1D0AC7C200B7529E /* ShakeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 627E02AE1D0AC7C200B7529E /* ShakeViewModel.swift */; };
 		627E02B31D0AC8B700B7529E /* EmptySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 627E02B11D0AC8A400B7529E /* EmptySpec.swift */; };
+		627E02BB1D0ACC0A00B7529E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 627E02BA1D0ACC0A00B7529E /* AppDelegate.swift */; };
+		627E02BD1D0ACC0A00B7529E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 627E02BC1D0ACC0A00B7529E /* ViewController.swift */; };
+		627E02C01D0ACC0A00B7529E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 627E02BE1D0ACC0A00B7529E /* Main.storyboard */; };
+		627E02C21D0ACC0A00B7529E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 627E02C11D0ACC0A00B7529E /* Assets.xcassets */; };
+		7F8252C25FE1E6E57B3C5BEE /* Pods_Delirium_Delirium_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB2B6692FAA126C146ED2ADA /* Pods_Delirium_Delirium_Example.framework */; };
 		8878C4F19C970CE9B6465B0F /* Pods_Delirium_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61DD93C3B2EC7567BA4DC10A /* Pods_Delirium_Tests.framework */; };
 		95465B4D0376DE7DDA97A508 /* Pods_Delirium_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9459A1BC2F0B7C1B61ECE2C6 /* Pods_Delirium_Example.framework */; };
 /* End PBXBuildFile section */
@@ -30,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		145B826C1D8D794BA84BC6FE /* Pods-Delirium-Delirium_tvExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Delirium-Delirium_tvExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-Delirium-Delirium_tvExample/Pods-Delirium-Delirium_tvExample.release.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* Delirium_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Delirium_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -43,10 +50,21 @@
 		627E02AC1D0AC6C000B7529E /* ShakeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShakeViewController.swift; sourceTree = "<group>"; };
 		627E02AE1D0AC7C200B7529E /* ShakeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShakeViewModel.swift; sourceTree = "<group>"; };
 		627E02B11D0AC8A400B7529E /* EmptySpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptySpec.swift; sourceTree = "<group>"; };
+		627E02B81D0ACC0A00B7529E /* Delirium_tvExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Delirium_tvExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		627E02BA1D0ACC0A00B7529E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		627E02BC1D0ACC0A00B7529E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		627E02BF1D0ACC0A00B7529E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		627E02C11D0ACC0A00B7529E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		627E02C31D0ACC0A00B7529E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		748A1376C10A9EC066BF172B /* Pods-Delirium-Delirium_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Delirium-Delirium_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Delirium-Delirium_Example/Pods-Delirium-Delirium_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		7662CAA06CDB05AB172355D2 /* Pods-Delirium-Delirium_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Delirium-Delirium_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-Delirium-Delirium_Example/Pods-Delirium-Delirium_Example.release.xcconfig"; sourceTree = "<group>"; };
 		7AF8E97AC2B8ABFED0A372D9 /* Pods-Delirium_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Delirium_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Delirium_Tests/Pods-Delirium_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		8D0156F99F2720388116775B /* Pods-Delirium-Delirium_tvExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Delirium-Delirium_tvExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Delirium-Delirium_tvExample/Pods-Delirium-Delirium_tvExample.debug.xcconfig"; sourceTree = "<group>"; };
 		9459A1BC2F0B7C1B61ECE2C6 /* Pods_Delirium_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Delirium_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB2B6692FAA126C146ED2ADA /* Pods_Delirium_Delirium_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Delirium_Delirium_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E21C7DC195FA3217D96FDE58 /* Pods-Delirium_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Delirium_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Delirium_Tests/Pods-Delirium_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		ED43FF0C9FC4C4EAC52A5A92 /* Pods-Delirium_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Delirium_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-Delirium_Example/Pods-Delirium_Example.release.xcconfig"; sourceTree = "<group>"; };
+		EDECC17C57FF6D594DAFE335 /* Pods_Delirium_Delirium_tvExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Delirium_Delirium_tvExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F752AF59F07B0EA8F698AD47 /* Pods-Delirium_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Delirium_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Delirium_Example/Pods-Delirium_Example.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -56,6 +74,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				95465B4D0376DE7DDA97A508 /* Pods_Delirium_Example.framework in Frameworks */,
+				7F8252C25FE1E6E57B3C5BEE /* Pods_Delirium_Delirium_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,6 +86,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		627E02B51D0ACC0A00B7529E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3159B9457127320BB125790C /* Pods_Delirium_Delirium_tvExample.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -74,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				607FACD21AFB9204008FA782 /* Example for Delirium */,
+				627E02B91D0ACC0A00B7529E /* Example for tvOS Delirium */,
 				D51A5B31631A31A3F619112C /* Frameworks */,
 				AAF996A2ED7E75145D7CB751 /* Pods */,
 				607FACD11AFB9204008FA782 /* Products */,
@@ -86,6 +114,7 @@
 			children = (
 				607FACD01AFB9204008FA782 /* Delirium_Example.app */,
 				607FACE51AFB9204008FA782 /* Delirium_Tests.xctest */,
+				627E02B81D0ACC0A00B7529E /* Delirium_tvExample.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -162,6 +191,19 @@
 			path = Specs;
 			sourceTree = "<group>";
 		};
+		627E02B91D0ACC0A00B7529E /* Example for tvOS Delirium */ = {
+			isa = PBXGroup;
+			children = (
+				627E02BA1D0ACC0A00B7529E /* AppDelegate.swift */,
+				627E02BC1D0ACC0A00B7529E /* ViewController.swift */,
+				627E02BE1D0ACC0A00B7529E /* Main.storyboard */,
+				627E02C11D0ACC0A00B7529E /* Assets.xcassets */,
+				627E02C31D0ACC0A00B7529E /* Info.plist */,
+			);
+			name = "Example for tvOS Delirium";
+			path = Delirium_tvExample;
+			sourceTree = "<group>";
+		};
 		AAF996A2ED7E75145D7CB751 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -169,6 +211,10 @@
 				ED43FF0C9FC4C4EAC52A5A92 /* Pods-Delirium_Example.release.xcconfig */,
 				7AF8E97AC2B8ABFED0A372D9 /* Pods-Delirium_Tests.debug.xcconfig */,
 				E21C7DC195FA3217D96FDE58 /* Pods-Delirium_Tests.release.xcconfig */,
+				748A1376C10A9EC066BF172B /* Pods-Delirium-Delirium_Example.debug.xcconfig */,
+				7662CAA06CDB05AB172355D2 /* Pods-Delirium-Delirium_Example.release.xcconfig */,
+				8D0156F99F2720388116775B /* Pods-Delirium-Delirium_tvExample.debug.xcconfig */,
+				145B826C1D8D794BA84BC6FE /* Pods-Delirium-Delirium_tvExample.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -178,6 +224,8 @@
 			children = (
 				9459A1BC2F0B7C1B61ECE2C6 /* Pods_Delirium_Example.framework */,
 				61DD93C3B2EC7567BA4DC10A /* Pods_Delirium_Tests.framework */,
+				BB2B6692FAA126C146ED2ADA /* Pods_Delirium_Delirium_Example.framework */,
+				EDECC17C57FF6D594DAFE335 /* Pods_Delirium_Delirium_tvExample.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -226,13 +274,33 @@
 			productReference = 607FACE51AFB9204008FA782 /* Delirium_Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		627E02B71D0ACC0A00B7529E /* Delirium_tvExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 627E02C61D0ACC0A00B7529E /* Build configuration list for PBXNativeTarget "Delirium_tvExample" */;
+			buildPhases = (
+				53C1C34FB331EC5DA8E059C8 /* 📦 Check Pods Manifest.lock */,
+				627E02B41D0ACC0A00B7529E /* Sources */,
+				627E02B51D0ACC0A00B7529E /* Frameworks */,
+				627E02B61D0ACC0A00B7529E /* Resources */,
+				D304D0231409AED48FF66EDF /* 📦 Embed Pods Frameworks */,
+				77D21F3544543CE84EE2C89D /* 📦 Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Delirium_tvExample;
+			productName = Delirium_tvExample;
+			productReference = 627E02B81D0ACC0A00B7529E /* Delirium_tvExample.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		607FACC81AFB9204008FA782 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0720;
+				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = CocoaPods;
 				TargetAttributes = {
@@ -242,6 +310,9 @@
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
 						TestTargetID = 607FACCF1AFB9204008FA782;
+					};
+					627E02B71D0ACC0A00B7529E = {
+						CreatedOnToolsVersion = 7.3.1;
 					};
 				};
 			};
@@ -259,6 +330,7 @@
 			projectRoot = "";
 			targets = (
 				607FACCF1AFB9204008FA782 /* Delirium_Example */,
+				627E02B71D0ACC0A00B7529E /* Delirium_tvExample */,
 				607FACE41AFB9204008FA782 /* Delirium_Tests */,
 			);
 		};
@@ -283,10 +355,34 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		627E02B61D0ACC0A00B7529E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				627E02C21D0ACC0A00B7529E /* Assets.xcassets in Resources */,
+				627E02C01D0ACC0A00B7529E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
 		44B4DFE2CEC5A086DAD62F95 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		53C1C34FB331EC5DA8E059C8 /* 📦 Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -316,6 +412,21 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Delirium_Tests/Pods-Delirium_Tests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		77D21F3544543CE84EE2C89D /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Delirium-Delirium_tvExample/Pods-Delirium-Delirium_tvExample-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		7E9AF3FD146BF789FC986E40 /* 📦 Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -328,7 +439,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Delirium_Example/Pods-Delirium_Example-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Delirium-Delirium_Example/Pods-Delirium-Delirium_Example-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		8BB60A1067445D5EBBD66DB8 /* 📦 Check Pods Manifest.lock */ = {
@@ -361,6 +472,21 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Delirium_Tests/Pods-Delirium_Tests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		D304D0231409AED48FF66EDF /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Delirium-Delirium_tvExample/Pods-Delirium-Delirium_tvExample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		FDE29A9B1BA4418829002BBE /* 📦 Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -373,7 +499,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Delirium_Example/Pods-Delirium_Example-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Delirium-Delirium_Example/Pods-Delirium-Delirium_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -394,6 +520,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				627E02B31D0AC8B700B7529E /* EmptySpec.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		627E02B41D0ACC0A00B7529E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				627E02BD1D0ACC0A00B7529E /* ViewController.swift in Sources */,
+				627E02BB1D0ACC0A00B7529E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,6 +559,14 @@
 			);
 			name = LaunchScreen.xib;
 			path = .;
+			sourceTree = "<group>";
+		};
+		627E02BE1D0ACC0A00B7529E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				627E02BF1D0ACC0A00B7529E /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -513,10 +656,11 @@
 		};
 		607FACF01AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F752AF59F07B0EA8F698AD47 /* Pods-Delirium_Example.debug.xcconfig */;
+			baseConfigurationReference = 748A1376C10A9EC066BF172B /* Pods-Delirium-Delirium_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Example for Delirium/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
@@ -526,10 +670,11 @@
 		};
 		607FACF11AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = ED43FF0C9FC4C4EAC52A5A92 /* Pods-Delirium_Example.release.xcconfig */;
+			baseConfigurationReference = 7662CAA06CDB05AB172355D2 /* Pods-Delirium-Delirium_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Example for Delirium/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
@@ -565,6 +710,41 @@
 			};
 			name = Release;
 		};
+		627E02C41D0ACC0A00B7529E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8D0156F99F2720388116775B /* Pods-Delirium-Delirium_tvExample.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ANALYZER_NONNULL = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				INFOPLIST_FILE = Delirium_tvExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.icapps.Delirium-tvExample";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Debug;
+		};
+		627E02C51D0ACC0A00B7529E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 145B826C1D8D794BA84BC6FE /* Pods-Delirium-Delirium_tvExample.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ANALYZER_NONNULL = YES;
+				INFOPLIST_FILE = Delirium_tvExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.icapps.Delirium-tvExample";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -591,6 +771,15 @@
 			buildConfigurations = (
 				607FACF31AFB9204008FA782 /* Debug */,
 				607FACF41AFB9204008FA782 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		627E02C61D0ACC0A00B7529E /* Build configuration list for PBXNativeTarget "Delirium_tvExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				627E02C41D0ACC0A00B7529E /* Debug */,
+				627E02C51D0ACC0A00B7529E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

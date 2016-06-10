@@ -1,0 +1,6 @@
+framework module Delirium {
+  umbrella header "Delirium-iOS-umbrella.h"
+
+  export *
+  module * { export * }
+}
