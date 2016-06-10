@@ -1,0 +1,22 @@
+{
+  "name": "Delirium",
+  "version": "0.1.0",
+  "summary": "A short description of Delirium.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/<GITHUB_USERNAME>/Delirium",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Jelle Vandebeeck": "jelle@fousa.be"
+  },
+  "source": {
+    "git": "https://github.com/<GITHUB_USERNAME>/Delirium.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "Delirium/Classes/**/*"
+}
