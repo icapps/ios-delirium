@@ -1,3 +1,11 @@
+//
+//  UIAlertController+Error.swift
+//  Pods
+//
+//  Created by Jelle Vandebeeck on 08/06/16.
+//
+//
+
 import UIKit
 
 /// When you want to display an `ErrorType` in an `UIAlertController`, than you'll need some more data you want to display. The alert needs a title and a description.

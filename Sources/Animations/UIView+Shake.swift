@@ -1,3 +1,11 @@
+//
+//  UIView+Shake.swift
+//  Pods
+//
+//  Created by Jelle Vandebeeck on 08/06/16.
+//
+//
+
 import UIKit
 
 extension UIView {
