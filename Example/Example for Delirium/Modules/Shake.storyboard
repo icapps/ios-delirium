@@ -5,10 +5,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Shake View Controller-->
         <scene sceneID="FSZ-0t-RrB">
             <objects>
-                <viewController id="MRH-mA-wDZ" sceneMemberID="viewController">
+                <viewController id="MRH-mA-wDZ" customClass="ShakeViewController" customModule="Delirium_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="44o-Cj-WjP"/>
                         <viewControllerLayoutGuide type="bottom" id="q8G-2P-Pf1"/>
@@ -21,6 +21,9 @@
                                 <rect key="frame" x="251" y="468" width="99" height="32"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
                                 <state key="normal" title="Start shaking"/>
+                                <connections>
+                                    <action selector="startShaking:" destination="MRH-mA-wDZ" eventType="touchUpInside" id="Pcy-dF-EhY"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is the label that will start to shake when tapping the button below." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AoD-ke-MdQ">
                                 <rect key="frame" x="200" y="120" width="200" height="96"/>
@@ -40,6 +43,9 @@
                             <constraint firstItem="q8G-2P-Pf1" firstAttribute="top" secondItem="AsR-Q5-fyE" secondAttribute="bottom" constant="100" id="zNu-75-0W8"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="label" destination="AoD-ke-MdQ" id="hJ3-3W-ZgI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o4n-q4-K0h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

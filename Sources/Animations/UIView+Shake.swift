@@ -2,7 +2,7 @@ import UIKit
 
 extension UIView {
     
-    func shake(repeatCount repeatCount: Float = 4, duration duration: CFTimeInterval = 0.07) {
+    public func shake(repeatCount repeatCount: Float = 4, duration duration: CFTimeInterval = 0.07) {
         let animation = CABasicAnimation(keyPath: "position")
         animation.duration = duration
         animation.repeatCount = repeatCount
