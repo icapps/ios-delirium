@@ -1,7 +1,10 @@
 use_frameworks!
 
-target 'Delirium_Example' do
+abstract_target 'Delirium' do
   pod 'Delirium', :path => '../'
+
+  target 'Delirium_Example'
+  target 'Delirium_tvExample'
 
   target 'Delirium_Tests' do
     inherit! :search_paths

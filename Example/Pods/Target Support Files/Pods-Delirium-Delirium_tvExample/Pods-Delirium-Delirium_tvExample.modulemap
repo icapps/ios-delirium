@@ -1,0 +1,6 @@
+framework module Pods_Delirium_Delirium_tvExample {
+  umbrella header "Pods-Delirium-Delirium_tvExample-umbrella.h"
+
+  export *
+  module * { export * }
+}

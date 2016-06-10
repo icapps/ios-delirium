@@ -1,5 +1,5 @@
 framework module Delirium {
-  umbrella header "Delirium-umbrella.h"
+  umbrella header "Delirium-tvOS-umbrella.h"
 
   export *
   module * { export * }
