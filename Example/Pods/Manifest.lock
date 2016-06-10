@@ -14,9 +14,8 @@ PODS:
 
 DEPENDENCIES:
   - Delirium (from `../`)
-  - FBSnapshotTestCase
   - Nimble (~> 3.0)
-  - Nimble-Snapshots
+  - Nimble-Snapshots (~> 4.1)
   - Quick (~> 0.8)
 
 EXTERNAL SOURCES:
@@ -24,12 +23,12 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  Delirium: eefef9c99e96ca7373954070e0cdcf3faddea5fe
+  Delirium: 49bd8d9d5a5c63ff4abdeb2ce5bcbb69a9516328
   FBSnapshotTestCase: 432afd8d059ccef7f207225894840a03fbcf7474
   Nimble: 703854335d181df169bbca9c97117b5cf8c47c1d
   Nimble-Snapshots: 2da4d2ec829b458d6886c06812c52493fce284c9
   Quick: 18d057bc66451eedd5d1c8dc99ba2a5db6e60226
 
-PODFILE CHECKSUM: 6d183a2a560379469c5f374af1d80319e9b2d037
+PODFILE CHECKSUM: f03ab914e29c6b396cdafff46189c1bd0926d49d
 
 COCOAPODS: 1.0.0

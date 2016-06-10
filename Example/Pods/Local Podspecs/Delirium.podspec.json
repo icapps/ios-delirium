@@ -1,9 +1,9 @@
 {
   "name": "Delirium",
   "version": "0.1.0",
-  "summary": "A short description of Delirium.",
-  "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/<GITHUB_USERNAME>/Delirium",
+  "summary": "A set of UI components that we tend to reuse at iCapps.",
+  "description": "Delirium contains a set of UI components for reuse.",
+  "homepage": "https://github.com/icapps/ios-delirium",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -12,11 +12,13 @@
     "Jelle Vandebeeck": "jelle@fousa.be"
   },
   "source": {
-    "git": "https://github.com/<GITHUB_USERNAME>/Delirium.git",
+    "git": "https://github.com/icapps/ios-delirium.git",
     "tag": "0.1.0"
   },
+  "social_media_url": "https://twitter.com/icapps",
   "platforms": {
-    "ios": "8.0"
+    "ios": "8.0",
+    "tvos": "9.0"
   },
-  "source_files": "Delirium/Classes/**/*"
+  "source_files": "Sources/**/*"
 }
