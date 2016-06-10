@@ -11,6 +11,7 @@
 		03A9FD93E86C0CD07A37D7BF34A02F09 /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F915F8C8679193EEFD293EC4CCA6C6 /* Match.swift */; };
 		07DECC64B9B23D49E4A65BED42C7A314 /* QuickConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B4E8F0A0B14361B2EAE4D0DA0BE57EB /* QuickConfiguration.m */; };
 		0A215055DE00585D4A5B2A2B1DEE6FB0 /* NSString+QCKSelectorName.h in Headers */ = {isa = PBXBuildFile; fileRef = B4F2569FC59B67E76E570E93D89731EB /* NSString+QCKSelectorName.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		0B8C584BA2265C569508A45E7ACDD981 /* UIAlertController+Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = F574AB6FE1950E0887CDF46D08DFDDBD /* UIAlertController+Error.swift */; };
 		109EB99F003668E3ED3868B57E1071AF /* ExampleMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D16A43EE01CEF8E86984264FDF2C3A /* ExampleMetadata.swift */; };
 		112614F21939902B59102E6E876ADCBC /* RaisesException.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC724D753931716676AE42503730DBC6 /* RaisesException.swift */; };
 		11C22C7B844DF31A5EBDC9AC132C5E94 /* UIImage+Compare.m in Sources */ = {isa = PBXBuildFile; fileRef = D7E3C353118B3E2CA476674EC4BBCED6 /* UIImage+Compare.m */; };
@@ -23,6 +24,7 @@
 		1ED8C77E9422C66BBF56E6C10D5826F0 /* NMBExceptionCapture.m in Sources */ = {isa = PBXBuildFile; fileRef = DCF330BF6C88C59845888329E76AF044 /* NMBExceptionCapture.m */; };
 		23626BC4DDA1A2E90A155728F57802FF /* DSL.h in Headers */ = {isa = PBXBuildFile; fileRef = 859C5C30856A6617F00E5D648C212EC9 /* DSL.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		24BA48295DE470061BB55F0999CC7B28 /* SuiteHooks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B06621F04BF61FD2640778B87EF01EF /* SuiteHooks.swift */; };
+		26CDB09B1C07E62B6CF686D4AFD28D8A /* UIView+Shake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099C781D59CC6C31496C8585E9D3F366 /* UIView+Shake.swift */; };
 		2C87E1788C8FA06AE3481A2226E3AF2D /* UIApplication+StrictKeyWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C4735107E92082DC6617FC47323AC36 /* UIApplication+StrictKeyWindow.m */; };
 		30AACAA8D51DC8C429577D9B67BB016C /* BeginWith.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF51A81CF86181D76DF7B232F158D51C /* BeginWith.swift */; };
 		31629295E87A24C98238C66D41983C49 /* BeVoid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 999FFA06127CE356CBCD2A88AE2E3F4A /* BeVoid.swift */; };
@@ -43,11 +45,9 @@
 		49CA018A1EFE0681D470F5743BA8BB0F /* QuickTestSuite.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE997C745F05A9B57C00D839E47FD137 /* QuickTestSuite.swift */; };
 		4A2EF0E72836C8432665C044C67933EA /* String+FileName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7919E006D8AD5BDDA891839BF797D2B7 /* String+FileName.swift */; };
 		4AF6C26A30D865059C24DC5317786B76 /* BeNil.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D6AF1AB45E76B352DD93ACE676230A /* BeNil.swift */; };
-		4B5E95DF4FC664E878B6D0ED9107E354 /* UIView+Shake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD853573F2A9D08B9367A9E7B7BE944 /* UIView+Shake.swift */; };
 		4E5A721963877AA3A6AA3D80DAA4E5E9 /* AssertionRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2C8E711729FB4599F51C263CB8965D /* AssertionRecorder.swift */; };
 		5104AE2989305145BF446E633B567924 /* EndWith.swift in Sources */ = {isa = PBXBuildFile; fileRef = E772D3E5AF34E2F6DC985845FB3489AF /* EndWith.swift */; };
 		5438871833E759C86C2CA743AD3EF2DD /* World.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAD9B4FF295C9E0487B426B9968F28B /* World.swift */; };
-		55425EAE43D5114790A1C77B65E06F1A /* UIView+Shake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD853573F2A9D08B9367A9E7B7BE944 /* UIView+Shake.swift */; };
 		5EF5C00C6AECE1FCFFF118577817F5CE /* Equal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786FE4B4725F603253354543D534DE89 /* Equal.swift */; };
 		61EBC5CF0D5E065C88028B49C6B8D3B3 /* UIImage+Diff.h in Headers */ = {isa = PBXBuildFile; fileRef = 599644A4F7E0D425F0BAAE68F5028FBE /* UIImage+Diff.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		636A1DD83197D4668B43CC94E874E892 /* Callsite.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD73863B384083727F1E1F1433B8FEF /* Callsite.swift */; };
@@ -59,6 +59,7 @@
 		6A2416DC412F9A491A2515F9BB09A435 /* Quick.h in Headers */ = {isa = PBXBuildFile; fileRef = 16919C7A4E4268D3FF7586B89894D6FD /* Quick.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6E4A16BF4D27C48BB1FE1E1CF5E8B90E /* FBSnapshotTestCasePlatform.m in Sources */ = {isa = PBXBuildFile; fileRef = E6015044230FFD0F7A4F16DFBDC93317 /* FBSnapshotTestCasePlatform.m */; };
 		6ED0409031540D9B2AD7B061B608B0C9 /* DSL+Wait.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CC416E6691073F6AA0B44428259AC1 /* DSL+Wait.swift */; };
+		6F8240C750C93CBDB939CF9702549B9B /* Delirium-tvOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9055F277A088645B6FC87146EAC9E487 /* Delirium-tvOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7202A0B871C57B7857341D88C2883A3A /* BeIdenticalTo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440C1E2EE5D680BE6079CE69974985C3 /* BeIdenticalTo.swift */; };
 		730FE65CF9B832FC01AB3F545A8CAF73 /* QuickSelectedTestSuiteBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6D05EE2BA25EB952B5E566EDE6048E /* QuickSelectedTestSuiteBuilder.swift */; };
 		73B96724E9D2B03677BA3C2D24601D64 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22F5DB5C1F320F2D49F930F5E503AEE5 /* XCTest.framework */; };
@@ -67,6 +68,7 @@
 		77F0D6DD5C40DB6AB912DA7C984F2D8D /* Pods-Delirium-Delirium_tvExample-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C69B0C404905388F70A6CAFBAA1FE7FE /* Pods-Delirium-Delirium_tvExample-dummy.m */; };
 		78C0EDC656B9152FB603EC259D241DA5 /* FBSnapshotTestCase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21550AAB49E632FDA6E9266B56B557D2 /* FBSnapshotTestCase.framework */; };
 		7929623E9CC7C966AD703F6410B3935A /* XCTestSuite+QuickTestSuiteBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 16A490DE6EF5FD2EECBD3E87DDD7B1F0 /* XCTestSuite+QuickTestSuiteBuilder.m */; };
+		7A867433BFB8457298153A6C9283351A /* Delirium-iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F5B8DEB263827E5A5BE5FFF0B89B710D /* Delirium-iOS-dummy.m */; };
 		7CC86ABC7F4135EE12A755B023F134CE /* AssertionDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D1223A52A7D757500B5F20A08B5AD6 /* AssertionDispatcher.swift */; };
 		7DC9B169B5FCC3EE99F6D36EC530FE1E /* Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D8617C7CB79D6BC7E4582B59727905 /* Async.swift */; };
 		7EBD6B630F4536CB673DC0B455CCB16D /* BeGreaterThan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907F33C2B0CF1BD93F497D1B0CCEB5F6 /* BeGreaterThan.swift */; };
@@ -79,19 +81,20 @@
 		8404F7168BDB16D6157E38B56C831CA7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A59C431566BD2702711AB0D713C3E34 /* Foundation.framework */; };
 		85D178DFCA1BC67BBFB1188E34EC5B19 /* SwiftSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848C402D439EB9B5972AECCE4084C23C /* SwiftSupport.swift */; };
 		85D4DBD7E83768DAFD903EF915D1C1DA /* HooksPhase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA67375ED7A4B3A90A94312D0D93E05C /* HooksPhase.swift */; };
+		86A59B911D7BFAD22A9C5C149F43EA10 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9856D86AD8325CE731FED808F4293B0B /* Foundation.framework */; };
 		86FB708FCFE6121A82BB09E5ADD84554 /* NMBExceptionCapture.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FF4072FF3B5A22E2FC2DBDFEF8428B3 /* NMBExceptionCapture.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8A76A1CA29A88F51B7DD4C04A483A686 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A59C431566BD2702711AB0D713C3E34 /* Foundation.framework */; };
 		8ACF6A5515A175054E22414BF740EF14 /* FBSnapshotTestCase.h in Headers */ = {isa = PBXBuildFile; fileRef = 48F777E25ED36E70CE87097188DADEAA /* FBSnapshotTestCase.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8B6F53EC9C1DC50024901FA728D5225A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A59C431566BD2702711AB0D713C3E34 /* Foundation.framework */; };
 		9137D15E4C432CD4FEA43DC273C3ADE8 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22F5DB5C1F320F2D49F930F5E503AEE5 /* XCTest.framework */; };
 		91ED5B067FCA3CBD48E3114672941051 /* MatcherProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC8B86181C85EC4029D31826D97DBDE /* MatcherProtocols.swift */; };
 		96ED0CCA721955637A88FE0C9737EC56 /* SourceLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5DC65580B17F93D38B52747F3C1A9C /* SourceLocation.swift */; };
+		976DF253F14C5EA8B37E4466388638D5 /* UIAlertController+Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = F574AB6FE1950E0887CDF46D08DFDDBD /* UIAlertController+Error.swift */; };
 		9B5DE58927557CE87968C051D2A1C47E /* BeLogical.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D22A66AD4CF0ED8361AF36F94FD91C /* BeLogical.swift */; };
 		9BAEE6A607528BBFAA526CFFA5277E43 /* ExampleHooks.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F8B8308864A130D630110C7734744E /* ExampleHooks.swift */; };
 		9C185CB0E0636BD9DD3E9E96A0462317 /* NSString+QCKSelectorName.m in Sources */ = {isa = PBXBuildFile; fileRef = B2B112F1E9B122094C5F127A0CA8E480 /* NSString+QCKSelectorName.m */; };
 		9EE41FAF2A88E2DCEEE2C974E33C398E /* QuickConfiguration.h in Headers */ = {isa = PBXBuildFile; fileRef = 3358B5E8463BBBF73653B2FBB6916DE5 /* QuickConfiguration.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9F08F74CB8740CF0EFF26746EEB0C930 /* CurrentTestCaseTracker.m in Sources */ = {isa = PBXBuildFile; fileRef = 36215F7E5778F54BA3D2A39454D4B03F /* CurrentTestCaseTracker.m */; };
 		9FA3B93CE0ECAC3CDC30890659AACF82 /* FBSnapshotTestCasePlatform.h in Headers */ = {isa = PBXBuildFile; fileRef = 2518F997765A59F844B6A841E7723FA7 /* FBSnapshotTestCasePlatform.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9FEAB732A913B6EC5BE0883090B54DCA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9856D86AD8325CE731FED808F4293B0B /* Foundation.framework */; };
 		A1253488850CE3B86ED19CB93A9CD3D5 /* HaveValidSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3B4A87FE17DFB2CCA9CAD7D79D0D48 /* HaveValidSnapshot.swift */; };
 		A2CABD326609AD67377700A148785E09 /* BeAnInstanceOf.swift in Sources */ = {isa = PBXBuildFile; fileRef = D583345A544DBE4373F3BB917431FFAF /* BeAnInstanceOf.swift */; };
 		A374A2729E32469085C5025EC7115EB8 /* Stringers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249D2638D0070442D0D750885D075640 /* Stringers.swift */; };
@@ -103,6 +106,7 @@
 		AD2D4354F429E4DBD49D327BD408A3EB /* NSBundle+CurrentTestBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5038A9C14E90AA451724DCD0D3FCA8BA /* NSBundle+CurrentTestBundle.swift */; };
 		B1825287DE872A038A4A44623EA54C1B /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DA3A806920B5D6DC56ED011270DE1F /* Configuration.swift */; };
 		B43EDBC7DA15A429006C67B63D45ACFD /* ThrowError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E685779B53865FBDF4197A9CE4D9FD1 /* ThrowError.swift */; };
+		B64D4094477B603FF169631FE2937BA8 /* Delirium-iOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B93FC2452DF7105CF4FA8E6EAA202C76 /* Delirium-iOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B6A67A3B998747E4290BF6010EC33806 /* FBSnapshotTestCase-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3480229FE5312ED491104B2619BC675D /* FBSnapshotTestCase-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B9D2E426B5CA226D60A78A71FA289D4C /* AsyncMatcherWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F5BE94693475F841CEEC329FF19A11 /* AsyncMatcherWrapper.swift */; };
 		BBE10615F3CD16FAF02BBD3D42B6D246 /* World+DSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60104C3BBC45FA4AE08E62653BA6F961 /* World+DSL.swift */; };
@@ -110,9 +114,9 @@
 		C033C346AC287D2009457C31E85587D1 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13A2CFDDE5B0364C6E42677A62F017EB /* Quick.framework */; };
 		C12E0930E021F1894B60BC6AFA8F2409 /* AdapterProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233BF814866ED4F7C6434F41F12EFBCF /* AdapterProtocols.swift */; };
 		C1534A17A2F8E5AA096C28E2743D090A /* Pods-Delirium_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CBB6F4D30632D1B4026C578F6196082D /* Pods-Delirium_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C231716311AE79DA4B93AACE52E768C7 /* Delirium-tvOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 65D39D30309ECB709EE4E079B42FF709 /* Delirium-tvOS-dummy.m */; };
 		C360952381641F725C15758993A0F665 /* UIImage+Diff.m in Sources */ = {isa = PBXBuildFile; fileRef = 36C9BFB4E392CEED3BC63CB05F5EADAF /* UIImage+Diff.m */; };
 		C3F5B00DF9EBD2D35E75559869C09945 /* Pods-Delirium-Delirium_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A12AC213423093CAF615AD72FA22E7EA /* Pods-Delirium-Delirium_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C55C6BCC860DF0A5A4AB2D085BC3DE14 /* Delirium-iOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E12C48E9CAE3BFE198768E94E2CDBC30 /* Delirium-iOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C81FFEEC76399EF3C7C1EE349C810E76 /* NimbleXCTestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87225E9B9E389551A1F536347B982B04 /* NimbleXCTestHandler.swift */; };
 		C9B329113A2A88CDBA950FCFACC8E78E /* Pods-Delirium_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B00C1A57DE8466C4BC218D17DAFE3DF6 /* Pods-Delirium_Tests-dummy.m */; };
 		CBB70E882E7FE0FF926730EAA0CD59DA /* ExampleGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5D10BCD0066C637018C7806D39B902 /* ExampleGroup.swift */; };
@@ -121,18 +125,16 @@
 		D39D7A9422384FEA6463626792C00FF4 /* QuickSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EF343DFD1C01B260FA04D422349D426 /* QuickSpec.m */; };
 		D41F628A81153A978EB209E4FE925700 /* Nimble.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E65CDBFB735DF3AD2C40D79C63092DF /* Nimble.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D5C30BC656C11AF60394E3180A217BB1 /* UIImage+Snapshot.m in Sources */ = {isa = PBXBuildFile; fileRef = B28003917869A306C9497FB3139B5550 /* UIImage+Snapshot.m */; };
+		D9D50593DD596CD33A1B8291D7A37F50 /* UIView+Shake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099C781D59CC6C31496C8585E9D3F366 /* UIView+Shake.swift */; };
 		DCA54337E8687685A293CC24A97F936C /* Contain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168FB3F77E4C4F8A60BD0821D35D19C7 /* Contain.swift */; };
 		DF0216DBDE0084F6C87FE9275A4E9F0D /* Nimble-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F8F65877051A80854B8307C51E5BF152 /* Nimble-dummy.m */; };
 		E080703C603FF3C11DA1DDA86CFF0177 /* Pods-Delirium-Delirium_tvExample-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F074EF623D9C41095F4371D12F92C63 /* Pods-Delirium-Delirium_tvExample-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E1414814BCDF4884D18CFF286A1B606D /* Delirium-tvOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 227F08A59BE50AD5C0E6D54EE4DB2543 /* Delirium-tvOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E1D9607361BF8C61139D65C14E83FE20 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9856D86AD8325CE731FED808F4293B0B /* Foundation.framework */; };
 		E3B1EAAC82543C09339AE71FE9B31AEC /* QuickSpec.h in Headers */ = {isa = PBXBuildFile; fileRef = 7395C69488EE986713CFCD76E434400B /* QuickSpec.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E6F6FF9554A6C7EABD6B92B691751DAD /* BeLessThanOrEqual.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712924708985B1EB68BCE0D290D815FC /* BeLessThanOrEqual.swift */; };
-		E7FA1FCC828A6D8E0741DFF578C86B48 /* Delirium-iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E817B2C3DDAC4AF9732595E0B1D378D6 /* Delirium-iOS-dummy.m */; };
 		E909D0D33037F3C642BBB8D47FC642B3 /* Nimble-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B6203A309895700207A684C456765291 /* Nimble-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E9A500611CF699885DE8A6BAB4E6B392 /* BeEmpty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4957F682B3F1EE74D842B29320D0D131 /* BeEmpty.swift */; };
 		EAA652557B70F493923A3447B5D64E0D /* UIImage+Compare.h in Headers */ = {isa = PBXBuildFile; fileRef = BF446B28545341AFF094A94F8633BDF6 /* UIImage+Compare.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		ED36FDCC6F419D9BD180B4705BDFA68D /* Delirium-tvOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D5263605F8B2F9F396C7BA8268209CC /* Delirium-tvOS-dummy.m */; };
 		ED60F0FCE00B05D670EAEAAB22A01B7C /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22F5DB5C1F320F2D49F930F5E503AEE5 /* XCTest.framework */; };
 		ED6A0B20E661EA13A99C377E2213DC5F /* NimbleSnapshotsConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69F965743749243B4108DC054D9C80B /* NimbleSnapshotsConfiguration.swift */; };
 		F0B3BC4CE7B1074981F32DDD032E9539 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D09FD7077CFC1FCA3013751531BACDF /* UIKit.framework */; };
@@ -148,7 +150,7 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 8C11E5A55690D520C6D49A9C3D68AF33;
+			remoteGlobalIDString = 8F79E5F2AD3A4C2AF8B0D11A73164113;
 			remoteInfo = "Delirium-iOS";
 		};
 		1E25F2C9BC835A59105D3FEB9C03E12B /* PBXContainerItemProxy */ = {
@@ -169,7 +171,7 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = A6E28479C11D0C59022602BE5969A5B2;
+			remoteGlobalIDString = 9C16A461CE6B9E4CE3CC9C5DCB8942DC;
 			remoteInfo = "Delirium-tvOS";
 		};
 		67B84CC48124DDE2ADD9AFDFBAEE034C /* PBXContainerItemProxy */ = {
@@ -211,28 +213,26 @@
 
 /* Begin PBXFileReference section */
 		005785FE2D9D67637E2977FC2F1CCBEB /* Pods-Delirium_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Delirium_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		0072B64B353CA7CC8E9D9ABB101AF0AF /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = "../Delirium-tvOS/Info.plist"; sourceTree = "<group>"; };
-		05D6E1624026B25A87C2B23A55B14295 /* Delirium-iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Delirium-iOS.modulemap"; sourceTree = "<group>"; };
 		08EB9821FB5B9F801F415103D86794A2 /* ObjCMatcher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ObjCMatcher.swift; path = Sources/Nimble/Wrappers/ObjCMatcher.swift; sourceTree = "<group>"; };
+		099C781D59CC6C31496C8585E9D3F366 /* UIView+Shake.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIView+Shake.swift"; sourceTree = "<group>"; };
 		09E53985A018FF5695153451D9A75E23 /* BeLessThan.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeLessThan.swift; path = Sources/Nimble/Matchers/BeLessThan.swift; sourceTree = "<group>"; };
 		0C83F5C578988BC0F8D2A7B6ADFD0E5F /* Expectation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Expectation.swift; path = Sources/Nimble/Expectation.swift; sourceTree = "<group>"; };
+		0D48E6E947DC5FCFE39FC470BF8F1C2B /* Delirium-iOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Delirium-iOS.xcconfig"; sourceTree = "<group>"; };
 		0E5D10BCD0066C637018C7806D39B902 /* ExampleGroup.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExampleGroup.swift; path = Sources/Quick/ExampleGroup.swift; sourceTree = "<group>"; };
 		0EF343DFD1C01B260FA04D422349D426 /* QuickSpec.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = QuickSpec.m; path = Sources/Quick/QuickSpec.m; sourceTree = "<group>"; };
 		11D22A66AD4CF0ED8361AF36F94FD91C /* BeLogical.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeLogical.swift; path = Sources/Nimble/Matchers/BeLogical.swift; sourceTree = "<group>"; };
 		13A2CFDDE5B0364C6E42677A62F017EB /* Quick.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Quick.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		153C4E4AEB350C3FBEE46AD6D01E21E5 /* Delirium-iOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Delirium-iOS-prefix.pch"; sourceTree = "<group>"; };
+		13B73D0B576DD2A0C17C58D68C780D63 /* Delirium-iOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Delirium-iOS-prefix.pch"; sourceTree = "<group>"; };
 		15DDE0DDB5FBDB7FA49967B1E9DBE095 /* Nimble.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Nimble.modulemap; sourceTree = "<group>"; };
 		168FB3F77E4C4F8A60BD0821D35D19C7 /* Contain.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Contain.swift; path = Sources/Nimble/Matchers/Contain.swift; sourceTree = "<group>"; };
 		16919C7A4E4268D3FF7586B89894D6FD /* Quick.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Quick.h; path = Sources/Quick/Quick.h; sourceTree = "<group>"; };
 		16A490DE6EF5FD2EECBD3E87DDD7B1F0 /* XCTestSuite+QuickTestSuiteBuilder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "XCTestSuite+QuickTestSuiteBuilder.m"; path = "Sources/Quick/XCTestSuite+QuickTestSuiteBuilder.m"; sourceTree = "<group>"; };
 		193CB4F375751A6BB4B4398274EA65AB /* Pods-Delirium-Delirium_tvExample-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Delirium-Delirium_tvExample-resources.sh"; sourceTree = "<group>"; };
-		1AFD4FAFDDE6B5597A83B303B1C83673 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1C4735107E92082DC6617FC47323AC36 /* UIApplication+StrictKeyWindow.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIApplication+StrictKeyWindow.m"; path = "FBSnapshotTestCase/Categories/UIApplication+StrictKeyWindow.m"; sourceTree = "<group>"; };
 		1EC4A4C40B59567B2C0BED393FA0EB20 /* Closures.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Closures.swift; path = Sources/Quick/Hooks/Closures.swift; sourceTree = "<group>"; };
 		1FA5D4FC1244F6004BFD4CAFE86063EF /* Quick.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Quick.xcconfig; sourceTree = "<group>"; };
 		20CC416E6691073F6AA0B44428259AC1 /* DSL+Wait.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DSL+Wait.swift"; path = "Sources/Nimble/DSL+Wait.swift"; sourceTree = "<group>"; };
 		21550AAB49E632FDA6E9266B56B557D2 /* FBSnapshotTestCase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FBSnapshotTestCase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		227F08A59BE50AD5C0E6D54EE4DB2543 /* Delirium-tvOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Delirium-tvOS-umbrella.h"; path = "../Delirium-tvOS/Delirium-tvOS-umbrella.h"; sourceTree = "<group>"; };
 		22F5DB5C1F320F2D49F930F5E503AEE5 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		233BF814866ED4F7C6434F41F12EFBCF /* AdapterProtocols.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AdapterProtocols.swift; path = Sources/Nimble/Adapters/AdapterProtocols.swift; sourceTree = "<group>"; };
 		23D8617C7CB79D6BC7E4582B59727905 /* Async.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Async.swift; path = Sources/Nimble/Utils/Async.swift; sourceTree = "<group>"; };
@@ -258,9 +258,9 @@
 		36C9BFB4E392CEED3BC63CB05F5EADAF /* UIImage+Diff.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Diff.m"; path = "FBSnapshotTestCase/Categories/UIImage+Diff.m"; sourceTree = "<group>"; };
 		3A347C7378D4F18FC0A876A2AFCAD1FD /* FBSnapshotTestCase.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = FBSnapshotTestCase.modulemap; sourceTree = "<group>"; };
 		3B4FC1212A61267B50A1FED761F82F71 /* Pods-Delirium-Delirium_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Delirium-Delirium_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		3D5263605F8B2F9F396C7BA8268209CC /* Delirium-tvOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "Delirium-tvOS-dummy.m"; path = "../Delirium-tvOS/Delirium-tvOS-dummy.m"; sourceTree = "<group>"; };
 		3F074EF623D9C41095F4371D12F92C63 /* Pods-Delirium-Delirium_tvExample-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Delirium-Delirium_tvExample-umbrella.h"; sourceTree = "<group>"; };
 		3F91B9B8E458BDDFC3E07DEAD91C5EEE /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		40979156D68C5392868DC68B540851F0 /* Delirium-tvOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Delirium-tvOS-prefix.pch"; path = "../Delirium-tvOS/Delirium-tvOS-prefix.pch"; sourceTree = "<group>"; };
 		40A4E9A5259FFBF2F5AFEDF2B5340C1E /* FBSnapshotTestCase.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FBSnapshotTestCase.xcconfig; sourceTree = "<group>"; };
 		425293E77484F37F2F26FA98CECCAB9F /* AllPass.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AllPass.swift; path = Sources/Nimble/Matchers/AllPass.swift; sourceTree = "<group>"; };
 		440C1E2EE5D680BE6079CE69974985C3 /* BeIdenticalTo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeIdenticalTo.swift; path = Sources/Nimble/Matchers/BeIdenticalTo.swift; sourceTree = "<group>"; };
@@ -280,12 +280,14 @@
 		60710648C85C46C226A1D15CEA73C5A0 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		64228F5CDC7D1D84B4330B40FFB69D8A /* Quick-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Quick-umbrella.h"; sourceTree = "<group>"; };
 		651677EA0F08729D1B2F3D9A435B1FAF /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		65D39D30309ECB709EE4E079B42FF709 /* Delirium-tvOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "Delirium-tvOS-dummy.m"; path = "../Delirium-tvOS/Delirium-tvOS-dummy.m"; sourceTree = "<group>"; };
 		676C36E5049792670440A6A37A23B705 /* BeAKindOf.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeAKindOf.swift; path = Sources/Nimble/Matchers/BeAKindOf.swift; sourceTree = "<group>"; };
-		6AD853573F2A9D08B9367A9E7B7BE944 /* UIView+Shake.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIView+Shake.swift"; sourceTree = "<group>"; };
 		6B4E8F0A0B14361B2EAE4D0DA0BE57EB /* QuickConfiguration.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = QuickConfiguration.m; path = Sources/Quick/Configuration/QuickConfiguration.m; sourceTree = "<group>"; };
 		6CC8B86181C85EC4029D31826D97DBDE /* MatcherProtocols.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MatcherProtocols.swift; path = Sources/Nimble/Matchers/MatcherProtocols.swift; sourceTree = "<group>"; };
 		6EBA10BC2B0994D2B6AE508F1566F08D /* Pods-Delirium-Delirium_tvExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Delirium-Delirium_tvExample.release.xcconfig"; sourceTree = "<group>"; };
 		712924708985B1EB68BCE0D290D815FC /* BeLessThanOrEqual.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeLessThanOrEqual.swift; path = Sources/Nimble/Matchers/BeLessThanOrEqual.swift; sourceTree = "<group>"; };
+		726D42791EDFAEA235E9741BD0B22CD4 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		72BA70C06ED2C39DEE03DFD3F2ED1BBB /* Delirium-iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Delirium-iOS.modulemap"; sourceTree = "<group>"; };
 		7395C69488EE986713CFCD76E434400B /* QuickSpec.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QuickSpec.h; path = Sources/Quick/QuickSpec.h; sourceTree = "<group>"; };
 		7721577730C07577C8AAE8B06E7DBFC0 /* NimbleEnvironment.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NimbleEnvironment.swift; path = Sources/Nimble/Adapters/NimbleEnvironment.swift; sourceTree = "<group>"; };
 		786FE4B4725F603253354543D534DE89 /* Equal.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Equal.swift; path = Sources/Nimble/Matchers/Equal.swift; sourceTree = "<group>"; };
@@ -295,15 +297,17 @@
 		7EC748B938739D8B87F415EE175F58D1 /* World.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = World.h; path = Sources/Quick/World.h; sourceTree = "<group>"; };
 		81B3D2BC6E65080D4D0A721C2DA5D76E /* Pods-Delirium-Delirium_tvExample.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Delirium-Delirium_tvExample.modulemap"; sourceTree = "<group>"; };
 		8248BD96F9EBBC98E2DD332798B3A0F4 /* Pods-Delirium-Delirium_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Delirium-Delirium_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		84121989708EA5EA5475595004A80DE7 /* Delirium-tvOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; name = "Delirium-tvOS.modulemap"; path = "../Delirium-tvOS/Delirium-tvOS.modulemap"; sourceTree = "<group>"; };
 		848C402D439EB9B5972AECCE4084C23C /* SwiftSupport.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftSupport.swift; path = FBSnapshotTestCase/SwiftSupport.swift; sourceTree = "<group>"; };
+		850A2D20731C97E80B6911B949D9C0CB /* Delirium-tvOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Delirium-tvOS.xcconfig"; path = "../Delirium-tvOS/Delirium-tvOS.xcconfig"; sourceTree = "<group>"; };
 		859C5C30856A6617F00E5D648C212EC9 /* DSL.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DSL.h; path = Sources/Nimble/objc/DSL.h; sourceTree = "<group>"; };
 		87225E9B9E389551A1F536347B982B04 /* NimbleXCTestHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NimbleXCTestHandler.swift; path = Sources/Nimble/Adapters/NimbleXCTestHandler.swift; sourceTree = "<group>"; };
 		88324A6B6C332C9BAA4B07B81F008B50 /* Pods-Delirium-Delirium_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Delirium-Delirium_Example.release.xcconfig"; sourceTree = "<group>"; };
 		88CC9179543B4BE3415FDF6A9E07E66A /* FBSnapshotTestCase-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FBSnapshotTestCase-dummy.m"; sourceTree = "<group>"; };
+		8AFF48333254DBAA8E3E64F086EC7A27 /* Delirium-tvOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; name = "Delirium-tvOS.modulemap"; path = "../Delirium-tvOS/Delirium-tvOS.modulemap"; sourceTree = "<group>"; };
 		8DF1B41E38EDD94E1ED1FE9BC999DEF1 /* FBSnapshotTestController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSnapshotTestController.m; path = FBSnapshotTestCase/FBSnapshotTestController.m; sourceTree = "<group>"; };
 		8E65CDBFB735DF3AD2C40D79C63092DF /* Nimble.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Nimble.h; path = Sources/Nimble/Nimble.h; sourceTree = "<group>"; };
 		8E98E2B1E37D758A50B7539634D9179B /* Pods-Delirium-Delirium_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Delirium-Delirium_Example.modulemap"; sourceTree = "<group>"; };
+		9055F277A088645B6FC87146EAC9E487 /* Delirium-tvOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Delirium-tvOS-umbrella.h"; path = "../Delirium-tvOS/Delirium-tvOS-umbrella.h"; sourceTree = "<group>"; };
 		907F33C2B0CF1BD93F497D1B0CCEB5F6 /* BeGreaterThan.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeGreaterThan.swift; path = Sources/Nimble/Matchers/BeGreaterThan.swift; sourceTree = "<group>"; };
 		91DAAB48887F39EF788FF672C9A34052 /* Pods-Delirium_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Delirium_Tests-resources.sh"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
@@ -336,10 +340,12 @@
 		B4F2569FC59B67E76E570E93D89731EB /* NSString+QCKSelectorName.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+QCKSelectorName.h"; path = "Sources/Quick/NSString+QCKSelectorName.h"; sourceTree = "<group>"; };
 		B5CA51A537B8A1D62516D4D49038B2EA /* Example.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Example.swift; path = Sources/Quick/Example.swift; sourceTree = "<group>"; };
 		B6203A309895700207A684C456765291 /* Nimble-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Nimble-umbrella.h"; sourceTree = "<group>"; };
+		B93FC2452DF7105CF4FA8E6EAA202C76 /* Delirium-iOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Delirium-iOS-umbrella.h"; sourceTree = "<group>"; };
 		B9D6AF1AB45E76B352DD93ACE676230A /* BeNil.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeNil.swift; path = Sources/Nimble/Matchers/BeNil.swift; sourceTree = "<group>"; };
 		BAEE0AA407B501B27CD879CF8E608E81 /* World+DSL.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "World+DSL.h"; path = "Sources/Quick/DSL/World+DSL.h"; sourceTree = "<group>"; };
 		BC663D53AF0CB15EDB9D72AC3D7FDC84 /* Pods-Delirium-Delirium_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Delirium-Delirium_Example-dummy.m"; sourceTree = "<group>"; };
 		BDC4C06A00F57A3332BFBC63C0DA3F1E /* ExceptionCapture.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExceptionCapture.swift; path = Sources/Nimble/Utils/ExceptionCapture.swift; sourceTree = "<group>"; };
+		BEB4E226BB01AD80B1E5CC5A78683FBB /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = "../Delirium-tvOS/Info.plist"; sourceTree = "<group>"; };
 		BF2C8E711729FB4599F51C263CB8965D /* AssertionRecorder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AssertionRecorder.swift; path = Sources/Nimble/Adapters/AssertionRecorder.swift; sourceTree = "<group>"; };
 		BF446B28545341AFF094A94F8633BDF6 /* UIImage+Compare.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+Compare.h"; path = "FBSnapshotTestCase/Categories/UIImage+Compare.h"; sourceTree = "<group>"; };
 		BFD0FFD7DDD965A3EC841E26B24E3B39 /* Pods-Delirium_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Delirium_Tests-frameworks.sh"; sourceTree = "<group>"; };
@@ -364,7 +370,6 @@
 		DCF330BF6C88C59845888329E76AF044 /* NMBExceptionCapture.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NMBExceptionCapture.m; path = Sources/Nimble/objc/NMBExceptionCapture.m; sourceTree = "<group>"; };
 		DE300E3EAEB55D242BB905111CE02C5A /* MatcherFunc.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MatcherFunc.swift; path = Sources/Nimble/Wrappers/MatcherFunc.swift; sourceTree = "<group>"; };
 		E0CB59E222B52B1A8991F62947171AD6 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E12C48E9CAE3BFE198768E94E2CDBC30 /* Delirium-iOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Delirium-iOS-umbrella.h"; sourceTree = "<group>"; };
 		E456588A7D5D494914B25F6F2C50662A /* Nimble-Snapshots.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Nimble-Snapshots.modulemap"; sourceTree = "<group>"; };
 		E49C95F056009CC789247F71C33EB79A /* Nimble-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Nimble-prefix.pch"; sourceTree = "<group>"; };
 		E5C952BB3C51ED899A741706478EBC72 /* Nimble_Snapshots.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Nimble_Snapshots.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -372,45 +377,27 @@
 		E614CEF798B620B0B98837100B736AF5 /* SatisfyAnyOf.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SatisfyAnyOf.swift; path = Sources/Nimble/Matchers/SatisfyAnyOf.swift; sourceTree = "<group>"; };
 		E7116E4797A8F559FBCC350C433EB2AB /* DSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DSL.swift; path = Sources/Nimble/DSL.swift; sourceTree = "<group>"; };
 		E772D3E5AF34E2F6DC985845FB3489AF /* EndWith.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EndWith.swift; path = Sources/Nimble/Matchers/EndWith.swift; sourceTree = "<group>"; };
-		E817B2C3DDAC4AF9732595E0B1D378D6 /* Delirium-iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Delirium-iOS-dummy.m"; sourceTree = "<group>"; };
 		EA67375ED7A4B3A90A94312D0D93E05C /* HooksPhase.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HooksPhase.swift; path = Sources/Quick/Hooks/HooksPhase.swift; sourceTree = "<group>"; };
 		EA9C21F8907FE9EF54A4CB45B8D6709F /* Quick-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Quick-prefix.pch"; sourceTree = "<group>"; };
 		EC4367C4488925AB67CC39819E11B023 /* PostNotification.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PostNotification.swift; path = Sources/Nimble/Matchers/PostNotification.swift; sourceTree = "<group>"; };
 		EC724D753931716676AE42503730DBC6 /* RaisesException.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RaisesException.swift; path = Sources/Nimble/Matchers/RaisesException.swift; sourceTree = "<group>"; };
 		EE15230104557E3A99132C72E8069B79 /* QCKDSL.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QCKDSL.h; path = Sources/Quick/DSL/QCKDSL.h; sourceTree = "<group>"; };
 		EEAD9B4FF295C9E0487B426B9968F28B /* World.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = World.swift; path = Sources/Quick/World.swift; sourceTree = "<group>"; };
-		EEBC03D0C723986FDBA307819AB11AB4 /* Delirium-tvOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Delirium-tvOS.xcconfig"; path = "../Delirium-tvOS/Delirium-tvOS.xcconfig"; sourceTree = "<group>"; };
 		F03A1A302C6C29F7707D1545C60B509D /* QCKDSL.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = QCKDSL.m; path = Sources/Quick/DSL/QCKDSL.m; sourceTree = "<group>"; };
 		F29069528FAD306847C75AF601701B09 /* FailureMessage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FailureMessage.swift; path = Sources/Nimble/FailureMessage.swift; sourceTree = "<group>"; };
 		F340E2FDCE7FD9B7BD631F18AED2AB31 /* Pods_Delirium_Delirium_tvExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Delirium_Delirium_tvExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3AE9286DAD58890F512DA1B4B59F06F /* Nimble.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Nimble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F574AB6FE1950E0887CDF46D08DFDDBD /* UIAlertController+Error.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIAlertController+Error.swift"; sourceTree = "<group>"; };
+		F5B8DEB263827E5A5BE5FFF0B89B710D /* Delirium-iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Delirium-iOS-dummy.m"; sourceTree = "<group>"; };
 		F5F18A014577D0391052EF282FE3049C /* BeGreaterThanOrEqualTo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeGreaterThanOrEqualTo.swift; path = Sources/Nimble/Matchers/BeGreaterThanOrEqualTo.swift; sourceTree = "<group>"; };
 		F6D33E22C1EA1BEFBD331FD3AE10D062 /* UIImage+Snapshot.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+Snapshot.h"; path = "FBSnapshotTestCase/Categories/UIImage+Snapshot.h"; sourceTree = "<group>"; };
 		F8F65877051A80854B8307C51E5BF152 /* Nimble-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Nimble-dummy.m"; sourceTree = "<group>"; };
-		F968EC15C51617CE90815C377176863F /* Delirium-iOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Delirium-iOS.xcconfig"; sourceTree = "<group>"; };
-		F9C68C3B47E70EE6FCEF60444ADC63DA /* Delirium-tvOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Delirium-tvOS-prefix.pch"; path = "../Delirium-tvOS/Delirium-tvOS-prefix.pch"; sourceTree = "<group>"; };
 		FB3B4A87FE17DFB2CCA9CAD7D79D0D48 /* HaveValidSnapshot.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HaveValidSnapshot.swift; sourceTree = "<group>"; };
 		FE997C745F05A9B57C00D839E47FD137 /* QuickTestSuite.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QuickTestSuite.swift; path = Sources/Quick/QuickTestSuite.swift; sourceTree = "<group>"; };
 		FF51A81CF86181D76DF7B232F158D51C /* BeginWith.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeginWith.swift; path = Sources/Nimble/Matchers/BeginWith.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		016B1ECB3DBA6EABAAD554A178965358 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9FEAB732A913B6EC5BE0883090B54DCA /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1C17FE5D1356F3DD2D95730E19CB0F04 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8B6F53EC9C1DC50024901FA728D5225A /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		52D2A0585E7609A05EA3730EDC88EF38 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -425,6 +412,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				02F58CFB53B42E1D87087D9B866D1963 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9DBBC23A46AE560D108948AC2861FF8D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				86A59B911D7BFAD22A9C5C149F43EA10 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -464,6 +459,14 @@
 				F366B775C22BBE1DBAC7BDB7DE8F0A26 /* QuartzCore.framework in Frameworks */,
 				F0B3BC4CE7B1074981F32DDD032E9539 /* UIKit.framework in Frameworks */,
 				73B96724E9D2B03677BA3C2D24601D64 /* XCTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FDE6773416394F0AC6CE5825D941BEA5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A76A1CA29A88F51B7DD4C04A483A686 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -594,6 +597,15 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
+		364C010E646D9AD24A3A2A9470FC97A3 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				FC0581CA56E91067761E6385CCD55781 /* Animations */,
+				8F130B0B380896487F73AF94BEC1448C /* Controllers */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
 		4922328D85C4E3F6A7F490B75C127485 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -603,24 +615,6 @@
 				7770C2629DA6DF2066FA4EF26C7D891E /* Quick */,
 			);
 			name = Pods;
-			sourceTree = "<group>";
-		};
-		540D0D0C91ECC7B826B25AD1814455B4 /* Animations */ = {
-			isa = PBXGroup;
-			children = (
-				6AD853573F2A9D08B9367A9E7B7BE944 /* UIView+Shake.swift */,
-			);
-			path = Animations;
-			sourceTree = "<group>";
-		};
-		63F93B70C0F73F7DA3F9F7AF120EDF67 /* Delirium */ = {
-			isa = PBXGroup;
-			children = (
-				EA8D6E681000DAC51BFEC87487D0FAA5 /* Sources */,
-				765A003A607406F92D525380580350A4 /* Support Files */,
-			);
-			name = Delirium;
-			path = ../..;
 			sourceTree = "<group>";
 		};
 		71770B568E290DE4A68E59D9CC45B8C5 /* Frameworks */ = {
@@ -633,26 +627,6 @@
 				1A9533DC6A0AE12E115DA962E8095B00 /* tvOS */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		765A003A607406F92D525380580350A4 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				05D6E1624026B25A87C2B23A55B14295 /* Delirium-iOS.modulemap */,
-				F968EC15C51617CE90815C377176863F /* Delirium-iOS.xcconfig */,
-				E817B2C3DDAC4AF9732595E0B1D378D6 /* Delirium-iOS-dummy.m */,
-				153C4E4AEB350C3FBEE46AD6D01E21E5 /* Delirium-iOS-prefix.pch */,
-				E12C48E9CAE3BFE198768E94E2CDBC30 /* Delirium-iOS-umbrella.h */,
-				84121989708EA5EA5475595004A80DE7 /* Delirium-tvOS.modulemap */,
-				EEBC03D0C723986FDBA307819AB11AB4 /* Delirium-tvOS.xcconfig */,
-				3D5263605F8B2F9F396C7BA8268209CC /* Delirium-tvOS-dummy.m */,
-				F9C68C3B47E70EE6FCEF60444ADC63DA /* Delirium-tvOS-prefix.pch */,
-				227F08A59BE50AD5C0E6D54EE4DB2543 /* Delirium-tvOS-umbrella.h */,
-				0072B64B353CA7CC8E9D9ABB101AF0AF /* Info.plist */,
-				1AFD4FAFDDE6B5597A83B303B1C83673 /* Info.plist */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/Delirium-iOS";
 			sourceTree = "<group>";
 		};
 		7770C2629DA6DF2066FA4EF26C7D891E /* Quick */ = {
@@ -691,6 +665,16 @@
 				FF011E64149D650C2FBF93ECF2F1EA56 /* Support Files */,
 			);
 			path = Quick;
+			sourceTree = "<group>";
+		};
+		7A86BFA7CBE4E0555C44630C07711915 /* Delirium */ = {
+			isa = PBXGroup;
+			children = (
+				364C010E646D9AD24A3A2A9470FC97A3 /* Sources */,
+				A330F4ACB3639B6B8FFE4D6CB77912CF /* Support Files */,
+			);
+			name = Delirium;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
@@ -751,6 +735,14 @@
 			path = "../Target Support Files/Nimble";
 			sourceTree = "<group>";
 		};
+		8F130B0B380896487F73AF94BEC1448C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F574AB6FE1950E0887CDF46D08DFDDBD /* UIAlertController+Error.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		93A3EA8D4EC6FF42D6F0D71A1076F501 /* Pods-Delirium-Delirium_tvExample */ = {
 			isa = PBXGroup;
 			children = (
@@ -778,6 +770,26 @@
 				85A43A897BC9F9E165C5AC35B1C0A8AC /* Support Files */,
 			);
 			path = "Nimble-Snapshots";
+			sourceTree = "<group>";
+		};
+		A330F4ACB3639B6B8FFE4D6CB77912CF /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				72BA70C06ED2C39DEE03DFD3F2ED1BBB /* Delirium-iOS.modulemap */,
+				0D48E6E947DC5FCFE39FC470BF8F1C2B /* Delirium-iOS.xcconfig */,
+				F5B8DEB263827E5A5BE5FFF0B89B710D /* Delirium-iOS-dummy.m */,
+				13B73D0B576DD2A0C17C58D68C780D63 /* Delirium-iOS-prefix.pch */,
+				B93FC2452DF7105CF4FA8E6EAA202C76 /* Delirium-iOS-umbrella.h */,
+				8AFF48333254DBAA8E3E64F086EC7A27 /* Delirium-tvOS.modulemap */,
+				850A2D20731C97E80B6911B949D9C0CB /* Delirium-tvOS.xcconfig */,
+				65D39D30309ECB709EE4E079B42FF709 /* Delirium-tvOS-dummy.m */,
+				40979156D68C5392868DC68B540851F0 /* Delirium-tvOS-prefix.pch */,
+				9055F277A088645B6FC87146EAC9E487 /* Delirium-tvOS-umbrella.h */,
+				BEB4E226BB01AD80B1E5CC5A78683FBB /* Info.plist */,
+				726D42791EDFAEA235E9741BD0B22CD4 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/Delirium-iOS";
 			sourceTree = "<group>";
 		};
 		B5F31F8E948F651C6E764571ACC18E4F /* Pods-Delirium_Tests */ = {
@@ -837,20 +849,20 @@
 			path = FBSnapshotTestCase;
 			sourceTree = "<group>";
 		};
-		EA8D6E681000DAC51BFEC87487D0FAA5 /* Sources */ = {
-			isa = PBXGroup;
-			children = (
-				540D0D0C91ECC7B826B25AD1814455B4 /* Animations */,
-			);
-			path = Sources;
-			sourceTree = "<group>";
-		};
 		EA96033EBD694092C4EA1F469D89DD16 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				63F93B70C0F73F7DA3F9F7AF120EDF67 /* Delirium */,
+				7A86BFA7CBE4E0555C44630C07711915 /* Delirium */,
 			);
 			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		FC0581CA56E91067761E6385CCD55781 /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				099C781D59CC6C31496C8585E9D3F366 /* UIView+Shake.swift */,
+			);
+			path = Animations;
 			sourceTree = "<group>";
 		};
 		FF011E64149D650C2FBF93ECF2F1EA56 /* Support Files */ = {
@@ -885,19 +897,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0FE472A7920F39F1F6BB7270EE494971 /* Headers */ = {
+		4DE5ADAD820C160D0F6C921F60D1B646 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C55C6BCC860DF0A5A4AB2D085BC3DE14 /* Delirium-iOS-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		344933AC8BB736CD4EEC11898497CCF7 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E1414814BCDF4884D18CFF286A1B606D /* Delirium-tvOS-umbrella.h in Headers */,
+				B64D4094477B603FF169631FE2937BA8 /* Delirium-iOS-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -909,6 +913,14 @@
 				E909D0D33037F3C642BBB8D47FC642B3 /* Nimble-umbrella.h in Headers */,
 				D41F628A81153A978EB209E4FE925700 /* Nimble.h in Headers */,
 				86FB708FCFE6121A82BB09E5ADD84554 /* NMBExceptionCapture.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A161DFFD45679C173DC35A6609C95F1 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6F8240C750C93CBDB939CF9702549B9B /* Delirium-tvOS-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1018,23 +1030,6 @@
 			productReference = F340E2FDCE7FD9B7BD631F18AED2AB31 /* Pods_Delirium_Delirium_tvExample.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		8C11E5A55690D520C6D49A9C3D68AF33 /* Delirium-iOS */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = BDE3EC938FABCDBBCFF74080D0189EC1 /* Build configuration list for PBXNativeTarget "Delirium-iOS" */;
-			buildPhases = (
-				28E9477E1DE01C5084C3BC72E4C8424D /* Sources */,
-				1C17FE5D1356F3DD2D95730E19CB0F04 /* Frameworks */,
-				0FE472A7920F39F1F6BB7270EE494971 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Delirium-iOS";
-			productName = "Delirium-iOS";
-			productReference = 2AC2AE994CA3F4F645C6D3EC20A7E421 /* Delirium.framework */;
-			productType = "com.apple.product-type.framework";
-		};
 		8D67C38FCB708EE7F97B4043F1680ACD /* Pods-Delirium-Delirium_Example */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7D9408FDE7FFE9682996785EAFD85B05 /* Build configuration list for PBXNativeTarget "Pods-Delirium-Delirium_Example" */;
@@ -1051,6 +1046,23 @@
 			name = "Pods-Delirium-Delirium_Example";
 			productName = "Pods-Delirium-Delirium_Example";
 			productReference = 990EF896A6B62B9AC4515305E6871F4A /* Pods_Delirium_Delirium_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		8F79E5F2AD3A4C2AF8B0D11A73164113 /* Delirium-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4D920464C97F42018AF973E3089A3EEC /* Build configuration list for PBXNativeTarget "Delirium-iOS" */;
+			buildPhases = (
+				1D409ADB112D7464B9F011D23816DD64 /* Sources */,
+				FDE6773416394F0AC6CE5825D941BEA5 /* Frameworks */,
+				4DE5ADAD820C160D0F6C921F60D1B646 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Delirium-iOS";
+			productName = "Delirium-iOS";
+			productReference = 2AC2AE994CA3F4F645C6D3EC20A7E421 /* Delirium.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		9A3AE440FB23CCC076AA408C3C4836C4 /* Nimble-Snapshots */ = {
@@ -1073,6 +1085,23 @@
 			productReference = E5C952BB3C51ED899A741706478EBC72 /* Nimble_Snapshots.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		9C16A461CE6B9E4CE3CC9C5DCB8942DC /* Delirium-tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AEB84B6D6354FB81443107E53154A22C /* Build configuration list for PBXNativeTarget "Delirium-tvOS" */;
+			buildPhases = (
+				AEA1750AAE021B7B02328C60A1B391C7 /* Sources */,
+				9DBBC23A46AE560D108948AC2861FF8D /* Frameworks */,
+				5A161DFFD45679C173DC35A6609C95F1 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Delirium-tvOS";
+			productName = "Delirium-tvOS";
+			productReference = 28DDBAB4D41CAFBADA469F0807917CB8 /* Delirium.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		A5C430B1E2D8298FD6C5403590C0B80F /* Quick */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = CDD472835DE04EBDB4665D3207961542 /* Build configuration list for PBXNativeTarget "Quick" */;
@@ -1088,23 +1117,6 @@
 			name = Quick;
 			productName = Quick;
 			productReference = 2982738D83DC26E279C0FAC89ECD2C98 /* Quick.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		A6E28479C11D0C59022602BE5969A5B2 /* Delirium-tvOS */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 2C8DE69468852520A231C13FD6398DD1 /* Build configuration list for PBXNativeTarget "Delirium-tvOS" */;
-			buildPhases = (
-				907A583BA1D7BBF968A87A098CF7205B /* Sources */,
-				016B1ECB3DBA6EABAAD554A178965358 /* Frameworks */,
-				344933AC8BB736CD4EEC11898497CCF7 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Delirium-tvOS";
-			productName = "Delirium-tvOS";
-			productReference = 28DDBAB4D41CAFBADA469F0807917CB8 /* Delirium.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		FF61C7C740C1B196A3B33F37B77DBC68 /* Nimble */ = {
@@ -1145,8 +1157,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8C11E5A55690D520C6D49A9C3D68AF33 /* Delirium-iOS */,
-				A6E28479C11D0C59022602BE5969A5B2 /* Delirium-tvOS */,
+				8F79E5F2AD3A4C2AF8B0D11A73164113 /* Delirium-iOS */,
+				9C16A461CE6B9E4CE3CC9C5DCB8942DC /* Delirium-tvOS */,
 				5DB46EA499F9A5E22765121102FCC34B /* FBSnapshotTestCase */,
 				FF61C7C740C1B196A3B33F37B77DBC68 /* Nimble */,
 				9A3AE440FB23CCC076AA408C3C4836C4 /* Nimble-Snapshots */,
@@ -1159,6 +1171,16 @@
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
+		1D409ADB112D7464B9F011D23816DD64 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A867433BFB8457298153A6C9283351A /* Delirium-iOS-dummy.m in Sources */,
+				0B8C584BA2265C569508A45E7ACDD981 /* UIAlertController+Error.swift in Sources */,
+				D9D50593DD596CD33A1B8291D7A37F50 /* UIView+Shake.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2823BDA58F2F74DEAB39C2F345AA07A1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1213,15 +1235,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		28E9477E1DE01C5084C3BC72E4C8424D /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E7FA1FCC828A6D8E0741DFF578C86B48 /* Delirium-iOS-dummy.m in Sources */,
-				4B5E95DF4FC664E878B6D0ED9107E354 /* UIView+Shake.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		4A6D7F282EE005D4334AA4DE520862BF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1243,15 +1256,6 @@
 				11C22C7B844DF31A5EBDC9AC132C5E94 /* UIImage+Compare.m in Sources */,
 				C360952381641F725C15758993A0F665 /* UIImage+Diff.m in Sources */,
 				D5C30BC656C11AF60394E3180A217BB1 /* UIImage+Snapshot.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		907A583BA1D7BBF968A87A098CF7205B /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				ED36FDCC6F419D9BD180B4705BDFA68D /* Delirium-tvOS-dummy.m in Sources */,
-				55425EAE43D5114790A1C77B65E06F1A /* UIView+Shake.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1283,6 +1287,16 @@
 				BBE10615F3CD16FAF02BBD3D42B6D246 /* World+DSL.swift in Sources */,
 				5438871833E759C86C2CA743AD3EF2DD /* World.swift in Sources */,
 				7929623E9CC7C966AD703F6410B3935A /* XCTestSuite+QuickTestSuiteBuilder.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AEA1750AAE021B7B02328C60A1B391C7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C231716311AE79DA4B93AACE52E768C7 /* Delirium-tvOS-dummy.m in Sources */,
+				976DF253F14C5EA8B37E4466388638D5 /* UIAlertController+Error.swift in Sources */,
+				26CDB09B1C07E62B6CF686D4AFD28D8A /* UIView+Shake.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1319,7 +1333,7 @@
 		0DA93A699B1797ED86910A86F47CBACB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Delirium-tvOS";
-			target = A6E28479C11D0C59022602BE5969A5B2 /* Delirium-tvOS */;
+			target = 9C16A461CE6B9E4CE3CC9C5DCB8942DC /* Delirium-tvOS */;
 			targetProxy = 63AA94496BDE9EBD642ACECF1D929D73 /* PBXContainerItemProxy */;
 		};
 		51181AC113284270633563DB2A331F61 /* PBXTargetDependency */ = {
@@ -1343,7 +1357,7 @@
 		BB5E38101307A16265A6BC373F52C8AF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Delirium-iOS";
-			target = 8C11E5A55690D520C6D49A9C3D68AF33 /* Delirium-iOS */;
+			target = 8F79E5F2AD3A4C2AF8B0D11A73164113 /* Delirium-iOS */;
 			targetProxy = 15FCA4C4D4E42777040367BDDDEC4337 /* PBXContainerItemProxy */;
 		};
 		D4CDB3016B93DFDFD2EBDD5463F4F378 /* PBXTargetDependency */ = {
@@ -1373,12 +1387,42 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		19B14D36C668E095E7236B33FAD2C810 /* Debug */ = {
+		0F0C3FFC89FEA0B5528041727CD235FA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EEBC03D0C723986FDBA307819AB11AB4 /* Delirium-tvOS.xcconfig */;
+			baseConfigurationReference = 0D48E6E947DC5FCFE39FC470BF8F1C2B /* Delirium-iOS.xcconfig */;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Delirium-iOS/Delirium-iOS-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Delirium-iOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Delirium-iOS/Delirium-iOS.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = Delirium;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		192189080A7938C7682135B1E2807CE9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 850A2D20731C97E80B6911B949D9C0CB /* Delirium-tvOS.xcconfig */;
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -1390,17 +1434,16 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/Delirium-tvOS/Delirium-tvOS.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = Delirium;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
 		1EAB35ACB452D210D5CF60F7847CD85B /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -1654,10 +1697,11 @@
 			};
 			name = Debug;
 		};
-		8DBBEC4AEB73FAE7A0FD51BCF0FF860A /* Release */ = {
+		7E2793510FEE83EF646B6491AE1CFFFF /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EEBC03D0C723986FDBA307819AB11AB4 /* Delirium-tvOS.xcconfig */;
+			baseConfigurationReference = 0D48E6E947DC5FCFE39FC470BF8F1C2B /* Delirium-iOS.xcconfig */;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
@@ -1666,17 +1710,17 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Delirium-tvOS/Delirium-tvOS-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Delirium-tvOS/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/Delirium-iOS/Delirium-iOS-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Delirium-iOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Delirium-tvOS/Delirium-tvOS.modulemap";
+				MODULEMAP_FILE = "Target Support Files/Delirium-iOS/Delirium-iOS.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = Delirium;
-				SDKROOT = appletvos;
+				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 9.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -1710,36 +1754,6 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		A454ADF87B15FF34E8BCCB8AB4F3FD88 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = F968EC15C51617CE90815C377176863F /* Delirium-iOS.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Delirium-iOS/Delirium-iOS-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Delirium-iOS/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Delirium-iOS/Delirium-iOS.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = Delirium;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -1918,34 +1932,34 @@
 			};
 			name = Release;
 		};
-		EB358CADD5AC9D55E51F1E19BD9E6F84 /* Release */ = {
+		EFFD0A819F5B2D495676F41A41CA08BD /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F968EC15C51617CE90815C377176863F /* Delirium-iOS.xcconfig */;
+			baseConfigurationReference = 850A2D20731C97E80B6911B949D9C0CB /* Delirium-tvOS.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Delirium-iOS/Delirium-iOS-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Delirium-iOS/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/Delirium-tvOS/Delirium-tvOS-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Delirium-tvOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Delirium-iOS/Delirium-iOS.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
+				MODULEMAP_FILE = "Target Support Files/Delirium-tvOS/Delirium-tvOS.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = Delirium;
-				SDKROOT = iphoneos;
+				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
 		F14745E2F2D90E33DB7401B9ED7C5F16 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -2018,20 +2032,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2C8DE69468852520A231C13FD6398DD1 /* Build configuration list for PBXNativeTarget "Delirium-tvOS" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				19B14D36C668E095E7236B33FAD2C810 /* Debug */,
-				8DBBEC4AEB73FAE7A0FD51BCF0FF860A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C4F82721F30584AC0F2E5B342243CECC /* Debug */,
 				B21AA7C853EB33A67CAB289878494245 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4D920464C97F42018AF973E3089A3EEC /* Build configuration list for PBXNativeTarget "Delirium-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0F0C3FFC89FEA0B5528041727CD235FA /* Debug */,
+				7E2793510FEE83EF646B6491AE1CFFFF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -2081,11 +2095,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BDE3EC938FABCDBBCFF74080D0189EC1 /* Build configuration list for PBXNativeTarget "Delirium-iOS" */ = {
+		AEB84B6D6354FB81443107E53154A22C /* Build configuration list for PBXNativeTarget "Delirium-tvOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A454ADF87B15FF34E8BCCB8AB4F3FD88 /* Debug */,
-				EB358CADD5AC9D55E51F1E19BD9E6F84 /* Release */,
+				EFFD0A819F5B2D495676F41A41CA08BD /* Debug */,
+				192189080A7938C7682135B1E2807CE9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
