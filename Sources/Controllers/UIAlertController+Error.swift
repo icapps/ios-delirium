@@ -35,20 +35,34 @@ extension UIViewController {
     
     /// Present the `UIAlertController` created from the `NSError` object.
     ///
+    /// When you implement the retry closure when calling the `presentAlertController` method, than a 'Try Again' button will be displayed in the alert next to the 'Ok' button.
+    ///
     /// - Parameter error: The `NSError` to display in the alert.
-    public func presentAlertController(withError error: NSError) {
+    /// - Parameter retry: The closure that is called when the retry button is tapped.
+    public func presentAlertController(withError error: NSError, retry: (() -> ())? = nil) {
         let controller = UIAlertController(error: error)
-        controller.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil))
-        self.presentViewController(controller, animated: true, completion: nil)
+        presentAlertController(controller, retry: retry)
     }
     
     /// Present the `UIAlertController` created from the `AlertError` object.
     ///
+    /// When you implement the retry closure when calling the `presentAlertController` method, than a 'Try Again' button will be displayed in the alert next to the 'Ok' button.
+    ///
     /// - Parameter error: The `AlertError` to display in the alert.
-    public func presentAlertController(withError error: AlertError) {
+    /// - Parameter retry: The closure that is called when the retry button is tapped.
+    public func presentAlertController(withError error: AlertError, retry: (() -> ())? = nil) {
         let controller = UIAlertController(error: error)
-        controller.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil))
-        self.presentViewController(controller, animated: true, completion: nil)
+        presentAlertController(controller, retry: retry)
+    }
+    
+    private func presentAlertController(controller: UIAlertController, retry: (() -> ())? = nil) {
+        controller.addAction(UIAlertAction(title: "Ok", style: .Cancel, handler: nil))
+        if let retry = retry {
+            controller.addAction(UIAlertAction(title: "Try Again", style: .Default) { action in
+                retry()
+            })
+        }
+        presentViewController(controller, animated: true, completion: nil)
     }
     
 }

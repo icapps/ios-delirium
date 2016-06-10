@@ -32,4 +32,10 @@ class AlertViewController: UIViewController {
         presentAlertController(withError: viewModel.errorType)
     }
     
+    @IBAction func showRetryError(sender: AnyObject) {
+        presentAlertController(withError: viewModel.errorType) {
+            print("🎯 Tapped retry")
+        }
+    }
+    
 }
