@@ -18,7 +18,7 @@ extension UIAlertController {
     ///
     /// - Parameter error: The `NSError` to display in the alert.
     /// - Parameter title: The title can be manually set and is 'An error occured' by default.
-    public convenience init(title: String = "An error occured", error: NSError) {
+    public convenience init(title: String = NSLocalizedString("delirium.alert.title", bundle: NSBundle.deliriumBundle(), comment: ""), error: NSError) {
         self.init(title: title, message: error.localizedDescription, preferredStyle: .Alert)
     }
     
@@ -56,9 +56,9 @@ extension UIViewController {
     }
     
     private func presentAlertController(controller: UIAlertController, retry: (() -> ())? = nil) {
-        controller.addAction(UIAlertAction(title: "Ok", style: .Cancel, handler: nil))
+        controller.addAction(UIAlertAction(title: NSLocalizedString("delirium.alert.button.ok", bundle: NSBundle.deliriumBundle(), comment: ""), style: .Cancel, handler: nil))
         if let retry = retry {
-            controller.addAction(UIAlertAction(title: "Try Again", style: .Default) { action in
+            controller.addAction(UIAlertAction(title: NSLocalizedString("delirium.alert.button.tryagain", bundle: NSBundle.deliriumBundle(), comment: ""), style: .Default) { action in
                 retry()
             })
         }

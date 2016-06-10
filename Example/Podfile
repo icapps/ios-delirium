@@ -1,3 +1,5 @@
+install! 'cocoapods', deterministic_uuids: false
+
 use_frameworks!
 
 abstract_target 'Delirium' do
