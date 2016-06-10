@@ -28,4 +28,8 @@ class AlertViewController: UIViewController {
         presentAlertController(withError: viewModel.error)
     }
     
+    @IBAction func showErrorType(sender: AnyObject) {
+        presentAlertController(withError: viewModel.errorType)
+    }
+    
 }
