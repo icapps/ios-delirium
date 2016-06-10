@@ -11,7 +11,9 @@ Pod::Spec.new do |s|
   s.version          = '0.1.0'
   s.summary          = 'A set of UI components that we tend to reuse at iCapps.'
   s.description      = <<-DESC
-Delirium contains a set of UI components for reuse.
+Delirium contains a set of UI components for reuse. Like for example:
+
+- Shake your `UIView`.
                        DESC
 
   s.homepage         = 'https://github.com/icapps/ios-delirium'
