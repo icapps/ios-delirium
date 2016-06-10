@@ -151,7 +151,7 @@
 				627E02AC1D0AC6C000B7529E /* ShakeViewController.swift */,
 				627E02AE1D0AC7C200B7529E /* ShakeViewModel.swift */,
 			);
-			name = Shake;
+			path = Shake;
 			sourceTree = "<group>";
 		};
 		627E02B01D0AC89800B7529E /* Specs */ = {
@@ -159,7 +159,7 @@
 			children = (
 				627E02B11D0AC8A400B7529E /* EmptySpec.swift */,
 			);
-			name = Specs;
+			path = Specs;
 			sourceTree = "<group>";
 		};
 		AAF996A2ED7E75145D7CB751 /* Pods */ = {
