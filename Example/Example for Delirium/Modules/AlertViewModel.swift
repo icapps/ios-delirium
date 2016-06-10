@@ -14,4 +14,11 @@ class AlertViewModel {
         return "Alert"
     }
     
+    var error: NSError {
+        let userInfo = [
+            NSLocalizedDescriptionKey: "An error occured fetching the data"
+        ]
+        return NSError(domain: "com.icapps.delirium", code: 1, userInfo: userInfo)
+    }
+    
 }

@@ -25,7 +25,7 @@ class AlertViewController: UIViewController {
     // MARK: - Actions
     
     @IBAction func showError(sender: AnyObject) {
-        
+        presentAlertController(withError: viewModel.error)
     }
     
 }
