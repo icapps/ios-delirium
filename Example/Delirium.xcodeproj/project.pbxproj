@@ -14,6 +14,7 @@
 		627E02AB1D0AC55800B7529E /* Shake.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 627E02AA1D0AC55800B7529E /* Shake.storyboard */; };
 		627E02AD1D0AC6C000B7529E /* ShakeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 627E02AC1D0AC6C000B7529E /* ShakeViewController.swift */; };
 		627E02AF1D0AC7C200B7529E /* ShakeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 627E02AE1D0AC7C200B7529E /* ShakeViewModel.swift */; };
+		627E02B31D0AC8B700B7529E /* EmptySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 627E02B11D0AC8A400B7529E /* EmptySpec.swift */; };
 		8878C4F19C970CE9B6465B0F /* Pods_Delirium_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61DD93C3B2EC7567BA4DC10A /* Pods_Delirium_Tests.framework */; };
 		95465B4D0376DE7DDA97A508 /* Pods_Delirium_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9459A1BC2F0B7C1B61ECE2C6 /* Pods_Delirium_Example.framework */; };
 /* End PBXBuildFile section */
@@ -41,6 +42,7 @@
 		627E02AA1D0AC55800B7529E /* Shake.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Shake.storyboard; sourceTree = "<group>"; };
 		627E02AC1D0AC6C000B7529E /* ShakeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShakeViewController.swift; sourceTree = "<group>"; };
 		627E02AE1D0AC7C200B7529E /* ShakeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShakeViewModel.swift; sourceTree = "<group>"; };
+		627E02B11D0AC8A400B7529E /* EmptySpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptySpec.swift; sourceTree = "<group>"; };
 		7AF8E97AC2B8ABFED0A372D9 /* Pods-Delirium_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Delirium_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Delirium_Tests/Pods-Delirium_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		9459A1BC2F0B7C1B61ECE2C6 /* Pods_Delirium_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Delirium_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E21C7DC195FA3217D96FDE58 /* Pods-Delirium_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Delirium_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Delirium_Tests/Pods-Delirium_Tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 		607FACE81AFB9204008FA782 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				627E02B01D0AC89800B7529E /* Specs */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
 			);
 			path = Tests;
@@ -149,6 +152,14 @@
 				627E02AE1D0AC7C200B7529E /* ShakeViewModel.swift */,
 			);
 			name = Shake;
+			sourceTree = "<group>";
+		};
+		627E02B01D0AC89800B7529E /* Specs */ = {
+			isa = PBXGroup;
+			children = (
+				627E02B11D0AC8A400B7529E /* EmptySpec.swift */,
+			);
+			name = Specs;
 			sourceTree = "<group>";
 		};
 		AAF996A2ED7E75145D7CB751 /* Pods */ = {
@@ -382,6 +393,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				627E02B31D0AC8B700B7529E /* EmptySpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -529,10 +541,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7AF8E97AC2B8ABFED0A372D9 /* Pods-Delirium_Tests.debug.xcconfig */;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -548,10 +557,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E21C7DC195FA3217D96FDE58 /* Pods-Delirium_Tests.release.xcconfig */;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "Tests/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
