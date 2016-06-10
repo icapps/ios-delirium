@@ -12,6 +12,8 @@
 
 - [Installation](#installation)
 - [Features](#features)
+  - [Animations](#animations)
+    - [Shake](#shake)
 - [Bucket List](#bucket-list)
 - [Author](#author)
 - [License](#license)
@@ -26,11 +28,26 @@ pod 'Delirium', '~> 0.1'
 
 ## Features
 
+### Animations
+
+#### Shake
+
+You can shake a UIView with this handy `shake` function.
+
+```swift
+let view: UIView = ...
+
+// Shake the view with the default `duration` of 0.07 seconds and a `repeatCount` of 4.
+view.shake()
+
+// You can also pass a custom `duration` or `repeatCount` is wanted.
+view.shake(repeatCount: 10, duration: 1.0)
+```
+
 ## Bucket List
 
 Here is an overview what is on our todo list.
 
-- [ ] Add `UIView` shake.
 - [ ] Add `UIView` Wiggle.
 - [ ] Add pin view component.
 
