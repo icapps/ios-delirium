@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="IgX-P9-jcv">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Alert View Controller-->
+        <scene sceneID="soy-j7-yDc">
+            <objects>
+                <viewController id="IgX-P9-jcv" customClass="AlertViewController" customModule="Delirium_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kns-Uq-FBF"/>
+                        <viewControllerLayoutGuide type="bottom" id="zHl-Kc-57X"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8l1-o0-N8W">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Show an alert controller that is constructed from an NSError." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EgM-jy-d8r">
+                                <rect key="frame" x="170" y="120" width="260" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="260" id="8QU-xb-qVW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w5Y-9y-AhE">
+                                <rect key="frame" x="259" y="468" width="82" height="32"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                <state key="normal" title="Show error"/>
+                                <connections>
+                                    <action selector="showError:" destination="IgX-P9-jcv" eventType="touchUpInside" id="1i8-jL-qcw"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="zHl-Kc-57X" firstAttribute="top" secondItem="w5Y-9y-AhE" secondAttribute="bottom" constant="100" id="amu-Ih-RQr"/>
+                            <constraint firstItem="w5Y-9y-AhE" firstAttribute="centerX" secondItem="8l1-o0-N8W" secondAttribute="centerX" id="g0l-UC-eA4"/>
+                            <constraint firstItem="EgM-jy-d8r" firstAttribute="centerX" secondItem="8l1-o0-N8W" secondAttribute="centerX" id="lC5-Bd-BWM"/>
+                            <constraint firstItem="EgM-jy-d8r" firstAttribute="top" secondItem="kns-Uq-FBF" secondAttribute="bottom" constant="100" id="rCh-sp-7km"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sUS-EH-a5e" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1153" y="387"/>
+        </scene>
+    </scenes>
+</document>
