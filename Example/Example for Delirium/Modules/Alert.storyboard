@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="IgX-P9-jcv">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Alert View Controller-->
+        <scene sceneID="soy-j7-yDc">
+            <objects>
+                <viewController id="IgX-P9-jcv" customClass="AlertViewController" customModule="Delirium_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kns-Uq-FBF"/>
+                        <viewControllerLayoutGuide type="bottom" id="zHl-Kc-57X"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8l1-o0-N8W">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Show an alert controller that is constructed from an NSError." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EgM-jy-d8r">
+                                <rect key="frame" x="170" y="50" width="260" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="260" id="8QU-xb-qVW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w5Y-9y-AhE">
+                                <rect key="frame" x="228" y="108" width="145" height="32"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                <state key="normal" title="Show NSError error"/>
+                                <connections>
+                                    <action selector="showError:" destination="IgX-P9-jcv" eventType="touchUpInside" id="1i8-jL-qcw"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Show an alert controller that is constructed from an ErrorType." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mB6-PO-m5R">
+                                <rect key="frame" x="170" y="170" width="260" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="260" id="TYI-lw-Q6Z"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d9t-PN-tR3">
+                                <rect key="frame" x="221" y="228" width="159" height="32"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                <state key="normal" title="Show ErrorType error"/>
+                                <connections>
+                                    <action selector="showErrorType:" destination="IgX-P9-jcv" eventType="touchUpInside" id="Rp6-Gu-hgo"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cjn-oQ-Fr0">
+                                <rect key="frame" x="222" y="348" width="157" height="32"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                <state key="normal" title="Show error with retry"/>
+                                <connections>
+                                    <action selector="showRetryError:" destination="IgX-P9-jcv" eventType="touchUpInside" id="XPt-J1-yOE"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="When an error occurs you can always try to execute again." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o1l-l0-NNP">
+                                <rect key="frame" x="170" y="290" width="260" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="260" id="loE-HX-0xc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="mB6-PO-m5R" firstAttribute="top" secondItem="w5Y-9y-AhE" secondAttribute="bottom" constant="30" id="0D2-Qt-0lN"/>
+                            <constraint firstItem="o1l-l0-NNP" firstAttribute="top" secondItem="d9t-PN-tR3" secondAttribute="bottom" constant="30" id="Koe-eB-igK"/>
+                            <constraint firstItem="o1l-l0-NNP" firstAttribute="centerX" secondItem="8l1-o0-N8W" secondAttribute="centerX" id="MMf-5G-ikD"/>
+                            <constraint firstItem="Cjn-oQ-Fr0" firstAttribute="centerX" secondItem="8l1-o0-N8W" secondAttribute="centerX" id="Mwq-28-Va8"/>
+                            <constraint firstItem="d9t-PN-tR3" firstAttribute="top" secondItem="mB6-PO-m5R" secondAttribute="bottom" constant="10" id="ORh-U9-lV9"/>
+                            <constraint firstItem="w5Y-9y-AhE" firstAttribute="top" secondItem="EgM-jy-d8r" secondAttribute="bottom" constant="10" id="SMH-m4-vz8"/>
+                            <constraint firstItem="mB6-PO-m5R" firstAttribute="centerX" secondItem="8l1-o0-N8W" secondAttribute="centerX" id="Wwm-9h-gMu"/>
+                            <constraint firstItem="Cjn-oQ-Fr0" firstAttribute="top" secondItem="o1l-l0-NNP" secondAttribute="bottom" constant="10" id="aDh-rw-yqj"/>
+                            <constraint firstItem="w5Y-9y-AhE" firstAttribute="centerX" secondItem="8l1-o0-N8W" secondAttribute="centerX" id="g0l-UC-eA4"/>
+                            <constraint firstItem="EgM-jy-d8r" firstAttribute="centerX" secondItem="8l1-o0-N8W" secondAttribute="centerX" id="lC5-Bd-BWM"/>
+                            <constraint firstItem="d9t-PN-tR3" firstAttribute="centerX" secondItem="8l1-o0-N8W" secondAttribute="centerX" id="pps-I9-aDQ"/>
+                            <constraint firstItem="EgM-jy-d8r" firstAttribute="top" secondItem="kns-Uq-FBF" secondAttribute="bottom" constant="30" id="rCh-sp-7km"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sUS-EH-a5e" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1153" y="387"/>
+        </scene>
+    </scenes>
+</document>

@@ -32,7 +32,7 @@
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BFX-e5-e1U" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController id="W8M-Du-Y9x" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="C69-JX-GJe">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="C69-JX-GJe">
                         <rect key="frame" x="0.0" y="0.0" width="1920" height="145"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

@@ -14,6 +14,7 @@ Pod::Spec.new do |s|
 Delirium contains a set of UI components for reuse. Like for example:
 
 - Shake your `UIView`.
+- Present a `UIAlertController` from an `NSError`.
                        DESC
 
   s.homepage         = 'https://github.com/icapps/ios-delirium'
@@ -26,4 +27,5 @@ Delirium contains a set of UI components for reuse. Like for example:
   s.tvos.deployment_target = '9.0'
 
   s.source_files = 'Sources/**/*'
+  s.resource = 'Assets/Delirium.bundle'
 end
