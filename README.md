@@ -48,6 +48,7 @@ view.shake(repeatCount: 10, duration: 1.0)
 
 Here is an overview what is on our todo list.
 
+- [ ] Easily present an NSError from an `UIAlertController`.
 - [ ] Add `UIView` Wiggle.
 - [ ] Add pin view component.
 
