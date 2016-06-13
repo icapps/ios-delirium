@@ -5,10 +5,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--Pin View Controller-->
+        <!--Custom Pin View Controller-->
         <scene sceneID="V4i-PH-IMR">
             <objects>
-                <viewController id="9jL-gF-MHs" customClass="PinViewController" customModule="Delirium_Example" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="9jL-gF-MHs" customClass="CustomPinViewController" customModule="Delirium_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Q5b-ov-SRE"/>
                         <viewControllerLayoutGuide type="bottom" id="j0u-hK-GSM"/>
@@ -16,53 +16,7 @@
                     <view key="view" contentMode="scaleToFill" id="uxt-R2-Hc3">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Show the pin flow for setting up your pin code." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qYU-nP-MRr">
-                                <rect key="frame" x="170" y="50" width="260" height="48"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="260" id="VRP-JF-dDE"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="20"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Wh-Gc-F6p">
-                                <rect key="frame" x="246" y="108" width="108" height="32"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
-                                <state key="normal" title="Setup your pin"/>
-                                <connections>
-                                    <action selector="setupPin:" destination="9jL-gF-MHs" eventType="touchUpInside" id="azC-83-QTl"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your pin code to verify that it's you." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EoX-EQ-SQb">
-                                <rect key="frame" x="170" y="170" width="260" height="48"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="260" id="ngw-ae-cbw"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="20"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3J5-Ck-g1J">
-                                <rect key="frame" x="244" y="228" width="112" height="32"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
-                                <state key="normal" title="Verify pin code"/>
-                                <connections>
-                                    <action selector="verifyPin:" destination="9jL-gF-MHs" eventType="touchUpInside" id="OyM-ri-6XA"/>
-                                </connections>
-                            </button>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="qYU-nP-MRr" firstAttribute="centerX" secondItem="uxt-R2-Hc3" secondAttribute="centerX" id="68K-KB-hix"/>
-                            <constraint firstItem="5Wh-Gc-F6p" firstAttribute="top" secondItem="qYU-nP-MRr" secondAttribute="bottom" constant="10" id="Afc-0z-rl6"/>
-                            <constraint firstItem="EoX-EQ-SQb" firstAttribute="centerX" secondItem="uxt-R2-Hc3" secondAttribute="centerX" id="JPp-Uq-Jce"/>
-                            <constraint firstItem="EoX-EQ-SQb" firstAttribute="top" secondItem="5Wh-Gc-F6p" secondAttribute="bottom" constant="30" id="QAe-a7-KKy"/>
-                            <constraint firstItem="3J5-Ck-g1J" firstAttribute="centerX" secondItem="uxt-R2-Hc3" secondAttribute="centerX" id="Wpm-c5-Pur"/>
-                            <constraint firstItem="3J5-Ck-g1J" firstAttribute="top" secondItem="EoX-EQ-SQb" secondAttribute="bottom" constant="10" id="oLT-ck-Jux"/>
-                            <constraint firstItem="qYU-nP-MRr" firstAttribute="top" secondItem="Q5b-ov-SRE" secondAttribute="bottom" constant="30" id="uSv-VO-o2w"/>
-                            <constraint firstItem="5Wh-Gc-F6p" firstAttribute="centerX" secondItem="uxt-R2-Hc3" secondAttribute="centerX" id="uvO-ee-qe7"/>
-                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tsa-lt-u6w" userLabel="First Responder" sceneMemberID="firstResponder"/>
