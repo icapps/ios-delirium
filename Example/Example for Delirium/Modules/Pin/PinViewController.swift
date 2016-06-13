@@ -8,6 +8,10 @@
 
 import UIKit
 
+struct PinConfiguration {
+    var numberOfDigits: Int = 4
+}
+
 protocol PinViewControllerDelegate {
     
     func pinViewController(controller: PinViewController, didEnterPin pin: String)
@@ -16,25 +20,26 @@ protocol PinViewControllerDelegate {
 
 class PinViewController: UIViewController {
     
+    // MARK: - Configuration
+    
     var delegate: PinViewControllerDelegate?
+    private var configuration: PinConfiguration!
     
     // MARK: - Outlets
     
     @IBOutlet var dotView: PinDotView!
-    @IBOutlet var paddingConstraints: [NSLayoutConstraint]!
-    @IBOutlet var sizeConstraints: [NSLayoutConstraint]!
     
     // MARK: - Model
     
-    private let viewModel = PinViewModel()
+    private var viewModel: PinViewModel!
     
     // MARK: - View flow
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        for constraint in paddingConstraints { constraint.constant = 15.0 }
-        for constraint in sizeConstraints { constraint.constant = 60.0 }
+        viewModel = PinViewModel(withConfiguration: configuration)
+        dotView.configuration = configuration
     }
     
     // MARK: - Actions
@@ -58,14 +63,12 @@ class PinViewController: UIViewController {
 
 extension UIViewController {
     
-    // MARK: - Add pin view
+    // MARK: - Controller
     
-    func addPinChildViewController() -> PinViewController {
+    func pinViewController(withConfiguration configuration: PinConfiguration = PinConfiguration()) -> PinViewController {
         let storyboard = UIStoryboard(name: "PinViewController", bundle: nil)
         let controller = storyboard.instantiateInitialViewController() as! PinViewController
-        addChildViewController(controller)
-        view.addSubview(controller.view)
-        
+        controller.configuration = configuration
         return controller
     }
     

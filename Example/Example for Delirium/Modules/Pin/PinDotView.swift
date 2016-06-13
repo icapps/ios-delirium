@@ -12,26 +12,12 @@ class PinDotView: UIView {
     
     // MARK: - Configuration
     
-    var size: Int = 4 {
-        didSet {
-            invalidateIntrinsicContentSize()
-            setNeedsDisplay()
-        }
-    }
+    var configuration: PinConfiguration!
     
-    var dotSize: CGFloat = 16.0 {
-        didSet {
-            invalidateIntrinsicContentSize()
-            setNeedsDisplay()
-        }
-    }
+    // MARK: - Layout Configuration
     
-    var dotPadding: CGFloat = 6.0 {
-        didSet {
-            invalidateIntrinsicContentSize()
-            setNeedsDisplay()
-        }
-    }
+    private let dotSize: CGFloat = 10.0
+    private let dotPadding: CGFloat = 5.0
     
     // MARK: - Size
     
@@ -44,7 +30,7 @@ class PinDotView: UIView {
     // MARK: - Size
     
     override func intrinsicContentSize() -> CGSize {
-        let width: CGFloat = dotSize * CGFloat(size) + (dotPadding * (CGFloat(size) - 1))
+        let width: CGFloat = dotSize * CGFloat(configuration.numberOfDigits) + (dotPadding * (CGFloat(configuration.numberOfDigits) - 1))
         return CGSize(width: width, height: dotSize)
     }
     
@@ -54,7 +40,7 @@ class PinDotView: UIView {
         let context = UIGraphicsGetCurrentContext()
         
         var previousBubbleRect: CGRect? = nil
-        for index in 0..<size {
+        for index in 0..<configuration.numberOfDigits {
             var x: CGFloat = 0
             if let previousBubbleRect = previousBubbleRect {
                 x = CGRectGetMaxX(previousBubbleRect) + dotPadding

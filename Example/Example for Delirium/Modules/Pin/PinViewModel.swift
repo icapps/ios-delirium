@@ -12,12 +12,18 @@ class PinViewModel {
     
     // MARK: - Configuration
     
-    private let size: Int = 4
+    private let configuration: PinConfiguration
+    
+    // MARK: - Init
+    
+    init(withConfiguration configuration: PinConfiguration) {
+        self.configuration = configuration
+    }
     
     // MARK: - Properties
     
     var complete: Bool {
-        return code.count == size
+        return code.count == configuration.numberOfDigits
     }
     
     // MARK: - Code
@@ -31,7 +37,7 @@ class PinViewModel {
     // MARK: - Actions
     
     func add(number number: Int) -> Bool {
-        guard code.count < size else {
+        guard code.count < configuration.numberOfDigits else {
             return false
         }
         

@@ -8,23 +8,33 @@
 
 import UIKit
 
-class CustomPinViewController: UIViewController, PinViewControllerDelegate {
+class CustomPinViewController: UIViewController {
     
     // MARK: - View flow
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = "Enter your pin"
-        
-        let controller = addPinChildViewController()
-        controller.delegate = self
+        title = "Pin Code"
     }
     
-    // MARK: - PinViewControllerDelegate
+    // MARK: - Actions
+    
+    @IBAction func setupPinCode(sender: AnyObject) {
+        let configuration = PinConfiguration(numberOfDigits: 5)
+        let controller = pinViewController(withConfiguration: configuration)
+        controller.delegate = self
+        navigationController?.pushViewController(controller, animated: true)
+    }
+    
+}
+
+extension UIViewController: PinViewControllerDelegate {
     
     func pinViewController(controller: PinViewController, didEnterPin pin: String) {
-        print("🔑", pin)
+        let controller = UIAlertController(title: "Pin code", message: "The pincode you entered is \(pin).", preferredStyle: .Alert)
+        controller.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil))
+        presentViewController(controller, animated: true, completion: nil)
     }
     
 }
