@@ -15,7 +15,8 @@ class CustomPinViewController: UIViewController, PinViewControllerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let _ = addPinChildViewController()
+        let controller = addPinChildViewController()
+        controller.delegate = self
     }
     
     // MARK: - PinViewControllerDelegate

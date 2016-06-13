@@ -10,18 +10,36 @@ import UIKit
 
 class PinDotView: UIView {
     
-    let size: Int = 4
+    // MARK: - Configuration
+    
+    var size: Int = 4 {
+        didSet {
+            invalidateIntrinsicContentSize()
+            setNeedsDisplay()
+        }
+    }
+    
+    var dotSize: CGFloat = 20.0 {
+        didSet {
+            invalidateIntrinsicContentSize()
+            setNeedsDisplay()
+        }
+    }
+    
+    var dotPadding: CGFloat = 10.0 {
+        didSet {
+            invalidateIntrinsicContentSize()
+            setNeedsDisplay()
+        }
+    }
+    
+    // MARK: - Size
     
     var currentSize: Int = 0 {
         didSet {
             setNeedsDisplay()
         }
     }
-    
-    // MARK: - Configuration
-    
-    let dotSize: CGFloat = 20.0
-    let dotPadding: CGFloat = 10.0
     
     // MARK: - Size
     

@@ -14,6 +14,12 @@ class PinViewModel {
     
     private let size: Int = 4
     
+    // MARK: - Properties
+    
+    var complete: Bool {
+        return code.count == size
+    }
+    
     // MARK: - Code
     
     private var code = [Int]()
@@ -24,22 +30,22 @@ class PinViewModel {
     
     // MARK: - Actions
     
-    func add(number number: Int) {
+    func add(number number: Int) -> Bool {
         guard code.count < size else {
-            return
+            return false
         }
         
         code.append(number)
-        print("🍞", codeString)
+        return true
     }
     
-    func remove() {
+    func remove() -> Bool {
         guard code.count > 0 else {
-            return
+            return false
         }
         
         code.removeLast()
-        print("❌", codeString)
+        return true
     }
     
 }

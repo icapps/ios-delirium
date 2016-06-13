@@ -16,6 +16,8 @@ protocol PinViewControllerDelegate {
 
 class PinViewController: UIViewController {
     
+    var delegate: PinViewControllerDelegate?
+    
     // MARK: - Outlets
     
     @IBOutlet var dotView: PinDotView!
@@ -31,29 +33,25 @@ class PinViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let padding: CGFloat = 20.0
-        for constraint in paddingConstraints {
-            constraint.constant = padding
-        }
-        
-        let size: CGFloat = 60.0
-        for constraint in sizeConstraints {
-            constraint.constant = size
-        }
+        for constraint in paddingConstraints { constraint.constant = 20.0 }
+        for constraint in sizeConstraints { constraint.constant = 60.0 }
     }
     
     // MARK: - Actions
     
     @IBAction func pressNumber(sender: AnyObject) {
-        if let button = sender as? UIButton {
-            viewModel.add(number: button.tag)
+        if let button = sender as? UIButton where viewModel.add(number: button.tag) {
             dotView.currentSize = viewModel.codeString.characters.count
+            if viewModel.complete {
+                delegate?.pinViewController(self, didEnterPin: viewModel.codeString)
+            }
         }
     }
     
     @IBAction func pressDelete(sender: AnyObject) {
-        viewModel.remove()
-        dotView.currentSize = viewModel.codeString.characters.count
+        if viewModel.remove() {
+            dotView.currentSize = viewModel.codeString.characters.count
+        }
     }
     
 }
