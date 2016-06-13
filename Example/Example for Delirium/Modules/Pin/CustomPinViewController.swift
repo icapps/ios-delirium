@@ -15,15 +15,7 @@ class CustomPinViewController: UIViewController, PinViewControllerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // let controller = PinViewController()
-        // addChildViewController(controller)
-        // view.addSubview(controller.view)
-        
-        let storyboard = UIStoryboard(name: "PinViewController", bundle: nil)
-        if let controller = storyboard.instantiateInitialViewController() {
-            addChildViewController(controller)
-            view.addSubview(controller.view)
-        }
+        let _ = addPinChildViewController()
     }
     
     // MARK: - PinViewControllerDelegate

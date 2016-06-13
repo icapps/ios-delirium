@@ -18,6 +18,7 @@ class PinViewController: UIViewController {
     
     // MARK: - Outlets
     
+    @IBOutlet var dotView: PinDotView!
     @IBOutlet var paddingConstraints: [NSLayoutConstraint]!
     @IBOutlet var sizeConstraints: [NSLayoutConstraint]!
     
@@ -46,11 +47,28 @@ class PinViewController: UIViewController {
     @IBAction func pressNumber(sender: AnyObject) {
         if let button = sender as? UIButton {
             viewModel.add(number: button.tag)
+            dotView.currentSize = viewModel.codeString.characters.count
         }
     }
     
     @IBAction func pressDelete(sender: AnyObject) {
         viewModel.remove()
+        dotView.currentSize = viewModel.codeString.characters.count
+    }
+    
+}
+
+extension UIViewController {
+    
+    // MARK: - Add pin view
+    
+    func addPinChildViewController() -> PinViewController {
+        let storyboard = UIStoryboard(name: "PinViewController", bundle: nil)
+        let controller = storyboard.instantiateInitialViewController() as! PinViewController
+        addChildViewController(controller)
+        view.addSubview(controller.view)
+        
+        return controller
     }
     
 }
