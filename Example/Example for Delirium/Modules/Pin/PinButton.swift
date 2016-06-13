@@ -19,4 +19,15 @@ class PinButton: UIButton {
         layer.masksToBounds = true
     }
     
+    // MARK: - Drawing
+    
+    override func drawRect(rect: CGRect) {
+        let context = UIGraphicsGetCurrentContext()
+        
+        CGContextSetFillColorWithColor(context, tintColor.CGColor)
+        CGContextFillEllipseInRect(context, rect)
+        CGContextSetFillColorWithColor(context, UIColor.whiteColor().CGColor)
+        CGContextFillEllipseInRect(context, CGRectInset(rect, 1.0, 1.0))
+    }
+    
 }

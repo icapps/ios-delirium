@@ -62,11 +62,11 @@ class PinDotView: UIView {
             let rect = CGRect(x: x, y: 0, width: dotSize, height: dotSize)
             previousBubbleRect = rect
             
-            CGContextSetFillColorWithColor(context, UIColor.redColor().CGColor)
+            CGContextSetFillColorWithColor(context, tintColor.CGColor)
             CGContextFillEllipseInRect(context, rect)
             if index >= currentSize {
                 CGContextSetFillColorWithColor(context, UIColor.whiteColor().CGColor)
-                CGContextFillEllipseInRect(context, CGRectInset(rect, 2.0, 2.0))
+                CGContextFillEllipseInRect(context, CGRectInset(rect, 1.0, 1.0))
             }
         }
     }
