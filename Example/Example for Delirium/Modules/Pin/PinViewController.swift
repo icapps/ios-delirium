@@ -33,7 +33,7 @@ class PinViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        for constraint in paddingConstraints { constraint.constant = 20.0 }
+        for constraint in paddingConstraints { constraint.constant = 15.0 }
         for constraint in sizeConstraints { constraint.constant = 60.0 }
     }
     

@@ -19,14 +19,14 @@ class PinDotView: UIView {
         }
     }
     
-    var dotSize: CGFloat = 20.0 {
+    var dotSize: CGFloat = 16.0 {
         didSet {
             invalidateIntrinsicContentSize()
             setNeedsDisplay()
         }
     }
     
-    var dotPadding: CGFloat = 10.0 {
+    var dotPadding: CGFloat = 6.0 {
         didSet {
             invalidateIntrinsicContentSize()
             setNeedsDisplay()
