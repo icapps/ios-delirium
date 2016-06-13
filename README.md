@@ -14,6 +14,8 @@
 - [Features](#features)
   - [Animations](#animations)
     - [Shake](#shake)
+  - [Controllers](#controllers)
+    - [Alert](#alert)
 - [Bucket List](#bucket-list)
 - [Author](#author)
 - [License](#license)
@@ -44,11 +46,42 @@ view.shake()
 view.shake(repeatCount: 10, duration: 1.0)
 ```
 
+## Controllers
+
+### Alert
+
+You can present an `NSError` from your `UIViewController` instance. This will present a `UIAlertController` with a title translated by the 'delirium.alert.button.ok' key. And with a description `localizedDescription` from `NSError`.
+
+```swift
+let error: NSError = ...
+presentAlertController(withError: error)
+```
+
+When you want to present an 'ErrorType' than you'll have to conform to the `AlertError` protocol. This will make sure that the `ErrorType` has a title and a description to show in the alert.
+
+```swift
+struct SomeError: AlertError {
+  var title: String { return "Some error occured" }
+  var description: String { return "This is the reason why some error occured." }
+}
+
+let error: SomeError = ...
+presentAlertController(withError: error)
+```
+
+All the `presentAlertController` function can have a `retry` closure. When implementing this closure you will get a 'Try again' button in the alert. When tapping this button the closure will be triggered.
+
+```swift
+let error: NSError = ...
+presentAlertController(withError: error) {
+  // Tapped retry.
+}
+```
+
 ## Bucket List
 
 Here is an overview what is on our todo list.
 
-- [ ] Easily present an NSError from an `UIAlertController`.
 - [ ] Add `UIView` Wiggle.
 - [ ] Add pin view component.
 
