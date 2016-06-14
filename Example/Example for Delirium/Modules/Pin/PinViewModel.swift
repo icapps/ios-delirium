@@ -45,13 +45,8 @@ class PinViewModel {
         return true
     }
     
-    func remove() -> Bool {
-        guard code.count > 0 else {
-            return false
-        }
-        
-        code.removeLast()
-        return true
+    func clean() {
+        code.removeAll()
     }
     
 }

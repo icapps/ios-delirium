@@ -16,8 +16,8 @@ class PinDotView: UIView {
     
     // MARK: - Layout Configuration
     
-    private let dotSize: CGFloat = 10.0
-    private let dotPadding: CGFloat = 5.0
+    private let dotSize: CGFloat = 12.0
+    private let dotPadding: CGFloat = 12.0
     
     // MARK: - Size
     
@@ -48,11 +48,11 @@ class PinDotView: UIView {
             let rect = CGRect(x: x, y: 0, width: dotSize, height: dotSize)
             previousBubbleRect = rect
             
-            CGContextSetFillColorWithColor(context, tintColor.CGColor)
+            CGContextSetFillColorWithColor(context, UIColor(red:0.72, green:0.75, blue:0.80, alpha:1.00).CGColor)
             CGContextFillEllipseInRect(context, rect)
             if index >= currentSize {
                 CGContextSetFillColorWithColor(context, UIColor.whiteColor().CGColor)
-                CGContextFillEllipseInRect(context, CGRectInset(rect, 1.0, 1.0))
+                CGContextFillEllipseInRect(context, CGRectInset(rect, 0.5, 0.5))
             }
         }
     }

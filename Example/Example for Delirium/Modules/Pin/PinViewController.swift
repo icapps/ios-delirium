@@ -54,9 +54,8 @@ class PinViewController: UIViewController {
     }
     
     @IBAction func pressDelete(sender: AnyObject) {
-        if viewModel.remove() {
-            dotView.currentSize = viewModel.codeString.characters.count
-        }
+        viewModel.clean()
+        dotView.currentSize = 0
     }
     
 }
