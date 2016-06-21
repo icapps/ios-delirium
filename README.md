@@ -16,6 +16,7 @@
     - [Shake](#shake)
   - [Controllers](#controllers)
     - [Alert](#alert)
+    - [Pin](#pin)
 - [Bucket List](#bucket-list)
 - [Author](#author)
 - [License](#license)
@@ -78,12 +79,60 @@ presentAlertController(withError: error) {
 }
 ```
 
+### Pin
+
+Present a pin view controller is really easy with _Delirium_.
+
+```swift
+let controller = pinViewController()
+controller.delegate = self
+navigationController?.pushViewController(controller, animated: true)
+```
+
+When you set the delegate to be the current controller. Than this controller needs to conform to `PinViewControllerDelegate`. Which means that the following method should be implemented.
+
+```swift
+func pinViewController(controller: PinViewController, didEnterPin pin: String) {
+    // This method is called whenever your pin code is complete.
+    // So when the `numberOfDigitis` matched the pin count.
+}
+```
+
+You can pass a custom configuration to the `PinViewController`. Here are some of the options that can be configured:
+
+```swift
+let configuration = PinConfiguration()
+
+// Define the number of digits you want to enter.
+configuration.numberOfDigits = 4
+// The title to be displayed in the navigation bar.
+configuration.title = "Enter your pin"
+// The color of the filled dot at the top of the pin view.
+configuration.dotColor = UIColor(red:0.11, green:0.68, blue:0.93, alpha:1.00)
+// The color of the stroked dot at the top of the pin view.
+configuration.dotStrokeColor = UIColor(red:0.73, green:0.77, blue:0.81, alpha:1.00)
+// The color of the stroked pin number button.
+configuration.numberStrokeColor = UIColor(red:0.75, green:0.79, blue:0.83, alpha:1.00)
+// The color of the highlighted background in the pin number button.
+configuration.selectionBackgroundColor = UIColor(red:0.90, green:0.91, blue:0.93, alpha:1.00)
+// The color of the background in the pin number button.
+configuration.backgroundColor = UIColor.whiteColor()
+// The color of the text in the pin number button.
+configuration.numberTextColor = UIColor(red:0.01, green:0.13, blue:0.28, alpha:1.00)
+```
+
+You can set the configuration by passing the `configuration` instance to the `pinViewController()` method.
+
+```swift
+let configuration = PinConfiguration()
+let controller = pinViewController(withConfiguration: configuration)
+```
+
 ## Bucket List
 
 Here is an overview what is on our todo list.
 
 - [ ] Add `UIView` Wiggle.
-- [ ] Add pin view component.
 
 ## Author
 
