@@ -112,15 +112,6 @@
                                                     <action selector="pressNumber:" destination="hP3-ZD-Mzk" eventType="touchUpInside" id="LyN-bs-U5i"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zNS-Dd-9gt" customClass="PinButton" customModule="Delirium_Example" customModuleProvider="target">
-                                                <rect key="frame" x="180" y="270" width="70" height="70"/>
-                                                <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="30"/>
-                                                <state key="normal" title="C"/>
-                                                <connections>
-                                                    <action selector="pressDelete:" destination="hP3-ZD-Mzk" eventType="touchUpInside" id="YPP-a7-9sc"/>
-                                                </connections>
-                                            </button>
                                             <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ich-76-O0h" customClass="PinButton" customModule="Delirium_Example" customModuleProvider="target">
                                                 <rect key="frame" x="180" y="180" width="70" height="70"/>
                                                 <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -128,6 +119,15 @@
                                                 <state key="normal" title="9"/>
                                                 <connections>
                                                     <action selector="pressNumber:" destination="hP3-ZD-Mzk" eventType="touchUpInside" id="u9f-dF-Fo7"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zNS-Dd-9gt" customClass="PinButton" customModule="Delirium_Example" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="270" width="70" height="70"/>
+                                                <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="30"/>
+                                                <state key="normal" title="C"/>
+                                                <connections>
+                                                    <action selector="pressDelete:" destination="hP3-ZD-Mzk" eventType="touchUpInside" id="YPP-a7-9sc"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -153,25 +153,30 @@
                                             <constraint firstItem="lsy-NC-Zzg" firstAttribute="height" secondItem="GXk-ch-nf2" secondAttribute="height" id="QhZ-u1-tNt"/>
                                             <constraint firstItem="Jeq-K9-xkE" firstAttribute="top" secondItem="wcd-D7-Mtk" secondAttribute="bottom" constant="20" id="QsZ-sM-rOR"/>
                                             <constraint firstItem="2ph-t8-MAY" firstAttribute="leading" secondItem="qGh-ga-GC8" secondAttribute="trailing" constant="20" id="RQK-AA-Imw"/>
+                                            <constraint firstItem="rep-HR-5Dp" firstAttribute="leading" secondItem="zNS-Dd-9gt" secondAttribute="trailing" constant="20" id="RTy-rE-Tmr"/>
                                             <constraint firstItem="Jeq-K9-xkE" firstAttribute="height" secondItem="2ph-t8-MAY" secondAttribute="height" id="Ruo-O5-S2y"/>
                                             <constraint firstItem="2ph-t8-MAY" firstAttribute="width" secondItem="qGh-ga-GC8" secondAttribute="width" id="Vdu-Le-H4F"/>
                                             <constraint firstItem="2ph-t8-MAY" firstAttribute="top" secondItem="Sms-Kh-jst" secondAttribute="bottom" constant="20" id="VtD-fI-Cg7"/>
                                             <constraint firstItem="qGh-ga-GC8" firstAttribute="leading" secondItem="UUo-y9-d9K" secondAttribute="leading" id="XoY-rb-ZdY"/>
+                                            <constraint firstItem="zNS-Dd-9gt" firstAttribute="top" secondItem="GXk-ch-nf2" secondAttribute="bottom" constant="20" id="Z65-Kw-NtG"/>
                                             <constraint firstItem="Jeq-K9-xkE" firstAttribute="leading" secondItem="2ph-t8-MAY" secondAttribute="trailing" constant="20" id="bYT-2T-9CP"/>
                                             <constraint firstAttribute="bottom" secondItem="zNS-Dd-9gt" secondAttribute="bottom" id="cFQ-rv-Jer"/>
+                                            <constraint firstItem="zNS-Dd-9gt" firstAttribute="leading" secondItem="GXk-ch-nf2" secondAttribute="leading" id="chz-Dy-xy5"/>
                                             <constraint firstItem="ich-76-O0h" firstAttribute="top" secondItem="Jeq-K9-xkE" secondAttribute="bottom" constant="20" id="dJa-bO-rBh"/>
                                             <constraint firstItem="ich-76-O0h" firstAttribute="height" secondItem="lsy-NC-Zzg" secondAttribute="height" id="ehg-bd-45i"/>
-                                            <constraint firstItem="zNS-Dd-9gt" firstAttribute="leading" secondItem="rep-HR-5Dp" secondAttribute="trailing" constant="20" id="f6M-0L-vhc"/>
                                             <constraint firstItem="Sms-Kh-jst" firstAttribute="width" secondItem="aKR-tQ-ZIy" secondAttribute="width" id="f8S-2N-5RE"/>
+                                            <constraint firstItem="zNS-Dd-9gt" firstAttribute="leading" secondItem="GXk-ch-nf2" secondAttribute="leading" id="flj-Ao-hi5"/>
                                             <constraint firstItem="zNS-Dd-9gt" firstAttribute="height" secondItem="rep-HR-5Dp" secondAttribute="height" id="gXA-O9-VPT"/>
+                                            <constraint firstItem="zNS-Dd-9gt" firstAttribute="top" secondItem="GXk-ch-nf2" secondAttribute="bottom" constant="20" id="goe-rf-UDo"/>
                                             <constraint firstItem="aKR-tQ-ZIy" firstAttribute="top" secondItem="UUo-y9-d9K" secondAttribute="top" id="gtN-On-WeG"/>
-                                            <constraint firstItem="zNS-Dd-9gt" firstAttribute="top" secondItem="ich-76-O0h" secondAttribute="bottom" constant="20" id="i1t-3b-qII"/>
                                             <constraint firstItem="lsy-NC-Zzg" firstAttribute="leading" secondItem="GXk-ch-nf2" secondAttribute="trailing" constant="20" id="i5P-qt-lcA"/>
                                             <constraint firstItem="rep-HR-5Dp" firstAttribute="height" secondItem="lsy-NC-Zzg" secondAttribute="height" id="izN-Lf-94G"/>
                                             <constraint firstItem="2ph-t8-MAY" firstAttribute="height" secondItem="qGh-ga-GC8" secondAttribute="height" id="kBI-lL-lEb"/>
                                             <constraint firstItem="qGh-ga-GC8" firstAttribute="width" secondItem="aKR-tQ-ZIy" secondAttribute="width" id="lTB-5t-LBx"/>
                                             <constraint firstItem="lsy-NC-Zzg" firstAttribute="top" secondItem="2ph-t8-MAY" secondAttribute="bottom" constant="20" id="n2e-kX-aCp"/>
                                             <constraint firstItem="GXk-ch-nf2" firstAttribute="width" secondItem="qGh-ga-GC8" secondAttribute="width" id="qVg-Th-cH9"/>
+                                            <constraint firstItem="rep-HR-5Dp" firstAttribute="leading" secondItem="lsy-NC-Zzg" secondAttribute="leading" id="r7f-2C-foY"/>
+                                            <constraint firstItem="zNS-Dd-9gt" firstAttribute="top" secondItem="GXk-ch-nf2" secondAttribute="bottom" constant="20" id="sKi-mW-wrQ"/>
                                             <constraint firstItem="wcd-D7-Mtk" firstAttribute="leading" secondItem="Sms-Kh-jst" secondAttribute="trailing" constant="20" id="sST-Na-CLA"/>
                                             <constraint firstItem="GXk-ch-nf2" firstAttribute="height" secondItem="qGh-ga-GC8" secondAttribute="height" id="tQt-e2-u4R"/>
                                             <constraint firstItem="Sms-Kh-jst" firstAttribute="height" secondItem="aKR-tQ-ZIy" secondAttribute="height" id="tcc-ba-nBy"/>
@@ -180,6 +185,16 @@
                                             <constraint firstAttribute="trailing" secondItem="Jeq-K9-xkE" secondAttribute="trailing" id="w5Q-0S-6ng"/>
                                             <constraint firstAttribute="trailing" secondItem="zNS-Dd-9gt" secondAttribute="trailing" id="wnS-c9-aLf"/>
                                         </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="Z65-Kw-NtG"/>
+                                                <exclude reference="cFQ-rv-Jer"/>
+                                                <exclude reference="flj-Ao-hi5"/>
+                                                <exclude reference="goe-rf-UDo"/>
+                                                <exclude reference="wnS-c9-aLf"/>
+                                                <exclude reference="RTy-rE-Tmr"/>
+                                            </mask>
+                                        </variation>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -201,6 +216,17 @@
                     </view>
                     <connections>
                         <outlet property="dotView" destination="0YG-Dh-ycm" id="WFd-c5-jTC"/>
+                        <outletCollection property="pinButtons" destination="aKR-tQ-ZIy" collectionClass="NSMutableArray" id="GeX-qO-Z5T"/>
+                        <outletCollection property="pinButtons" destination="Sms-Kh-jst" collectionClass="NSMutableArray" id="FUC-3Y-ovC"/>
+                        <outletCollection property="pinButtons" destination="wcd-D7-Mtk" collectionClass="NSMutableArray" id="JeP-IP-4rU"/>
+                        <outletCollection property="pinButtons" destination="qGh-ga-GC8" collectionClass="NSMutableArray" id="hX7-2S-soB"/>
+                        <outletCollection property="pinButtons" destination="2ph-t8-MAY" collectionClass="NSMutableArray" id="DDK-Vv-oFV"/>
+                        <outletCollection property="pinButtons" destination="Jeq-K9-xkE" collectionClass="NSMutableArray" id="gV8-t0-uFZ"/>
+                        <outletCollection property="pinButtons" destination="GXk-ch-nf2" collectionClass="NSMutableArray" id="syh-5u-hL9"/>
+                        <outletCollection property="pinButtons" destination="lsy-NC-Zzg" collectionClass="NSMutableArray" id="Vw8-pE-ACu"/>
+                        <outletCollection property="pinButtons" destination="ich-76-O0h" collectionClass="NSMutableArray" id="FRi-Lh-WhJ"/>
+                        <outletCollection property="pinButtons" destination="rep-HR-5Dp" collectionClass="NSMutableArray" id="UeW-m4-emh"/>
+                        <outletCollection property="pinButtons" destination="zNS-Dd-9gt" collectionClass="NSMutableArray" id="dw3-yq-EpH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S0i-hB-bOV" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -12,7 +12,11 @@ class PinDotView: UIView {
     
     // MARK: - Configuration
     
-    var configuration: PinConfiguration!
+    var configuration = PinConfiguration() {
+        didSet {
+            setNeedsDisplay()
+        }
+    }
     
     // MARK: - Layout Configuration
     
@@ -48,11 +52,14 @@ class PinDotView: UIView {
             let rect = CGRect(x: x, y: 0, width: dotSize, height: dotSize)
             previousBubbleRect = rect
             
-            CGContextSetFillColorWithColor(context, UIColor(red:0.72, green:0.75, blue:0.80, alpha:1.00).CGColor)
-            CGContextFillEllipseInRect(context, rect)
             if index >= currentSize {
+                CGContextSetFillColorWithColor(context, configuration.dotStrokeColor.CGColor)
+                CGContextFillEllipseInRect(context, rect)
                 CGContextSetFillColorWithColor(context, UIColor.whiteColor().CGColor)
                 CGContextFillEllipseInRect(context, CGRectInset(rect, 0.5, 0.5))
+            } else {
+                CGContextSetFillColorWithColor(context, configuration.dotColor.CGColor)
+                CGContextFillEllipseInRect(context, rect)
             }
         }
     }

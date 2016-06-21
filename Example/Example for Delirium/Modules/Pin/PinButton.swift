@@ -10,12 +10,13 @@ import UIKit
 
 class PinButton: UIButton {
     
-    // MARK: - Init
+    // MARK: - Configuration
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        
-        setTitleColor(UIColor(red:0.07, green:0.18, blue:0.33, alpha:1.00), forState: .Normal)
+    var configuration = PinConfiguration() {
+        didSet {
+            setTitleColor(configuration.numberTextColor, forState: .Normal)
+            setNeedsDisplay()
+        }
     }
     
     // MARK: - Layout
@@ -40,12 +41,12 @@ class PinButton: UIButton {
     override func drawRect(rect: CGRect) {
         let context = UIGraphicsGetCurrentContext()
         
-        CGContextSetFillColorWithColor(context, UIColor(red:0.72, green:0.76, blue:0.80, alpha:1.00).CGColor)
+        CGContextSetFillColorWithColor(context, configuration.numberStrokeColor.CGColor)
         CGContextFillEllipseInRect(context, rect)
         if highlighted {
-            CGContextSetFillColorWithColor(context, UIColor(red:0.90, green:0.91, blue:0.93, alpha:1.00).CGColor)
+            CGContextSetFillColorWithColor(context, configuration.selectionBackgroundColor.CGColor)
         } else {
-            CGContextSetFillColorWithColor(context, UIColor.whiteColor().CGColor)
+            CGContextSetFillColorWithColor(context, configuration.backgroundColor.CGColor)
         }
         CGContextFillEllipseInRect(context, CGRectInset(rect, 0.5, 0.5))
     }

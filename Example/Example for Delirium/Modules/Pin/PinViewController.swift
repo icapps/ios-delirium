@@ -9,7 +9,21 @@
 import UIKit
 
 struct PinConfiguration {
+    
+    // The pin view configuration.
     var numberOfDigits: Int = 4
+    var title: String = "Enter your pin"
+    
+    // The dots configuration.
+    var dotColor = UIColor(red:0.11, green:0.68, blue:0.93, alpha:1.00)
+    var dotStrokeColor = UIColor(red:0.73, green:0.77, blue:0.81, alpha:1.00)
+    
+    // The number button configuration.
+    var numberStrokeColor = UIColor(red:0.75, green:0.79, blue:0.83, alpha:1.00)
+    var selectionBackgroundColor = UIColor(red:0.90, green:0.91, blue:0.93, alpha:1.00)
+    var backgroundColor = UIColor.whiteColor()
+    var numberTextColor = UIColor(red:0.01, green:0.13, blue:0.28, alpha:1.00)
+    
 }
 
 protocol PinViewControllerDelegate {
@@ -28,6 +42,7 @@ class PinViewController: UIViewController {
     // MARK: - Outlets
     
     @IBOutlet var dotView: PinDotView!
+    @IBOutlet var pinButtons: [PinButton]!
     
     // MARK: - Model
     
@@ -38,8 +53,14 @@ class PinViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        title = configuration.title
+        
         viewModel = PinViewModel(withConfiguration: configuration)
         dotView.configuration = configuration
+        
+        for pinButton in pinButtons {
+            pinButton.configuration = configuration
+        }
     }
     
     // MARK: - Actions

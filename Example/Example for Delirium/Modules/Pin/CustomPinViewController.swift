@@ -21,7 +21,7 @@ class CustomPinViewController: UIViewController {
     // MARK: - Actions
     
     @IBAction func setupPinCode(sender: AnyObject) {
-        let configuration = PinConfiguration(numberOfDigits: 5)
+        let configuration = PinConfiguration()
         let controller = pinViewController(withConfiguration: configuration)
         controller.delegate = self
         navigationController?.pushViewController(controller, animated: true)
