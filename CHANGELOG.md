@@ -1,5 +1,10 @@
 # Delirium
 
+## Version 0.3.0
+
+- Add some more documentation on the alert.
+- Add a pin controller.
+
 ## Version 0.2.0
 
 - Add a more convenient way to present a `UIAlertController` from an `NSError`.
