@@ -23,14 +23,20 @@ Delirium contains a set of UI components for reuse. Like for example:
   s.source           = { git: 'https://github.com/icapps/ios-delirium.git', tag: s.version.to_s }
   s.social_media_url = 'https://twitter.com/icapps'
 
+  # The platform definition.
   s.ios.deployment_target = '8.0'
   s.tvos.deployment_target = '9.0'
 
+  # The source files.
   s.source_files = 'Sources/**/*'
+
+  # The resource bundles for all the platforms.
   s.resource_bundles = {
-    'Delirium' => [
-      'Assets/**/*.strings',
-      'Assets/**/*.storyboard'
-    ]
+    'Delirium' => ['Assets/**/*.strings']
+  }
+
+  # The resource bundles for iOS only.
+  s.ios.resource_bundles = {
+    'Delirium' => ['Assets/**/*.storyboard']
   }
 end
