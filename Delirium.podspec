@@ -27,5 +27,10 @@ Delirium contains a set of UI components for reuse. Like for example:
   s.tvos.deployment_target = '9.0'
 
   s.source_files = 'Sources/**/*'
-  s.resource = 'Assets/Delirium.bundle'
+  s.resource_bundles = {
+    'Delirium' => [
+      'Assets/**/*.strings',
+      'Assets/**/*.storyboard'
+    ]
+  }
 end

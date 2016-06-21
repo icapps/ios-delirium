@@ -12,7 +12,7 @@ class BaseBundle {}
 
 extension NSBundle {
     
-    private static func deliriumBundle() -> NSBundle {
+    static func deliriumBundle() -> NSBundle {
         let bundlePath = NSBundle(forClass: BaseBundle.self).pathForResource("Delirium", ofType: "bundle")!
         return NSBundle(path: bundlePath)!
     }

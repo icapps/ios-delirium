@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Delirium
 
 class CustomPinViewController: UIViewController {
     
@@ -31,7 +32,7 @@ class CustomPinViewController: UIViewController {
 
 extension UIViewController: PinViewControllerDelegate {
     
-    func pinViewController(controller: PinViewController, didEnterPin pin: String) {
+    public func pinViewController(controller: PinViewController, didEnterPin pin: String) {
         let controller = UIAlertController(title: "Pin code", message: "The pincode you entered is \(pin).", preferredStyle: .Alert)
         controller.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil))
         presentViewController(controller, animated: true, completion: nil)

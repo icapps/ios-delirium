@@ -1,6 +1,6 @@
 {
   "name": "Delirium",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "summary": "A set of UI components that we tend to reuse at iCapps.",
   "description": "Delirium contains a set of UI components for reuse. Like for example:\n\n- Shake your `UIView`.\n- Present a `UIAlertController` from an `NSError`.",
   "homepage": "https://github.com/icapps/ios-delirium",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/icapps/ios-delirium.git",
-    "tag": "0.1.0"
+    "tag": "0.2.0"
   },
   "social_media_url": "https://twitter.com/icapps",
   "platforms": {
@@ -21,5 +21,10 @@
     "tvos": "9.0"
   },
   "source_files": "Sources/**/*",
-  "resources": "Assets/Delirium.bundle"
+  "resource_bundles": {
+    "Delirium": [
+      "Assets/**/*.strings",
+      "Assets/**/*.storyboard"
+    ]
+  }
 }
