@@ -18,4 +18,10 @@ class BlurredTransitionViewController: UIViewController {
         title = "Blurred Transition"
     }
     
+    // MARK: - Segue
+    
+    @IBAction func unwindToBlurredTransition(segue: UIStoryboardSegue) {
+        
+    }
+    
 }
