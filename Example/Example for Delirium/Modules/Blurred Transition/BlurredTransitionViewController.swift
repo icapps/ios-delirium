@@ -20,6 +20,10 @@ class BlurredTransitionViewController: UIViewController {
     
     // MARK: - Segue
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+    }
+    
     @IBAction func unwindToBlurredTransition(segue: UIStoryboardSegue) {
         
     }

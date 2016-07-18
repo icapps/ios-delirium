@@ -51,23 +51,27 @@
             </objects>
             <point key="canvasLocation" x="1006" y="638"/>
         </scene>
-        <!--View Controller-->
+        <!--Blurred Popup View Controller-->
         <scene sceneID="pdR-5l-6hm">
             <objects>
-                <viewController id="3vZ-BX-npB" sceneMemberID="viewController">
+                <viewController id="3vZ-BX-npB" customClass="BlurredPopupViewController" customModule="Delirium_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ova-lA-KJ3"/>
                         <viewControllerLayoutGuide type="bottom" id="0DS-fH-8MO"/>
                     </layoutGuides>
                     <view key="view" clipsSubviews="YES" contentMode="scaleToFill" id="8xt-zk-eIY">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SmallBackground" translatesAutoresizingMaskIntoConstraints="NO" id="hb4-QL-oYn">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="5ae-Nx-KxT"/>
+                                    <constraint firstAttribute="width" constant="200" id="NK1-vh-IbN"/>
+                                </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x70-67-LAu">
-                                <rect key="frame" x="233" y="281" width="134" height="38"/>
+                                <rect key="frame" x="33" y="81" width="134" height="38"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
                                 <state key="normal" title="Okay. Thnx. Bye."/>
@@ -92,11 +96,13 @@
                             <constraint firstAttribute="trailing" secondItem="hb4-QL-oYn" secondAttribute="trailing" id="xsJ-Ie-Nny"/>
                         </constraints>
                     </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="200" height="200"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sp1-Sw-tnq" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="uit-Bo-DyB" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1736" y="638"/>
+            <point key="canvasLocation" x="1570" y="638"/>
         </scene>
     </scenes>
     <resources>
