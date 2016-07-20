@@ -8,6 +8,7 @@
 
 import UIKit
 
+@available(iOS 9, *)
 public class ActionTransitioningDelegate: NSObject, UIViewControllerTransitioningDelegate {
     
     // MARK: - UIViewControllerTransitioningDelegate

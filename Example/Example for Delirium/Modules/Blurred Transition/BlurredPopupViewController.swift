@@ -13,20 +13,28 @@ class BlurredPopupViewController: UIViewController {
     
     // MARK: - Internals
     
-    private let transitionDelegate = ActionTransitioningDelegate()
+    private var transitionDelegate: UIViewControllerTransitioningDelegate?
     
     // MARK: - Init
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         
-        transitioningDelegate = transitionDelegate
-        modalPresentationStyle = .Custom
+        setupTransition()
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         
+        setupTransition()
+    }
+    
+    // MARK: - Transition
+    
+    private func setupTransition() {
+        guard #available(iOS 9, *) else { return }
+        
+        transitionDelegate = ActionTransitioningDelegate()
         transitioningDelegate = transitionDelegate
         modalPresentationStyle = .Custom
     }

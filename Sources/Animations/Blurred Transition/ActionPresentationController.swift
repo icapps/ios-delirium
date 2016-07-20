@@ -8,6 +8,7 @@
 
 import UIKit
 
+@available(iOS 9, *)
 class ActionPresentationController: UIPresentationController {
     // This will be the overlay view that is presented on top
     // of the presening controller's view

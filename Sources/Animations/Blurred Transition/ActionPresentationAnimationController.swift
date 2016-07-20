@@ -8,6 +8,7 @@
 
 import UIKit
 
+@available(iOS 9, *)
 class ActionPresentationAnimationController: NSObject, UIViewControllerAnimatedTransitioning {
     private let isPresenting: Bool
     
