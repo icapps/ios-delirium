@@ -1,12 +1,9 @@
 language: objective-c
 osx_image: xcode7.3
 
-before_install:
-    - gem install xcpretty -N --no-ri --no-rdoc
-
 script:
     - set -o pipefail
-    - xcodebuild clean test -workspace Example/Delirium.xcworkspace -scheme Delirium-Example -destination "platform=iOS Simulator,name=iPhone 6 Plus" -enableCodeCoverage YES | xcpretty
+    - xcodebuild clean test -workspace Example/Delirium.xcworkspace -scheme Delirium-Example -destination "platform=iOS Simulator,name=iPhone 6 Plus" -enableCodeCoverage YES
 
 deploy:
   skip_cleanup: true
