@@ -21,7 +21,17 @@ class BlurredTransitionViewController: UIViewController {
     // MARK: - Segue
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        guard let controller = segue.destinationViewController as? BlurredPopupViewController else {
+            return
+        }
         
+        if segue.identifier == "extralight" {
+            controller.blurEffectStyle = .ExtraLight
+        } else if segue.identifier == "light" {
+            controller.blurEffectStyle = .Light
+        } else if segue.identifier == "dark" {
+            controller.blurEffectStyle = .Dark
+        }
     }
     
     @IBAction func unwindToBlurredTransition(segue: UIStoryboardSegue) {

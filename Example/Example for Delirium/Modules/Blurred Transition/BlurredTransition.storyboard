@@ -20,11 +20,11 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="bxW-Ep-epa">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HYI-3g-Ayf">
-                                <rect key="frame" x="206" y="522" width="189" height="38"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Da7-be-NYT">
+                                <rect key="frame" x="215" y="454" width="170" height="38"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
-                                <state key="normal" title="Present the custom view"/>
+                                <state key="normal" title="Present with light blur"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <integer key="value" value="5"/>
@@ -32,7 +32,37 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="3vZ-BX-npB" kind="presentation" id="hqD-iw-6L2"/>
+                                    <segue destination="3vZ-BX-npB" kind="presentation" identifier="light" id="S6b-JA-AXQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HYI-3g-Ayf">
+                                <rect key="frame" x="215" y="522" width="171" height="38"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                                <state key="normal" title="Present with dark blur"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="3vZ-BX-npB" kind="presentation" identifier="dark" id="hqD-iw-6L2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6za-wg-aLc">
+                                <rect key="frame" x="196" y="386" width="209" height="38"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                                <state key="normal" title="Present with extra light blur"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="3vZ-BX-npB" kind="presentation" identifier="extralight" id="PHv-jx-Yat"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -43,6 +73,10 @@
                             <constraint firstItem="bxW-Ep-epa" firstAttribute="top" secondItem="b9n-4h-5dR" secondAttribute="top" id="PkW-xf-6hi"/>
                             <constraint firstItem="bxW-Ep-epa" firstAttribute="leading" secondItem="b9n-4h-5dR" secondAttribute="leading" id="TlH-Yz-GSN"/>
                             <constraint firstItem="HYI-3g-Ayf" firstAttribute="centerX" secondItem="bxW-Ep-epa" secondAttribute="centerX" id="Vbx-pg-4At"/>
+                            <constraint firstItem="HYI-3g-Ayf" firstAttribute="top" secondItem="Da7-be-NYT" secondAttribute="bottom" constant="30" id="dKP-Ej-lSB"/>
+                            <constraint firstItem="Da7-be-NYT" firstAttribute="centerX" secondItem="bxW-Ep-epa" secondAttribute="centerX" id="eyr-8q-naz"/>
+                            <constraint firstItem="6za-wg-aLc" firstAttribute="centerX" secondItem="bxW-Ep-epa" secondAttribute="centerX" id="foX-sY-huL"/>
+                            <constraint firstItem="Da7-be-NYT" firstAttribute="top" secondItem="6za-wg-aLc" secondAttribute="bottom" constant="30" id="gZE-AP-btA"/>
                             <constraint firstItem="Zo4-rc-3bS" firstAttribute="top" secondItem="bxW-Ep-epa" secondAttribute="bottom" id="jjZ-52-Ld6"/>
                         </constraints>
                     </view>
@@ -109,4 +143,7 @@
         <image name="Background" width="2560" height="1600"/>
         <image name="SmallBackground" width="1920" height="1200"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="PHv-jx-Yat"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -14,10 +14,14 @@ class ActionPresentationController: UIPresentationController {
     // of the presening controller's view
     private var overlayView: UIView?
     
+    // MARK: - Configuration
+    
+    var blurEffectStyle: UIBlurEffectStyle = .Light
+    
     // MARK: - Presentation
     
     override func presentationTransitionWillBegin() {
-        let effect = UIBlurEffect(style: .Light)
+        let effect = UIBlurEffect(style: blurEffectStyle)
         overlayView = UIVisualEffectView(effect: effect)
         overlayView?.alpha = 0.0
         overlayView?.translatesAutoresizingMaskIntoConstraints = false

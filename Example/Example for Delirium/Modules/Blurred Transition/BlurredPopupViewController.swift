@@ -15,6 +15,16 @@ class BlurredPopupViewController: UIViewController {
     
     private var transitionDelegate: UIViewControllerTransitioningDelegate?
     
+    // MARK: - Configuration
+    
+    var blurEffectStyle: UIBlurEffectStyle? {
+        didSet {
+            guard let blurEffectStyle = blurEffectStyle, #available(iOS 9, *) else { return }
+            
+            (transitionDelegate as! ActionTransitioningDelegate).blurEffectStyle = blurEffectStyle
+        }
+    }
+    
     // MARK: - Init
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {

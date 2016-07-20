@@ -11,10 +11,16 @@ import UIKit
 @available(iOS 9, *)
 public class ActionTransitioningDelegate: NSObject, UIViewControllerTransitioningDelegate {
     
+    // MARK: - Configuration
+    
+    public var blurEffectStyle: UIBlurEffectStyle = .Light
+    
     // MARK: - UIViewControllerTransitioningDelegate
     
     public func presentationControllerForPresentedViewController(presented: UIViewController, presentingViewController presenting: UIViewController, sourceViewController source: UIViewController) -> UIPresentationController? {
-        return ActionPresentationController(presentedViewController: presented, presentingViewController: presenting)
+        let presentationController = ActionPresentationController(presentedViewController: presented, presentingViewController: presenting)
+        presentationController.blurEffectStyle = blurEffectStyle
+        return presentationController
     }
     
     public func animationControllerForPresentedController(presented: UIViewController, presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
