@@ -1,5 +1,9 @@
 # Delirium
 
+## Version 0.4.0
+
+- Added a blurred modal transition.
+
 ## Version 0.3.0
 
 - Add some more documentation on the alert.
