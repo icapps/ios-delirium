@@ -13,6 +13,7 @@
 - [Installation](#installation)
 - [Features](#features)
   - [Animations](#animations)
+    - [Blurred Transition](#blurred-transition)
     - [Shake](#shake)
   - [Controllers](#controllers)
     - [Alert](#alert)
@@ -32,6 +33,28 @@ pod 'Delirium', '~> 0.3'
 ## Features
 
 ### Animations
+
+#### Blurred Transition
+
+Add some custom modal transitions to your application. Here is an example of what this transition looks like:
+
+![](Resources/Blur.png)
+
+You can pass all the values of `UIBlurEffectStyle` to the `ActionTransitioningDelegate` class. And here is how you implement this transition.
+
+```swift
+let transitionDelegate = ActionTransitioningDelegate()
+
+required init?(coder aDecoder: NSCoder) {
+  super.init(coder: aDecoder)
+
+  transitionDelegate.blurEffectStyle = .Light
+  transitioningDelegate = transitionDelegate
+  modalPresentationStyle = .Custom
+}
+```
+
+_This transition will only work on iOS 9._
 
 #### Shake
 
