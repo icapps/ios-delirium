@@ -76,6 +76,12 @@ view.shake(repeatCount: 10, duration: 1.0)
 
 You can present an `NSError` from your `UIViewController` instance. This will present a `UIAlertController` with a title translated by the 'delirium.alert.button.ok' key. And with a description `localizedDescription` from `NSError`.
 
+Here is an example of how it looks:
+
+![](Resources/Error.png)
+
+And here how to implement:
+
 ```swift
 let error: NSError = ...
 presentAlertController(withError: error)
@@ -105,6 +111,8 @@ presentAlertController(withError: error) {
 ### Pin
 
 Present a pin view controller is really easy with _Delirium_.
+
+![](Resources/Pin.png)
 
 ```swift
 let controller = pinViewController()
