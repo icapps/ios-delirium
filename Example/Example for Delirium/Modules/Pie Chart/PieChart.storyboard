@@ -16,10 +16,39 @@
                     <view key="view" contentMode="scaleToFill" id="kNq-wc-w6r">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oXS-4T-G9O" customClass="PieChartView" customModule="Delirium_Example" customModuleProvider="target">
+                                <rect key="frame" x="200" y="40" width="200" height="200"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" priority="800" constant="200" id="4Bt-zB-Tbq"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" priority="750" constant="300" id="lUG-4s-5fU"/>
+                                    <constraint firstAttribute="height" priority="800" constant="200" id="tzi-gk-4pg"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" priority="750" constant="300" id="u00-YV-bzJ"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="oXS-4T-G9O" firstAttribute="top" secondItem="Aaw-qR-TNT" secondAttribute="bottom" constant="20" id="R8Q-n9-TIB"/>
+                            <constraint firstItem="oXS-4T-G9O" firstAttribute="centerX" secondItem="kNq-wc-w6r" secondAttribute="centerX" id="TAs-qO-2NQ"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="TKy-ZV-2Ov" appends="YES" id="12j-LX-eHp"/>
+                        </connections>
                     </view>
+                    <connections>
+                        <outletCollection property="constraints" destination="4Bt-zB-Tbq" collectionClass="NSMutableArray" id="eQ6-pD-oyT"/>
+                        <outletCollection property="constraints" destination="tzi-gk-4pg" collectionClass="NSMutableArray" id="RkO-TO-Lsx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RWM-kv-NP3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="TKy-ZV-2Ov">
+                    <connections>
+                        <action selector="toggleSize:" destination="yTA-Pb-CX6" id="pHC-j0-1ka"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="996" y="461"/>
         </scene>

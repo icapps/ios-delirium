@@ -9,6 +9,10 @@
 import UIKit
 
 class PieChartViewController: UIViewController {
+    
+    // MARK: - Outlets
+    
+    @IBOutlet var constraints: [NSLayoutConstraint]!
 
     // MARK: - View flow
     
@@ -16,6 +20,14 @@ class PieChartViewController: UIViewController {
         super.viewDidLoad()
         
         title = "Pie Chart"
+    }
+    
+    // MARK: - Actions
+    
+    @IBAction func toggleSize(sender: AnyObject) {
+        for constraint in constraints {
+            constraint.priority = constraint.priority == 800 ? 700 : 800
+        }
     }
 
 }
