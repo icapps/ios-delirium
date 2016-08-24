@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oXS-4T-G9O" customClass="PieChartView" customModule="Delirium_Example" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oXS-4T-G9O" customClass="PieChartView" customModule="Delirium">
                                 <rect key="frame" x="200" y="40" width="200" height="200"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -39,6 +39,7 @@
                         </connections>
                     </view>
                     <connections>
+                        <outlet property="chart" destination="oXS-4T-G9O" id="bls-VU-osA"/>
                         <outletCollection property="constraints" destination="4Bt-zB-Tbq" collectionClass="NSMutableArray" id="eQ6-pD-oyT"/>
                         <outletCollection property="constraints" destination="tzi-gk-4pg" collectionClass="NSMutableArray" id="RkO-TO-Lsx"/>
                     </connections>
