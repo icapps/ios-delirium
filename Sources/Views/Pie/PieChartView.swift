@@ -10,12 +10,9 @@ import UIKit
 
 public class PieChartView: UIView {
     
-    // MARK: - Configuration
-    
-    public var startAngle = -Float(M_PI * 0.5)
-    
     // MARK: - Internals
     
+    private var startAngle = -Float(M_PI * 0.5)
     private var slices = [PieChartSlice]()
     
     // MARK: - Slices
