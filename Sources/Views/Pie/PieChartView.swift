@@ -10,6 +10,20 @@ import UIKit
 
 public class PieChartView: UIView {
     
+    // MARK: - Configuration
+    
+    public var overlayColor = UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 0.85) {
+        didSet {
+            setNeedsDisplay()
+        }
+    }
+    
+    public var overlayPadding: Float = 40.0 {
+        didSet {
+            setNeedsDisplay()
+        }
+    }
+    
     // MARK: - Internals
     
     private var startAngle = -Float(M_PI * 0.5)
@@ -38,10 +52,11 @@ public class PieChartView: UIView {
         var currentStartAngle = startAngle
         
         for slice in slices {
-            CGContextSetFillColorWithColor(context, slice.color.CGColor)
-            
             // Calculate the endAngle
             let endAngle = currentStartAngle + Float(M_PI * 2.0) * (slice.value / valueCount)
+            
+            // Set the slice color.
+            CGContextSetFillColorWithColor(context, slice.color.CGColor)
             
             // Draw the slice.
             CGContextMoveToPoint(context, center.x, center.y)
@@ -51,6 +66,13 @@ public class PieChartView: UIView {
             // Persist the current start angle for the next slice.
             currentStartAngle = endAngle
         }
+        
+        // Draw the inner circle.
+        
+        CGContextSetFillColorWithColor(context, overlayColor.CGColor)
+        CGContextMoveToPoint(context, center.x, center.y)
+        CGContextAddEllipseInRect(context, CGRectInset(rect, CGFloat(overlayPadding), CGFloat(overlayPadding)))
+        CGContextFillPath(context)
     }
     
 }
