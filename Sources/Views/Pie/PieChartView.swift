@@ -8,22 +8,26 @@
 
 import UIKit
 
+/// This view is responsible for drawing the pie chart.
 public class PieChartView: UIView {
     
     // MARK: - Configuration
     
+    /// This is the color of the circle that is drawn over the center of the pie chart. When giving this color an alpha value the pie chart is broken nicely.
     public var overlayColor = UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 0.85) {
         didSet {
             setNeedsDisplay()
         }
     }
     
+    /// This color is the color that is displayed between the slices.
     public var strokeColor = UIColor.whiteColor() {
         didSet {
             setNeedsDisplay()
         }
     }
     
+    /// This is the size of the padding from where the overlay circle will be displayed.
     public var overlayPadding: Float = 40.0 {
         didSet {
             setNeedsDisplay()
@@ -37,11 +41,15 @@ public class PieChartView: UIView {
     
     // MARK: - Slices
     
+    /// Add a slice to the pie chart.
+    ///
+    /// - Parameter slice: The `PieChartSlice` to add to the pie chart.
     public func add(slice slice: PieChartSlice) {
         slices.append(slice)
         setNeedsDisplay()
     }
     
+    /// Remove all the slices from the pie chart.
     public func removeAllSlices() {
         slices.removeAll()
         setNeedsDisplay()
