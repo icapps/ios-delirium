@@ -1,4 +1,4 @@
-# Delirium
+![](Resources/Delirium.jpg)
 
 [![CI Status](http://img.shields.io/travis/icapps/ios-delirium.svg?style=flat)](https://travis-ci.org/icapps/ios-delirium)
 [![License](https://img.shields.io/cocoapods/l/Delirium.svg?style=flat)](http://cocoapods.org/pods/Delirium)
