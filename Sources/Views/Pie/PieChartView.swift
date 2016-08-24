@@ -18,6 +18,12 @@ public class PieChartView: UIView {
         }
     }
     
+    public var strokeColor = UIColor.whiteColor() {
+        didSet {
+            setNeedsDisplay()
+        }
+    }
+    
     public var overlayPadding: Float = 40.0 {
         didSet {
             setNeedsDisplay()
@@ -60,20 +66,25 @@ public class PieChartView: UIView {
             // Calculate the endAngle
             let endAngle = currentStartAngle + Float(M_PI * 2.0) * (slice.value / valueCount)
             
-            // Set the slice color.
-            CGContextSetFillColorWithColor(context, slice.color.CGColor)
-            
             // Draw the slice.
+            CGContextSetFillColorWithColor(context, slice.color.CGColor)
             CGContextMoveToPoint(context, center.x, center.y)
             CGContextAddArc(context, center.x, center.y, radius, CGFloat(currentStartAngle), CGFloat(endAngle), 0)
             CGContextFillPath(context)
+            
+            // Draw the line.
+            CGContextSetStrokeColorWithColor(context, strokeColor.CGColor)
+            CGContextMoveToPoint(context, center.x, center.y)
+            let pointX = CGFloat(cos(currentStartAngle)) * radius + center.x
+            let pointY = CGFloat(sin(currentStartAngle)) * radius + center.y
+            CGContextAddLineToPoint(context, pointX, pointY)
+            CGContextStrokePath(context)
             
             // Persist the current start angle for the next slice.
             currentStartAngle = endAngle
         }
         
         // Draw the inner circle.
-        
         CGContextSetFillColorWithColor(context, overlayColor.CGColor)
         CGContextMoveToPoint(context, center.x, center.y)
         CGContextAddEllipseInRect(context, CGRectInset(rect, CGFloat(overlayPadding), CGFloat(overlayPadding)))
