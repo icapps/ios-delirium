@@ -24,14 +24,15 @@ class PieChartViewController: UIViewController {
         title = "Pie Chart"
         
         chart.overlayPadding = 25.0
+        chart.overlayColor = UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 0.5)
         
         // Add slices to the chart.
-        chart.add(slice: PieChartSlice(value: 5.46, color: UIColor(red:0.02,green:0.22,blue:0.40,alpha:1.00)))
-        chart.add(slice: PieChartSlice(value: 12.41, color: UIColor(red:0.11,green:0.50,blue:0.72,alpha:1.00)))
-        chart.add(slice: PieChartSlice(value: 16.71, color: UIColor(red:0.11,green:0.68,blue:0.93,alpha:1.00)))
-        chart.add(slice: PieChartSlice(value: 4.02, color: UIColor(red:0.13,green:0.77,blue:0.93,alpha:1.00)))
-        chart.add(slice: PieChartSlice(value: 23.72, color: UIColor(red:0.87,green:0.84,blue:0.90,alpha:1.00)))
-        chart.add(slice: PieChartSlice(value: 37.67, color: UIColor(red:0.89,green:0.89,blue:0.89,alpha:1.00)))
+        chart.add(slice: PieChartSlice(value: 5.46, color: UIColor(red:0.16,green:0.55,blue:0.55,alpha:1.00)))
+        chart.add(slice: PieChartSlice(value: 12.41, color: UIColor(red:0.44,green:0.81,blue:0.80,alpha:1.00)))
+        chart.add(slice: PieChartSlice(value: 16.71, color: UIColor(red:0.98,green:0.90,blue:0.40,alpha:1.00)))
+        chart.add(slice: PieChartSlice(value: 4.02, color: UIColor(red:0.93,green:0.45,blue:0.20,alpha:1.00)))
+        chart.add(slice: PieChartSlice(value: 23.72, color: UIColor(red:0.57,green:0.86,blue:0.63,alpha:1.00)))
+        chart.add(slice: PieChartSlice(value: 37.67, color: UIColor(red:0.28,green:0.24,blue:0.25,alpha:1.00)))
     }
     
     // MARK: - Actions
