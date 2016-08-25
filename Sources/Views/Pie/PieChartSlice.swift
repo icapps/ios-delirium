@@ -9,7 +9,7 @@
 import UIKit
 
 /// The `PieChartSlice` is responsible for a slice that is displayed in the pie chart.
-public struct PieChartSlice {
+public class PieChartSlice: NSObject {
     
     /// The value can be any given number. When calculating the size of the slice we will take the sum of all the values into account and calculate the relative size of the slice depening on the value.
     public var value: Float
