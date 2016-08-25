@@ -10,10 +10,12 @@ import Quick
 import Nimble
 import Nimble_Snapshots
 
-extension QuickSpec {
-    
-    func expectSnapshot(forView view: UIView, record: Bool = false) {
-        if record {
+class QuickSnapshotSpec: QuickSpec {
+
+    var record = false
+
+    func expect📷ToHaveValidSnapshot(view: UIView) {
+        if self.record {
             📷(view)
         } else {
             expect(view) == snapshot()

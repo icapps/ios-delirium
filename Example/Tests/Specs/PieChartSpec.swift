@@ -21,36 +21,31 @@ class Slice: PieChartSlice {
     }
 }
 
-class PieChartSpec: QuickSpec {
-    
-    // MARK: - Record
-    
-    private let record = false
-    
-    // MARK: - Specs
-    
+class PieChartSpec: QuickSnapshotSpec {
+   
     override func spec() {
         describe("pie chart view") {
             var view: PieChartView!
             beforeEach{
+                self.record = false
                 let frame = CGRect(x: 0, y: 0, width: 300, height: 300)
                 view = PieChartView(frame: frame)
             }
             
             it("should show an empty pie chart") {
-                self.expectSnapshot(forView: view, record: self.record)
+                self.expect📷ToHaveValidSnapshot(view)
             }
             
             it("should show a pie chart with one slice") {
                 view.add(slice: Slice(value: 10, color: UIColor(red:0.16,green:0.55,blue:0.55,alpha:1.00)))
-                self.expectSnapshot(forView: view, record: self.record)
+                self.expect📷ToHaveValidSnapshot(view)
             }
             
             it("should show a pie chart with three slices") {
                 view.add(slice: Slice(value: 10, color: UIColor(red:0.16,green:0.55,blue:0.55,alpha:1.00)))
                 view.add(slice: Slice(value: 10, color: UIColor(red:0.44,green:0.81,blue:0.80,alpha:1.00)))
                 view.add(slice: Slice(value: 10, color: UIColor(red:0.98,green:0.90,blue:0.40,alpha:1.00)))
-                self.expectSnapshot(forView: view, record: self.record)
+                self.expect📷ToHaveValidSnapshot(view)
             }
             
             it("should show a pie chart with another overlay color") {
@@ -58,7 +53,7 @@ class PieChartSpec: QuickSpec {
                 view.add(slice: Slice(value: 10, color: UIColor(red:0.16,green:0.55,blue:0.55,alpha:1.00)))
                 view.add(slice: Slice(value: 10, color: UIColor(red:0.44,green:0.81,blue:0.80,alpha:1.00)))
                 view.add(slice: Slice(value: 10, color: UIColor(red:0.98,green:0.90,blue:0.40,alpha:1.00)))
-                self.expectSnapshot(forView: view, record: self.record)
+                self.expect📷ToHaveValidSnapshot(view)
             }
             
             it("should show a pie chart with another stroke color") {
@@ -66,7 +61,7 @@ class PieChartSpec: QuickSpec {
                 view.add(slice: Slice(value: 10, color: UIColor(red:0.16,green:0.55,blue:0.55,alpha:1.00)))
                 view.add(slice: Slice(value: 10, color: UIColor(red:0.44,green:0.81,blue:0.80,alpha:1.00)))
                 view.add(slice: Slice(value: 10, color: UIColor(red:0.98,green:0.90,blue:0.40,alpha:1.00)))
-                self.expectSnapshot(forView: view, record: self.record)
+                self.expect📷ToHaveValidSnapshot(view)
             }
             
             it("should show a pie chart with another overlay padding") {
@@ -74,7 +69,7 @@ class PieChartSpec: QuickSpec {
                 view.add(slice: Slice(value: 10, color: UIColor(red:0.16,green:0.55,blue:0.55,alpha:1.00)))
                 view.add(slice: Slice(value: 10, color: UIColor(red:0.44,green:0.81,blue:0.80,alpha:1.00)))
                 view.add(slice: Slice(value: 10, color: UIColor(red:0.98,green:0.90,blue:0.40,alpha:1.00)))
-                self.expectSnapshot(forView: view, record: self.record)
+                self.expect📷ToHaveValidSnapshot(view)
             }
         }
     }
