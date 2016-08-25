@@ -68,6 +68,7 @@ public class PieChartView: UIView {
         let radius = min(frame.size.width, frame.size.height) * 0.5
         let center = CGPoint(x: bounds.size.width * 0.5, y: bounds.size.height * 0.5)
         let valueCount = slices.reduce(0) { $0 + $1.value }
+        let shouldDrawLines = slices.count > 1
         var currentStartAngle = startAngle
         
         for slice in slices {
@@ -80,13 +81,15 @@ public class PieChartView: UIView {
             CGContextAddArc(context, center.x, center.y, radius, CGFloat(currentStartAngle), CGFloat(endAngle), 0)
             CGContextFillPath(context)
             
-            // Draw the line.
-            CGContextSetStrokeColorWithColor(context, strokeColor.CGColor)
-            CGContextMoveToPoint(context, center.x, center.y)
-            let pointX = CGFloat(cos(currentStartAngle)) * radius + center.x
-            let pointY = CGFloat(sin(currentStartAngle)) * radius + center.y
-            CGContextAddLineToPoint(context, pointX, pointY)
-            CGContextStrokePath(context)
+            // Draw the line if needed.
+            if shouldDrawLines {
+                CGContextSetStrokeColorWithColor(context, strokeColor.CGColor)
+                CGContextMoveToPoint(context, center.x, center.y)
+                let pointX = CGFloat(cos(currentStartAngle)) * radius + center.x
+                let pointY = CGFloat(sin(currentStartAngle)) * radius + center.y
+                CGContextAddLineToPoint(context, pointX, pointY)
+                CGContextStrokePath(context)
+            }
             
             // Persist the current start angle for the next slice.
             currentStartAngle = endAngle
