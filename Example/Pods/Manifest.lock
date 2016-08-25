@@ -1,5 +1,5 @@
 PODS:
-  - Delirium (0.3.0)
+  - Delirium (0.4.0)
   - FBSnapshotTestCase (2.1.1):
     - FBSnapshotTestCase/SwiftSupport (= 2.1.1)
   - FBSnapshotTestCase/Core (2.1.1)
@@ -23,12 +23,12 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  Delirium: a1a67484a3e94df8470ffd66df4a17c657964ff0
+  Delirium: 655cdd3210ef95192e2af790a444aacdf8898ea0
   FBSnapshotTestCase: 432afd8d059ccef7f207225894840a03fbcf7474
   Nimble: 703854335d181df169bbca9c97117b5cf8c47c1d
   Nimble-Snapshots: 2da4d2ec829b458d6886c06812c52493fce284c9
   Quick: 18d057bc66451eedd5d1c8dc99ba2a5db6e60226
 
-PODFILE CHECKSUM: 3215b810143666db25f34164b6a8a4e41ed36187
+PODFILE CHECKSUM: a36d939c3fd2c0bd2b6696fdc80a4b1eeb2bacc3
 
 COCOAPODS: 1.0.1

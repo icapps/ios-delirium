@@ -11,6 +11,10 @@ abstract_target 'Delirium' do
   target 'Delirium_Tests' do
     inherit! :search_paths
 
+    # This pod shouldn't be added here, but if not the spec classes are
+    # unable to find the Delirium module...
+    pod 'Delirium', :path => '../'
+
     # The test frameworks
     pod 'Quick',            '~> 0.8'
     pod 'Nimble',           '~> 3.0'

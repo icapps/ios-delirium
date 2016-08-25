@@ -18,6 +18,8 @@
   - [Controllers](#controllers)
     - [Alert](#alert)
     - [Pin](#pin)
+  - [Views](#views)
+    - [Pie Chart](#pie-chart)
 - [Bucket List](#bucket-list)
 - [Author](#author)
 - [License](#license)
@@ -157,6 +159,40 @@ You can set the configuration by passing the `configuration` instance to the `pi
 ```swift
 let configuration = PinConfiguration()
 let controller = pinViewController(withConfiguration: configuration)
+```
+
+## Views
+
+### Pie Chart
+
+Show a basic pie chart that has a simple overlay that breaks the pie chart and gives it a clean design.
+
+![](Resources/PieChart.png)
+
+You can easily integrate the `PieChartView` by just extending a `UIView` in your storyboard. But for the hardcore fans, you can also create the view manually. (_like an animal_)
+
+When the view is created you can add some slices to it. A slice contains a value and a color.
+
+```swift
+let pieChartView = ...
+
+pieChartView.add(slice: PieChartSlice(value: 12.0, color: UIColor.redColor()))
+pieChartView.add(slice: PieChartSlice(value: 8.0, color: UIColor.greenColor()))
+```
+
+This will result in a pie chart that has two slices. The **red** slice will take 60% of the pie chart, and the **green** slice will contain 40% of the pie chart.
+
+Next to the slices you can also pass some minor configuration options to the view.
+
+```swift
+// This is the overlay color of the circle that is drawn over the center of the pie chart. When giving this color an alpha value the pie chart is broken nicely.
+pieChartView.overlayColor = UIColor.blueColor()
+
+// This stroke color is the color that is displayed between the slices.
+pieChartView.strokeColor = UIColor.blueColor()
+
+// This is the size of the padding from where the overlay circle will be displayed.
+pieChartView.overlayPadding = 20.0
 ```
 
 ## Bucket List

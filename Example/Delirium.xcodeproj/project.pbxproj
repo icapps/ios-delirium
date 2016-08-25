@@ -19,15 +19,18 @@
 		627E02AB1D0AC55800B7529E /* Shake.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 627E02AA1D0AC55800B7529E /* Shake.storyboard */; };
 		627E02AD1D0AC6C000B7529E /* ShakeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 627E02AC1D0AC6C000B7529E /* ShakeViewController.swift */; };
 		627E02AF1D0AC7C200B7529E /* ShakeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 627E02AE1D0AC7C200B7529E /* ShakeViewModel.swift */; };
-		627E02B31D0AC8B700B7529E /* EmptySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 627E02B11D0AC8A400B7529E /* EmptySpec.swift */; };
+		627E02B31D0AC8B700B7529E /* PieChartSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 627E02B11D0AC8A400B7529E /* PieChartSpec.swift */; };
 		627E02BB1D0ACC0A00B7529E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 627E02BA1D0ACC0A00B7529E /* AppDelegate.swift */; };
 		627E02C01D0ACC0A00B7529E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 627E02BE1D0ACC0A00B7529E /* Main.storyboard */; };
 		627E02C21D0ACC0A00B7529E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 627E02C11D0ACC0A00B7529E /* Assets.xcassets */; };
 		627E02D21D0AD9B100B7529E /* Alert.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 627E02D11D0AD9B100B7529E /* Alert.storyboard */; };
 		627E02D41D0AD9BE00B7529E /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 627E02D31D0AD9BE00B7529E /* AlertViewController.swift */; };
 		627E02D61D0AD9DF00B7529E /* AlertViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 627E02D51D0AD9DF00B7529E /* AlertViewModel.swift */; };
+		6294A9321D6EE2040088E18C /* QuickSpec+Snapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6294A9301D6EE1B70088E18C /* QuickSpec+Snapshot.swift */; };
 		6297F4111D0EA72900645AB9 /* Pin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6297F4101D0EA72900645AB9 /* Pin.storyboard */; };
 		6297F4131D0EA7BB00645AB9 /* CustomPinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6297F4121D0EA7BB00645AB9 /* CustomPinViewController.swift */; };
+		62CDEC9D1D6C8A31005A0CEF /* PieChart.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62CDEC9C1D6C8A31005A0CEF /* PieChart.storyboard */; };
+		62CDEC9F1D6C8A6F005A0CEF /* PieChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62CDEC9E1D6C8A6F005A0CEF /* PieChartViewController.swift */; };
 		8CB2E944415C20A8CD14AB02 /* Pods_Delirium_Delirium_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A876D93EC1B6F361EF6C57E /* Pods_Delirium_Delirium_Example.framework */; };
 /* End PBXBuildFile section */
 
@@ -60,7 +63,7 @@
 		627E02AA1D0AC55800B7529E /* Shake.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Shake.storyboard; sourceTree = "<group>"; };
 		627E02AC1D0AC6C000B7529E /* ShakeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShakeViewController.swift; sourceTree = "<group>"; };
 		627E02AE1D0AC7C200B7529E /* ShakeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShakeViewModel.swift; sourceTree = "<group>"; };
-		627E02B11D0AC8A400B7529E /* EmptySpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptySpec.swift; sourceTree = "<group>"; };
+		627E02B11D0AC8A400B7529E /* PieChartSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PieChartSpec.swift; sourceTree = "<group>"; };
 		627E02B81D0ACC0A00B7529E /* Delirium_tvExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Delirium_tvExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		627E02BA1D0ACC0A00B7529E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		627E02BF1D0ACC0A00B7529E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -69,8 +72,11 @@
 		627E02D11D0AD9B100B7529E /* Alert.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Alert.storyboard; sourceTree = "<group>"; };
 		627E02D31D0AD9BE00B7529E /* AlertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
 		627E02D51D0AD9DF00B7529E /* AlertViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertViewModel.swift; sourceTree = "<group>"; };
+		6294A9301D6EE1B70088E18C /* QuickSpec+Snapshot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "QuickSpec+Snapshot.swift"; sourceTree = "<group>"; };
 		6297F4101D0EA72900645AB9 /* Pin.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Pin.storyboard; sourceTree = "<group>"; };
 		6297F4121D0EA7BB00645AB9 /* CustomPinViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPinViewController.swift; sourceTree = "<group>"; };
+		62CDEC9C1D6C8A31005A0CEF /* PieChart.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PieChart.storyboard; sourceTree = "<group>"; };
+		62CDEC9E1D6C8A6F005A0CEF /* PieChartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PieChartViewController.swift; sourceTree = "<group>"; };
 		85692D5D4B6A3CF4C61EF6FE /* Pods-Delirium-Delirium_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Delirium-Delirium_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Delirium-Delirium_Example/Pods-Delirium-Delirium_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		9A876D93EC1B6F361EF6C57E /* Pods_Delirium_Delirium_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Delirium_Delirium_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4B929F2E2F02D67FFCED98D /* Pods_Delirium_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Delirium_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -163,6 +169,7 @@
 		607FACE81AFB9204008FA782 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				6294A92F1D6EE1A50088E18C /* Helpers */,
 				627E02B01D0AC89800B7529E /* Specs */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
 			);
@@ -180,9 +187,9 @@
 		62220A801D3D13B800D87438 /* Blurred Transition */ = {
 			isa = PBXGroup;
 			children = (
+				625D37061D3D1FE900B51EF5 /* BlurredPopupViewController.swift */,
 				62220A811D3D13CE00D87438 /* BlurredTransition.storyboard */,
 				62220A831D3D140900D87438 /* BlurredTransitionViewController.swift */,
-				625D37061D3D1FE900B51EF5 /* BlurredPopupViewController.swift */,
 			);
 			path = "Blurred Transition";
 			sourceTree = "<group>";
@@ -192,6 +199,7 @@
 			children = (
 				627E02D01D0AD9A200B7529E /* Alert */,
 				62220A801D3D13B800D87438 /* Blurred Transition */,
+				62CDEC9B1D6C8A1D005A0CEF /* Pie Chart */,
 				6297F40F1D0EA71C00645AB9 /* Pin */,
 				627E02A91D0AC54C00B7529E /* Shake */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
@@ -221,7 +229,7 @@
 		627E02B01D0AC89800B7529E /* Specs */ = {
 			isa = PBXGroup;
 			children = (
-				627E02B11D0AC8A400B7529E /* EmptySpec.swift */,
+				627E02B11D0AC8A400B7529E /* PieChartSpec.swift */,
 			);
 			path = Specs;
 			sourceTree = "<group>";
@@ -271,6 +279,14 @@
 			path = Alert;
 			sourceTree = "<group>";
 		};
+		6294A92F1D6EE1A50088E18C /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				6294A9301D6EE1B70088E18C /* QuickSpec+Snapshot.swift */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
 		6297F40F1D0EA71C00645AB9 /* Pin */ = {
 			isa = PBXGroup;
 			children = (
@@ -278,6 +294,15 @@
 				6297F4101D0EA72900645AB9 /* Pin.storyboard */,
 			);
 			path = Pin;
+			sourceTree = "<group>";
+		};
+		62CDEC9B1D6C8A1D005A0CEF /* Pie Chart */ = {
+			isa = PBXGroup;
+			children = (
+				62CDEC9C1D6C8A31005A0CEF /* PieChart.storyboard */,
+				62CDEC9E1D6C8A6F005A0CEF /* PieChartViewController.swift */,
+			);
+			path = "Pie Chart";
 			sourceTree = "<group>";
 		};
 		C0BCBB90998A2CF6F3B8D640 /* Frameworks */ = {
@@ -403,6 +428,7 @@
 			files = (
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
 				627E02D21D0AD9B100B7529E /* Alert.storyboard in Resources */,
+				62CDEC9D1D6C8A31005A0CEF /* PieChart.storyboard in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
 				6297F4111D0EA72900645AB9 /* Pin.storyboard in Resources */,
@@ -578,6 +604,7 @@
 				6297F4131D0EA7BB00645AB9 /* CustomPinViewController.swift in Sources */,
 				625D37071D3D1FE900B51EF5 /* BlurredPopupViewController.swift in Sources */,
 				627E02AD1D0AC6C000B7529E /* ShakeViewController.swift in Sources */,
+				62CDEC9F1D6C8A6F005A0CEF /* PieChartViewController.swift in Sources */,
 				627E02D61D0AD9DF00B7529E /* AlertViewModel.swift in Sources */,
 				627E02D41D0AD9BE00B7529E /* AlertViewController.swift in Sources */,
 			);
@@ -587,7 +614,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				627E02B31D0AC8B700B7529E /* EmptySpec.swift in Sources */,
+				6294A9321D6EE2040088E18C /* QuickSpec+Snapshot.swift in Sources */,
+				627E02B31D0AC8B700B7529E /* PieChartSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
