@@ -1,5 +1,9 @@
 # Delirium
 
+## Version 0.5.0
+
+- Added a pie chart view.
+
 ## Version 0.4.0
 
 - Added a blurred modal transition.
