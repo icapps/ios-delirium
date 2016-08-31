@@ -81,18 +81,27 @@ public class PieChartView: UIView {
             CGContextAddArc(context, center.x, center.y, radius, CGFloat(currentStartAngle), CGFloat(endAngle), 0)
             CGContextFillPath(context)
             
-            // Draw the line if needed.
-            if shouldDrawLines {
+            // Persist the current start angle for the next slice.
+            currentStartAngle = endAngle
+        }
+        
+        if shouldDrawLines {
+            currentStartAngle = startAngle
+            for slice in slices {
+                // Calculate the endAngle
+                let endAngle = currentStartAngle + Float(M_PI * 2.0) * (slice.value / valueCount)
+                
+                // Draw the line.
                 CGContextSetStrokeColorWithColor(context, strokeColor.CGColor)
                 CGContextMoveToPoint(context, center.x, center.y)
                 let pointX = CGFloat(cos(currentStartAngle)) * radius + center.x
                 let pointY = CGFloat(sin(currentStartAngle)) * radius + center.y
                 CGContextAddLineToPoint(context, pointX, pointY)
                 CGContextStrokePath(context)
+                
+                // Persist the current start angle for the next slice.
+                currentStartAngle = endAngle
             }
-            
-            // Persist the current start angle for the next slice.
-            currentStartAngle = endAngle
         }
         
         // Draw the inner circle.
