@@ -7,6 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PickerViewController" customModule="Delirium_Example" customModuleProvider="target">
             <connections>
+                <outlet property="clearButton" destination="eAX-rY-ljt" id="IXd-4D-VMa"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -15,23 +16,20 @@
             <rect key="frame" x="0.0" y="0.0" width="306" height="220"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Picker" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c7y-XG-R0k">
-                    <rect key="frame" x="10" y="10" width="200" height="200"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="200" id="Lfh-BM-yC4"/>
-                        <constraint firstAttribute="width" constant="200" id="dgm-38-yem"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" type="system" weight="thin" pointSize="30"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eAX-rY-ljt">
+                    <rect key="frame" x="262" y="8" width="36" height="30"/>
+                    <state key="normal" title="Clear"/>
+                    <connections>
+                        <action selector="clear:" destination="-1" eventType="touchUpInside" id="Sbj-RP-Uas"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="c7y-XG-R0k" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="10" id="5jD-os-lWM"/>
-                <constraint firstItem="c7y-XG-R0k" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="GyV-T4-4Ew"/>
-                <constraint firstAttribute="bottom" secondItem="c7y-XG-R0k" secondAttribute="bottom" constant="10" id="feM-mi-g1y"/>
-                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="c7y-XG-R0k" secondAttribute="trailing" constant="10" id="yjh-c1-3bM"/>
+                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="eAX-rY-ljt" secondAttribute="bottom" constant="8" id="aZL-vQ-ZbE"/>
+                <constraint firstItem="eAX-rY-ljt" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="8" id="ffP-Cv-8hQ"/>
+                <constraint firstAttribute="trailing" secondItem="eAX-rY-ljt" secondAttribute="trailing" constant="8" id="h5C-NJ-xfK"/>
+                <constraint firstItem="eAX-rY-ljt" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="zV3-ig-t9l"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="814" y="405"/>

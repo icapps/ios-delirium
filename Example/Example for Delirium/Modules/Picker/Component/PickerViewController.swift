@@ -14,6 +14,10 @@ class PickerViewController: UIViewController {
     
     private var transitionDelegate: UIViewControllerTransitioningDelegate?
     
+    // MARK: - Outlet
+    
+    @IBOutlet var clearButton: UIButton!
+    
     // MARK: - Properties
     
     var referenceView: UIView?
@@ -33,6 +37,17 @@ class PickerViewController: UIViewController {
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+    }
+    
+    // MARK: - Clear
+    
+    @IBAction func clear(sender: AnyObject) {
+        clearSelection()
+        presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    func clearSelection() {
+        assert(false, "💀 `func clearSelection()` not implemented")
     }
     
     // MARK: - Popover
