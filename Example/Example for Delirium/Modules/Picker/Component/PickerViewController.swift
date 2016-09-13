@@ -10,6 +10,10 @@ import UIKit
 
 class PickerViewController: UIViewController {
     
+    // MARK: - Internals
+    
+    private var transitionDelegate: UIViewControllerTransitioningDelegate?
+    
     // MARK: - Properties
     
     var referenceView: UIView?
@@ -35,20 +39,21 @@ class PickerViewController: UIViewController {
     
     private func preparePopover() {
         modalPresentationStyle = .Popover
+        if UIScreen.mainScreen().traitCollection.userInterfaceIdiom == .Phone {
+            if #available(iOS 9, *) {
+                modalPresentationStyle = .Custom
+                transitionDelegate = PickerTransitioningDelegate()
+                transitioningDelegate = transitionDelegate
+            }
+        }
         preferredContentSize = view.systemLayoutSizeFittingSize(CGSizeZero)
         
-        popoverPresentationController?.delegate = self
         popoverPresentationController?.permittedArrowDirections = .Up
         popoverPresentationController?.backgroundColor = view.backgroundColor
-        
         if let referenceView = referenceView {
             popoverPresentationController?.sourceView = referenceView
             popoverPresentationController?.sourceRect = referenceView.bounds
         }
     }
 
-}
-
-extension PickerViewController: UIPopoverPresentationControllerDelegate {
-    
 }
