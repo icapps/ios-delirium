@@ -18,6 +18,9 @@ class MultiPickerViewController: UIViewController {
     
     @IBAction func presentSingleSelectPicker(sender: AnyObject) {
         print("🎯 Tapped present single select picker")
+        
+        let controller = PickerViewController(referenceView: sender as! UIButton)
+        presentViewController(controller, animated: true, completion: nil)
     }
 
 }

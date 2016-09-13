@@ -33,6 +33,8 @@
 		62CDEC9F1D6C8A6F005A0CEF /* PieChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62CDEC9E1D6C8A6F005A0CEF /* PieChartViewController.swift */; };
 		62CE8BE51D881FAC00F7AC78 /* MultiPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62CE8BE41D881FAC00F7AC78 /* MultiPickerViewController.swift */; };
 		62CE8BE71D881FC900F7AC78 /* Picker.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62CE8BE61D881FC900F7AC78 /* Picker.storyboard */; };
+		62CE8BEB1D88214C00F7AC78 /* PickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62CE8BE91D88214C00F7AC78 /* PickerViewController.swift */; };
+		62CE8BEC1D88214C00F7AC78 /* PickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 62CE8BEA1D88214C00F7AC78 /* PickerViewController.xib */; };
 		8CB2E944415C20A8CD14AB02 /* Pods_Delirium_Delirium_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A876D93EC1B6F361EF6C57E /* Pods_Delirium_Delirium_Example.framework */; };
 /* End PBXBuildFile section */
 
@@ -81,6 +83,8 @@
 		62CDEC9E1D6C8A6F005A0CEF /* PieChartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PieChartViewController.swift; sourceTree = "<group>"; };
 		62CE8BE41D881FAC00F7AC78 /* MultiPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiPickerViewController.swift; sourceTree = "<group>"; };
 		62CE8BE61D881FC900F7AC78 /* Picker.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Picker.storyboard; sourceTree = "<group>"; };
+		62CE8BE91D88214C00F7AC78 /* PickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerViewController.swift; sourceTree = "<group>"; };
+		62CE8BEA1D88214C00F7AC78 /* PickerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PickerViewController.xib; sourceTree = "<group>"; };
 		85692D5D4B6A3CF4C61EF6FE /* Pods-Delirium-Delirium_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Delirium-Delirium_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Delirium-Delirium_Example/Pods-Delirium-Delirium_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		9A876D93EC1B6F361EF6C57E /* Pods_Delirium_Delirium_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Delirium_Delirium_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4B929F2E2F02D67FFCED98D /* Pods_Delirium_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Delirium_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -313,10 +317,20 @@
 		62CE8BE31D881F9200F7AC78 /* Picker */ = {
 			isa = PBXGroup;
 			children = (
+				62CE8BE81D88211100F7AC78 /* Component */,
 				62CE8BE41D881FAC00F7AC78 /* MultiPickerViewController.swift */,
 				62CE8BE61D881FC900F7AC78 /* Picker.storyboard */,
 			);
 			path = Picker;
+			sourceTree = "<group>";
+		};
+		62CE8BE81D88211100F7AC78 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				62CE8BE91D88214C00F7AC78 /* PickerViewController.swift */,
+				62CE8BEA1D88214C00F7AC78 /* PickerViewController.xib */,
+			);
+			path = Component;
 			sourceTree = "<group>";
 		};
 		C0BCBB90998A2CF6F3B8D640 /* Frameworks */ = {
@@ -448,6 +462,7 @@
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
 				6297F4111D0EA72900645AB9 /* Pin.storyboard in Resources */,
 				627E02AB1D0AC55800B7529E /* Shake.storyboard in Resources */,
+				62CE8BEC1D88214C00F7AC78 /* PickerViewController.xib in Resources */,
 				62220A821D3D13CE00D87438 /* BlurredTransition.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -620,6 +635,7 @@
 				625D37071D3D1FE900B51EF5 /* BlurredPopupViewController.swift in Sources */,
 				627E02AD1D0AC6C000B7529E /* ShakeViewController.swift in Sources */,
 				62CDEC9F1D6C8A6F005A0CEF /* PieChartViewController.swift in Sources */,
+				62CE8BEB1D88214C00F7AC78 /* PickerViewController.swift in Sources */,
 				627E02D61D0AD9DF00B7529E /* AlertViewModel.swift in Sources */,
 				62CE8BE51D881FAC00F7AC78 /* MultiPickerViewController.swift in Sources */,
 				627E02D41D0AD9BE00B7529E /* AlertViewController.swift in Sources */,
@@ -777,6 +793,7 @@
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = com.icapps.delirium.example.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -791,6 +808,7 @@
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = com.icapps.delirium.example.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
