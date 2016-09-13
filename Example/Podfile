@@ -1,4 +1,4 @@
-install! 'cocoapods', deterministic_uuids: false
+install! 'cocoapods', deterministic_uuids: false, share_schemes_for_development_pods: false
 
 use_frameworks!
 
