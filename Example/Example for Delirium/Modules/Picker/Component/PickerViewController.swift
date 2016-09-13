@@ -35,8 +35,10 @@ class PickerViewController: UIViewController {
     
     private func preparePopover() {
         modalPresentationStyle = .Popover
-        popoverPresentationController?.delegate = self
+        preferredContentSize = view.systemLayoutSizeFittingSize(CGSizeZero)
         
+        popoverPresentationController?.delegate = self
+        popoverPresentationController?.permittedArrowDirections = .Up
         popoverPresentationController?.backgroundColor = view.backgroundColor
         
         if let referenceView = referenceView {
@@ -48,9 +50,5 @@ class PickerViewController: UIViewController {
 }
 
 extension PickerViewController: UIPopoverPresentationControllerDelegate {
-
-//    func adaptivePresentationStyleForPresentationController(controller: UIPresentationController) -> UIModalPresentationStyle {
-//        
-//    }
     
 }

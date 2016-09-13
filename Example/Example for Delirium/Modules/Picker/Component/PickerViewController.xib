@@ -12,11 +12,15 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <rect key="frame" x="0.0" y="0.0" width="220" height="220"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Picker" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c7y-XG-R0k">
-                    <rect key="frame" x="100" y="464" width="400" height="36"/>
+                    <rect key="frame" x="10" y="10" width="200" height="200"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="200" id="Lfh-BM-yC4"/>
+                        <constraint firstAttribute="width" constant="200" id="dgm-38-yem"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="system" weight="thin" pointSize="30"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
@@ -24,10 +28,12 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="c7y-XG-R0k" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="100" id="GyV-T4-4Ew"/>
-                <constraint firstAttribute="bottom" secondItem="c7y-XG-R0k" secondAttribute="bottom" constant="100" id="feM-mi-g1y"/>
-                <constraint firstAttribute="trailing" secondItem="c7y-XG-R0k" secondAttribute="trailing" constant="100" id="yjh-c1-3bM"/>
+                <constraint firstItem="c7y-XG-R0k" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="10" id="5jD-os-lWM"/>
+                <constraint firstItem="c7y-XG-R0k" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="GyV-T4-4Ew"/>
+                <constraint firstAttribute="bottom" secondItem="c7y-XG-R0k" secondAttribute="bottom" constant="10" id="feM-mi-g1y"/>
+                <constraint firstAttribute="trailing" secondItem="c7y-XG-R0k" secondAttribute="trailing" constant="10" id="yjh-c1-3bM"/>
             </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
         </view>
     </objects>
 </document>
