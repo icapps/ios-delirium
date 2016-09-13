@@ -25,7 +25,7 @@ class PickerPresentationController: UIPresentationController, UIAdaptivePresenta
     override func presentationTransitionWillBegin() {
         overlayView = UIView()
         overlayView?.alpha = 0.0
-        overlayView?.backgroundColor = UIColor.redColor()
+        overlayView?.backgroundColor = UIColor.clearColor()
         overlayView?.translatesAutoresizingMaskIntoConstraints = false
         containerView?.addSubview(overlayView!)
         overlayView?.topAnchor.constraintEqualToAnchor(containerView?.topAnchor).active = true
@@ -42,7 +42,7 @@ class PickerPresentationController: UIPresentationController, UIAdaptivePresenta
         
         let transitionCoordinator = self.presentingViewController.transitionCoordinator()
         transitionCoordinator?.animateAlongsideTransition({(context: UIViewControllerTransitionCoordinatorContext!) -> Void in
-            self.overlayView?.alpha = 0.7
+            self.overlayView?.alpha = 1.0
             }, completion:nil)
     }
     
