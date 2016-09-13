@@ -101,8 +101,35 @@
                                             <segue destination="xTL-db-hsf" kind="show" id="Gs4-HJ-LSp"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="Of6-k8-n3D" detailTextLabel="JkF-1R-yYp" style="IBUITableViewCellStyleSubtitle" id="TUo-wu-uhr">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="Jie-Vk-8Eu" detailTextLabel="EYU-LU-EJl" style="IBUITableViewCellStyleSubtitle" id="o8C-8m-NSx">
                                         <rect key="frame" x="0.0" y="300" width="600" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="o8C-8m-NSx" id="Nir-5o-EQA">
+                                            <rect key="frame" x="0.0" y="0.0" width="567" height="59"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Pickers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Jie-Vk-8Eu">
+                                                    <rect key="frame" x="15" y="10" width="62" height="22"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Display different custom picker components." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="EYU-LU-EJl">
+                                                    <rect key="frame" x="15" y="32" width="286" height="17"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="thin" pointSize="14"/>
+                                                    <color key="textColor" red="0.49803921579999999" green="0.49803921579999999" blue="0.49803921579999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="w8T-2y-MV0" kind="show" id="8XK-xB-kCk"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="Of6-k8-n3D" detailTextLabel="JkF-1R-yYp" style="IBUITableViewCellStyleSubtitle" id="TUo-wu-uhr">
+                                        <rect key="frame" x="0.0" y="360" width="600" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="TUo-wu-uhr" id="swo-ze-vHo">
                                             <rect key="frame" x="0.0" y="0.0" width="567" height="59"/>
@@ -133,7 +160,7 @@
                             <tableViewSection headerTitle="Views" id="MYu-Dw-qcc">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="SCj-oa-Qga" detailTextLabel="Rpy-pL-eoN" style="IBUITableViewCellStyleSubtitle" id="hMu-YG-5TE">
-                                        <rect key="frame" x="0.0" y="388" width="600" height="60"/>
+                                        <rect key="frame" x="0.0" y="448" width="600" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hMu-YG-5TE" id="l2Y-GS-fUW">
                                             <rect key="frame" x="0.0" y="0.0" width="567" height="59"/>
@@ -179,7 +206,7 @@
                 <viewControllerPlaceholder storyboardName="Shake" id="kvc-Jm-vjN" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dz7-aG-owd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1731.5" y="491"/>
+            <point key="canvasLocation" x="1731.5" y="465"/>
         </scene>
         <!--Alert-->
         <scene sceneID="yRW-O2-feg">
@@ -187,7 +214,7 @@
                 <viewControllerPlaceholder storyboardName="Alert" id="xTL-db-hsf" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WQT-7I-AOl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1728" y="540"/>
+            <point key="canvasLocation" x="1728" y="514"/>
         </scene>
         <!--Pin-->
         <scene sceneID="Jzz-OB-okk">
@@ -195,7 +222,15 @@
                 <viewControllerPlaceholder storyboardName="Pin" id="18y-VR-Z27" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ret-8j-anq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1723" y="590"/>
+            <point key="canvasLocation" x="1723" y="564"/>
+        </scene>
+        <!--Picker-->
+        <scene sceneID="uin-Dt-o5G">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Picker" id="w8T-2y-MV0" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f52-Ni-yP2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1732" y="611"/>
         </scene>
         <!--BlurredTransition-->
         <scene sceneID="3gL-vz-zCg">
@@ -203,7 +238,7 @@
                 <viewControllerPlaceholder storyboardName="BlurredTransition" id="d6v-3B-sII" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ect-vh-wjq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1766" y="640"/>
+            <point key="canvasLocation" x="1766" y="662"/>
         </scene>
         <!--PieChart-->
         <scene sceneID="4mO-7M-OUR">
@@ -211,7 +246,7 @@
                 <viewControllerPlaceholder storyboardName="PieChart" id="ZFt-pe-63g" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6RM-Rx-dL4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1739.5" y="690"/>
+            <point key="canvasLocation" x="1739.5" y="712"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ZY0-qf-09X">
