@@ -16,10 +16,14 @@ abstract_target 'Delirium' do
     # unable to find the Delirium module...
     pod 'Delirium', :path => '../'
 
+    # This is the currently needed version with Swift support.
+    pod 'FBSnapshotTestCase', git: 'https://github.com/facebook/ios-snapshot-test-case.git',
+                              commit: '6a3f71f'
+
     # The test frameworks
     pod 'Quick',            '~> 0.10'
     pod 'Nimble',           '~> 5.0'
-    # pod 'Nimble-Snapshots', '~> 4.2'
+    pod 'Nimble-Snapshots', '~> 4.2'
   end
 end
 
