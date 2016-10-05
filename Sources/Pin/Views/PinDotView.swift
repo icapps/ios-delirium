@@ -20,8 +20,8 @@ class PinDotView: UIView {
     
     // MARK: - Layout Configuration
     
-    private let dotSize: CGFloat = 12.0
-    private let dotPadding: CGFloat = 12.0
+    fileprivate let dotSize: CGFloat = 12.0
+    fileprivate let dotPadding: CGFloat = 12.0
     
     // MARK: - Size
     
@@ -33,33 +33,33 @@ class PinDotView: UIView {
     
     // MARK: - Size
     
-    override func intrinsicContentSize() -> CGSize {
+    override var intrinsicContentSize : CGSize {
         let width: CGFloat = dotSize * CGFloat(configuration.numberOfDigits) + (dotPadding * (CGFloat(configuration.numberOfDigits) - 1))
         return CGSize(width: width, height: dotSize)
     }
     
     // MARK: - Drawing
     
-    override func drawRect(rect: CGRect) {
+    override func draw(_ rect: CGRect) {
         let context = UIGraphicsGetCurrentContext()
         
         var previousBubbleRect: CGRect? = nil
         for index in 0..<configuration.numberOfDigits {
             var x: CGFloat = 0
             if let previousBubbleRect = previousBubbleRect {
-                x = CGRectGetMaxX(previousBubbleRect) + dotPadding
+                x = previousBubbleRect.maxX + dotPadding
             }
             let rect = CGRect(x: x, y: 0, width: dotSize, height: dotSize)
             previousBubbleRect = rect
             
             if index >= currentSize {
-                CGContextSetFillColorWithColor(context, configuration.dotStrokeColor.CGColor)
-                CGContextFillEllipseInRect(context, rect)
-                CGContextSetFillColorWithColor(context, UIColor.whiteColor().CGColor)
-                CGContextFillEllipseInRect(context, CGRectInset(rect, 0.5, 0.5))
+                context?.setFillColor(configuration.dotStrokeColor.cgColor)
+                context?.fillEllipse(in: rect)
+                context?.setFillColor(UIColor.white.cgColor)
+                context?.fillEllipse(in: rect.insetBy(dx: 0.5, dy: 0.5))
             } else {
-                CGContextSetFillColorWithColor(context, configuration.dotColor.CGColor)
-                CGContextFillEllipseInRect(context, rect)
+                context?.setFillColor(configuration.dotColor.cgColor)
+                context?.fillEllipse(in: rect)
             }
         }
     }

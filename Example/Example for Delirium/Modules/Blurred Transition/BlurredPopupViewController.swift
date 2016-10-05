@@ -13,7 +13,7 @@ class BlurredPopupViewController: UIViewController {
     
     // MARK: - Internals
     
-    private var transitionDelegate: UIViewControllerTransitioningDelegate?
+    fileprivate var transitionDelegate: UIViewControllerTransitioningDelegate?
     
     // MARK: - Configuration
     
@@ -35,12 +35,12 @@ class BlurredPopupViewController: UIViewController {
     
     // MARK: - Transition
     
-    private func setupTransition() {
+    fileprivate func setupTransition() {
         guard #available(iOS 9, *) else { return }
         
         transitionDelegate = ActionTransitioningDelegate()
         transitioningDelegate = transitionDelegate
-        modalPresentationStyle = .Custom
+        modalPresentationStyle = .custom
     }
     
 }

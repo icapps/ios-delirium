@@ -10,22 +10,22 @@ import Foundation
 
 class BaseBundle {}
 
-extension NSBundle {
+extension Bundle {
     
-    static func deliriumBundle() -> NSBundle {
-        let bundlePath = NSBundle(forClass: BaseBundle.self).pathForResource("Delirium", ofType: "bundle")!
-        return NSBundle(path: bundlePath)!
+    static func deliriumBundle() -> Bundle {
+        let bundlePath = Bundle(for: BaseBundle.self).path(forResource: "Delirium", ofType: "bundle")!
+        return Bundle(path: bundlePath)!
     }
     
-    private static func localeBundle() -> NSBundle {
+    fileprivate static func localeBundle() -> Bundle {
         // Fetch your current language.
-        let components = NSLocale.componentsFromLocaleIdentifier(NSLocale.currentLocale().localeIdentifier)
-        let language = components[NSLocaleLanguageCode]
+        let components = Locale.components(fromIdentifier: Locale.current.identifier)
+        let language = components[Locale.current.languageCode!]
         
         // When we can't find the bundle we prepare the English bunde.
-        var path = deliriumBundle().pathForResource(language, ofType: "lproj")
-        if path == nil { path = deliriumBundle().pathForResource("en", ofType: "lproj") }
-        return NSBundle(path: path!)!
+        var path = deliriumBundle().path(forResource: language, ofType: "lproj")
+        if path == nil { path = deliriumBundle().path(forResource: "en", ofType: "lproj") }
+        return Bundle(path: path!)!
     }
     
 }
@@ -33,7 +33,7 @@ extension NSBundle {
 extension String {
     
     var localizedString: String {
-        return NSLocalizedString(self, bundle: NSBundle.localeBundle(), comment: "")
+        return NSLocalizedString(self, bundle: Bundle.localeBundle(), comment: "")
     }
     
 }

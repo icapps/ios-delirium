@@ -47,7 +47,7 @@ class PieChartViewController: UIViewController {
     
     // MARK: - Actions
     
-    @IBAction func toggleSize(sender: AnyObject) {
+    @IBAction func toggleSize(_ sender: AnyObject) {
         for constraint in constraints {
             constraint.priority = constraint.priority == 800 ? 700 : 800
         }

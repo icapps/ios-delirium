@@ -30,7 +30,7 @@ public struct PinConfiguration {
     public var selectionBackgroundColor = UIColor(red:0.90, green:0.91, blue:0.93, alpha:1.00)
     
     /// The color of the background in the pin number button.
-    public var backgroundColor = UIColor.whiteColor()
+    public var backgroundColor = UIColor.white
     
     /// The color of the text in the pin number button.
     public var numberTextColor = UIColor(red:0.01, green:0.13, blue:0.28, alpha:1.00)
@@ -47,16 +47,16 @@ public protocol PinViewControllerDelegate {
     ///
     /// - Parameter controller: The controller that triggers this method.
     /// - Parameter pin: The entered pin code.
-    func pinViewController(controller: PinViewController, didEnterPin pin: String)
+    func pinViewController(_ controller: PinViewController, didEnterPin pin: String)
     
 }
 
-public class PinViewController: UIViewController {
+open class PinViewController: UIViewController {
     
     // MARK: - Configuration
     
-    public var delegate: PinViewControllerDelegate?
-    private var configuration: PinConfiguration!
+    open var delegate: PinViewControllerDelegate?
+    fileprivate var configuration: PinConfiguration!
     
     // MARK: - Outlets
     
@@ -65,11 +65,11 @@ public class PinViewController: UIViewController {
     
     // MARK: - Model
     
-    private var viewModel: PinViewModel!
+    fileprivate var viewModel: PinViewModel!
     
     // MARK: - View flow
     
-    public override func viewDidLoad() {
+    open override func viewDidLoad() {
         super.viewDidLoad()
         
         title = configuration.title
@@ -84,8 +84,8 @@ public class PinViewController: UIViewController {
     
     // MARK: - Actions
     
-    @IBAction func pressNumber(sender: AnyObject) {
-        if let button = sender as? UIButton where viewModel.add(number: button.tag) {
+    @IBAction func pressNumber(_ sender: AnyObject) {
+        if let button = sender as? UIButton , viewModel.add(number: button.tag) {
             dotView.currentSize = viewModel.codeString.characters.count
             if viewModel.complete {
                 delegate?.pinViewController(self, didEnterPin: viewModel.codeString)
@@ -93,7 +93,7 @@ public class PinViewController: UIViewController {
         }
     }
     
-    @IBAction func pressDelete(sender: AnyObject) {
+    @IBAction func pressDelete(_ sender: AnyObject) {
         viewModel.clean()
         dotView.currentSize = 0
     }
@@ -105,7 +105,7 @@ extension UIViewController {
     // MARK: - Controller
     
     public func pinViewController(withConfiguration configuration: PinConfiguration = PinConfiguration()) -> PinViewController {
-        let storyboard = UIStoryboard(name: "PinViewController", bundle: NSBundle.deliriumBundle())
+        let storyboard = UIStoryboard(name: "PinViewController", bundle: Bundle.deliriumBundle())
         let controller = storyboard.instantiateInitialViewController() as! PinViewController
         controller.configuration = configuration
         return controller

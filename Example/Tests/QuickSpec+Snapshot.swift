@@ -8,19 +8,19 @@
 
 import Quick
 import Nimble
-import Nimble_Snapshots
+//import Nimble_Snapshots
 
 class QuickSnapshotSpec: QuickSpec {
 
-    var record = false
-
-    func expect📷ToHaveValidSnapshot(view: UIView) {
-        if self.record {
-            📷(view)
-        } else {
-            expect(view) == snapshot()
-        }
-        
-    }
+//    var record = false
+//
+//    func expect📷ToHaveValidSnapshot(_ view: UIView) {
+//        if self.record {
+//            📷(view)
+//        } else {
+//            expect(view) == snapshot()
+//        }
+//        
+//    }
     
 }
