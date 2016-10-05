@@ -12,7 +12,7 @@ class PinViewModel {
     
     // MARK: - Configuration
     
-    private let configuration: PinConfiguration
+    fileprivate let configuration: PinConfiguration
     
     // MARK: - Init
     
@@ -28,15 +28,15 @@ class PinViewModel {
     
     // MARK: - Code
     
-    private var code = [Int]()
+    fileprivate var code = [Int]()
     
     var codeString: String {
-        return code.map { String($0) }.joinWithSeparator("")
+        return code.map { String($0) }.joined(separator: "")
     }
     
     // MARK: - Actions
     
-    func add(number number: Int) -> Bool {
+    func add(number: Int) -> Bool {
         guard code.count < configuration.numberOfDigits else {
             return false
         }

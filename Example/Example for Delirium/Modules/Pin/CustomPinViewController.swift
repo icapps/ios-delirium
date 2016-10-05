@@ -21,7 +21,7 @@ class CustomPinViewController: UIViewController {
     
     // MARK: - Actions
     
-    @IBAction func setupPinCode(sender: AnyObject) {
+    @IBAction func setupPinCode(_ sender: AnyObject) {
         let configuration = PinConfiguration()
         let controller = pinViewController(withConfiguration: configuration)
         controller.delegate = self
@@ -32,10 +32,10 @@ class CustomPinViewController: UIViewController {
 
 extension UIViewController: PinViewControllerDelegate {
     
-    public func pinViewController(controller: PinViewController, didEnterPin pin: String) {
-        let controller = UIAlertController(title: "Pin code", message: "The pincode you entered is \(pin).", preferredStyle: .Alert)
-        controller.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil))
-        presentViewController(controller, animated: true, completion: nil)
+    public func pinViewController(_ controller: PinViewController, didEnterPin pin: String) {
+        let controller = UIAlertController(title: "Pin code", message: "The pincode you entered is \(pin).", preferredStyle: .alert)
+        controller.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+        present(controller, animated: true, completion: nil)
     }
     
 }

@@ -10,7 +10,7 @@ import UIKit
 
 @available(iOS 9, *)
 class ActionPresentationAnimationController: NSObject, UIViewControllerAnimatedTransitioning {
-    private let isPresenting: Bool
+    fileprivate let isPresenting: Bool
     
     // MARK: - Init
     
@@ -21,11 +21,11 @@ class ActionPresentationAnimationController: NSObject, UIViewControllerAnimatedT
     
     // MARK: - UIViewControllerAnimatedTransitioning
     
-    func transitionDuration(transitionContext: UIViewControllerContextTransitioning?) -> NSTimeInterval {
+    func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
         return 0.5
     }
     
-    func animateTransition(transitionContext: UIViewControllerContextTransitioning) {
+    func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
         if isPresenting {
             animatePresentationWithTransitionContext(transitionContext)
         } else {
@@ -35,41 +35,41 @@ class ActionPresentationAnimationController: NSObject, UIViewControllerAnimatedT
     
     // MARK: - Animations
     
-    private func animatePresentationWithTransitionContext(transitionContext: UIViewControllerContextTransitioning) {
-        let presentedControllerView = transitionContext.viewForKey(UITransitionContextToViewKey)!
+    fileprivate func animatePresentationWithTransitionContext(_ transitionContext: UIViewControllerContextTransitioning) {
+        let presentedControllerView = transitionContext.view(forKey: UITransitionContextViewKey.to)!
         presentedControllerView.translatesAutoresizingMaskIntoConstraints = false
-        let containerView = transitionContext.containerView()!
+        let containerView = transitionContext.containerView
         
-        let horizontalConstraint: NSLayoutConstraint = presentedControllerView.centerYAnchor.constraintLessThanOrEqualToAnchor(presentedControllerView.superview?.centerYAnchor)
+        let horizontalConstraint: NSLayoutConstraint = presentedControllerView.centerYAnchor.constraint(lessThanOrEqualTo: (presentedControllerView.superview?.centerYAnchor)!)
         horizontalConstraint.priority = 600
-        horizontalConstraint.active = true
+        horizontalConstraint.isActive = true
         horizontalConstraint.constant = containerView.frame.size.height
-        presentedControllerView.centerXAnchor.constraintLessThanOrEqualToAnchor(presentedControllerView.superview?.centerXAnchor).active = true
+        presentedControllerView.centerXAnchor.constraint(lessThanOrEqualTo: (presentedControllerView.superview?.centerXAnchor)!).isActive = true
         presentedControllerView.superview?.layoutIfNeeded()
         
         // We enable this constraint for when the keyboard appears.
-        presentedControllerView.bottomAnchor.constraintLessThanOrEqualToAnchor(containerView.bottomAnchor, constant: 10.0).active = true
+        presentedControllerView.bottomAnchor.constraint(lessThanOrEqualTo: containerView.bottomAnchor, constant: 10.0).isActive = true
         
         // Start animation
         horizontalConstraint.constant = 0
-        UIView.animateWithDuration(0.75, delay: 0.0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.3, options: .CurveEaseInOut, animations: {
+        UIView.animate(withDuration: 0.75, delay: 0.0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.3, options: UIViewAnimationOptions(), animations: {
             presentedControllerView.superview?.layoutIfNeeded()
             }, completion: { (completed) -> Void in
                 transitionContext.completeTransition(true)
         })
     }
     
-    private func animateDismissalWithTransitionContext(transitionContext: UIViewControllerContextTransitioning) {
-        let presentedControllerView = transitionContext.viewForKey(UITransitionContextFromViewKey)!
-        let containerView = transitionContext.containerView()!
+    fileprivate func animateDismissalWithTransitionContext(_ transitionContext: UIViewControllerContextTransitioning) {
+        let presentedControllerView = transitionContext.view(forKey: UITransitionContextViewKey.from)!
+        let containerView = transitionContext.containerView
         
         let horizontalConstraint = containerView.constraints.filter { (constraint) -> Bool in
-            constraint.firstAttribute == .CenterY && constraint.secondAttribute == .CenterY
+            constraint.firstAttribute == .centerY && constraint.secondAttribute == .centerY
             }.first
         
         // Start animation
         horizontalConstraint?.constant = -containerView.frame.size.height
-        UIView.animateWithDuration(0.75, delay: 0.0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.3, options: .CurveEaseInOut, animations: {
+        UIView.animate(withDuration: 0.75, delay: 0.0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.3, options: UIViewAnimationOptions(), animations: {
             presentedControllerView.superview?.layoutIfNeeded()
             }, completion: { (completed) -> Void in
                 transitionContext.completeTransition(true)

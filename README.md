@@ -4,7 +4,7 @@
 [![License](https://img.shields.io/cocoapods/l/Delirium.svg?style=flat)](http://cocoapods.org/pods/Delirium)
 [![Platform](https://img.shields.io/cocoapods/p/Delirium.svg?style=flat)](http://cocoapods.org/pods/Delirium)
 [![Version](https://img.shields.io/cocoapods/v/Delirium.svg?style=flat)](http://cocoapods.org/pods/Delirium)
-[![Language Swift 2.2](https://img.shields.io/badge/Language-Swift%202.2-orange.svg?style=flat)](https://swift.org)
+[![Language Swift 3.0](https://img.shields.io/badge/Language-Swift%203.0-orange.svg?style=flat)](https://swift.org)
 
 > Delirium contains a set of UI components that can be reused during development.
 
@@ -86,7 +86,7 @@ And here how to implement:
 
 ```swift
 let error: NSError = ...
-presentAlertController(withError: error)
+presentAlertController(with: error)
 ```
 
 When you want to present an 'ErrorType' than you'll have to conform to the `AlertError` protocol. This will make sure that the `ErrorType` has a title and a description to show in the alert.
@@ -98,7 +98,7 @@ struct SomeError: AlertError {
 }
 
 let error: SomeError = ...
-presentAlertController(withError: error)
+presentAlertController(with: error)
 ```
 
 All the `presentAlertController` function can have a `retry` closure. When implementing this closure you will get a 'Try again' button in the alert. When tapping this button the closure will be triggered.

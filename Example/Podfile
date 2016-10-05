@@ -1,4 +1,5 @@
-install! 'cocoapods', deterministic_uuids: false
+install! 'cocoapods', deterministic_uuids: false,
+                      share_schemes_for_development_pods: false
 
 use_frameworks!
 
@@ -15,9 +16,23 @@ abstract_target 'Delirium' do
     # unable to find the Delirium module...
     pod 'Delirium', :path => '../'
 
+    # This is the currently needed version with Swift support.
+    pod 'FBSnapshotTestCase', git: 'https://github.com/facebook/ios-snapshot-test-case.git',
+                              commit: '6a3f71f'
+
     # The test frameworks
-    pod 'Quick',            '~> 0.8'
-    pod 'Nimble',           '~> 3.0'
-    pod 'Nimble-Snapshots', '~> 4.1'
+    pod 'Quick',            '~> 0.10'
+    pod 'Nimble',           '~> 5.0'
+    pod 'Nimble-Snapshots', '~> 4.2'
+  end
+end
+
+post_install do |installer|
+  # Make sure all targets have the right swift version set
+  installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      config.build_settings['SWIFT_VERSION'] = '3.0'
+      config.build_settings['ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES'] = '$(inherited) YES'
+    end
   end
 end

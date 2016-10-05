@@ -14,7 +14,7 @@ class QuickSnapshotSpec: QuickSpec {
 
     var record = false
 
-    func expect📷ToHaveValidSnapshot(view: UIView) {
+    func expect📷ToHaveValidSnapshot(_ view: UIView) {
         if self.record {
             📷(view)
         } else {

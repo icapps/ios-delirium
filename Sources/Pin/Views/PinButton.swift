@@ -14,7 +14,7 @@ class PinButton: UIButton {
     
     var configuration = PinConfiguration() {
         didSet {
-            setTitleColor(configuration.numberTextColor, forState: .Normal)
+            setTitleColor(configuration.numberTextColor, for: UIControlState())
             setNeedsDisplay()
         }
     }
@@ -30,7 +30,7 @@ class PinButton: UIButton {
     
     // MARK: - Touch
     
-    override var highlighted: Bool {
+    override var isHighlighted: Bool {
         didSet {
             setNeedsDisplay()
         }
@@ -38,17 +38,17 @@ class PinButton: UIButton {
     
     // MARK: - Drawing
     
-    override func drawRect(rect: CGRect) {
+    override func draw(_ rect: CGRect) {
         let context = UIGraphicsGetCurrentContext()
         
-        CGContextSetFillColorWithColor(context, configuration.numberStrokeColor.CGColor)
-        CGContextFillEllipseInRect(context, rect)
-        if highlighted {
-            CGContextSetFillColorWithColor(context, configuration.selectionBackgroundColor.CGColor)
+        context?.setFillColor(configuration.numberStrokeColor.cgColor)
+        context?.fillEllipse(in: rect)
+        if isHighlighted {
+            context?.setFillColor(configuration.selectionBackgroundColor.cgColor)
         } else {
-            CGContextSetFillColorWithColor(context, configuration.backgroundColor.CGColor)
+            context?.setFillColor(configuration.backgroundColor.cgColor)
         }
-        CGContextFillEllipseInRect(context, CGRectInset(rect, 0.5, 0.5))
+        context?.fillEllipse(in: rect.insetBy(dx: 0.5, dy: 0.5))
     }
     
 }

@@ -14,28 +14,28 @@ import UIKit
 ///
 /// The size of the controller is defined by the `intrinsicContentSize` of the `view` belonging to the controller.
 @available(iOS 9, *)
-public class ActionTransitioningDelegate: NSObject, UIViewControllerTransitioningDelegate {
+open class ActionTransitioningDelegate: NSObject, UIViewControllerTransitioningDelegate {
     
     // MARK: - Configuration
     
     /// The blurred effect style of the background view can be set with this property.
     ///
     /// The possible values can be found in the `UIBlurEffectStyle` docs.
-    public var blurEffectStyle: UIBlurEffectStyle = .Light
+    open var blurEffectStyle: UIBlurEffectStyle = .light
     
     // MARK: - UIViewControllerTransitioningDelegate
     
-    public func presentationControllerForPresentedViewController(presented: UIViewController, presentingViewController presenting: UIViewController, sourceViewController source: UIViewController) -> UIPresentationController? {
-        let presentationController = ActionPresentationController(presentedViewController: presented, presentingViewController: presenting)
+    open func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
+        let presentationController = ActionPresentationController(presentedViewController: presented, presenting: presenting)
         presentationController.blurEffectStyle = blurEffectStyle
         return presentationController
     }
     
-    public func animationControllerForPresentedController(presented: UIViewController, presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+    open func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         return ActionPresentationAnimationController(isPresenting: true)
     }
     
-    public func animationControllerForDismissedController(dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+    open func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         return ActionPresentationAnimationController(isPresenting: false)
     }
 }

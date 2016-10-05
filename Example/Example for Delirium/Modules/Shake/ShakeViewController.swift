@@ -17,7 +17,7 @@ class ShakeViewController: UIViewController {
     
     // MARK: - View model
     
-    private let viewModel = ShakeViewModel()
+    fileprivate let viewModel = ShakeViewModel()
     
     // MARK: - View flow
     
@@ -29,7 +29,7 @@ class ShakeViewController: UIViewController {
     
     // MARK: - Actions
     
-    @IBAction func startShaking(sender: AnyObject) {
+    @IBAction func startShaking(_ sender: AnyObject) {
         label.shake()
     }
     

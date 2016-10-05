@@ -1,5 +1,10 @@
 # Delirium
 
+## Version 1.0.0
+
+- Add Swift 3.0 support.
+- Cleanup functions to be more Swifty.
+
 ## Version 0.5.0
 
 - Added a pie chart view.

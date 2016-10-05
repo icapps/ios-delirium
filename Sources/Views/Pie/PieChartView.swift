@@ -9,26 +9,26 @@
 import UIKit
 
 /// This view is responsible for drawing the pie chart.
-public class PieChartView: UIView {
+open class PieChartView: UIView {
     
     // MARK: - Configuration
     
     /// This is the color of the circle that is drawn over the center of the pie chart. When giving this color an alpha value the pie chart is broken nicely.
-    public var overlayColor = UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 0.85) {
+    open var overlayColor = UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 0.85) {
         didSet {
             setNeedsDisplay()
         }
     }
     
     /// This color is the color that is displayed between the slices.
-    public var strokeColor = UIColor.whiteColor() {
+    open var strokeColor = UIColor.white {
         didSet {
             setNeedsDisplay()
         }
     }
     
     /// This is the size of the padding from where the overlay circle will be displayed.
-    public var overlayPadding: Float = 40.0 {
+    open var overlayPadding: Float = 40.0 {
         didSet {
             setNeedsDisplay()
         }
@@ -36,33 +36,33 @@ public class PieChartView: UIView {
     
     // MARK: - Internals
     
-    private var startAngle = -Float(M_PI * 0.5)
-    private var slices = [PieChartSlice]()
+    fileprivate var startAngle = -Float(M_PI * 0.5)
+    fileprivate var slices = [PieChartSlice]()
     
     // MARK: - Slices
     
     /// Add a slice to the pie chart.
     ///
     /// - Parameter slice: The `PieChartSlice` to add to the pie chart.
-    public func add(slice slice: PieChartSlice) {
+    open func add(slice: PieChartSlice) {
         slices.append(slice)
         setNeedsDisplay()
     }
     
     /// Remove all the slices from the pie chart.
-    public func removeAllSlices() {
+    open func removeAllSlices() {
         slices.removeAll()
         setNeedsDisplay()
     }
     
-    public override func layoutSubviews() {
+    open override func layoutSubviews() {
         super.layoutSubviews()
         setNeedsDisplay()
     }
     
     // MARK: - Drawing
     
-    public override func drawRect(rect: CGRect) {
+    open override func draw(_ rect: CGRect) {
         let context = UIGraphicsGetCurrentContext()
     
         let radius = min(frame.size.width, frame.size.height) * 0.5
@@ -76,10 +76,10 @@ public class PieChartView: UIView {
             let endAngle = currentStartAngle + Float(M_PI * 2.0) * (slice.value / valueCount)
             
             // Draw the slice.
-            CGContextSetFillColorWithColor(context, slice.color.CGColor)
-            CGContextMoveToPoint(context, center.x, center.y)
-            CGContextAddArc(context, center.x, center.y, radius, CGFloat(currentStartAngle), CGFloat(endAngle), 0)
-            CGContextFillPath(context)
+            context?.setFillColor(slice.color.cgColor)
+            context?.move(to: CGPoint(x: center.x, y: center.y))
+            context?.addArc(center: center, radius: radius, startAngle: CGFloat(currentStartAngle), endAngle: CGFloat(endAngle), clockwise: false)
+            context?.fillPath()
             
             // Persist the current start angle for the next slice.
             currentStartAngle = endAngle
@@ -92,12 +92,12 @@ public class PieChartView: UIView {
                 let endAngle = currentStartAngle + Float(M_PI * 2.0) * (slice.value / valueCount)
                 
                 // Draw the line.
-                CGContextSetStrokeColorWithColor(context, strokeColor.CGColor)
-                CGContextMoveToPoint(context, center.x, center.y)
+                context?.setStrokeColor(strokeColor.cgColor)
+                context?.move(to: CGPoint(x: center.x, y: center.y))
                 let pointX = CGFloat(cos(currentStartAngle)) * radius + center.x
                 let pointY = CGFloat(sin(currentStartAngle)) * radius + center.y
-                CGContextAddLineToPoint(context, pointX, pointY)
-                CGContextStrokePath(context)
+                context?.addLine(to: CGPoint(x: pointX, y: pointY))
+                context?.strokePath()
                 
                 // Persist the current start angle for the next slice.
                 currentStartAngle = endAngle
@@ -105,10 +105,10 @@ public class PieChartView: UIView {
         }
         
         // Draw the inner circle.
-        CGContextSetFillColorWithColor(context, overlayColor.CGColor)
-        CGContextMoveToPoint(context, center.x, center.y)
-        CGContextAddEllipseInRect(context, CGRectInset(rect, CGFloat(overlayPadding), CGFloat(overlayPadding)))
-        CGContextFillPath(context)
+        context?.setFillColor(overlayColor.cgColor)
+        context?.move(to: CGPoint(x: center.x, y: center.y))
+        context?.addEllipse(in: rect.insetBy(dx: CGFloat(overlayPadding), dy: CGFloat(overlayPadding)))
+        context?.fillPath()
     }
     
 }

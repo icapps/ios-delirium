@@ -12,7 +12,7 @@ class AlertViewController: UIViewController {
     
     // MARK: - View model
     
-    private let viewModel = AlertViewModel()
+    fileprivate let viewModel = AlertViewModel()
     
     // MARK: - View flow
     
@@ -24,16 +24,16 @@ class AlertViewController: UIViewController {
     
     // MARK: - Actions
     
-    @IBAction func showError(sender: AnyObject) {
-        presentAlertController(withError: viewModel.error)
+    @IBAction func showError(_ sender: AnyObject) {
+        presentAlertController(with: viewModel.error)
     }
     
-    @IBAction func showErrorType(sender: AnyObject) {
-        presentAlertController(withError: viewModel.errorType)
+    @IBAction func showErrorType(_ sender: AnyObject) {
+        presentAlertController(with: viewModel.errorType)
     }
     
-    @IBAction func showRetryError(sender: AnyObject) {
-        presentAlertController(withError: viewModel.errorType) {
+    @IBAction func showRetryError(_ sender: AnyObject) {
+        presentAlertController(with: viewModel.errorType) {
             print("🎯 Tapped retry")
         }
     }
