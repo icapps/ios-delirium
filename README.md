@@ -29,7 +29,7 @@
 Delirium is available through [CocoaPods](http://cocoapods.org). To install it, simply add the following line to your `Podfile`:
 
 ```ruby
-pod 'Delirium', '~> 0.5'
+pod 'Delirium', '~> 1.0'
 ```
 
 ## Features
