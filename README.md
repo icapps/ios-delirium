@@ -86,7 +86,7 @@ And here how to implement:
 
 ```swift
 let error: NSError = ...
-presentAlertController(withError: error)
+presentAlertController(with: error)
 ```
 
 When you want to present an 'ErrorType' than you'll have to conform to the `AlertError` protocol. This will make sure that the `ErrorType` has a title and a description to show in the alert.
@@ -98,7 +98,7 @@ struct SomeError: AlertError {
 }
 
 let error: SomeError = ...
-presentAlertController(withError: error)
+presentAlertController(with: error)
 ```
 
 All the `presentAlertController` function can have a `retry` closure. When implementing this closure you will get a 'Try again' button in the alert. When tapping this button the closure will be triggered.

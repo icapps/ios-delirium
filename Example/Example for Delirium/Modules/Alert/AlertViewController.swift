@@ -25,15 +25,15 @@ class AlertViewController: UIViewController {
     // MARK: - Actions
     
     @IBAction func showError(_ sender: AnyObject) {
-        presentAlertController(withError: viewModel.error)
+        presentAlertController(with: viewModel.error)
     }
     
     @IBAction func showErrorType(_ sender: AnyObject) {
-        presentAlertController(withError: viewModel.errorType)
+        presentAlertController(with: viewModel.errorType)
     }
     
     @IBAction func showRetryError(_ sender: AnyObject) {
-        presentAlertController(withError: viewModel.errorType) {
+        presentAlertController(with: viewModel.errorType) {
             print("🎯 Tapped retry")
         }
     }
