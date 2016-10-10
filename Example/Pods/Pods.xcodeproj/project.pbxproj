@@ -150,6 +150,9 @@
 		B98ABA9A71851071A08507BB /* NSBundle+CurrentTestBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D80317989B3D0AD48F8F0B /* NSBundle+CurrentTestBundle.swift */; };
 		BA4D1A6E12B8A62EC9431FE0 /* NSString+QCKSelectorName.m in Sources */ = {isa = PBXBuildFile; fileRef = 29D45DE6E4243089B2095915 /* NSString+QCKSelectorName.m */; };
 		BF1C77B5C4FF0D0168DC2A32 /* World+DSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303DF276427360DFA54584EE /* World+DSL.swift */; };
+		C014B7591DAC1D2500F0C1CE /* KeyboardConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = C014B7581DAC1D2500F0C1CE /* KeyboardConstraint.swift */; };
+		C014B75A1DAC1D2500F0C1CE /* KeyboardConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = C014B7581DAC1D2500F0C1CE /* KeyboardConstraint.swift */; };
+		C014B75B1DAC1D2500F0C1CE /* KeyboardConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = C014B7581DAC1D2500F0C1CE /* KeyboardConstraint.swift */; };
 		C12A58F137FEEE322ACA152C /* SatisfyAnyOf.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAB2F8F6A3B4430DF57EAE9 /* SatisfyAnyOf.swift */; };
 		C53FCDA14BA06A45BC2AADB7 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C9FBE2D2653FCC67A7D0C9C /* QuartzCore.framework */; };
 		C859C2E209A66BF4F44F640F /* FBSnapshotTestCasePlatform.m in Sources */ = {isa = PBXBuildFile; fileRef = 9109D269763A7FE3986C65AF /* FBSnapshotTestCasePlatform.m */; };
@@ -453,6 +456,7 @@
 		BF378A8F3113A8118FA7CD0E /* Quick-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Quick-umbrella.h"; sourceTree = "<group>"; };
 		BF5828FDCA72086CF0C29802 /* Localizable.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = nl.lproj/Localizable.strings; sourceTree = "<group>"; };
 		BFFBAB5FE6D8A469D2CD4479 /* ActionPresentationController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ActionPresentationController.swift; sourceTree = "<group>"; };
+		C014B7581DAC1D2500F0C1CE /* KeyboardConstraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardConstraint.swift; sourceTree = "<group>"; };
 		C15D6D5ED4676F6279FC76D7 /* Delirium-iOS8.3-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Delirium-iOS8.3-prefix.pch"; path = "../Delirium-iOS8.3/Delirium-iOS8.3-prefix.pch"; sourceTree = "<group>"; };
 		C195CF303220B283EAE78D5E /* AssertionDispatcher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AssertionDispatcher.swift; path = Sources/Nimble/Adapters/AssertionDispatcher.swift; sourceTree = "<group>"; };
 		C25B9C3E398812FBB2E70D38 /* UIImage+Snapshot.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+Snapshot.h"; path = "FBSnapshotTestCase/Categories/UIImage+Snapshot.h"; sourceTree = "<group>"; };
@@ -965,6 +969,7 @@
 		A84A13F491C9DB6D49DA9803 /* Animations */ = {
 			isa = PBXGroup;
 			children = (
+				C014B7581DAC1D2500F0C1CE /* KeyboardConstraint.swift */,
 				FB951C4EE1C858F6F25D458A /* UIView+Shake.swift */,
 				5C27AD9B1BBF556E8C45EBE4 /* Blurred Transition */,
 			);
@@ -1631,6 +1636,7 @@
 				33F596D814CE9535D578A1D1 /* PinViewModel.swift in Sources */,
 				058F6D60798B178E9013D8BF /* UIAlertController+Error.swift in Sources */,
 				9CFF4DCFFC768631299329EF /* UIView+Shake.swift in Sources */,
+				C014B75B1DAC1D2500F0C1CE /* KeyboardConstraint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1705,6 +1711,7 @@
 				72E0C95633B161A19DF28DA5 /* PinViewModel.swift in Sources */,
 				2890D4ADE942E1A246EC3DF7 /* UIAlertController+Error.swift in Sources */,
 				0AA5C000179CEB8E492A3363 /* UIView+Shake.swift in Sources */,
+				C014B75A1DAC1D2500F0C1CE /* KeyboardConstraint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1756,6 +1763,7 @@
 				09A1934DFFC3E88DDCE48117 /* PinViewModel.swift in Sources */,
 				528988314CA3323B82577876 /* UIAlertController+Error.swift in Sources */,
 				73C2E93F13B4DD7E8CF192B4 /* UIView+Shake.swift in Sources */,
+				C014B7591DAC1D2500F0C1CE /* KeyboardConstraint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
