@@ -20,6 +20,7 @@
     - [Pin](#pin)
   - [Views](#views)
     - [Pie Chart](#pie-chart)
+  - [Keyboard](#Keyboard)
 - [Bucket List](#bucket-list)
 - [Author](#author)
 - [License](#license)
@@ -195,6 +196,38 @@ pieChartView.strokeColor = UIColor.blueColor()
 pieChartView.overlayPadding = 20.0
 ```
 
+# Keyboard
+
+Simply animate any view with the keyboard by setting the class of a layout constraint.
+
+Take a look at the example. You do not need to implement the viewcontroller like below or sublcass it. Just use the `KeyboardConstraint` class.
+
+Credits to *Stefan Adams* form iCapps!
+
+```swift
+class KeyboardViewController: UIViewController {
+
+    @IBOutlet weak var textField: UITextField!
+    @IBOutlet weak var keyboardConstraint: KeyboardConstraint! {
+        didSet {
+            keyboardConstraint.offsetFromKeyboardHeight = 25
+        }
+    }
+
+    @IBAction func tapOutsideTextfield(_ sender: UITapGestureRecognizer) {
+        textField.resignFirstResponder()
+    }
+
+}
+
+extension KeyboardViewController: UITextFieldDelegate {
+
+    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+}
+```
 ## Bucket List
 
 Here is an overview what is on our todo list.
