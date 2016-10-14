@@ -1,8 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="9jL-gF-MHs">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="9jL-gF-MHs">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Custom Pin View Controller-->
@@ -14,19 +15,10 @@
                         <viewControllerLayoutGuide type="bottom" id="j0u-hK-GSM"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="uxt-R2-Hc3">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V2x-Xv-cbX">
-                                <rect key="frame" x="246" y="132" width="108" height="32"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
-                                <state key="normal" title="Enter pin code"/>
-                                <connections>
-                                    <action selector="setupPinCode:" destination="9jL-gF-MHs" eventType="touchUpInside" id="kGV-Xf-ODR"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Present the pin verification controller from the button below." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hx3-1P-Lp5">
-                                <rect key="frame" x="170" y="50" width="260" height="72"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter the correct pin. (1234)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hx3-1P-Lp5">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="260" id="qLV-XD-U3f"/>
                                 </constraints>
@@ -34,15 +26,21 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" placeholderIntrinsicWidth="240" placeholderIntrinsicHeight="128" translatesAutoresizingMaskIntoConstraints="NO" id="yqm-5h-im1" customClass="PinView" customModule="Delirium">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="V2x-Xv-cbX" firstAttribute="top" secondItem="hx3-1P-Lp5" secondAttribute="bottom" constant="10" id="WH4-wu-F8Q"/>
-                            <constraint firstItem="V2x-Xv-cbX" firstAttribute="centerX" secondItem="uxt-R2-Hc3" secondAttribute="centerX" id="XOa-ac-gwl"/>
+                            <constraint firstItem="yqm-5h-im1" firstAttribute="centerX" secondItem="uxt-R2-Hc3" secondAttribute="centerX" id="Pea-EM-LRH"/>
                             <constraint firstItem="hx3-1P-Lp5" firstAttribute="centerX" secondItem="uxt-R2-Hc3" secondAttribute="centerX" id="dYS-8V-un8"/>
                             <constraint firstItem="hx3-1P-Lp5" firstAttribute="top" secondItem="Q5b-ov-SRE" secondAttribute="bottom" constant="30" id="usP-Wb-StX"/>
+                            <constraint firstItem="yqm-5h-im1" firstAttribute="top" secondItem="hx3-1P-Lp5" secondAttribute="bottom" constant="20" id="xSi-m0-6PR"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="pinView" destination="yqm-5h-im1" id="yi8-Wl-kxt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tsa-lt-u6w" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
