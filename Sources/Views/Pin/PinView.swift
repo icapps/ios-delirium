@@ -9,8 +9,8 @@
 import UIKit
 
 /// The delegate protocol for the `PinViewController`.
-protocol PinViewDelegate {
 @available(iOS 9, *)
+public protocol PinViewDelegate {
     
     /// When the complete pin was entered you return to this delegate method.
     ///
@@ -20,17 +20,17 @@ protocol PinViewDelegate {
     
 }
 
-class PinView: UIView {
 @available(iOS 9, *)
+open class PinView: UIView {
     
     // MARK: - Configuration
     
     private let buttonPadding: CGFloat = 10.0
     private let dotPadding: CGFloat = 20.0
     
-    var delegate: PinViewDelegate?
+    public var delegate: PinViewDelegate?
     
-    var configuration = PinConfiguration() {
+    public var configuration = PinConfiguration() {
         didSet {
             dotView.configuration = configuration
             buttons.forEach { $0.configuration = configuration }
@@ -40,7 +40,7 @@ class PinView: UIView {
     
     // MARK: - Init
     
-    required init?(coder aDecoder: NSCoder) {
+    public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         
         prepareDots()
@@ -183,7 +183,7 @@ class PinView: UIView {
     
     private var code = [Int]()
     
-    var codeString: String {
+    public var codeString: String {
         return code.map { String($0) }.joined(separator: "")
     }
     
