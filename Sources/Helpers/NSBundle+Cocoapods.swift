@@ -33,7 +33,7 @@ extension Bundle {
 extension String {
     
     var localizedString: String {
-        return NSLocalizedString(self, bundle: Bundle.localeBundle(), comment: "")
+        return NSLocalizedString(self, tableName: "DeliriumLocalizable", bundle: Bundle.localeBundle(), comment: "")
     }
     
 }
