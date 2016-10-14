@@ -8,6 +8,7 @@
 
 import UIKit
 
+@available(iOS 9, *)
 enum PinButtonType {
     case number(Int)
     case clear
@@ -49,6 +50,7 @@ enum PinButtonType {
     }
 }
 
+@available(iOS 9, *)
 class PinButton: UIButton {
     
     // MARK: - Configuration

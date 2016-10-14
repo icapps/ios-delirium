@@ -8,6 +8,7 @@
 
 import UIKit
 
+@available(iOS 9, *)
 class PinDotView: UIView {
     
     // MARK: - Configuration

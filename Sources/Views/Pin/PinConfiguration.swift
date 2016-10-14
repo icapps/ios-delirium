@@ -9,6 +9,7 @@
 import UIKit
 
 /// You can configure the pin view with this struct.
+@available(iOS 9, *)
 public struct PinConfiguration {
     
     /// Define the size of the buttons.

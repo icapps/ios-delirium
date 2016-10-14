@@ -10,6 +10,7 @@ import UIKit
 
 /// The delegate protocol for the `PinViewController`.
 protocol PinViewDelegate {
+@available(iOS 9, *)
     
     /// When the complete pin was entered you return to this delegate method.
     ///
@@ -20,6 +21,7 @@ protocol PinViewDelegate {
 }
 
 class PinView: UIView {
+@available(iOS 9, *)
     
     // MARK: - Configuration
     
