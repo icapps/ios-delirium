@@ -9,7 +9,7 @@
 import UIKit
 
 @available(iOS 9, *)
-enum PinButtonType {
+public enum PinButtonType {
     case number(Int)
     case clear
     
@@ -51,12 +51,12 @@ enum PinButtonType {
 }
 
 @available(iOS 9, *)
-class PinButton: UIButton {
+public class PinButton: UIButton {
     
     // MARK: - Configuration
     
     /// Pass the type used for the code.
-    var type = PinButtonType.clear
+    public internal(set) var type = PinButtonType.clear
     
     /// Set the configuration.
     var configuration = PinConfiguration() {
@@ -68,7 +68,7 @@ class PinButton: UIButton {
     
     // MARK: - Layout
     
-    override func layoutSubviews() {
+    override public func layoutSubviews() {
         super.layoutSubviews()
         
         layer.cornerRadius = bounds.size.height / 2.0
@@ -77,7 +77,7 @@ class PinButton: UIButton {
     
     // MARK: - Touch
     
-    override var isHighlighted: Bool {
+    override public var isHighlighted: Bool {
         didSet {
             setNeedsDisplay()
         }
@@ -85,7 +85,7 @@ class PinButton: UIButton {
     
     // MARK: - Drawing
     
-    override func draw(_ rect: CGRect) {
+    override public func draw(_ rect: CGRect) {
         let context = UIGraphicsGetCurrentContext()
         
         context?.setFillColor(type.strokeColor(for: configuration).cgColor)
