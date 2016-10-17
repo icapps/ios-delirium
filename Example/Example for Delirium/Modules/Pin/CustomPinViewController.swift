@@ -14,7 +14,6 @@ class CustomPinViewController: UIViewController {
 
     // MARK: - Outlets
 
-
     @IBOutlet weak var pinView: PinView!
     
     // MARK: - View flow
