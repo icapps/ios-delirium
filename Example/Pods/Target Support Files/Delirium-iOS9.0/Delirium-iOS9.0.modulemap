@@ -1,5 +1,5 @@
 framework module Delirium {
-  umbrella header "Delirium-iOS8.3-umbrella.h"
+  umbrella header "Delirium-iOS9.0-umbrella.h"
 
   export *
   module * { export * }

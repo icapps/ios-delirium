@@ -17,9 +17,9 @@
     - [Shake](#shake)
   - [Controllers](#controllers)
     - [Alert](#alert)
-    - [Pin](#pin)
   - [Views](#views)
     - [Pie Chart](#pie-chart)
+    - [Pin](#pin)
   - [Keyboard](#Keyboard)
 - [Bucket List](#bucket-list)
 - [Author](#author)
@@ -30,7 +30,7 @@
 Delirium is available through [CocoaPods](http://cocoapods.org). To install it, simply add the following line to your `Podfile`:
 
 ```ruby
-pod 'Delirium', '~> 1.0'
+pod 'Delirium', '~> 2.0'
 ```
 
 ## Features
@@ -111,57 +111,6 @@ presentAlertController(withError: error) {
 }
 ```
 
-### Pin
-
-Present a pin view controller is really easy with _Delirium_.
-
-![](Resources/Pin.png)
-
-```swift
-let controller = pinViewController()
-controller.delegate = self
-navigationController?.pushViewController(controller, animated: true)
-```
-
-When you set the delegate to be the current controller. Than this controller needs to conform to `PinViewControllerDelegate`. Which means that the following method should be implemented.
-
-```swift
-func pinViewController(controller: PinViewController, didEnterPin pin: String) {
-    // This method is called whenever your pin code is complete.
-    // So when the `numberOfDigitis` matched the pin count.
-}
-```
-
-You can pass a custom configuration to the `PinViewController`. Here are some of the options that can be configured:
-
-```swift
-let configuration = PinConfiguration()
-
-// Define the number of digits you want to enter.
-configuration.numberOfDigits = 4
-// The title to be displayed in the navigation bar.
-configuration.title = "Enter your pin"
-// The color of the filled dot at the top of the pin view.
-configuration.dotColor = UIColor(red:0.11, green:0.68, blue:0.93, alpha:1.00)
-// The color of the stroked dot at the top of the pin view.
-configuration.dotStrokeColor = UIColor(red:0.73, green:0.77, blue:0.81, alpha:1.00)
-// The color of the stroked pin number button.
-configuration.numberStrokeColor = UIColor(red:0.75, green:0.79, blue:0.83, alpha:1.00)
-// The color of the highlighted background in the pin number button.
-configuration.selectionBackgroundColor = UIColor(red:0.90, green:0.91, blue:0.93, alpha:1.00)
-// The color of the background in the pin number button.
-configuration.backgroundColor = UIColor.whiteColor()
-// The color of the text in the pin number button.
-configuration.numberTextColor = UIColor(red:0.01, green:0.13, blue:0.28, alpha:1.00)
-```
-
-You can set the configuration by passing the `configuration` instance to the `pinViewController()` method.
-
-```swift
-let configuration = PinConfiguration()
-let controller = pinViewController(withConfiguration: configuration)
-```
-
 ## Views
 
 ### Pie Chart
@@ -196,6 +145,77 @@ pieChartView.strokeColor = UIColor.blueColor()
 pieChartView.overlayPadding = 20.0
 ```
 
+### Pin
+
+Present a pin view is really easy with _Delirium_.
+
+![](Resources/Pin.png)
+
+Subclass a `UIView` in your storyboard and set it to `PinView`. This view will automatically calculate it's own intrinsic content size.
+
+```swift
+pinView.delegate = self
+```
+
+When you set the delegate to be the current controller. Than this controller needs to conform to `PinViewDelegate`. Which means that the following method should be implemented.
+
+```swift
+func pinView(view: PinView, didEnterPin pin: String) {
+    // This method is called whenever your pin code is complete.
+    // So when the `numberOfDigitis` matched the pin count.
+}
+```
+
+You can pass a custom configuration to the `PinView`. Here are some of the options that can be configured:
+
+    @IBOutlet weak var textField: UITextField!
+    @IBOutlet weak var keyboardConstraint: KeyboardConstraint! {
+        didSet {
+            keyboardConstraint.offsetFromKeyboardHeight = 25
+        }
+    }
+
+    @IBAction func tapOutsideTextfield(_ sender: UITapGestureRecognizer) {
+        textField.resignFirstResponder()
+    }
+
+/// Define the size of the buttons.
+configuration.buttonSize: CGFloat = 60.0
+/// Define the font of the buttons.
+configuration.buttonFont = UIFont.systemFont(ofSize: 18.0)
+/// Define if you want to see the touch down highlight color.
+configuration.allowSelectionFeedback = true
+// Define the number of digits you want to enter.
+configuration.numberOfDigits = 4
+// The title to be displayed in the navigation bar.
+configuration.title = "Enter your pin"
+// The color of the filled dot at the top of the pin view.
+configuration.dotColor = UIColor(red:0.11, green:0.68, blue:0.93, alpha:1.00)
+// The color of the stroked dot at the top of the pin view.
+configuration.dotStrokeColor = UIColor(red:0.73, green:0.77, blue:0.81, alpha:1.00)
+// The color of the stroked pin number button.
+configuration.numberStrokeColor = UIColor(red:0.75, green:0.79, blue:0.83, alpha:1.00)
+// The color of the highlighted background in the pin number button.
+configuration.selectionBackgroundColor = UIColor(red:0.90, green:0.91, blue:0.93, alpha:1.00)
+// The color of the background in the pin number button.
+configuration.backgroundColor = UIColor.whiteColor()
+// The color of the text in the pin number button.
+configuration.numberTextColor = UIColor(red:0.01, green:0.13, blue:0.28, alpha:1.00)
+/// The color of the stroked clear button.
+configuration.clearStrokeColor = UIColor.red
+/// The color of the highlighted background in the clear button.
+configuration.clearSelectionBackgroundColor = UIColor.lightGray
+/// The color of the text in the clear button.
+configuration.clearTextColor = UIColor.red
+}
+
+You can set the configuration by passing the `configuration` instance to the `pinView` instance.
+
+```swift
+let configuration = PinConfiguration()
+pinView.configuration = configuration
+```
+
 # Keyboard
 
 Simply animate any view with the keyboard by setting the class of a layout constraint.
@@ -227,7 +247,7 @@ extension KeyboardViewController: UITextFieldDelegate {
         return true
     }
 }
-```
+
 ## Bucket List
 
 Here is an overview what is on our todo list.

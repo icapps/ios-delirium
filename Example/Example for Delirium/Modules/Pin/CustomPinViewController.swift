@@ -9,7 +9,12 @@
 import UIKit
 import Delirium
 
+@available(iOS 9, *)
 class CustomPinViewController: UIViewController {
+
+    // MARK: - Outlets
+
+    @IBOutlet weak var pinView: PinView!
     
     // MARK: - View flow
     
@@ -17,25 +22,17 @@ class CustomPinViewController: UIViewController {
         super.viewDidLoad()
         
         title = "Pin Code"
-    }
-    
-    // MARK: - Actions
-    
-    @IBAction func setupPinCode(_ sender: AnyObject) {
-        let configuration = PinConfiguration()
-        let controller = pinViewController(withConfiguration: configuration)
-        controller.delegate = self
-        navigationController?.pushViewController(controller, animated: true)
+
+        pinView.delegate = self
     }
     
 }
 
-extension UIViewController: PinViewControllerDelegate {
-    
-    public func pinViewController(_ controller: PinViewController, didEnterPin pin: String) {
-        let controller = UIAlertController(title: "Pin code", message: "The pincode you entered is \(pin).", preferredStyle: .alert)
-        controller.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
-        present(controller, animated: true, completion: nil)
+@available(iOS 9, *)
+extension CustomPinViewController: PinViewDelegate {
+
+    func pinView(view: PinView, didEnterPin pin: String) {
+        print("Entered the correct pin", pin == "1234")
     }
-    
+
 }

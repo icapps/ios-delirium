@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0427A3721DB0984C0014970B /* PinViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0427A3701DB097C00014970B /* PinViewSpec.swift */; };
+		0427A3761DB098B70014970B /* PinSpec.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0427A3741DB098840014970B /* PinSpec.storyboard */; };
 		1FE2C97C5CCCF034F85FD1F4 /* Pods_Delirium_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4B929F2E2F02D67FFCED98D /* Pods_Delirium_Tests.framework */; };
 		4EB08FB4146109A55C5F3AF4 /* Pods_Delirium_Delirium_tvExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB99649EA6F52A58BBC97607 /* Pods_Delirium_Delirium_tvExample.framework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
@@ -47,6 +49,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0427A3701DB097C00014970B /* PinViewSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinViewSpec.swift; sourceTree = "<group>"; };
+		0427A3741DB098840014970B /* PinSpec.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PinSpec.storyboard; sourceTree = "<group>"; };
 		06D20A32F4CAE8FA227C3ED6 /* Pods-Delirium-Delirium_tvExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Delirium-Delirium_tvExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Delirium-Delirium_tvExample/Pods-Delirium-Delirium_tvExample.debug.xcconfig"; sourceTree = "<group>"; };
 		176023E3211AD11FEC628AB5 /* Pods-Delirium-Delirium_tvExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Delirium-Delirium_tvExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-Delirium-Delirium_tvExample/Pods-Delirium-Delirium_tvExample.release.xcconfig"; sourceTree = "<group>"; };
 		361576391C1E1EDDF2805EC3 /* Pods-Delirium-Delirium_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Delirium-Delirium_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-Delirium-Delirium_Example/Pods-Delirium-Delirium_Example.release.xcconfig"; sourceTree = "<group>"; };
@@ -116,6 +120,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0427A3731DB098770014970B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0427A3741DB098840014970B /* PinSpec.storyboard */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		3726237C0BC757BB6472F27D /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -173,6 +185,7 @@
 		607FACE81AFB9204008FA782 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				0427A3731DB098770014970B /* Resources */,
 				6294A92F1D6EE1A50088E18C /* Helpers */,
 				627E02B01D0AC89800B7529E /* Specs */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
@@ -235,6 +248,7 @@
 			isa = PBXGroup;
 			children = (
 				627E02B11D0AC8A400B7529E /* PieChartSpec.swift */,
+				0427A3701DB097C00014970B /* PinViewSpec.swift */,
 			);
 			path = Specs;
 			sourceTree = "<group>";
@@ -458,6 +472,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0427A3761DB098B70014970B /* PinSpec.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -632,6 +647,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0427A3721DB0984C0014970B /* PinViewSpec.swift in Sources */,
 				6294A9321D6EE2040088E18C /* QuickSpec+Snapshot.swift in Sources */,
 				627E02B31D0AC8B700B7529E /* PieChartSpec.swift in Sources */,
 			);
@@ -813,6 +829,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "Tests/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -826,6 +843,7 @@
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "Tests/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
