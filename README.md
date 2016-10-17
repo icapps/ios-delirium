@@ -230,11 +230,6 @@ Credits to *Stefan Adams* form iCapps!
 class KeyboardViewController: UIViewController {
 
     @IBOutlet weak var textField: UITextField!
-    @IBOutlet weak var keyboardConstraint: KeyboardConstraint! {
-        didSet {
-            keyboardConstraint.offsetFromKeyboardHeight = 25
-        }
-    }
 
     @IBAction func tapOutsideTextfield(_ sender: UITapGestureRecognizer) {
         textField.resignFirstResponder()
@@ -250,6 +245,9 @@ extension KeyboardViewController: UITextFieldDelegate {
     }
 }
 ```
+The amount of space beteen the keyboard and your view can be set in storyboard when you select the constraint of class `KeyboardConstraint`
+
+![](Resources/Inspectable.png)
 
 ## Bucket List
 

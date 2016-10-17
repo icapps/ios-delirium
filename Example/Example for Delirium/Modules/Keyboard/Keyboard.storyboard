@@ -32,7 +32,13 @@
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="rqM-pJ-Rnv" secondAttribute="trailing" id="3QX-Xy-3hM"/>
-                            <constraint firstItem="CxJ-eR-ic2" firstAttribute="top" secondItem="rqM-pJ-Rnv" secondAttribute="bottom" constant="25" id="UrP-Ku-AdK" userLabel="KeyboardConstraint" customClass="KeyboardConstraint" customModule="Delirium"/>
+                            <constraint firstItem="CxJ-eR-ic2" firstAttribute="top" secondItem="rqM-pJ-Rnv" secondAttribute="bottom" constant="25" id="UrP-Ku-AdK" userLabel="KeyboardConstraint" customClass="KeyboardConstraint" customModule="Delirium">
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="aboveKeyboard">
+                                        <real key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </constraint>
                             <constraint firstItem="rqM-pJ-Rnv" firstAttribute="leading" secondItem="QNT-DN-Mnt" secondAttribute="leadingMargin" id="irl-R6-1hJ"/>
                             <constraint firstItem="rqM-pJ-Rnv" firstAttribute="centerX" secondItem="QNT-DN-Mnt" secondAttribute="centerX" id="qL0-GP-ndG"/>
                         </constraints>

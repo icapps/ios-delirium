@@ -3,11 +3,13 @@ import UIKit
 /// Set any NSLayoutConstraint class to this class and it moves up and down with the keyboard.
 open class KeyboardConstraint: NSLayoutConstraint {
     /// this amount is added to the keyboard height to show the view above the keyboard.
-    public var offsetFromKeyboardHeight: CGFloat = 15
-    /// will be set on awakeFromNib to the constant value. 
-    /// Is used to move back to the position before the keyboard was shown
-    public var normalConstant: CGFloat = 0
+    @IBInspectable public var aboveKeyboard: CGFloat = 15
 
+    // MARK: - PRIVATE
+
+    /// Will be set on awakeFromNib to the constant value.
+    /// Is used to move back to the position before the keyboard was shown
+    private var normalConstant: CGFloat = 0
     private var notifications: [Any]?  = [Any]()
 
     override open func awakeFromNib() {
@@ -20,7 +22,7 @@ open class KeyboardConstraint: NSLayoutConstraint {
                         let userInfo = notification.userInfo
                         let frameInfo = userInfo?[UIKeyboardFrameBeginUserInfoKey]
                         if let keyboardSize = (frameInfo as? NSValue)?.cgRectValue {
-                            let offset = self?.offsetFromKeyboardHeight != nil ? self!.offsetFromKeyboardHeight : 0
+                            let offset = self?.aboveKeyboard != nil ? self!.aboveKeyboard : 0
                             self?.animate(to: (keyboardSize.height + offset), userInfo: userInfo)
                         }
                     }
@@ -45,7 +47,11 @@ open class KeyboardConstraint: NSLayoutConstraint {
             return
         }
 
-        self.constant = newConstant
+        constant = newConstant
+        animateConstraintChange(curve: curve, duration: duration)
+    }
+
+    private func animateConstraintChange(curve: UInt, duration: TimeInterval) {
         UIView.animate(withDuration: duration, delay: 0, options: UIViewAnimationOptions(rawValue: curve), animations: {
             guard let view = self.firstItem as? UIView,
                 let view2 = self.firstItem as? UIView else {
@@ -53,9 +59,9 @@ open class KeyboardConstraint: NSLayoutConstraint {
             }
             view.superview?.layoutIfNeeded()
             view2.superview?.layoutIfNeeded()
-        }, completion: nil)
-
+            }, completion: nil)
     }
+
     deinit {
         guard let notifications = notifications else {
             return
