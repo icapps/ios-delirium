@@ -15,7 +15,7 @@ open class KeyboardConstraint: NSLayoutConstraint {
     override open func awakeFromNib() {
         //swiftlint:disable opening_brace
         normalConstant = constant
-        let not1 = NotificationCenter.default.addObserver(forName: NSNotification.Name.UIKeyboardWillShow,
+        let keyboardWillShow = NotificationCenter.default.addObserver(forName: NSNotification.Name.UIKeyboardWillShow,
                                                object: nil,
                                                queue: OperationQueue.main)
                     { [weak self] (notification) in
@@ -27,7 +27,7 @@ open class KeyboardConstraint: NSLayoutConstraint {
                         }
                     }
 
-        let not2 = NotificationCenter.default.addObserver(forName: NSNotification.Name.UIKeyboardWillHide,
+        let keyboardWillHide = NotificationCenter.default.addObserver(forName: NSNotification.Name.UIKeyboardWillHide,
                                                           object: nil,
                                                           queue: OperationQueue.main)
                     { [weak self] (notification) in
@@ -35,8 +35,8 @@ open class KeyboardConstraint: NSLayoutConstraint {
                         self?.animate(to: self?.normalConstant, userInfo: userInfo)
                     }
 
-        notifications?.append(not1)
-        notifications?.append(not2)
+        notifications?.append(keyboardWillShow)
+        notifications?.append(keyboardWillHide)
         super.awakeFromNib()
     }
 
