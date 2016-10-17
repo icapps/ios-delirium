@@ -91,7 +91,7 @@ public class PinButton: UIButton {
         
         context?.setFillColor(type.strokeColor(for: configuration).cgColor)
         context?.fillEllipse(in: rect)
-        if isHighlighted {
+        if isHighlighted && configuration.allowSelectionFeedback {
             context?.setFillColor(type.selectionBackgroundColor(for: configuration).cgColor)
         } else {
             context?.setFillColor(configuration.backgroundColor.cgColor)

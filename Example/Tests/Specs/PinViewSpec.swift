@@ -131,6 +131,50 @@ class PinViewSpec: QuickSnapshotSpec {
 
                 self.expect📷ToHaveValidSnapshot(view)
             }
+
+            it("should not show the correct selection background color") {
+                var configuration = PinConfiguration()
+                configuration.allowSelectionFeedback = false
+                configuration.selectionBackgroundColor = .green
+                view.configuration = configuration
+
+                let button = view.subviews.filter { subview -> Bool in
+                    if let button = subview as? PinButton {
+                        switch button.type {
+                        case .number(_):
+                            return true
+                        default:
+                            return false
+                        }
+                    }
+                    return false
+                    }.first as? UIButton
+                button?.isHighlighted = true
+
+                self.expect📷ToHaveValidSnapshot(view)
+            }
+
+            it("should not show the correct clear selection background color") {
+                var configuration = PinConfiguration()
+                configuration.allowSelectionFeedback = false
+                configuration.clearSelectionBackgroundColor = .green
+                view.configuration = configuration
+
+                let button = view.subviews.filter { subview -> Bool in
+                    if let button = subview as? PinButton {
+                        switch button.type {
+                        case .clear:
+                            return true
+                        default:
+                            return false
+                        }
+                    }
+                    return false
+                    }.first as? UIButton
+                button?.isHighlighted = true
+                
+                self.expect📷ToHaveValidSnapshot(view)
+            }
         }
     }
 }

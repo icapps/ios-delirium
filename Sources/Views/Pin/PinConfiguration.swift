@@ -17,6 +17,9 @@ public struct PinConfiguration {
 
     /// Define the font of the buttons.
     public var buttonFont = UIFont.systemFont(ofSize: 18.0)
+
+    /// Define if you want to see the touch down highlight color.
+    public var allowSelectionFeedback = true
     
     /// Define the number of digits you want to enter.
     public var numberOfDigits: Int = 4
