@@ -1,17 +1,19 @@
 //
-//  PinView.swift
-//  Delirium
+//  PinDotView.swift
+//  Point of Sale
 //
-//  Created by Jelle Vandebeeck on 13/06/16.
-//  Copyright © 2016 CocoaPods. All rights reserved.
+//  Created by Jelle Vandebeeck on 13/10/2016.
+//  Copyright © 2016 iCapps. All rights reserved.
 //
 
 import UIKit
 
+@available(iOS 9, *)
 class PinDotView: UIView {
     
     // MARK: - Configuration
     
+    /// Set the configuration.
     var configuration = PinConfiguration() {
         didSet {
             setNeedsDisplay()
@@ -33,7 +35,7 @@ class PinDotView: UIView {
     
     // MARK: - Size
     
-    override var intrinsicContentSize : CGSize {
+    override var intrinsicContentSize: CGSize {
         let width: CGFloat = dotSize * CGFloat(configuration.numberOfDigits) + (dotPadding * (CGFloat(configuration.numberOfDigits) - 1))
         return CGSize(width: width, height: dotSize)
     }
