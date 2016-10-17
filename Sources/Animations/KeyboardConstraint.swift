@@ -53,12 +53,14 @@ open class KeyboardConstraint: NSLayoutConstraint {
 
     private func animateConstraintChange(curve: UInt, duration: TimeInterval) {
         UIView.animate(withDuration: duration, delay: 0, options: UIViewAnimationOptions(rawValue: curve), animations: {
-            guard let view = self.firstItem as? UIView,
-                let view2 = self.firstItem as? UIView else {
+            guard   let view = self.firstItem as? UIView,
+                    let view2 = self.firstItem as? UIView else {
                     return
             }
+
             view.superview?.layoutIfNeeded()
             view2.superview?.layoutIfNeeded()
+
             }, completion: nil)
     }
 
