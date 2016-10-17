@@ -173,6 +173,10 @@ let configuration = PinConfiguration()
 
 /// Define the size of the buttons.
 configuration.buttonSize: CGFloat = 60.0
+/// Define the font of the buttons.
+configuration.buttonFont = UIFont.systemFont(ofSize: 18.0)
+/// Define if you want to see the touch down highlight color.
+configuration.allowSelectionFeedback = true
 // Define the number of digits you want to enter.
 configuration.numberOfDigits = 4
 // The title to be displayed in the navigation bar.
