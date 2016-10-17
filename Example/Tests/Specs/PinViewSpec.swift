@@ -41,6 +41,13 @@ class PinViewSpec: QuickSnapshotSpec {
                 self.expect📷ToHaveValidSnapshot(view)
             }
 
+            it("should show the correct button font") {
+                var configuration = PinConfiguration()
+                configuration.buttonFont = UIFont.systemFont(ofSize: 20.0, weight: UIFontWeightHeavy)
+                view.configuration = configuration
+                self.expect📷ToHaveValidSnapshot(view)
+            }
+
             it("should show the correct dot stroke color") {
                 var configuration = PinConfiguration()
                 configuration.dotStrokeColor = .green
