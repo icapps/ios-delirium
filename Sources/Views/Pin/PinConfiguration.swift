@@ -14,6 +14,9 @@ public struct PinConfiguration {
     
     /// Define the size of the buttons.
     public var buttonSize: CGFloat = 60.0
+
+    /// Define the font of the buttons.
+    public var buttonFont = UIFont.systemFont(ofSize: 18.0)
     
     /// Define the number of digits you want to enter.
     public var numberOfDigits: Int = 4
