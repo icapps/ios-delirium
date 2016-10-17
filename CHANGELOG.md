@@ -1,5 +1,10 @@
 # Delirium
 
+## Version 2.0.0
+
+- Refactored the `PinView` to be more like a `UIView`.
+- Renamed the `Localizable.strings` file to be more unique.
+
 ## Version 1.0.0
 
 - Add Swift 3.0 support.
