@@ -168,6 +168,7 @@ func pinView(view: PinView, didEnterPin pin: String) {
 
 You can pass a custom configuration to the `PinView`. Here are some of the options that can be configured:
 
+```swift
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var keyboardConstraint: KeyboardConstraint! {
         didSet {
@@ -178,6 +179,7 @@ You can pass a custom configuration to the `PinView`. Here are some of the optio
     @IBAction func tapOutsideTextfield(_ sender: UITapGestureRecognizer) {
         textField.resignFirstResponder()
     }
+```
 
 /// Define the size of the buttons.
 configuration.buttonSize: CGFloat = 60.0
@@ -247,6 +249,7 @@ extension KeyboardViewController: UITextFieldDelegate {
         return true
     }
 }
+```
 
 ## Bucket List
 
