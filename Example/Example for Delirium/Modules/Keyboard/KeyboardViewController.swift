@@ -14,7 +14,7 @@ class KeyboardViewController: UIViewController {
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var keyboardConstraint: KeyboardConstraint! {
         didSet {
-            keyboardConstraint.offsetFromKeyboardHeight = 25
+            keyboardConstraint.aboveKeyboard = 25
         }
     }
 
