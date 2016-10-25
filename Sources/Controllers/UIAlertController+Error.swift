@@ -47,9 +47,9 @@ extension UIViewController {
     ///
     /// - Parameter error: The `NSError` to display in the alert.
     /// - Parameter retry: The closure that is called when the retry button is tapped.
-    public func presentAlertController(with error: NSError, retry: (() -> ())? = nil) {
+    public func presentAlertController(with error: NSError, retry: (() -> ())? = nil, ok: (()->())? = nil) {
         let controller = UIAlertController(error: error)
-        presentAlertController(controller, retry: retry)
+        presentAlertController(controller, retry: retry, ok: ok)
     }
     
     /// Present the `UIAlertController` created from the `AlertError` object.
@@ -58,13 +58,13 @@ extension UIViewController {
     ///
     /// - Parameter error: The `AlertError` to display in the alert.
     /// - Parameter retry: The closure that is called when the retry button is tapped.
-    public func presentAlertController(with error: AlertError, retry: (() -> ())? = nil) {
+    public func presentAlertController(with error: AlertError, retry: (() -> ())? = nil, ok: (()->())? = nil) {
         let controller = UIAlertController(error: error)
-        presentAlertController(controller, retry: retry)
+        presentAlertController(controller, retry: retry, ok: ok)
     }
     
-    fileprivate func presentAlertController(_ controller: UIAlertController, retry: (() -> ())? = nil) {
-        controller.addAction(UIAlertAction(title: "delirium.alert.button.ok".localizedString, style: .cancel, handler: nil))
+    fileprivate func presentAlertController(_ controller: UIAlertController, retry: (() -> ())? = nil, ok: (()->())? = nil) {
+        controller.addAction(UIAlertAction(title: "delirium.alert.button.ok".localizedString, style: .cancel) { action in ok?()})
         if let retry = retry {
             controller.addAction(UIAlertAction(title: "delirium.alert.button.tryagain".localizedString, style: .default) { action in
                 retry()
