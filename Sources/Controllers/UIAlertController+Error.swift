@@ -47,6 +47,7 @@ extension UIViewController {
     ///
     /// - Parameter error: The `NSError` to display in the alert.
     /// - Parameter retry: The closure that is called when the retry button is tapped.
+    /// - Parameter ok: The closure that is called when the ok button is pressed.
     public func presentAlertController(with error: NSError, retry: (() -> ())? = nil, ok: (()->())? = nil) {
         let controller = UIAlertController(error: error)
         presentAlertController(controller, retry: retry, ok: ok)
@@ -58,6 +59,7 @@ extension UIViewController {
     ///
     /// - Parameter error: The `AlertError` to display in the alert.
     /// - Parameter retry: The closure that is called when the retry button is tapped.
+    /// - Parameter ok: The closure that is called when the ok button is pressed.
     public func presentAlertController(with error: AlertError, retry: (() -> ())? = nil, ok: (()->())? = nil) {
         let controller = UIAlertController(error: error)
         presentAlertController(controller, retry: retry, ok: ok)
