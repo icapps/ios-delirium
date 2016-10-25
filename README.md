@@ -20,6 +20,7 @@
   - [Views](#views)
     - [Pie Chart](#pie-chart)
     - [Pin](#pin)
+  - [Keyboard](#Keyboard)
 - [Bucket List](#bucket-list)
 - [Author](#author)
 - [License](#license)
@@ -168,8 +169,17 @@ func pinView(view: PinView, didEnterPin pin: String) {
 You can pass a custom configuration to the `PinView`. Here are some of the options that can be configured:
 
 ```swift
-let configuration = PinConfiguration()
+    @IBOutlet weak var textField: UITextField!
+    @IBOutlet weak var keyboardConstraint: KeyboardConstraint! {
+        didSet {
+            keyboardConstraint.offsetFromKeyboardHeight = 25
+        }
+    }
 
+    @IBAction func tapOutsideTextfield(_ sender: UITapGestureRecognizer) {
+        textField.resignFirstResponder()
+    }
+```
 
 /// Define the size of the buttons.
 configuration.buttonSize: CGFloat = 60.0
@@ -199,7 +209,7 @@ configuration.clearStrokeColor = UIColor.red
 configuration.clearSelectionBackgroundColor = UIColor.lightGray
 /// The color of the text in the clear button.
 configuration.clearTextColor = UIColor.red
-```
+}
 
 You can set the configuration by passing the `configuration` instance to the `pinView` instance.
 
@@ -207,6 +217,37 @@ You can set the configuration by passing the `configuration` instance to the `pi
 let configuration = PinConfiguration()
 pinView.configuration = configuration
 ```
+
+# Keyboard
+
+Simply animate any view with the keyboard by setting the class of a layout constraint.
+
+Take a look at the example. You do not need to implement the viewcontroller like below or sublcass it. Just use the `KeyboardConstraint` class.
+
+Credits to *Stefan Adams* form iCapps!
+
+```swift
+class KeyboardViewController: UIViewController {
+
+    @IBOutlet weak var textField: UITextField!
+
+    @IBAction func tapOutsideTextfield(_ sender: UITapGestureRecognizer) {
+        textField.resignFirstResponder()
+    }
+
+}
+
+extension KeyboardViewController: UITextFieldDelegate {
+
+    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+}
+```
+The amount of space beteen the keyboard and your view can be set in storyboard when you select the constraint of class `KeyboardConstraint`
+
+![](Resources/Inspectable.png)
 
 ## Bucket List
 
