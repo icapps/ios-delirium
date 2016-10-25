@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="z4l-FK-RFJ">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Keyboard View Controller-->
+        <scene sceneID="y6w-gL-q41">
+            <objects>
+                <viewController id="z4l-FK-RFJ" customClass="KeyboardViewController" customModule="Delirium_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5SC-OR-ygf"/>
+                        <viewControllerLayoutGuide type="bottom" id="CxJ-eR-ic2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="QNT-DN-Mnt">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Try to type some text" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="rqM-pJ-Rnv">
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="z4l-FK-RFJ" id="eXg-FN-zEU"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="rqM-pJ-Rnv" secondAttribute="trailing" id="3QX-Xy-3hM"/>
+                            <constraint firstItem="CxJ-eR-ic2" firstAttribute="top" secondItem="rqM-pJ-Rnv" secondAttribute="bottom" constant="25" id="UrP-Ku-AdK" userLabel="KeyboardConstraint" customClass="KeyboardConstraint" customModule="Delirium">
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="aboveKeyboard">
+                                        <real key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </constraint>
+                            <constraint firstItem="rqM-pJ-Rnv" firstAttribute="leading" secondItem="QNT-DN-Mnt" secondAttribute="leadingMargin" id="irl-R6-1hJ"/>
+                            <constraint firstItem="rqM-pJ-Rnv" firstAttribute="centerX" secondItem="QNT-DN-Mnt" secondAttribute="centerX" id="qL0-GP-ndG"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="X9h-Te-RNd" appends="YES" id="OlW-bU-m9o"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="keyboardConstraint" destination="UrP-Ku-AdK" id="dBd-lJ-OUa"/>
+                        <outlet property="textField" destination="rqM-pJ-Rnv" id="rbf-Pa-6p8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eOM-8g-HbS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="X9h-Te-RNd">
+                    <connections>
+                        <action selector="tapOutsideTextfield:" destination="z4l-FK-RFJ" id="s05-yv-a5g"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-374" y="54"/>
+        </scene>
+    </scenes>
+</document>
