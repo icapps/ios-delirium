@@ -163,10 +163,14 @@ public class StickyCollectionViewLayout: UICollectionViewLayout {
             self.itemAttributes.append(rowAttributes)
         }
 
+        calculateTotalContentSize(contentWidth: contentWidth)
+    }
+
+    private func calculateTotalContentSize(contentWidth: CGFloat) {
         guard let lastAttribute = itemAttributes.last?.last else {
             return
         }
-        contentHeight = lastAttribute.frame.origin.y + lastAttribute.frame.size.height
-        self.contentSize = CGSize(width: contentWidth, height: contentHeight)
+        let contentHeight = lastAttribute.frame.origin.y + lastAttribute.frame.size.height
+        contentSize = CGSize(width: contentWidth, height: contentHeight)
     }
 }
