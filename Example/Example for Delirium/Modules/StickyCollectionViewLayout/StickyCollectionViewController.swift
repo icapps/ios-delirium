@@ -1,5 +1,6 @@
 import Foundation
 import UIKit
+import Delirium
 
 enum StickyCell: String {
     case stickyCell

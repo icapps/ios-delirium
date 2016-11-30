@@ -1,13 +1,13 @@
 import UIKit
 
-class CustomCollectionViewLayout: UICollectionViewLayout {
+public class StickyCollectionViewLayout: UICollectionViewLayout {
 
     let numberOfColumns = 8
     var itemAttributes = [[UICollectionViewLayoutAttributes]]()
     var itemsSize = [CGSize]()
     var contentSize : CGSize!
     
-    override func prepare() {
+    override public func prepare() {
         guard let sectionCount = collectionView?.numberOfSections, sectionCount > 0 else {
             return
         }
@@ -98,15 +98,15 @@ class CustomCollectionViewLayout: UICollectionViewLayout {
         self.contentSize = CGSize(width: contentWidth, height: contentHeight)
     }
     
-    override var collectionViewContentSize : CGSize {
+    override public var collectionViewContentSize : CGSize {
         return self.contentSize
     }
     
-    override func layoutAttributesForItem(at indexPath: IndexPath) -> UICollectionViewLayoutAttributes? {
+    override public func layoutAttributesForItem(at indexPath: IndexPath) -> UICollectionViewLayoutAttributes? {
         return self.itemAttributes[indexPath.section][indexPath.row]
     }
     
-    override func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
+    override public func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
         var attributes = [UICollectionViewLayoutAttributes]()
         for section in self.itemAttributes {
             let filteredArray  = section.filter { rect.intersects($0.frame) }
@@ -116,7 +116,7 @@ class CustomCollectionViewLayout: UICollectionViewLayout {
         return attributes
     }
 
-    override func shouldInvalidateLayout(forBoundsChange newBounds: CGRect) -> Bool {
+    override public func shouldInvalidateLayout(forBoundsChange newBounds: CGRect) -> Bool {
         return true
     }
     
