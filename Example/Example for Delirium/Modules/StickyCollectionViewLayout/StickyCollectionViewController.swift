@@ -5,21 +5,61 @@ import Delirium
 enum StickyCellIdentifier: String {
     case stickyCell
 }
+enum Section: Int {
+    case section1, section2, section3, section4
+}
+
+enum Row: Int {
+    case A, B, C, D, E, F, G, H
+}
+
+class ViewModel {
+    private var model: [Section: [Row]]
+
+    init(_ model: [Section: [Row]]) {
+        self.model = model
+    }
+
+    var numberOfSection: Int {
+        return model.count
+    }
+
+    func rows(in section: Section) -> Int {
+        guard let rows = model[section] else {
+            return 0
+        }
+        return rows.count
+    }
+}
 
 class StickyCollectionViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
 
+    var viewModel: ViewModel!
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        let row1: [Row] = [.A, .B, .C, .D, .E, .F, .G, .H]
+        let row2 = row1
+        let row3 = row1
+        viewModel = ViewModel([.section1:row1, .section2:row2, .section3:row3])
+    }
 }
 
 extension StickyCollectionViewController: UICollectionViewDataSource {
 
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 50
+        return viewModel.numberOfSection
     }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 8
+        guard let section = Section(rawValue: section) else {
+            return 0
+        }
+
+        return viewModel.rows(in: section)
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
