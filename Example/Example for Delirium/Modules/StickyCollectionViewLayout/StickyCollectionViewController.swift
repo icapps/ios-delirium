@@ -65,9 +65,15 @@ extension StickyCollectionViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: .stickyCell, for: indexPath) as! StickyCell
 
+        let row = Section(rawValue: indexPath.section)!
+        let column = Row(rawValue: indexPath.row)!
+
+        cell.label.text = "\(row): \(column)"
+
         if indexPath.row  == 0 {
             cell.backgroundColor = UIColor.darkGray
             cell.label.textColor = UIColor.white
+
         } else if indexPath.section == 0 {
             cell.backgroundColor = UIColor.gray
             cell.label.textColor = UIColor.white
