@@ -36,8 +36,7 @@
 		8CB2E944415C20A8CD14AB02 /* Pods_Delirium_Delirium_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A876D93EC1B6F361EF6C57E /* Pods_Delirium_Delirium_Example.framework */; };
 		C014B75D1DAC1D5900F0C1CE /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C014B75C1DAC1D5900F0C1CE /* KeyboardViewController.swift */; };
 		C014B7601DAC1DAD00F0C1CE /* Keyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C014B75F1DAC1DAD00F0C1CE /* Keyboard.storyboard */; };
-		C05979BC1DEECD7B00D38200 /* StickeyCollectionViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05979BB1DEECD7B00D38200 /* StickeyCollectionViewSpec.swift */; };
-		C05979BE1DEECDD500D38200 /* StickeyCollectionView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C05979BD1DEECDD500D38200 /* StickeyCollectionView.storyboard */; };
+		C05979BE1DEECDD500D38200 /* StickyCollectionView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C05979BD1DEECDD500D38200 /* StickyCollectionView.storyboard */; };
 		C05979C01DEECF6800D38200 /* StickyCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05979BF1DEECF6800D38200 /* StickyCollectionViewController.swift */; };
 		C05979C21DEED56200D38200 /* StickyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05979C11DEED56200D38200 /* StickyCell.swift */; };
 /* End PBXBuildFile section */
@@ -91,8 +90,7 @@
 		9A876D93EC1B6F361EF6C57E /* Pods_Delirium_Delirium_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Delirium_Delirium_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C014B75C1DAC1D5900F0C1CE /* KeyboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KeyboardViewController.swift; path = Keyboard/KeyboardViewController.swift; sourceTree = "<group>"; };
 		C014B75F1DAC1DAD00F0C1CE /* Keyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Keyboard.storyboard; path = Keyboard/Keyboard.storyboard; sourceTree = "<group>"; };
-		C05979BB1DEECD7B00D38200 /* StickeyCollectionViewSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StickeyCollectionViewSpec.swift; sourceTree = "<group>"; };
-		C05979BD1DEECDD500D38200 /* StickeyCollectionView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = StickeyCollectionView.storyboard; sourceTree = "<group>"; };
+		C05979BD1DEECDD500D38200 /* StickyCollectionView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = StickyCollectionView.storyboard; sourceTree = "<group>"; };
 		C05979BF1DEECF6800D38200 /* StickyCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StickyCollectionViewController.swift; sourceTree = "<group>"; };
 		C05979C11DEED56200D38200 /* StickyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StickyCell.swift; sourceTree = "<group>"; };
 		C4B929F2E2F02D67FFCED98D /* Pods_Delirium_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Delirium_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -257,7 +255,6 @@
 			isa = PBXGroup;
 			children = (
 				627E02B11D0AC8A400B7529E /* PieChartSpec.swift */,
-				C05979BB1DEECD7B00D38200 /* StickeyCollectionViewSpec.swift */,
 				0427A3701DB097C00014970B /* PinViewSpec.swift */,
 			);
 			path = Specs;
@@ -346,7 +343,7 @@
 		C05979BA1DEECD4D00D38200 /* StickyCollectionViewLayout */ = {
 			isa = PBXGroup;
 			children = (
-				C05979BD1DEECDD500D38200 /* StickeyCollectionView.storyboard */,
+				C05979BD1DEECDD500D38200 /* StickyCollectionView.storyboard */,
 				C05979C11DEED56200D38200 /* StickyCell.swift */,
 				C05979BF1DEECF6800D38200 /* StickyCollectionViewController.swift */,
 			);
@@ -486,7 +483,7 @@
 				6297F4111D0EA72900645AB9 /* Pin.storyboard in Resources */,
 				627E02AB1D0AC55800B7529E /* Shake.storyboard in Resources */,
 				C014B7601DAC1DAD00F0C1CE /* Keyboard.storyboard in Resources */,
-				C05979BE1DEECDD500D38200 /* StickeyCollectionView.storyboard in Resources */,
+				C05979BE1DEECDD500D38200 /* StickyCollectionView.storyboard in Resources */,
 				62220A821D3D13CE00D87438 /* BlurredTransition.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -672,7 +669,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C05979BC1DEECD7B00D38200 /* StickeyCollectionViewSpec.swift in Sources */,
 				0427A3721DB0984C0014970B /* PinViewSpec.swift in Sources */,
 				6294A9321D6EE2040088E18C /* QuickSpec+Snapshot.swift in Sources */,
 				627E02B31D0AC8B700B7529E /* PieChartSpec.swift in Sources */,
