@@ -2,7 +2,7 @@ import Foundation
 import UIKit
 import Delirium
 
-enum StickyCell: String {
+enum StickyCellIdentifier: String {
     case stickyCell
 }
 
@@ -23,14 +23,17 @@ extension StickyCollectionViewController: UICollectionViewDataSource {
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: .stickyCell, for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: .stickyCell, for: indexPath) as! StickyCell
 
         if indexPath.row  == 0 {
-            cell.backgroundColor = UIColor.green
+            cell.backgroundColor = UIColor.darkGray
+            cell.label.textColor = UIColor.white
         } else if indexPath.section == 0 {
             cell.backgroundColor = UIColor.gray
+            cell.label.textColor = UIColor.white
         } else {
             cell.backgroundColor = UIColor.white
+            cell.label.textColor = UIColor.gray
         }
 
         return cell
@@ -45,7 +48,7 @@ extension StickyCollectionViewController: UICollectionViewDelegate {
 
 extension UICollectionView {
 
-    func dequeueReusableCell(withReuseIdentifier identifier: StickyCell, for indexPath: IndexPath) -> UICollectionViewCell {
+    func dequeueReusableCell(withReuseIdentifier identifier: StickyCellIdentifier, for indexPath: IndexPath) -> UICollectionViewCell {
         return dequeueReusableCell(withReuseIdentifier: identifier.rawValue, for: indexPath)
     }
 }

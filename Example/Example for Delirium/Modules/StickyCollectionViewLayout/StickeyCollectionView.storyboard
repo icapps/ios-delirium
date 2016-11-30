@@ -31,7 +31,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="stickyCell" id="EBz-85-y9K">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="stickyCell" id="EBz-85-y9K" customClass="StickyCell" customModule="Delirium_Example" customModuleProvider="target">
                                         <rect key="frame" x="27" y="0.0" width="322" height="99"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -51,6 +51,9 @@
                                             <constraint firstItem="rda-J1-Kfu" firstAttribute="centerX" secondItem="EBz-85-y9K" secondAttribute="centerX" id="ENi-eV-NcR"/>
                                             <constraint firstItem="rda-J1-Kfu" firstAttribute="centerY" secondItem="EBz-85-y9K" secondAttribute="centerY" id="Sde-Dh-j98"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="label" destination="rda-J1-Kfu" id="yYo-4n-7SJ"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                                 <connections>
