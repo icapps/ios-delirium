@@ -5,18 +5,19 @@ import Delirium
 enum StickyCellIdentifier: String {
     case stickyCell
 }
-enum Section: Int {
-    case section1, section2, section3, section4
-}
 
 enum Row: Int {
-    case A, B, C, D, E, F, G, H, last
+    case row1, row2, row3, row4
+}
+
+enum Column: Int {
+    case A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z, last
 }
 
 class ViewModel {
-    private var model: [Section: [Row]]
+    private var model: [Row: [Column]]
 
-    init(_ model: [Section: [Row]]) {
+    init(_ model: [Row: [Column]]) {
         self.model = model
     }
 
@@ -24,12 +25,17 @@ class ViewModel {
         return model.count
     }
 
-    func rows(in section: Section) -> Int {
-        guard let rows = model[section] else {
+    func rows(in row: Row) -> Int {
+        guard let rows = model[row] else {
             return 0
         }
         return rows.count
     }
+
+    func row(in row: Row) -> [Column] {
+        return model[row] ?? [Column]()
+    }
+
 }
 
 class StickyCollectionViewController: UIViewController {
@@ -41,10 +47,10 @@ class StickyCollectionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let row1: [Row] = [.A, .B, .C, .D, .E, .F, .G, .H, .last]
-        let row2 = row1
-        let row3 = row1
-        viewModel = ViewModel([.section1:row1, .section2:row2, .section3:row3])
+        let row1: [Column] = [.A, .B, .C, .D, .E, .F, .G, .H, .last]
+        let row2: [Column] = [.I, .J, .K, .L, .M, .N, .O, .P, .last]
+        let row3: [Column] = [.Q, .R, .S, .T, .U, .V, .W, .X, .last]
+        viewModel = ViewModel([.row1:row1, .row2:row2, .row3:row3])
     }
 }
 
@@ -55,7 +61,7 @@ extension StickyCollectionViewController: UICollectionViewDataSource {
     }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        guard let section = Section(rawValue: section) else {
+        guard let section = Row(rawValue: section) else {
             return 0
         }
 
@@ -65,9 +71,8 @@ extension StickyCollectionViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: .stickyCell, for: indexPath) as! StickyCell
 
-        let row = Section(rawValue: indexPath.section)!
-        let column = Row(rawValue: indexPath.row)!
-
+        let row = Row(rawValue: indexPath.section)!
+        let column = viewModel.row(in: row)[indexPath.row]
         cell.label.text = "\(row): \(column)"
 
         if indexPath.row  == 0 {
