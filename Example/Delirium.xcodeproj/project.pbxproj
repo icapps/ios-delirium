@@ -38,6 +38,7 @@
 		C014B7601DAC1DAD00F0C1CE /* Keyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C014B75F1DAC1DAD00F0C1CE /* Keyboard.storyboard */; };
 		C05979BC1DEECD7B00D38200 /* StickeyCollectionViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05979BB1DEECD7B00D38200 /* StickeyCollectionViewSpec.swift */; };
 		C05979BE1DEECDD500D38200 /* StickeyCollectionView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C05979BD1DEECDD500D38200 /* StickeyCollectionView.storyboard */; };
+		C05979C01DEECF6800D38200 /* StickyCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05979BF1DEECF6800D38200 /* StickyCollectionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +92,7 @@
 		C014B75F1DAC1DAD00F0C1CE /* Keyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Keyboard.storyboard; path = Keyboard/Keyboard.storyboard; sourceTree = "<group>"; };
 		C05979BB1DEECD7B00D38200 /* StickeyCollectionViewSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StickeyCollectionViewSpec.swift; sourceTree = "<group>"; };
 		C05979BD1DEECDD500D38200 /* StickeyCollectionView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = StickeyCollectionView.storyboard; sourceTree = "<group>"; };
+		C05979BF1DEECF6800D38200 /* StickyCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StickyCollectionViewController.swift; sourceTree = "<group>"; };
 		C4B929F2E2F02D67FFCED98D /* Pods_Delirium_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Delirium_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E05AFDD5EC1C0DAE2F95E78B /* Pods-Delirium_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Delirium_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Delirium_Tests/Pods-Delirium_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		EB99649EA6F52A58BBC97607 /* Pods_Delirium_Delirium_tvExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Delirium_Delirium_tvExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -343,6 +345,7 @@
 			isa = PBXGroup;
 			children = (
 				C05979BD1DEECDD500D38200 /* StickeyCollectionView.storyboard */,
+				C05979BF1DEECF6800D38200 /* StickyCollectionViewController.swift */,
 			);
 			path = StickyCollectionViewLayout;
 			sourceTree = "<group>";
@@ -653,6 +656,7 @@
 				625D37071D3D1FE900B51EF5 /* BlurredPopupViewController.swift in Sources */,
 				627E02AD1D0AC6C000B7529E /* ShakeViewController.swift in Sources */,
 				62CDEC9F1D6C8A6F005A0CEF /* PieChartViewController.swift in Sources */,
+				C05979C01DEECF6800D38200 /* StickyCollectionViewController.swift in Sources */,
 				627E02D61D0AD9DF00B7529E /* AlertViewModel.swift in Sources */,
 				627E02D41D0AD9BE00B7529E /* AlertViewController.swift in Sources */,
 			);
