@@ -12,7 +12,7 @@
         <!--Sticky Collection View Controller-->
         <scene sceneID="03f-db-6Eg">
             <objects>
-                <viewController id="RTk-Hm-mrm" customClass="StickyCollectionViewController" customModule="Delirium_Example" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="RTk-Hm-mrm" customClass="StickyCollectionViewController" customModule="Delirium_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="3Wh-gV-2QM"/>
                         <viewControllerLayoutGuide type="bottom" id="cyr-h4-BOS"/>
@@ -32,7 +32,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="stickyCell" id="EBz-85-y9K" customClass="StickyCell" customModule="Delirium_Example" customModuleProvider="target">
-                                        <rect key="frame" x="27" y="0.0" width="322" height="99"/>
+                                        <rect key="frame" x="26.5" y="0.0" width="322" height="99"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="322" height="99"/>
