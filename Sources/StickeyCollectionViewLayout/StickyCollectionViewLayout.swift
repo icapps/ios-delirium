@@ -2,13 +2,15 @@ import UIKit
 
 public class StickyCollectionViewLayout: UICollectionViewLayout {
 
-    let numberOfColumns = 8
     var itemAttributes = [[UICollectionViewLayoutAttributes]]()
     var itemsSize = [CGSize]()
     var contentSize : CGSize!
     
     override public func prepare() {
-        guard let sectionCount = collectionView?.numberOfSections, sectionCount > 0 else {
+        super.prepare()
+        guard let collectionView = collectionView,
+              let sectionCount = self.collectionView?.numberOfSections,
+              sectionCount > 0 else {
             return
         }
         
@@ -37,9 +39,7 @@ public class StickyCollectionViewLayout: UICollectionViewLayout {
             return
         }
         
-        if self.itemsSize.count != numberOfColumns {
-            self.calculateItemsSize()
-        }
+        self.calculateItemsSize()
         
         var column = 0
         var xOffset : CGFloat = 0
@@ -49,6 +49,7 @@ public class StickyCollectionViewLayout: UICollectionViewLayout {
         
         for section in 0..<self.collectionView!.numberOfSections {
             var rowAttributes = [UICollectionViewLayoutAttributes]()
+            let numberOfColumns = collectionView.numberOfItems(inSection: section)
             for index in 0..<numberOfColumns {
                 let itemSize = (self.itemsSize[index] as AnyObject).cgSizeValue
                 let indexPath = IndexPath(item: index, section: section)
@@ -88,7 +89,6 @@ public class StickyCollectionViewLayout: UICollectionViewLayout {
                 }
             }
             self.itemAttributes.append(rowAttributes)
-
         }
 
         guard let lastAttribute = itemAttributes.last?.last else {
@@ -125,8 +125,13 @@ public class StickyCollectionViewLayout: UICollectionViewLayout {
     }
     
     func calculateItemsSize() {
-        for index in 0..<numberOfColumns {
-            self.itemsSize.append(self.sizeForItemWithColumnIndex(index))
+        guard let collectionView = collectionView else {
+            return
+        }
+        for section in 0..<collectionView.numberOfSections {
+            for index in 0..<collectionView.numberOfItems(inSection: section) {
+                self.itemsSize.append(self.sizeForItemWithColumnIndex(index))
+            }
         }
     }
 }

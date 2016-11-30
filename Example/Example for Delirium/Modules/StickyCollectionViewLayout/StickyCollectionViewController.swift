@@ -10,7 +10,7 @@ enum Section: Int {
 }
 
 enum Row: Int {
-    case A, B, C, D, E, F, G, H
+    case A, B, C, D, E, F, G, H, last
 }
 
 class ViewModel {
@@ -41,7 +41,7 @@ class StickyCollectionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let row1: [Row] = [.A, .B, .C, .D, .E, .F, .G, .H]
+        let row1: [Row] = [.A, .B, .C, .D, .E, .F, .G, .H, .last]
         let row2 = row1
         let row3 = row1
         viewModel = ViewModel([.section1:row1, .section2:row2, .section3:row3])
