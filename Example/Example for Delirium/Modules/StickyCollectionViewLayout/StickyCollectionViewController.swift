@@ -7,7 +7,7 @@ enum StickyCellIdentifier: String {
 }
 
 enum Row: Int {
-    case row1, row2, row3, row4
+    case row1, row2, row3, row4, row5, row6, row7, row8, row9, row10, row11, row12, row13, row14, row15, row16, row17, row18
 }
 
 enum Column: Int {
@@ -41,6 +41,7 @@ class ViewModel {
 class StickyCollectionViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var stickyCollectionViewLayout: StickyCollectionViewLayout!
 
     var viewModel: ViewModel!
 
@@ -50,7 +51,9 @@ class StickyCollectionViewController: UIViewController {
         let row1: [Column] = [.A, .B, .C, .D, .E, .F, .G, .H, .last]
         let row2: [Column] = [.I, .J, .K, .L, .M, .N, .O, .P, .last]
         let row3: [Column] = [.Q, .R, .S, .T, .U, .V, .W, .X, .last]
-        viewModel = ViewModel([.row1:row1, .row2:row2, .row3:row3])
+        viewModel = ViewModel([.row1:row1, .row2:row2, .row3:row3, .row4:row1, .row5:row2, .row6:row3, .row7:row1, .row8: row2, .row9: row3, .row10: row1])
+
+        stickyCollectionViewLayout.preferredItemSize = CGSize(width: 150, height: 150)
     }
 }
 

@@ -29,6 +29,11 @@
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="size" keyPath="preferredItemSize">
+                                            <size key="value" width="250" height="40"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="stickyCell" id="EBz-85-y9K" customClass="StickyCell" customModule="Delirium_Example" customModuleProvider="target">
@@ -72,6 +77,7 @@
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="pWc-Fj-qoP" id="Y8R-l2-Z8W"/>
+                        <outlet property="stickyCollectionViewLayout" destination="yCw-6b-CXt" id="uYd-VZ-ouz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1wg-TY-4Uc" userLabel="First Responder" sceneMemberID="firstResponder"/>

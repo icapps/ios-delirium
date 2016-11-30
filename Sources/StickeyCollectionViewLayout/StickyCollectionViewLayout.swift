@@ -2,10 +2,12 @@ import UIKit
 
 public class StickyCollectionViewLayout: UICollectionViewLayout {
 
-    var itemAttributes = [[UICollectionViewLayoutAttributes]]()
-    var itemsSize = [CGSize]()
-    var contentSize : CGSize!
-    
+    public var preferredItemSize = CGSize(width: 150, height: 40)
+
+    private var itemAttributes = [[UICollectionViewLayoutAttributes]]()
+    private var itemsSize = [CGSize]()
+    private var contentSize : CGSize!
+
     override public func prepare() {
         super.prepare()
         guard let collectionView = collectionView,
@@ -48,7 +50,7 @@ public class StickyCollectionViewLayout: UICollectionViewLayout {
     // MARK: - Privates
 
     private func sizeForItemWithColumnIndex(_ columnIndex: Int) -> CGSize {
-        return CGSize(width: 150, height: 40)
+        return preferredItemSize
     }
     
     private func calculateItemsSize() {
