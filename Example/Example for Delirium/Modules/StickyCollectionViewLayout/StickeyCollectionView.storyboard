@@ -46,6 +46,7 @@
                                                 </label>
                                             </subviews>
                                         </view>
+                                        <color key="backgroundColor" red="0.96862745100000003" green="0.97647058819999999" blue="0.98431372549999996" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstItem="rda-J1-Kfu" firstAttribute="centerX" secondItem="EBz-85-y9K" secondAttribute="centerX" id="ENi-eV-NcR"/>
                                             <constraint firstItem="rda-J1-Kfu" firstAttribute="centerY" secondItem="EBz-85-y9K" secondAttribute="centerY" id="Sde-Dh-j98"/>

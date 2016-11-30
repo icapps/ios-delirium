@@ -121,29 +121,7 @@ public class StickyCollectionViewLayout: UICollectionViewLayout {
     }
     
     func sizeForItemWithColumnIndex(_ columnIndex: Int) -> CGSize {
-        var text : String = ""
-        switch (columnIndex) {
-        case 0:
-            text = "Col 0"
-        case 1:
-            text = "Col 1"
-        case 2:
-            text = "Col 2"
-        case 3:
-            text = "Col 3"
-        case 4:
-            text = "Col 4"
-        case 5:
-            text = "Col 5"
-        case 6:
-            text = "Col 6"
-        default:
-            text = "Col 7"
-        }
-        
-        let size : CGSize = (text as NSString).size(attributes: [NSFontAttributeName: UIFont.systemFont(ofSize: 17.0)])
-        let width : CGFloat = size.width + 25
-        return CGSize(width: width, height: 30)
+        return CGSize(width: 150, height: 40)
     }
     
     func calculateItemsSize() {
