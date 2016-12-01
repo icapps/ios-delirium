@@ -6,7 +6,7 @@ public class StickyCollectionViewLayout: UICollectionViewLayout {
 
     private var itemAttributes = [[UICollectionViewLayoutAttributes]]()
     private var itemsSize = [CGSize]()
-    private var contentSize : CGSize!
+    private var contentSize : CGSize?
 
     override public func prepare() {
         super.prepare()
@@ -25,7 +25,7 @@ public class StickyCollectionViewLayout: UICollectionViewLayout {
     }
 
     override public var collectionViewContentSize : CGSize {
-        return self.contentSize
+        return self.contentSize ?? CGSize.zero
     }
     
     override public func layoutAttributesForItem(at indexPath: IndexPath) -> UICollectionViewLayoutAttributes? {
