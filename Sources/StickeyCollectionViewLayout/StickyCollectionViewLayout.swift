@@ -46,6 +46,12 @@ public class StickyCollectionViewLayout: UICollectionViewLayout {
         return true
     }
     
+    public override func invalidateLayout() {
+        itemAttributes.removeAll()
+        itemsSize.removeAll()
+        contentSize = nil
+        super.invalidateLayout()
+    }
 
     // MARK: - Privates
 
