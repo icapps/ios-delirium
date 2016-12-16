@@ -1,16 +1,17 @@
 import UIKit
 
-public class StickyCollectionViewLayout: UICollectionViewLayout {
+/// Subclass this layout if you want a different itemsize per item.
+open class StickyCollectionViewLayout: UICollectionViewLayout {
 
     /// You can set this or override the function `sizeForItemWithColumnIndex(column:row:)`
     /// to have a variable item size.
-    public var preferredItemSize = CGSize(width: 150, height: 40)
+    open var preferredItemSize = CGSize(width: 150, height: 40)
 
     private var itemAttributes = [[UICollectionViewLayoutAttributes]]()
     private var itemsSize = [[CGSize]]()
     private var contentSize : CGSize?
 
-    override public func prepare() {
+    override open func prepare() {
         super.prepare()
         guard let collectionView = collectionView,
               collectionView.numberOfSections > 0 else {
@@ -25,15 +26,15 @@ public class StickyCollectionViewLayout: UICollectionViewLayout {
         stickColumnHeaderAndFirstColumn()
     }
 
-    override public var collectionViewContentSize : CGSize {
+    override open var collectionViewContentSize : CGSize {
         return self.contentSize ?? CGSize.zero
     }
     
-    override public func layoutAttributesForItem(at indexPath: IndexPath) -> UICollectionViewLayoutAttributes? {
+    override open func layoutAttributesForItem(at indexPath: IndexPath) -> UICollectionViewLayoutAttributes? {
         return self.itemAttributes[indexPath.section][indexPath.row]
     }
     
-    override public func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
+    override open func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
         var attributes = [UICollectionViewLayoutAttributes]()
         for section in self.itemAttributes {
             /// The filltered array is filled with tiems that are in the requested `rect`.
@@ -45,11 +46,11 @@ public class StickyCollectionViewLayout: UICollectionViewLayout {
         return attributes
     }
 
-    override public func shouldInvalidateLayout(forBoundsChange newBounds: CGRect) -> Bool {
+    override open func shouldInvalidateLayout(forBoundsChange newBounds: CGRect) -> Bool {
         return true
     }
     
-    public override func invalidateLayout() {
+    open override func invalidateLayout() {
         itemAttributes.removeAll()
         itemsSize.removeAll()
         contentSize = nil
@@ -63,7 +64,7 @@ public class StickyCollectionViewLayout: UICollectionViewLayout {
     /// When the itemSizes are calculated the heigth for 1 row will be the maximum height of a cell in that row.
     /// - parameter column: typically this is the row of `indexPath.row`
     /// - parameter row: typically this is the section of `indexPath.row`
-    public func sizeForItem(column: Int, row: Int) -> CGSize {
+    open func sizeForItem(column: Int, row: Int) -> CGSize {
         return self.preferredItemSize
     }
     
