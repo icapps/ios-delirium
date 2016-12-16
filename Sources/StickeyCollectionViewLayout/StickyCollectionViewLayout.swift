@@ -36,6 +36,8 @@ public class StickyCollectionViewLayout: UICollectionViewLayout {
     override public func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
         var attributes = [UICollectionViewLayoutAttributes]()
         for section in self.itemAttributes {
+            /// The filltered array is filled with tiems that are in the requested `rect`.
+            /// The function `intersects` is used to see if an items `frame` is inside the `rect 
             let filteredArray  = section.filter { rect.intersects($0.frame) }
             attributes.append(contentsOf: filteredArray)
         }
