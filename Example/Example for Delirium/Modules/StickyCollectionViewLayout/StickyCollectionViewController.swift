@@ -27,10 +27,6 @@ extension StickyCollectionViewController: UICollectionViewDataSource {
     }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        guard let section = Row(rawValue: section) else {
-            return 0
-        }
-
         return viewModel.rows(in: section)
     }
 

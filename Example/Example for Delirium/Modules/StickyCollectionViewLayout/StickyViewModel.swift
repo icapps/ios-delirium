@@ -24,7 +24,10 @@ class ViewModel {
         return model.count
     }
 
-    func rows(in row: Row) -> Int {
+    func rows(in row: Int) -> Int {
+        guard let row = Row(rawValue: row) else {
+            return 0
+        }
         guard let rows = model[row] else {
             return 0
         }
