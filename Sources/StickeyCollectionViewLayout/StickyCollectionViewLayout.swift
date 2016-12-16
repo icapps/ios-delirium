@@ -5,7 +5,7 @@ public class StickyCollectionViewLayout: UICollectionViewLayout {
     public var preferredItemSize = CGSize(width: 150, height: 40)
 
     private var itemAttributes = [[UICollectionViewLayoutAttributes]]()
-    private var itemsSize = [CGSize]()
+    private var itemsSize = [[CGSize]]()
     private var contentSize : CGSize?
 
     override public func prepare() {
@@ -55,7 +55,9 @@ public class StickyCollectionViewLayout: UICollectionViewLayout {
 
     // MARK: - Privates
 
-    private func sizeForItemWithColumnIndex(_ columnIndex: Int) -> CGSize {
+    /// Override this function if you want different itemSize for differen cells.
+    /// By default the preferredItemSize is used for everything
+    public func sizeForItemWithColumnIndex(_ columnIndex: Int, row: Int) -> CGSize {
         return preferredItemSize
     }
     
@@ -64,9 +66,11 @@ public class StickyCollectionViewLayout: UICollectionViewLayout {
             return
         }
         for section in 0..<collectionView.numberOfSections {
+            var columnSizes = [CGSize]()
             for index in 0..<collectionView.numberOfItems(inSection: section) {
-                self.itemsSize.append(self.sizeForItemWithColumnIndex(index))
+                columnSizes.append(self.sizeForItemWithColumnIndex(index, row: section))
             }
+            self.itemsSize.append(columnSizes)
         }
     }
 
@@ -114,26 +118,25 @@ public class StickyCollectionViewLayout: UICollectionViewLayout {
 
         self.calculateItemsSize()
 
-        var column = 0
         var xOffset : CGFloat = 0
         var yOffset : CGFloat = 0
         var contentWidth : CGFloat = 0
         var contentHeight : CGFloat = 0
 
-        for section in 0..<self.collectionView!.numberOfSections {
+        for section in 0..<collectionView.numberOfSections {
             var rowAttributes = [UICollectionViewLayoutAttributes]()
             let numberOfColumns = collectionView.numberOfItems(inSection: section)
             let contentOffset = collectionView.contentOffset
 
-            for index in 0..<numberOfColumns {
-                let itemSize = (self.itemsSize[index] as AnyObject).cgSizeValue
-                let indexPath = IndexPath(item: index, section: section)
+            for column in 0..<numberOfColumns {
+                let itemSize = self.itemsSize[section][column]
+                let indexPath = IndexPath(item: column, section: section)
                 let rowAttribute = UICollectionViewLayoutAttributes(forCellWith: indexPath)
-                rowAttribute.frame = CGRect(x: xOffset, y: yOffset, width: (itemSize?.width)!, height: (itemSize?.height)!).integral
+                rowAttribute.frame = CGRect(x: xOffset, y: yOffset, width: itemSize.width, height: itemSize.height).integral
 
-                if section == 0 && index == 0 {
+                if section == 0 && column == 0 {
                     rowAttribute.zIndex = 1024;
-                } else  if section == 0 || index == 0 {
+                } else  if section == 0 || column == 0 {
                     rowAttribute.zIndex = 1023
                 }
 
@@ -146,7 +149,7 @@ public class StickyCollectionViewLayout: UICollectionViewLayout {
 
                 // Stick the first column
 
-                if index == 0 {
+                if column == 0 {
                     var frame = rowAttribute.frame
                     frame.origin.x = contentOffset.x
                     rowAttribute.frame = frame
@@ -154,17 +157,15 @@ public class StickyCollectionViewLayout: UICollectionViewLayout {
 
                 rowAttributes.append(rowAttribute)
 
-                xOffset += (itemSize?.width)!
-                column += 1
+                xOffset += (itemSize.width)
 
-                if column == numberOfColumns {
+                if column == (numberOfColumns - 1) {
                     if xOffset > contentWidth {
                         contentWidth = xOffset
                     }
 
-                    column = 0
                     xOffset = 0
-                    yOffset += (itemSize?.height)!
+                    yOffset += itemSize.height
                 }
             }
 
