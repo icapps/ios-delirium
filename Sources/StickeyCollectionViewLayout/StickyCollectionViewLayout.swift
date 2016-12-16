@@ -56,7 +56,10 @@ public class StickyCollectionViewLayout: UICollectionViewLayout {
     // MARK: - Privates
 
     /// Override this function if you want different itemSize for differen cells.
-    /// By default the preferredItemSize is used for everything
+    /// By default the preferredItemSize is used for everything.
+    /// When the itemSizes are calculated the heigth for 1 row will be the maximum height of a cell in that row.
+    /// - parameter column: typically this is the row of `indexPath.row`
+    /// - parameter row: typically this is the section of `indexPath.row`
     public func sizeForItemWithColumnIndex(_ columnIndex: Int, row: Int) -> CGSize {
         return preferredItemSize
     }
@@ -121,25 +124,31 @@ public class StickyCollectionViewLayout: UICollectionViewLayout {
         var xOffset : CGFloat = 0
         var yOffset : CGFloat = 0
         var contentWidth : CGFloat = 0
-        var contentHeight : CGFloat = 0
 
         for section in 0..<collectionView.numberOfSections {
             var rowAttributes = [UICollectionViewLayoutAttributes]()
             let numberOfColumns = collectionView.numberOfItems(inSection: section)
             let contentOffset = collectionView.contentOffset
 
+            var maxHeight: CGFloat = 0
             for column in 0..<numberOfColumns {
                 let itemSize = self.itemsSize[section][column]
+
                 let indexPath = IndexPath(item: column, section: section)
                 let rowAttribute = UICollectionViewLayoutAttributes(forCellWith: indexPath)
+                // Normal frame regardless of stickking.
+                // Puts cells next to each other
                 rowAttribute.frame = CGRect(x: xOffset, y: yOffset, width: itemSize.width, height: itemSize.height).integral
 
+                // Make headers stick by priority
+                // Handle who goes on top if the cells go above eachother
                 if section == 0 && column == 0 {
-                    rowAttribute.zIndex = 1024;
+                    rowAttribute.zIndex = 1024 // This is zo the header would stick. This gives a priority to whoever goes on top.
                 } else  if section == 0 || column == 0 {
                     rowAttribute.zIndex = 1023
                 }
 
+                // Stick the frames to the lefet upper corner
                 // Stick the first row
                 if section == 0 {
                     var frame = rowAttribute.frame
@@ -148,7 +157,6 @@ public class StickyCollectionViewLayout: UICollectionViewLayout {
                 }
 
                 // Stick the first column
-
                 if column == 0 {
                     var frame = rowAttribute.frame
                     frame.origin.x = contentOffset.x
@@ -157,15 +165,22 @@ public class StickyCollectionViewLayout: UICollectionViewLayout {
 
                 rowAttributes.append(rowAttribute)
 
+                // Move cell to the rigth
                 xOffset += (itemSize.width)
 
+                // Store the maxHeight in the row
+                if itemSize.height > maxHeight {
+                    maxHeight = itemSize.height
+                }
+                // At the end of the row move to the next row
+                // with the largest cell height in that row
                 if column == (numberOfColumns - 1) {
                     if xOffset > contentWidth {
                         contentWidth = xOffset
                     }
 
                     xOffset = 0
-                    yOffset += itemSize.height
+                    yOffset += maxHeight
                 }
             }
 
