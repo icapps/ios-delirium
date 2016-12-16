@@ -37,7 +37,7 @@ public class StickyCollectionViewLayout: UICollectionViewLayout {
         var attributes = [UICollectionViewLayoutAttributes]()
         for section in self.itemAttributes {
             /// The filltered array is filled with tiems that are in the requested `rect`.
-            /// The function `intersects` is used to see if an items `frame` is inside the `rect 
+            /// The function `intersects` is used to see if an items `frame` is inside the `rect
             let filteredArray  = section.filter { rect.intersects($0.frame) }
             attributes.append(contentsOf: filteredArray)
         }
@@ -154,16 +154,12 @@ public class StickyCollectionViewLayout: UICollectionViewLayout {
                 // Stick the frames to the lefet upper corner
                 // Stick the first row
                 if section == 0 {
-                    var frame = rowAttribute.frame
-                    frame.origin.y = contentOffset.y
-                    rowAttribute.frame = frame
+                   rowAttribute.frame.origin.y = contentOffset.y
                 }
 
                 // Stick the first column
                 if column == 0 {
-                    var frame = rowAttribute.frame
-                    frame.origin.x = contentOffset.x
-                    rowAttribute.frame = frame
+                    rowAttribute.frame.origin.x = contentOffset.x
                 }
 
                 rowAttributes.append(rowAttribute)
