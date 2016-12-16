@@ -2,6 +2,8 @@ import UIKit
 
 public class StickyCollectionViewLayout: UICollectionViewLayout {
 
+    /// You can set this or override the function `sizeForItemWithColumnIndex(column:row:)`
+    /// to have a variable item size.
     public var preferredItemSize = CGSize(width: 150, height: 40)
 
     private var itemAttributes = [[UICollectionViewLayoutAttributes]]()
@@ -11,8 +13,7 @@ public class StickyCollectionViewLayout: UICollectionViewLayout {
     override public func prepare() {
         super.prepare()
         guard let collectionView = collectionView,
-              let numberOfSections = self.collectionView?.numberOfSections,
-              numberOfSections > 0 else {
+              collectionView.numberOfSections > 0 else {
             return
         }
 
@@ -60,8 +61,8 @@ public class StickyCollectionViewLayout: UICollectionViewLayout {
     /// When the itemSizes are calculated the heigth for 1 row will be the maximum height of a cell in that row.
     /// - parameter column: typically this is the row of `indexPath.row`
     /// - parameter row: typically this is the section of `indexPath.row`
-    public func sizeForItemWithColumnIndex(_ columnIndex: Int, row: Int) -> CGSize {
-        return preferredItemSize
+    public func sizeForItem(column: Int, row: Int) -> CGSize {
+        return self.preferredItemSize
     }
     
     private func calculateItemsSize() {
@@ -71,7 +72,7 @@ public class StickyCollectionViewLayout: UICollectionViewLayout {
         for section in 0..<collectionView.numberOfSections {
             var columnSizes = [CGSize]()
             for index in 0..<collectionView.numberOfItems(inSection: section) {
-                columnSizes.append(self.sizeForItemWithColumnIndex(index, row: section))
+                columnSizes.append(self.sizeForItem(column:index, row: section))
             }
             self.itemsSize.append(columnSizes)
         }
