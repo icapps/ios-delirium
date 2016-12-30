@@ -149,6 +149,9 @@
 		BF82E590A9D706B989E1E515 /* UIApplication+StrictKeyWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D956045079C024D39B32394 /* UIApplication+StrictKeyWindow.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		C05979B81DEECD2500D38200 /* StickyCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05979B71DEECD2500D38200 /* StickyCollectionViewLayout.swift */; };
 		C05979B91DEECD2500D38200 /* StickyCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05979B71DEECD2500D38200 /* StickyCollectionViewLayout.swift */; };
+		C0F2BAE21E16A5CF00AF64A2 /* CorneredViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F2BAE11E16A5CF00AF64A2 /* CorneredViewExtensions.swift */; };
+		C0F2BAE31E16A5CF00AF64A2 /* CorneredViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F2BAE11E16A5CF00AF64A2 /* CorneredViewExtensions.swift */; };
+		C0F2BAE41E16A5CF00AF64A2 /* CorneredViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F2BAE11E16A5CF00AF64A2 /* CorneredViewExtensions.swift */; };
 		C1473F189E292E6964204192 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37A77FEA38D3025F751770D /* Configuration.swift */; };
 		C2283245C3B390C5CC0F1078 /* BeEmpty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08ECA408AA924A9F358115E3 /* BeEmpty.swift */; };
 		C47BF63A1CBE0BCB3EA6DEBE /* UIView+Shake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F609B9BC926CA62A1775418 /* UIView+Shake.swift */; };
@@ -449,6 +452,7 @@
 		BFB976D9ABF01E754EF2BFB5 /* ResourceBundle-Delirium-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = "ResourceBundle-Delirium-Info.plist"; path = "../Delirium-tvOS9.0/ResourceBundle-Delirium-Info.plist"; sourceTree = "<group>"; };
 		C05979B71DEECD2500D38200 /* StickyCollectionViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StickyCollectionViewLayout.swift; sourceTree = "<group>"; };
 		C0BEC257669E057995ABC281 /* Nimble-Snapshots-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Nimble-Snapshots-umbrella.h"; sourceTree = "<group>"; };
+		C0F2BAE11E16A5CF00AF64A2 /* CorneredViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CorneredViewExtensions.swift; path = Corner/CorneredViewExtensions.swift; sourceTree = "<group>"; };
 		C1ADD54A3CEC7169CE10E373 /* AssertionDispatcher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AssertionDispatcher.swift; path = Sources/Nimble/Adapters/AssertionDispatcher.swift; sourceTree = "<group>"; };
 		C21172CCDC1F07B7CCB5FDD1 /* NSString+QCKSelectorName.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+QCKSelectorName.m"; path = "Sources/QuickObjectiveC/NSString+QCKSelectorName.m"; sourceTree = "<group>"; };
 		C3166C951D79E00AAEA1FC82 /* Pods-Delirium-Delirium_tvExample-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Delirium-Delirium_tvExample-dummy.m"; sourceTree = "<group>"; };
@@ -842,6 +846,7 @@
 			children = (
 				37E97335000714619F39CE4C /* Pie */,
 				042CFA78104D46884D9DF682 /* Pin */,
+				C0F2BAE51E16A5E000AF64A2 /* CorneredView */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1040,6 +1045,14 @@
 				C05979B71DEECD2500D38200 /* StickyCollectionViewLayout.swift */,
 			);
 			path = StickeyCollectionViewLayout;
+			sourceTree = "<group>";
+		};
+		C0F2BAE51E16A5E000AF64A2 /* CorneredView */ = {
+			isa = PBXGroup;
+			children = (
+				C0F2BAE11E16A5CF00AF64A2 /* CorneredViewExtensions.swift */,
+			);
+			name = CorneredView;
 			sourceTree = "<group>";
 		};
 		C66D3AA17446B998031D6EBF /* Pods-Delirium-Delirium_tvExample */ = {
@@ -1629,6 +1642,7 @@
 				861C31A2F59E44C749A981F1 /* ActionPresentationController.swift in Sources */,
 				5B41908B38E3E8AECD25B390 /* ActionTransitioningDelegate.swift in Sources */,
 				0102A680D0034BDEC48C61F3 /* Delirium-iOS9.0-dummy.m in Sources */,
+				C0F2BAE31E16A5CF00AF64A2 /* CorneredViewExtensions.swift in Sources */,
 				2F0770384C1036B6051FD83F /* KeyboardConstraint.swift in Sources */,
 				BB157E1CDB363A509FF48414 /* NSBundle+Cocoapods.swift in Sources */,
 				DD366F30EA7758EC4306CCF0 /* PieChartSlice.swift in Sources */,
@@ -1651,6 +1665,7 @@
 				827409B22797DC61D7FBF71E /* ActionPresentationController.swift in Sources */,
 				4FA560EE8368A5709094225E /* ActionTransitioningDelegate.swift in Sources */,
 				1625FB67CC09A966DCB97AF2 /* Delirium-iOS8.0-dummy.m in Sources */,
+				C0F2BAE21E16A5CF00AF64A2 /* CorneredViewExtensions.swift in Sources */,
 				CB6180704517EE7DB84163FF /* KeyboardConstraint.swift in Sources */,
 				9E77C3B0FFCBBCFB0EE77667 /* NSBundle+Cocoapods.swift in Sources */,
 				88209D094E35F2D968183710 /* PieChartSlice.swift in Sources */,
@@ -1685,6 +1700,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0F2BAE41E16A5CF00AF64A2 /* CorneredViewExtensions.swift in Sources */,
 				F23B2C9C739D36A687BB39E8 /* ActionPresentationAnimationController.swift in Sources */,
 				10FC92CBEDF89ECC2749947B /* ActionPresentationController.swift in Sources */,
 				4142BF8DC8A09BE908E85727 /* ActionTransitioningDelegate.swift in Sources */,
