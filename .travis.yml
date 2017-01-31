@@ -6,9 +6,7 @@ rvm:
 
 before_install:
   - gem install xcpretty -N --no-ri --no-rdoc
-
-install:
-  - bundle install
+  - gem install cocoapods -v '1.2.0' -N --no-ri --no-rdoc
 
 script:
   - set -o pipefail
@@ -17,7 +15,7 @@ script:
 deploy:
   skip_cleanup: true
   provider: script
-  script: 'PATH="${TRAVIS_BUILD_DIR}/bin:$PATH" rvm "$TRAVIS_RUBY_VERSION" do bundle exec pod trunk push'
+  script: 'PATH="${TRAVIS_BUILD_DIR}/bin:$PATH" pod trunk push'
   on:
     tags: true
     branch: master
