@@ -102,13 +102,25 @@ let error: SomeError = ...
 presentAlertController(with: error)
 ```
 
-All the `presentAlertController` function can have a `retry` closure. When implementing this closure you will get a 'Try again' button in the alert. When tapping this button the closure will be triggered.
+The `presentAlertController` function can have a `retry` closure. When implementing this closure you will get a 'Try again' button in the alert. When tapping this button the closure will be triggered.
 
 ```swift
 let error: NSError = ...
 presentAlertController(withError: error) {
   // Tapped retry.
 }
+```
+
+The `presentAlertController` function can also have an `ok` closure. This
+callback will be triggered when you press the 'ok' button.
+
+```swift
+let error: NSError = ...
+presentAlertController(withError: error, retry: {
+  // Tapped retry.
+}, ok: {
+  // Tapped ok.
+})
 ```
 
 ## Views
