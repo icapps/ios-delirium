@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'Delirium'
-  s.version          = '2.0.0'
+  s.version          = '2.1.0'
   s.summary          = 'A set of UI components that we tend to reuse at iCapps.'
   s.description      = <<-DESC
 Delirium contains a set of UI components for reuse.
