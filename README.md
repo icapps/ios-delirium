@@ -163,7 +163,10 @@ Present a pin view is really easy with _Delirium_.
 
 ![](Resources/Pin.png)
 
-Subclass a `UIView` in your storyboard and set it to `PinView`. This view will automatically calculate it's own intrinsic content size.
+Subclass a `UIView` in your storyboard and set it to `PinView`. This view will
+automatically calculate it's own intrinsic content size. So when using the pin
+view in you Storyboard you don't have to set a width or a height manually. Make
+sure that the pin view isn't to strictly pinned to it's super view.
 
 ```swift
 pinView.delegate = self
@@ -193,6 +196,9 @@ You can pass a custom configuration to the `PinView`. Here are some of the optio
     }
 ```
 
+Below is an overview of all the different configuration options available.
+
+```swift
 /// Define the size of the buttons.
 configuration.buttonSize: CGFloat = 60.0
 /// Define the font of the buttons.
@@ -221,7 +227,7 @@ configuration.clearStrokeColor = UIColor.red
 configuration.clearSelectionBackgroundColor = UIColor.lightGray
 /// The color of the text in the clear button.
 configuration.clearTextColor = UIColor.red
-}
+```
 
 You can set the configuration by passing the `configuration` instance to the `pinView` instance.
 
