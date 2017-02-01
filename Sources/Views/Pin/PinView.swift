@@ -128,7 +128,7 @@ open class PinView: UIView {
         buttonZero.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
         
         // C
-        let buttonC = prepareButton(text: "C", type: .clear, action: #selector(PinView.clear(sender:)))
+        let buttonC = prepareButton(text: "C", type: .clear, action: #selector(PinView.clear))
         buttonC.topAnchor.constraint(equalTo: buttonZero.topAnchor).isActive = true
         buttonC.rightAnchor.constraint(equalTo: buttonZero.leftAnchor, constant: -buttonPadding).isActive = true
         buttonC.leftAnchor.constraint(greaterThanOrEqualTo: leftAnchor).isActive = true
@@ -170,7 +170,7 @@ open class PinView: UIView {
         }
     }
     
-    func clear(sender: PinButton) {
+    public func clear() {
         code.removeAll()
         reloadDotView()
     }
