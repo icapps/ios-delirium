@@ -1,6 +1,7 @@
 import UIKit
 
 /// Set any NSLayoutConstraint class to this class and it moves up and down with the keyboard.
+#if os(iOS)
 open class KeyboardConstraint: NSLayoutConstraint {
     /// this amount is added to the keyboard height to show the view above the keyboard.
     @IBInspectable public var aboveKeyboard: CGFloat = 15
@@ -75,3 +76,4 @@ open class KeyboardConstraint: NSLayoutConstraint {
     }
 
 }
+#endif
