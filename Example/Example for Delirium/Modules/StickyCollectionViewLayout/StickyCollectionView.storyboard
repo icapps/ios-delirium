@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="RTk-Hm-mrm">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Sticky Collection View Controller-->
+        <scene sceneID="03f-db-6Eg">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="RTk-Hm-mrm" customClass="StickyCollectionViewController" customModule="Delirium_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3Wh-gV-2QM"/>
+                        <viewControllerLayoutGuide type="bottom" id="cyr-h4-BOS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Xcv-SF-GJV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="pWc-Fj-qoP">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="yCw-6b-CXt" customClass="StickyCollectionViewLayout" customModule="Delirium">
+                                    <size key="itemSize" width="322" height="99"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="size" keyPath="preferredItemSize">
+                                            <size key="value" width="250" height="40"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="stickyCell" id="EBz-85-y9K" customClass="StickyCell" customModule="Delirium_Example" customModuleProvider="target">
+                                        <rect key="frame" x="27" y="0.0" width="322" height="99"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="322" height="99"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="General Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rda-J1-Kfu">
+                                                    <rect key="frame" x="109.5" y="39" width="104" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <color key="backgroundColor" red="0.96862745100000003" green="0.97647058819999999" blue="0.98431372549999996" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="rda-J1-Kfu" firstAttribute="centerX" secondItem="EBz-85-y9K" secondAttribute="centerX" id="ENi-eV-NcR"/>
+                                            <constraint firstItem="rda-J1-Kfu" firstAttribute="centerY" secondItem="EBz-85-y9K" secondAttribute="centerY" id="Sde-Dh-j98"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="label" destination="rda-J1-Kfu" id="yYo-4n-7SJ"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="RTk-Hm-mrm" id="8Pg-u5-EhW"/>
+                                    <outlet property="delegate" destination="RTk-Hm-mrm" id="oie-FE-N3Y"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="pWc-Fj-qoP" firstAttribute="top" secondItem="3Wh-gV-2QM" secondAttribute="bottom" id="M48-7b-MQc"/>
+                            <constraint firstItem="pWc-Fj-qoP" firstAttribute="leading" secondItem="Xcv-SF-GJV" secondAttribute="leading" id="ao5-q9-g4U"/>
+                            <constraint firstItem="cyr-h4-BOS" firstAttribute="top" secondItem="pWc-Fj-qoP" secondAttribute="bottom" id="dEq-Se-kVw"/>
+                            <constraint firstAttribute="trailing" secondItem="pWc-Fj-qoP" secondAttribute="trailing" id="jdY-4V-7ZB"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="pWc-Fj-qoP" id="Y8R-l2-Z8W"/>
+                        <outlet property="stickyCollectionViewLayout" destination="yCw-6b-CXt" id="uYd-VZ-ouz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1wg-TY-4Uc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-652" y="-201.04947526236884"/>
+        </scene>
+    </scenes>
+</document>
