@@ -27,7 +27,7 @@ Here are the components we currently support:
   s.social_media_url = 'https://twitter.com/icapps'
 
   # The platform definition.
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '9.0'
   s.tvos.deployment_target = '9.0'
 
   # The source files.
