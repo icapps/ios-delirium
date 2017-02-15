@@ -1,5 +1,12 @@
 # Delirium
 
+## Version 2.1.1
+- Clear function public
+- minor changes
+
+## Version 2.1.0
+- Ignore keyboard constraint in tvOS
+
 ## Version 2.0.0
 
 - Refactored the `PinView` to be more like a `UIView`.
