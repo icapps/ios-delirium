@@ -1,5 +1,9 @@
 # Delirium
 
+## Version 2.0.1
+- Clear function public
+- minor changes
+
 ## Version 2.0.0
 
 - Refactored the `PinView` to be more like a `UIView`.
