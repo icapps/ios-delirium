@@ -15,9 +15,9 @@ class ViewModel {
         let row1: [Column] = [.A, .B, .C, .D, .E, .F, .G, .H, .last]
         let row2: [Column] = [.I, .J, .K, .L, .M, .N, .O, .P, .last]
         let row3: [Column] = [.Q, .R, .S, .T, .U, .V, .W, .X, .last]
-        self.model = [.row1:row1, .row2:row2, .row3:row3, .row4:row1, .row5:row2, .row6:row3, .row7:row1, .row8: row2, .row9: row3, .row10: row1,
-                      .row11:row1, .row12:row2, .row13:row3, .row14:row1, .row15:row2, .row16:row3, .row17:row1, .row18: row2, .row19: row3, .row20: row1,
-                      .row21:row1, .row22:row2, .row23:row3, .row24:row1, .row25:row2]
+        self.model = [.row1: row1, .row2: row2, .row3: row3, .row4: row1, .row5: row2, .row6: row3, .row7: row1, .row8: row2, .row9: row3, .row10: row1,
+                      .row11: row1, .row12: row2, .row13: row3, .row14: row1, .row15: row2, .row16: row3, .row17: row1, .row18: row2, .row19: row3, .row20: row1,
+                      .row21: row1, .row22: row2, .row23: row3, .row24: row1, .row25: row2]
     }
 
     var numberOfSection: Int {
@@ -37,5 +37,5 @@ class ViewModel {
     func row(in row: Row) -> [Column] {
         return model[row] ?? [Column]()
     }
-    
+
 }

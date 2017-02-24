@@ -54,7 +54,6 @@ extension StickyCollectionViewController: UICollectionViewDataSource {
 
 extension StickyCollectionViewController: UICollectionViewDelegate {
 
-
 }
 
 extension UICollectionView {
