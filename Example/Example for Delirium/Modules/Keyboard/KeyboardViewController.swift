@@ -12,9 +12,9 @@ import Delirium
 class KeyboardViewController: UIViewController {
 
     @IBOutlet weak var textField: UITextField!
-    @IBOutlet weak var keyboardConstraint: KeyboardConstraint! {
+    @IBOutlet weak var keyboardConstraint: KeyboardConstraint? {
         didSet {
-            keyboardConstraint.aboveKeyboard = 25
+            keyboardConstraint?.aboveKeyboard = 25
         }
     }
 
