@@ -64,7 +64,6 @@ public extension KeyboardStateDelegate where Self:UIViewController, Self: Scroll
 
 				if pointFromBottom < keyboardHeight {
 					let currentOffset =  (scrollView?.contentOffset.y ?? 0)
-					let currentInset = (scrollView?.contentInset.bottom ?? 0)
 					let offsetY: CGFloat = (keyboardHeight - pointFromBottom) + currentOffset
 					if offsetY > 0 {
 						let point = CGPoint(x: 0, y: offsetY)
