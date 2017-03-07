@@ -27,6 +27,9 @@ public struct PinConfiguration {
     /// The color of the filled dot at the top of the pin view.
     public var dotColor = UIColor.gray
     
+    /// The colof of the empty dot at the top of the pin view.
+    public var emptyDotColor = UIColor.white
+    
     /// The color of the stroked dot at the top of the pin view.
     public var dotStrokeColor = UIColor.gray
     
