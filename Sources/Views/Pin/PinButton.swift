@@ -89,8 +89,8 @@ public class PinButton: UIButton {
     override public func draw(_ rect: CGRect) {
         let context = UIGraphicsGetCurrentContext()
         
-        context?.setFillColor(type.strokeColor(for: configuration).cgColor)
-        context?.fillEllipse(in: rect)
+        context?.setStrokeColor(type.strokeColor(for: configuration).cgColor)
+        context?.strokeEllipse(in: rect)
         if isHighlighted && configuration.allowSelectionFeedback {
             context?.setFillColor(type.selectionBackgroundColor(for: configuration).cgColor)
         } else {
