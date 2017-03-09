@@ -15,17 +15,17 @@ class CustomPinViewController: UIViewController {
     // MARK: - Outlets
 
     @IBOutlet weak var pinView: PinView!
-    
+
     // MARK: - View flow
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         title = "Pin Code"
 
         pinView.delegate = self
     }
-    
+
 }
 
 @available(iOS 9, *)

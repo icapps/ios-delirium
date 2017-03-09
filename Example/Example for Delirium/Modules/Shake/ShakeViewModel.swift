@@ -9,9 +9,9 @@
 import Foundation
 
 class ShakeViewModel {
-    
+
     var title: String {
         return "Shake"
     }
-    
+
 }

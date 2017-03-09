@@ -10,37 +10,37 @@ import UIKit
 import Delirium
 
 class BlurredPopupViewController: UIViewController {
-    
+
     // MARK: - Internals
-    
+
     fileprivate var transitionDelegate: UIViewControllerTransitioningDelegate?
-    
+
     // MARK: - Configuration
-    
+
     var blurEffectStyle: UIBlurEffectStyle? {
         didSet {
             guard let blurEffectStyle = blurEffectStyle, #available(iOS 9, *) else { return }
-            
+
             (transitionDelegate as! ActionTransitioningDelegate).blurEffectStyle = blurEffectStyle
         }
     }
-    
+
     // MARK: - Init
-    
+
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        
+
         setupTransition()
     }
-    
+
     // MARK: - Transition
-    
+
     fileprivate func setupTransition() {
         guard #available(iOS 9, *) else { return }
-        
+
         transitionDelegate = ActionTransitioningDelegate()
         transitioningDelegate = transitionDelegate
         modalPresentationStyle = .custom
     }
-    
+
 }

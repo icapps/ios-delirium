@@ -147,6 +147,8 @@
 		BC75B12CFDAD38A41EF90A34 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC657FD492AFA6012872EE92 /* XCTest.framework */; };
 		BD49141B57AF6669A485BFD5 /* World+DSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27799F20F040690C290C3F15 /* World+DSL.swift */; };
 		BF82E590A9D706B989E1E515 /* UIApplication+StrictKeyWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D956045079C024D39B32394 /* UIApplication+StrictKeyWindow.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		C05979B81DEECD2500D38200 /* StickyCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05979B71DEECD2500D38200 /* StickyCollectionViewLayout.swift */; };
+		C05979B91DEECD2500D38200 /* StickyCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05979B71DEECD2500D38200 /* StickyCollectionViewLayout.swift */; };
 		C1473F189E292E6964204192 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37A77FEA38D3025F751770D /* Configuration.swift */; };
 		C2283245C3B390C5CC0F1078 /* BeEmpty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08ECA408AA924A9F358115E3 /* BeEmpty.swift */; };
 		C47BF63A1CBE0BCB3EA6DEBE /* UIView+Shake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F609B9BC926CA62A1775418 /* UIView+Shake.swift */; };
@@ -445,6 +447,7 @@
 		BDEA672D01AB8C1BD94F5C28 /* FBSnapshotTestCasePlatform.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSnapshotTestCasePlatform.m; path = FBSnapshotTestCase/FBSnapshotTestCasePlatform.m; sourceTree = "<group>"; };
 		BEEAD86A17297DD75300DF7E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BFB976D9ABF01E754EF2BFB5 /* ResourceBundle-Delirium-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = "ResourceBundle-Delirium-Info.plist"; path = "../Delirium-tvOS9.0/ResourceBundle-Delirium-Info.plist"; sourceTree = "<group>"; };
+		C05979B71DEECD2500D38200 /* StickyCollectionViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StickyCollectionViewLayout.swift; sourceTree = "<group>"; };
 		C0BEC257669E057995ABC281 /* Nimble-Snapshots-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Nimble-Snapshots-umbrella.h"; sourceTree = "<group>"; };
 		C1ADD54A3CEC7169CE10E373 /* AssertionDispatcher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AssertionDispatcher.swift; path = Sources/Nimble/Adapters/AssertionDispatcher.swift; sourceTree = "<group>"; };
 		C21172CCDC1F07B7CCB5FDD1 /* NSString+QCKSelectorName.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+QCKSelectorName.m"; path = "Sources/QuickObjectiveC/NSString+QCKSelectorName.m"; sourceTree = "<group>"; };
@@ -858,6 +861,7 @@
 		31C3312CACE0800EBFF0DBEA /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				C05979B61DEECD2500D38200 /* StickeyCollectionViewLayout */,
 				CF30D7A5D6BB0528DC2514C3 /* Animations */,
 				BFE693EF2595139BD1FC1E11 /* Controllers */,
 				6F4DDCF0A840F525F3B88AA3 /* Helpers */,
@@ -1028,6 +1032,14 @@
 				D6A518B4E515A9F094802CDE /* UIAlertController+Error.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		C05979B61DEECD2500D38200 /* StickeyCollectionViewLayout */ = {
+			isa = PBXGroup;
+			children = (
+				C05979B71DEECD2500D38200 /* StickyCollectionViewLayout.swift */,
+			);
+			path = StickeyCollectionViewLayout;
 			sourceTree = "<group>";
 		};
 		C66D3AA17446B998031D6EBF /* Pods-Delirium-Delirium_tvExample */ = {
@@ -1626,6 +1638,7 @@
 				83F2FAD7529014AAC020FCF1 /* PinDotView.swift in Sources */,
 				8BE6E98F39A7BB43B800AFAE /* PinView.swift in Sources */,
 				7901CD7179200AD0F39BBDBD /* UIAlertController+Error.swift in Sources */,
+				C05979B91DEECD2500D38200 /* StickyCollectionViewLayout.swift in Sources */,
 				7613BDEB8B7DBCE2083F4A3E /* UIView+Shake.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1647,6 +1660,7 @@
 				8700B8CC37295A7F16606C0C /* PinDotView.swift in Sources */,
 				A4073CC64429F9F2C3EB9234 /* PinView.swift in Sources */,
 				AABFFD5DBC4CF4BFE66FFD88 /* UIAlertController+Error.swift in Sources */,
+				C05979B81DEECD2500D38200 /* StickyCollectionViewLayout.swift in Sources */,
 				C47BF63A1CBE0BCB3EA6DEBE /* UIView+Shake.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

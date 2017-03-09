@@ -267,6 +267,11 @@ The amount of space beteen the keyboard and your view can be set in storyboard w
 
 ![](Resources/Inspectable.png)
 
+# Sticky CollectionView
+A custom layout for a CollectionView to stick first column and header like in the example movie.
+
+![](Resources/StickyCollectionView.mp4)
+
 ## Bucket List
 
 Here is an overview what is on our todo list.
