@@ -42,6 +42,7 @@
 		C05979C21DEED56200D38200 /* StickyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05979C11DEED56200D38200 /* StickyCell.swift */; };
 		C0BC5AAB1E6830CD00E8C54D /* KeyboardMutipleTextFieldsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0BC5AAA1E6830CD00E8C54D /* KeyboardMutipleTextFieldsViewController.swift */; };
 		C0BC5AB01E68387100E8C54D /* TableMutlipleTextFieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0BC5AAF1E68387100E8C54D /* TableMutlipleTextFieldViewController.swift */; };
+		C0C6DBC41E7297AE007B7565 /* MultipleSelectViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C6DBC21E729758007B7565 /* MultipleSelectViewModelSpec.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +100,7 @@
 		C05979C11DEED56200D38200 /* StickyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StickyCell.swift; sourceTree = "<group>"; };
 		C0BC5AAA1E6830CD00E8C54D /* KeyboardMutipleTextFieldsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KeyboardMutipleTextFieldsViewController.swift; path = Keyboard/KeyboardMutipleTextFieldsViewController.swift; sourceTree = "<group>"; };
 		C0BC5AAF1E68387100E8C54D /* TableMutlipleTextFieldViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TableMutlipleTextFieldViewController.swift; path = Keyboard/TableMutlipleTextFieldViewController.swift; sourceTree = "<group>"; };
+		C0C6DBC21E729758007B7565 /* MultipleSelectViewModelSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultipleSelectViewModelSpec.swift; sourceTree = "<group>"; };
 		C4B929F2E2F02D67FFCED98D /* Pods_Delirium_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Delirium_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E05AFDD5EC1C0DAE2F95E78B /* Pods-Delirium_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Delirium_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Delirium_Tests/Pods-Delirium_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		EB99649EA6F52A58BBC97607 /* Pods_Delirium_Delirium_tvExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Delirium_Delirium_tvExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -262,6 +264,7 @@
 		627E02B01D0AC89800B7529E /* Specs */ = {
 			isa = PBXGroup;
 			children = (
+				C0C6DBC21E729758007B7565 /* MultipleSelectViewModelSpec.swift */,
 				627E02B11D0AC8A400B7529E /* PieChartSpec.swift */,
 				0427A3701DB097C00014970B /* PinViewSpec.swift */,
 			);
@@ -682,6 +685,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0427A3721DB0984C0014970B /* PinViewSpec.swift in Sources */,
+				C0C6DBC41E7297AE007B7565 /* MultipleSelectViewModelSpec.swift in Sources */,
 				6294A9321D6EE2040088E18C /* QuickSpec+Snapshot.swift in Sources */,
 				627E02B31D0AC8B700B7529E /* PieChartSpec.swift in Sources */,
 			);

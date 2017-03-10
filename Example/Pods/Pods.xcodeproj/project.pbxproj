@@ -155,6 +155,14 @@
 		C0BC5AAC1E68362400E8C54D /* Keyboardy.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0BC5AA41E682F7100E8C54D /* Keyboardy.swift */; };
 		C0BC5AAD1E68364C00E8C54D /* UIView+FirstResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0BC5AA51E682F7100E8C54D /* UIView+FirstResponder.swift */; };
 		C0BC5AAE1E68365000E8C54D /* UIViewController+KeyboardFirstRespondable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0BC5AA61E682F7100E8C54D /* UIViewController+KeyboardFirstRespondable.swift */; };
+		C0C6DBBE1E72974F007B7565 /* MultipleSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C6DBBC1E72974F007B7565 /* MultipleSelectViewController.swift */; };
+		C0C6DBBF1E72974F007B7565 /* MultipleSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C6DBBC1E72974F007B7565 /* MultipleSelectViewController.swift */; };
+		C0C6DBC01E72974F007B7565 /* MultipleSelectViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C6DBBD1E72974F007B7565 /* MultipleSelectViewModel.swift */; };
+		C0C6DBC11E72974F007B7565 /* MultipleSelectViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C6DBBD1E72974F007B7565 /* MultipleSelectViewModel.swift */; };
+		C0C6DBC61E7298C8007B7565 /* CellDequeue.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C6DBC51E7298C8007B7565 /* CellDequeue.swift */; };
+		C0C6DBC71E7298C8007B7565 /* CellDequeue.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C6DBC51E7298C8007B7565 /* CellDequeue.swift */; };
+		C0C6DBC91E729916007B7565 /* CheckmarkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C6DBC81E729916007B7565 /* CheckmarkView.swift */; };
+		C0C6DBCA1E729916007B7565 /* CheckmarkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C6DBC81E729916007B7565 /* CheckmarkView.swift */; };
 		C1473F189E292E6964204192 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37A77FEA38D3025F751770D /* Configuration.swift */; };
 		C2283245C3B390C5CC0F1078 /* BeEmpty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08ECA408AA924A9F358115E3 /* BeEmpty.swift */; };
 		C47BF63A1CBE0BCB3EA6DEBE /* UIView+Shake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F609B9BC926CA62A1775418 /* UIView+Shake.swift */; };
@@ -458,6 +466,10 @@
 		C0BC5AA51E682F7100E8C54D /* UIView+FirstResponder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+FirstResponder.swift"; sourceTree = "<group>"; };
 		C0BC5AA61E682F7100E8C54D /* UIViewController+KeyboardFirstRespondable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+KeyboardFirstRespondable.swift"; sourceTree = "<group>"; };
 		C0BEC257669E057995ABC281 /* Nimble-Snapshots-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Nimble-Snapshots-umbrella.h"; sourceTree = "<group>"; };
+		C0C6DBBC1E72974F007B7565 /* MultipleSelectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MultipleSelectViewController.swift; path = MultipleSelectViewController/MultipleSelectViewController.swift; sourceTree = "<group>"; };
+		C0C6DBBD1E72974F007B7565 /* MultipleSelectViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MultipleSelectViewModel.swift; path = MultipleSelectViewController/MultipleSelectViewModel.swift; sourceTree = "<group>"; };
+		C0C6DBC51E7298C8007B7565 /* CellDequeue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CellDequeue.swift; path = MultipleSelectViewController/CellDequeue.swift; sourceTree = "<group>"; };
+		C0C6DBC81E729916007B7565 /* CheckmarkView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CheckmarkView.swift; path = MultipleSelectViewController/CheckmarkView.swift; sourceTree = "<group>"; };
 		C1ADD54A3CEC7169CE10E373 /* AssertionDispatcher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AssertionDispatcher.swift; path = Sources/Nimble/Adapters/AssertionDispatcher.swift; sourceTree = "<group>"; };
 		C21172CCDC1F07B7CCB5FDD1 /* NSString+QCKSelectorName.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+QCKSelectorName.m"; path = "Sources/QuickObjectiveC/NSString+QCKSelectorName.m"; sourceTree = "<group>"; };
 		C3166C951D79E00AAEA1FC82 /* Pods-Delirium-Delirium_tvExample-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Delirium-Delirium_tvExample-dummy.m"; sourceTree = "<group>"; };
@@ -870,6 +882,7 @@
 		31C3312CACE0800EBFF0DBEA /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				C0C6DBB21E7296DB007B7565 /* MultipleSelectViewController */,
 				C0BC5AA31E682F7100E8C54D /* Keyboard */,
 				C05979B61DEECD2500D38200 /* StickeyCollectionViewLayout */,
 				CF30D7A5D6BB0528DC2514C3 /* Animations */,
@@ -1060,6 +1073,17 @@
 				C0BC5AA61E682F7100E8C54D /* UIViewController+KeyboardFirstRespondable.swift */,
 			);
 			path = Keyboard;
+			sourceTree = "<group>";
+		};
+		C0C6DBB21E7296DB007B7565 /* MultipleSelectViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C0C6DBBC1E72974F007B7565 /* MultipleSelectViewController.swift */,
+				C0C6DBBD1E72974F007B7565 /* MultipleSelectViewModel.swift */,
+				C0C6DBC51E7298C8007B7565 /* CellDequeue.swift */,
+				C0C6DBC81E729916007B7565 /* CheckmarkView.swift */,
+			);
+			name = MultipleSelectViewController;
 			sourceTree = "<group>";
 		};
 		C66D3AA17446B998031D6EBF /* Pods-Delirium-Delirium_tvExample */ = {
@@ -1652,14 +1676,18 @@
 				0102A680D0034BDEC48C61F3 /* Delirium-iOS9.0-dummy.m in Sources */,
 				C0BC5AA71E682F7100E8C54D /* Keyboardy.swift in Sources */,
 				2F0770384C1036B6051FD83F /* KeyboardConstraint.swift in Sources */,
+				C0C6DBC71E7298C8007B7565 /* CellDequeue.swift in Sources */,
 				BB157E1CDB363A509FF48414 /* NSBundle+Cocoapods.swift in Sources */,
 				DD366F30EA7758EC4306CCF0 /* PieChartSlice.swift in Sources */,
 				A042A1E6AC2364C152708086 /* PieChartView.swift in Sources */,
 				4EBC09E5D6C145AAF815C6CB /* PinButton.swift in Sources */,
+				C0C6DBCA1E729916007B7565 /* CheckmarkView.swift in Sources */,
 				135226523CF5CA6825C832A8 /* PinConfiguration.swift in Sources */,
+				C0C6DBBF1E72974F007B7565 /* MultipleSelectViewController.swift in Sources */,
 				83F2FAD7529014AAC020FCF1 /* PinDotView.swift in Sources */,
 				8BE6E98F39A7BB43B800AFAE /* PinView.swift in Sources */,
 				7901CD7179200AD0F39BBDBD /* UIAlertController+Error.swift in Sources */,
+				C0C6DBC11E72974F007B7565 /* MultipleSelectViewModel.swift in Sources */,
 				C05979B91DEECD2500D38200 /* StickyCollectionViewLayout.swift in Sources */,
 				7613BDEB8B7DBCE2083F4A3E /* UIView+Shake.swift in Sources */,
 				C0BC5AA81E682F7100E8C54D /* UIView+FirstResponder.swift in Sources */,
@@ -1677,14 +1705,18 @@
 				1625FB67CC09A966DCB97AF2 /* Delirium-iOS8.0-dummy.m in Sources */,
 				C0BC5AAC1E68362400E8C54D /* Keyboardy.swift in Sources */,
 				CB6180704517EE7DB84163FF /* KeyboardConstraint.swift in Sources */,
+				C0C6DBC61E7298C8007B7565 /* CellDequeue.swift in Sources */,
 				9E77C3B0FFCBBCFB0EE77667 /* NSBundle+Cocoapods.swift in Sources */,
 				88209D094E35F2D968183710 /* PieChartSlice.swift in Sources */,
 				310A77A59ECFB81B8A7CFA8D /* PieChartView.swift in Sources */,
 				90C92BE516002CCF3CA4D40A /* PinButton.swift in Sources */,
+				C0C6DBC91E729916007B7565 /* CheckmarkView.swift in Sources */,
 				7608BE268C2B3A9F0DF4F171 /* PinConfiguration.swift in Sources */,
+				C0C6DBBE1E72974F007B7565 /* MultipleSelectViewController.swift in Sources */,
 				8700B8CC37295A7F16606C0C /* PinDotView.swift in Sources */,
 				A4073CC64429F9F2C3EB9234 /* PinView.swift in Sources */,
 				AABFFD5DBC4CF4BFE66FFD88 /* UIAlertController+Error.swift in Sources */,
+				C0C6DBC01E72974F007B7565 /* MultipleSelectViewModel.swift in Sources */,
 				C05979B81DEECD2500D38200 /* StickyCollectionViewLayout.swift in Sources */,
 				C47BF63A1CBE0BCB3EA6DEBE /* UIView+Shake.swift in Sources */,
 				C0BC5AAD1E68364C00E8C54D /* UIView+FirstResponder.swift in Sources */,
