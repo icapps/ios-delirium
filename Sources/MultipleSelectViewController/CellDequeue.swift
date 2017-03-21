@@ -13,7 +13,7 @@ The task of these classes is to set the right data on a cell.
 The reason this is done in a separate object is to be type safe.
 As UIKit is not generic we have to create an intermedite swift object that is.
 */
-public class CellDequeue<C: UICollectionViewCell, ID: RawRepresentable> where ID.RawValue == String {
+open class CellDequeue<C: UICollectionViewCell, ID: RawRepresentable> where ID.RawValue == String {
 
 	public typealias CellType = C
 
@@ -23,7 +23,7 @@ public class CellDequeue<C: UICollectionViewCell, ID: RawRepresentable> where ID
 		self.cellId = cellId
 	}
 
-	public func setup(_ cell: CellType) {
+	open func setup(_ cell: CellType) {
 		print("Should override \(self.setup)")
 	}
 	

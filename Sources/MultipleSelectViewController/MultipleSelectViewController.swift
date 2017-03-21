@@ -7,7 +7,7 @@ public enum MultipleSelectViewControllerError: Error {
 	case invalidCellType
 }
 
-public class MultipleSelectViewController: UIViewController {
+open class MultipleSelectViewController: UIViewController {
 
 	public typealias ChecklistItem = (String, selected: Bool)
 	public typealias SelectionChangedChecklistItems = ([ChecklistItem]) -> Void
@@ -41,11 +41,11 @@ public class MultipleSelectViewController: UIViewController {
 
 extension MultipleSelectViewController: UICollectionViewDataSource {
 
-	public func numberOfSections(in collectionView: UICollectionView) -> Int {
+	open func numberOfSections(in collectionView: UICollectionView) -> Int {
 		return viewModel.numberOfSections()
 	}
 
-	public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+	open func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
 		do {
 			return try viewModel.itemsIn(section: section)
 		} catch {
@@ -54,7 +54,7 @@ extension MultipleSelectViewController: UICollectionViewDataSource {
 		}
 	}
 
-	public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+	open func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 		var cell: MultipleCellDequeue.CellType!
 		do {
 			let dequeue = MultipleCellDequeue(try viewModel.value(at: indexPath))
@@ -69,7 +69,7 @@ extension MultipleSelectViewController: UICollectionViewDataSource {
 
 extension MultipleSelectViewController: UICollectionViewDelegate {
 
-	public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+	open func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 		do {
 			var checklistItem = try viewModel.value(at: indexPath)
 			checklistItem.selected = !checklistItem.selected
@@ -96,7 +96,7 @@ extension UICollectionView {
 
 }
 
-public class MultipleCellDequeue: CellDequeue<MultipleSelectCollectionViewCell, MultipleSelectCellID> {
+open class MultipleCellDequeue: CellDequeue<MultipleSelectCollectionViewCell, MultipleSelectCellID> {
 	public let titleSelection: MultipleSelectViewController.ChecklistItem
 
 	public init(_ titleSelection: MultipleSelectViewController.ChecklistItem) {
@@ -104,7 +104,7 @@ public class MultipleCellDequeue: CellDequeue<MultipleSelectCollectionViewCell, 
 		super.init(.multipleSelectCell)
 	}
 
-	override public  func setup(_ cell: MultipleSelectCollectionViewCell) {
+	override open func setup(_ cell: MultipleSelectCollectionViewCell) {
 		cell.label.text = titleSelection.0
 		cell.checkMark.checked = titleSelection.selected
 	}
