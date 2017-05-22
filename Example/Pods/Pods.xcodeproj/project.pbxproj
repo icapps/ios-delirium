@@ -45,6 +45,9 @@
 		27D7B9A16186746B8D4777B0 /* NMBExpectation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D4BF3429CA1AA27B64EDDE /* NMBExpectation.swift */; };
 		29723E3077D5FFD88DA7016D /* AdapterProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20449C6CBE977DD3C4F3519E /* AdapterProtocols.swift */; };
 		2D0DDBD90D644559F45F787C /* BeLogical.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B1DA06A24FBEBC57E634CC /* BeLogical.swift */; };
+		2D5ED09A1ED2D101005312FE /* UIFont+DynamicTypeCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5ED0991ED2D101005312FE /* UIFont+DynamicTypeCustom.swift */; };
+		2D5ED09B1ED2D101005312FE /* UIFont+DynamicTypeCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5ED0991ED2D101005312FE /* UIFont+DynamicTypeCustom.swift */; };
+		2D5ED09C1ED2D101005312FE /* UIFont+DynamicTypeCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5ED0991ED2D101005312FE /* UIFont+DynamicTypeCustom.swift */; };
 		2E6DDFC16EE3E645AC6C5CF6 /* UIImage+Diff.h in Headers */ = {isa = PBXBuildFile; fileRef = 2809D13EA1353F932789B4F1 /* UIImage+Diff.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		2E71464EFFA13C816D4F3C0D /* NMBExceptionCapture.h in Headers */ = {isa = PBXBuildFile; fileRef = EC2FEABE3E84CD14B9812422 /* NMBExceptionCapture.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2F0770384C1036B6051FD83F /* KeyboardConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD40137212E69AB8CAFE81B /* KeyboardConstraint.swift */; };
@@ -325,6 +328,7 @@
 		27E9AB1E213A7C302CF74D81 /* DSL.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DSL.h; path = Sources/NimbleObjectiveC/DSL.h; sourceTree = "<group>"; };
 		2809D13EA1353F932789B4F1 /* UIImage+Diff.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+Diff.h"; path = "FBSnapshotTestCase/Categories/UIImage+Diff.h"; sourceTree = "<group>"; };
 		28A38884E9EFF8BB6E79A3C5 /* Pods_Delirium_Delirium_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Delirium_Delirium_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D5ED0991ED2D101005312FE /* UIFont+DynamicTypeCustom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+DynamicTypeCustom.swift"; sourceTree = "<group>"; };
 		30842FFB9288D4B652CCB66D /* UIApplication+StrictKeyWindow.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIApplication+StrictKeyWindow.m"; path = "FBSnapshotTestCase/Categories/UIApplication+StrictKeyWindow.m"; sourceTree = "<group>"; };
 		3166A9115D4DE9C0730CFC79 /* Quick.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Quick.modulemap; sourceTree = "<group>"; };
 		32874847AC72642CD31876B3 /* BeginWith.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeginWith.swift; path = Sources/Nimble/Matchers/BeginWith.swift; sourceTree = "<group>"; };
@@ -941,6 +945,7 @@
 			isa = PBXGroup;
 			children = (
 				D70C9B13D19F5C4CCE3C5C9A /* NSBundle+Cocoapods.swift */,
+				2D5ED0991ED2D101005312FE /* UIFont+DynamicTypeCustom.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -1615,6 +1620,7 @@
 			files = (
 				DDCAC7B9973FD0C243429C3F /* ActionPresentationAnimationController.swift in Sources */,
 				861C31A2F59E44C749A981F1 /* ActionPresentationController.swift in Sources */,
+				2D5ED09B1ED2D101005312FE /* UIFont+DynamicTypeCustom.swift in Sources */,
 				5B41908B38E3E8AECD25B390 /* ActionTransitioningDelegate.swift in Sources */,
 				0102A680D0034BDEC48C61F3 /* Delirium-iOS9.0-dummy.m in Sources */,
 				2F0770384C1036B6051FD83F /* KeyboardConstraint.swift in Sources */,
@@ -1636,6 +1642,7 @@
 			files = (
 				630E92A03CA6D9525F3387E8 /* ActionPresentationAnimationController.swift in Sources */,
 				827409B22797DC61D7FBF71E /* ActionPresentationController.swift in Sources */,
+				2D5ED09A1ED2D101005312FE /* UIFont+DynamicTypeCustom.swift in Sources */,
 				4FA560EE8368A5709094225E /* ActionTransitioningDelegate.swift in Sources */,
 				1625FB67CC09A966DCB97AF2 /* Delirium-iOS8.0-dummy.m in Sources */,
 				CB6180704517EE7DB84163FF /* KeyboardConstraint.swift in Sources */,
@@ -1673,6 +1680,7 @@
 			files = (
 				F23B2C9C739D36A687BB39E8 /* ActionPresentationAnimationController.swift in Sources */,
 				10FC92CBEDF89ECC2749947B /* ActionPresentationController.swift in Sources */,
+				2D5ED09C1ED2D101005312FE /* UIFont+DynamicTypeCustom.swift in Sources */,
 				4142BF8DC8A09BE908E85727 /* ActionTransitioningDelegate.swift in Sources */,
 				94F42B50A2FEB8EB7EEABE8B /* Delirium-tvOS9.0-dummy.m in Sources */,
 				774911F6F3C6778FC20BEBDC /* KeyboardConstraint.swift in Sources */,
