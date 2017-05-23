@@ -267,6 +267,29 @@ The amount of space beteen the keyboard and your view can be set in storyboard w
 
 ![](Resources/Inspectable.png)
 
+# Font
+
+Easily use UIKit's Dynamic Type fonts with another font family.
+
+_Example Usage:_
+
+```swift
+// Without using TraitCollection:  
+let fontFamilyHeitiSC = "Heiti SC"
+let font = UIFont.preferredFont(with: fontFamilyHeitiSC, for: .body)
+
+// Using TraitColletion:
+let fontFamilyThonburi = "Thonburi"
+let anotherFont = UIFont.preferredFont(with: fontFamilyThonburi, for: style, compatibleWith: self.traitCollection)
+
+// For a list of available fonts use:
+print(UIFont.familyNames)
+```
+
+![](Resources/Text_Default.png)
+
+![](Resources/Text_Large.png)
+
 ## Bucket List
 
 Here is an overview what is on our todo list.
