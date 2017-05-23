@@ -12,6 +12,7 @@
 		1FE2C97C5CCCF034F85FD1F4 /* Pods_Delirium_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4B929F2E2F02D67FFCED98D /* Pods_Delirium_Tests.framework */; };
 		2D5ED09F1ED2D344005312FE /* DynamicType.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D5ED09E1ED2D344005312FE /* DynamicType.storyboard */; };
 		2D5ED0A11ED2D3A9005312FE /* SelectFontFamilyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5ED0A01ED2D3A9005312FE /* SelectFontFamilyViewController.swift */; };
+		2D91FE111ED421C9003489D0 /* DeliriumTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D91FE0F1ED42178003489D0 /* DeliriumTableViewController.swift */; };
 		4EB08FB4146109A55C5F3AF4 /* Pods_Delirium_Delirium_tvExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB99649EA6F52A58BBC97607 /* Pods_Delirium_Delirium_tvExample.framework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
@@ -57,6 +58,7 @@
 		176023E3211AD11FEC628AB5 /* Pods-Delirium-Delirium_tvExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Delirium-Delirium_tvExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-Delirium-Delirium_tvExample/Pods-Delirium-Delirium_tvExample.release.xcconfig"; sourceTree = "<group>"; };
 		2D5ED09E1ED2D344005312FE /* DynamicType.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = DynamicType.storyboard; path = "Dynamic Type/DynamicType.storyboard"; sourceTree = "<group>"; };
 		2D5ED0A01ED2D3A9005312FE /* SelectFontFamilyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SelectFontFamilyViewController.swift; path = "Dynamic Type/SelectFontFamilyViewController.swift"; sourceTree = "<group>"; };
+		2D91FE0F1ED42178003489D0 /* DeliriumTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeliriumTableViewController.swift; sourceTree = "<group>"; };
 		361576391C1E1EDDF2805EC3 /* Pods-Delirium-Delirium_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Delirium-Delirium_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-Delirium-Delirium_Example/Pods-Delirium-Delirium_Example.release.xcconfig"; sourceTree = "<group>"; };
 		394FFD2BAE8BFA333FA55B1B /* Pods-Delirium_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Delirium_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Delirium_Tests/Pods-Delirium_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* Delirium_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Delirium_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -234,6 +236,7 @@
 				6297F40F1D0EA71C00645AB9 /* Pin */,
 				627E02A91D0AC54C00B7529E /* Shake */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
+				2D91FE0F1ED42178003489D0 /* DeliriumTableViewController.swift */,
 				C014B75E1DAC1D8A00F0C1CE /* Keyboard */,
 			);
 			path = Modules;
@@ -647,6 +650,7 @@
 			files = (
 				627E02AF1D0AC7C200B7529E /* ShakeViewModel.swift in Sources */,
 				C014B75D1DAC1D5900F0C1CE /* KeyboardViewController.swift in Sources */,
+				2D91FE111ED421C9003489D0 /* DeliriumTableViewController.swift in Sources */,
 				62220A841D3D140900D87438 /* BlurredTransitionViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 				6297F4131D0EA7BB00645AB9 /* CustomPinViewController.swift in Sources */,
