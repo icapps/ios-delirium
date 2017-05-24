@@ -1,5 +1,5 @@
 //
-//  SelectFontFamilyViewController.swift
+//  FontFamilyViewController.swift
 //  Delirium
 //
 //  Created by Nikki Vergracht on 22/05/2017.
@@ -23,7 +23,7 @@ extension UIFont {
     }
 }
 
-class SelectFontFamilyHeader: UITableViewHeaderFooterView {
+class FontFamilyHeader: UITableViewHeaderFooterView {
     
     let label = UILabel()
     
@@ -55,7 +55,7 @@ class SelectFontFamilyHeader: UITableViewHeaderFooterView {
     
 }
 
-class SelectFontFamilyViewController: UITableViewController {
+class FontFamilyViewController: UITableViewController {
     
     private let cellReuseIdentifier = "fontFamilyCell"
     private var familyNames: [String]?
@@ -68,7 +68,7 @@ class SelectFontFamilyViewController: UITableViewController {
         tableView.estimatedRowHeight = 20
         tableView.sectionHeaderHeight = UITableViewAutomaticDimension
         tableView.estimatedSectionHeaderHeight = 40
-        tableView.register(SelectFontFamilyHeader.self, forHeaderFooterViewReuseIdentifier: SelectFontFamilyHeader.reuseIdentifier)
+        tableView.register(FontFamilyHeader.self, forHeaderFooterViewReuseIdentifier: FontFamilyHeader.reuseIdentifier)
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -83,7 +83,7 @@ class SelectFontFamilyViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        guard let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: SelectFontFamilyHeader.reuseIdentifier) as? SelectFontFamilyHeader else {
+        guard let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: FontFamilyHeader.reuseIdentifier) as? FontFamilyHeader else {
             return nil
         }
         header.label.text = "Change the \"Text Size\" in your phone's Settings and come back to this screen to see the sizes in the table view change accordingly."
