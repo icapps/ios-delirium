@@ -16,9 +16,9 @@ class FontSpec: QuickSnapshotSpec {
     override func spec() {
         describe("Font label view") {
             var label: UILabel!
-            let fontFamily = "Copperhead"
+            let fontFamily = "Courier"
             beforeEach{
-                self.record = true
+                self.record = false
                 let frame = CGRect(x: 0, y: 0, width: 500, height: 300)
                 label = UILabel(frame: frame)
                 label.text = "This text should be in the correct size."
@@ -41,10 +41,8 @@ class FontSpec: QuickSnapshotSpec {
                 } else {
                     label.font = UIFont.preferredFont(with: fontFamily, for: .headline)
                 }
-                let fontDescriptor = UIFontDescriptor.preferredFontDescriptor(withTextStyle: .headline)
                 self.expect📷ToHaveValidSnapshot(label, "FontDynamicType", .extraExtraExtraLarge)
             }
-
         }
     }
 }
