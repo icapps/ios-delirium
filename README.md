@@ -21,6 +21,7 @@
     - [Pie Chart](#pie-chart)
     - [Pin](#pin)
   - [Keyboard](#Keyboard)
+  - [Font](#Font)
 - [Bucket List](#bucket-list)
 - [Author](#author)
 - [License](#license)
@@ -269,7 +270,7 @@ The amount of space beteen the keyboard and your view can be set in storyboard w
 
 # Font
 
-Easily use UIKit's Dynamic Type fonts with another font family.
+Easily use UIKit's Dynamic Type fonts with another font family. More information regarding Dynamic Type and Typography in general can be found at [Apple](https://developer.apple.com/ios/human-interface-guidelines/visual-design/typography/).
 
 _Example Usage:_
 
