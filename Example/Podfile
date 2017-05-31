@@ -25,8 +25,8 @@ abstract_target 'Delirium' do
     # The test frameworks
     pod 'Quick',            '~> 0.10'
     pod 'Nimble',           '~> 5.0'
-    pod 'Nimble-Snapshots', '~> 4.3'
-    pod 'Nimble-Snapshots/DynamicType'
+    pod 'Nimble-Snapshots', '~> 4.4'
+    pod 'Nimble-Snapshots/DynamicType', '~> 4.4'
   end
 end
 

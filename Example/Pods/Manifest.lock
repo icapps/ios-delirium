@@ -22,8 +22,8 @@ DEPENDENCIES:
   - Delirium (from `../`)
   - FBSnapshotTestCase (from `https://github.com/facebook/ios-snapshot-test-case.git`, commit `6a3f71f`)
   - Nimble (~> 5.0)
-  - Nimble-Snapshots (~> 4.3)
-  - Nimble-Snapshots/DynamicType
+  - Nimble-Snapshots (~> 4.4)
+  - Nimble-Snapshots/DynamicType (~> 4.4)
   - Quick (~> 0.10)
 
 EXTERNAL SOURCES:
@@ -46,6 +46,6 @@ SPEC CHECKSUMS:
   OCMock: 35ae71d6a8fcc1b59434d561d1520b9dd4f15765
   Quick: 5d290df1c69d5ee2f0729956dcf0fd9a30447eaa
 
-PODFILE CHECKSUM: 20d2ce83f8f2e1388275ab61b8abc10caf16d23a
+PODFILE CHECKSUM: aeea75b0744bd0b6bff555b71cea1249e58ee6f8
 
 COCOAPODS: 1.1.1
