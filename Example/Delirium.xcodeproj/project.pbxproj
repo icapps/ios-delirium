@@ -13,6 +13,9 @@
 		2D39337B1ED56C7B009780D1 /* FontSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3933781ED56C64009780D1 /* FontSpec.swift */; };
 		2D5ED09F1ED2D344005312FE /* DynamicType.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D5ED09E1ED2D344005312FE /* DynamicType.storyboard */; };
 		2D5ED0A11ED2D3A9005312FE /* FontFamilyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5ED0A01ED2D3A9005312FE /* FontFamilyViewController.swift */; };
+		2D80C1061EDE96A30046B061 /* FontFamilyHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D80C1051EDE96A30046B061 /* FontFamilyHeader.swift */; };
+		2D80C1081EDE972C0046B061 /* UIFont+ChalkboardPreferred.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D80C1071EDE972C0046B061 /* UIFont+ChalkboardPreferred.swift */; };
+		2D80C10A1EDE97620046B061 /* FontFamilyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D80C1091EDE97620046B061 /* FontFamilyViewModel.swift */; };
 		2D91FE111ED421C9003489D0 /* DeliriumTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D91FE0F1ED42178003489D0 /* DeliriumTableViewController.swift */; };
 		4EB08FB4146109A55C5F3AF4 /* Pods_Delirium_Delirium_tvExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB99649EA6F52A58BBC97607 /* Pods_Delirium_Delirium_tvExample.framework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
@@ -60,6 +63,9 @@
 		2D3933781ED56C64009780D1 /* FontSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontSpec.swift; sourceTree = "<group>"; };
 		2D5ED09E1ED2D344005312FE /* DynamicType.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = DynamicType.storyboard; path = "Dynamic Type/DynamicType.storyboard"; sourceTree = "<group>"; };
 		2D5ED0A01ED2D3A9005312FE /* FontFamilyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FontFamilyViewController.swift; path = "Dynamic Type/FontFamilyViewController.swift"; sourceTree = "<group>"; };
+		2D80C1051EDE96A30046B061 /* FontFamilyHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FontFamilyHeader.swift; path = "Dynamic Type/FontFamilyHeader.swift"; sourceTree = "<group>"; };
+		2D80C1071EDE972C0046B061 /* UIFont+ChalkboardPreferred.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIFont+ChalkboardPreferred.swift"; path = "Dynamic Type/UIFont+ChalkboardPreferred.swift"; sourceTree = "<group>"; };
+		2D80C1091EDE97620046B061 /* FontFamilyViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FontFamilyViewModel.swift; path = "Dynamic Type/FontFamilyViewModel.swift"; sourceTree = "<group>"; };
 		2D91FE0F1ED42178003489D0 /* DeliriumTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeliriumTableViewController.swift; sourceTree = "<group>"; };
 		361576391C1E1EDDF2805EC3 /* Pods-Delirium-Delirium_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Delirium-Delirium_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-Delirium-Delirium_Example/Pods-Delirium-Delirium_Example.release.xcconfig"; sourceTree = "<group>"; };
 		394FFD2BAE8BFA333FA55B1B /* Pods-Delirium_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Delirium_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Delirium_Tests/Pods-Delirium_Tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -141,6 +147,9 @@
 			children = (
 				2D5ED09E1ED2D344005312FE /* DynamicType.storyboard */,
 				2D5ED0A01ED2D3A9005312FE /* FontFamilyViewController.swift */,
+				2D80C1051EDE96A30046B061 /* FontFamilyHeader.swift */,
+				2D80C1071EDE972C0046B061 /* UIFont+ChalkboardPreferred.swift */,
+				2D80C1091EDE97620046B061 /* FontFamilyViewModel.swift */,
 			);
 			name = "Dynamic Type";
 			sourceTree = "<group>";
@@ -663,6 +672,9 @@
 				627E02D61D0AD9DF00B7529E /* AlertViewModel.swift in Sources */,
 				2D5ED0A11ED2D3A9005312FE /* FontFamilyViewController.swift in Sources */,
 				627E02D41D0AD9BE00B7529E /* AlertViewController.swift in Sources */,
+				2D80C10A1EDE97620046B061 /* FontFamilyViewModel.swift in Sources */,
+				2D80C1081EDE972C0046B061 /* UIFont+ChalkboardPreferred.swift in Sources */,
+				2D80C1061EDE96A30046B061 /* FontFamilyHeader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
