@@ -22,16 +22,12 @@ class FontFamilyHeader: UITableViewHeaderFooterView {
         label.numberOfLines = 0
         label.backgroundColor = .clear
         label.textAlignment = .center
-        if #available(iOS 8.2, tvOS 8.2,  *) {
-            label.font = UIFont.systemFont(ofSize: 20, weight: UIFontWeightThin)
-        } else {
-            label.font = UIFont.systemFont(ofSize: 20)
-        }
+        label.font = UIFont.systemFont(ofSize: 20, weight: UIFontWeightThin)
         contentView.addSubview(label)
-        contentView.addConstraint(NSLayoutConstraint(item: label, attribute: .leading, relatedBy: .equal, toItem: contentView, attribute: .leading, multiplier: 1.0, constant: 20))
-        contentView.addConstraint(NSLayoutConstraint(item: label, attribute: .trailing, relatedBy: .equal, toItem: contentView, attribute: .trailing, multiplier: 1.0, constant: -20))
-        contentView.addConstraint(NSLayoutConstraint(item: label, attribute: .top, relatedBy: .equal, toItem: contentView, attribute: .top, multiplier: 1.0, constant: 20))
-        contentView.addConstraint(NSLayoutConstraint(item: label, attribute: .bottom, relatedBy: .equal, toItem: contentView, attribute: .bottom, multiplier: 1.0, constant: -20))
+        label.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20).isActive = true
+        label.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -20).isActive = true
+        label.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 20).isActive = true
+        label.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -20).isActive = true
     }
     
     required init?(coder aDecoder: NSCoder) {
