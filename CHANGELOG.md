@@ -1,5 +1,9 @@
 # Delirium
 
+## Version 2.2.0
+
+- Added dynamic type support for custom fonts.
+
 ## Version 2.1.1
 - Clear function public
 - minor changes
