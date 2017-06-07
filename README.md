@@ -20,7 +20,8 @@
   - [Views](#views)
     - [Pie Chart](#pie-chart)
     - [Pin](#pin)
-  - [Keyboard](#Keyboard)
+  - [Keyboard](#keyboard)
+  - [Font](#font)
 - [Bucket List](#bucket-list)
 - [Author](#author)
 - [License](#license)
@@ -266,6 +267,39 @@ extension KeyboardViewController: UITextFieldDelegate {
 The amount of space beteen the keyboard and your view can be set in storyboard when you select the constraint of class `KeyboardConstraint`
 
 ![](Resources/Inspectable.png)
+
+# Font
+
+Easily use UIKit's Dynamic Type and Text Styles with a custom font family. When using Dynamic Type in your apps, your apps will respond to users changing their preferred text size in their iOS device's settings.
+
+Text Styles are a set of styles that make it easier to implement different font sizes and font weights into your app. For example, a headline would default to a semi-bold weight and a 17pt point size while a body would default to a regular weight and a 17pt point size.
+
+The default Dynamic Type when no changes are done by the user is `Large`. Dynamic Types vary from `xSmall` to `xxxLarge`.
+
+Available parameters:
+- `family`: The name of the font family to be used as returned by `UIFont.familyNames` or a custom font embedded in the app.
+- `style`: The font text style to be used. (e.g. `UIFontTextStyle.headline`)
+
+_Example Usage:_
+
+```swift
+// Without using TraitCollection:  
+let fontFamilyHeitiSC = "Heiti SC"
+let font = UIFont.preferredFont(with: fontFamilyHeitiSC, for: .body)
+
+// Using TraitColletion:
+let fontFamilyThonburi = "Thonburi"
+let anotherFont = UIFont.preferredFont(with: fontFamilyThonburi, for: style, compatibleWith: traitCollection)
+
+// For a list of available fonts use:
+print(UIFont.familyNames)
+```
+
+![](Resources/Text_Default.png)
+
+![](Resources/Text_Large.png)
+
+_More information regarding Dynamic Type and Typography in general can be found at [Apple](https://developer.apple.com/ios/human-interface-guidelines/visual-design/typography/)._
 
 ## Bucket List
 

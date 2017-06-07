@@ -10,6 +10,13 @@
 		0427A3721DB0984C0014970B /* PinViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0427A3701DB097C00014970B /* PinViewSpec.swift */; };
 		0427A3761DB098B70014970B /* PinSpec.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0427A3741DB098840014970B /* PinSpec.storyboard */; };
 		1FE2C97C5CCCF034F85FD1F4 /* Pods_Delirium_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4B929F2E2F02D67FFCED98D /* Pods_Delirium_Tests.framework */; };
+		2D39337B1ED56C7B009780D1 /* FontSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3933781ED56C64009780D1 /* FontSpec.swift */; };
+		2D5ED09F1ED2D344005312FE /* DynamicType.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D5ED09E1ED2D344005312FE /* DynamicType.storyboard */; };
+		2D5ED0A11ED2D3A9005312FE /* FontFamilyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5ED0A01ED2D3A9005312FE /* FontFamilyViewController.swift */; };
+		2D80C1061EDE96A30046B061 /* FontFamilyHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D80C1051EDE96A30046B061 /* FontFamilyHeader.swift */; };
+		2D80C1081EDE972C0046B061 /* UIFont+ChalkboardPreferred.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D80C1071EDE972C0046B061 /* UIFont+ChalkboardPreferred.swift */; };
+		2D80C10A1EDE97620046B061 /* FontFamilyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D80C1091EDE97620046B061 /* FontFamilyViewModel.swift */; };
+		2D91FE111ED421C9003489D0 /* DeliriumTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D91FE0F1ED42178003489D0 /* DeliriumTableViewController.swift */; };
 		4EB08FB4146109A55C5F3AF4 /* Pods_Delirium_Delirium_tvExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB99649EA6F52A58BBC97607 /* Pods_Delirium_Delirium_tvExample.framework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
@@ -53,6 +60,13 @@
 		0427A3741DB098840014970B /* PinSpec.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PinSpec.storyboard; sourceTree = "<group>"; };
 		06D20A32F4CAE8FA227C3ED6 /* Pods-Delirium-Delirium_tvExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Delirium-Delirium_tvExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Delirium-Delirium_tvExample/Pods-Delirium-Delirium_tvExample.debug.xcconfig"; sourceTree = "<group>"; };
 		176023E3211AD11FEC628AB5 /* Pods-Delirium-Delirium_tvExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Delirium-Delirium_tvExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-Delirium-Delirium_tvExample/Pods-Delirium-Delirium_tvExample.release.xcconfig"; sourceTree = "<group>"; };
+		2D3933781ED56C64009780D1 /* FontSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontSpec.swift; sourceTree = "<group>"; };
+		2D5ED09E1ED2D344005312FE /* DynamicType.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = DynamicType.storyboard; path = "Dynamic Type/DynamicType.storyboard"; sourceTree = "<group>"; };
+		2D5ED0A01ED2D3A9005312FE /* FontFamilyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FontFamilyViewController.swift; path = "Dynamic Type/FontFamilyViewController.swift"; sourceTree = "<group>"; };
+		2D80C1051EDE96A30046B061 /* FontFamilyHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FontFamilyHeader.swift; path = "Dynamic Type/FontFamilyHeader.swift"; sourceTree = "<group>"; };
+		2D80C1071EDE972C0046B061 /* UIFont+ChalkboardPreferred.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIFont+ChalkboardPreferred.swift"; path = "Dynamic Type/UIFont+ChalkboardPreferred.swift"; sourceTree = "<group>"; };
+		2D80C1091EDE97620046B061 /* FontFamilyViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FontFamilyViewModel.swift; path = "Dynamic Type/FontFamilyViewModel.swift"; sourceTree = "<group>"; };
+		2D91FE0F1ED42178003489D0 /* DeliriumTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeliriumTableViewController.swift; sourceTree = "<group>"; };
 		361576391C1E1EDDF2805EC3 /* Pods-Delirium-Delirium_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Delirium-Delirium_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-Delirium-Delirium_Example/Pods-Delirium-Delirium_Example.release.xcconfig"; sourceTree = "<group>"; };
 		394FFD2BAE8BFA333FA55B1B /* Pods-Delirium_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Delirium_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Delirium_Tests/Pods-Delirium_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* Delirium_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Delirium_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -126,6 +140,18 @@
 				0427A3741DB098840014970B /* PinSpec.storyboard */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		2D5ED09D1ED2D314005312FE /* Dynamic Type */ = {
+			isa = PBXGroup;
+			children = (
+				2D5ED09E1ED2D344005312FE /* DynamicType.storyboard */,
+				2D5ED0A01ED2D3A9005312FE /* FontFamilyViewController.swift */,
+				2D80C1051EDE96A30046B061 /* FontFamilyHeader.swift */,
+				2D80C1071EDE972C0046B061 /* UIFont+ChalkboardPreferred.swift */,
+				2D80C1091EDE97620046B061 /* FontFamilyViewModel.swift */,
+			);
+			name = "Dynamic Type";
 			sourceTree = "<group>";
 		};
 		3726237C0BC757BB6472F27D /* Pods */ = {
@@ -214,12 +240,14 @@
 		627E02A71D0ABF4100B7529E /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				2D5ED09D1ED2D314005312FE /* Dynamic Type */,
 				627E02D01D0AD9A200B7529E /* Alert */,
 				62220A801D3D13B800D87438 /* Blurred Transition */,
 				62CDEC9B1D6C8A1D005A0CEF /* Pie Chart */,
 				6297F40F1D0EA71C00645AB9 /* Pin */,
 				627E02A91D0AC54C00B7529E /* Shake */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
+				2D91FE0F1ED42178003489D0 /* DeliriumTableViewController.swift */,
 				C014B75E1DAC1D8A00F0C1CE /* Keyboard */,
 			);
 			path = Modules;
@@ -247,6 +275,7 @@
 		627E02B01D0AC89800B7529E /* Specs */ = {
 			isa = PBXGroup;
 			children = (
+				2D3933781ED56C64009780D1 /* FontSpec.swift */,
 				627E02B11D0AC8A400B7529E /* PieChartSpec.swift */,
 				0427A3701DB097C00014970B /* PinViewSpec.swift */,
 			);
@@ -464,6 +493,7 @@
 				6297F4111D0EA72900645AB9 /* Pin.storyboard in Resources */,
 				627E02AB1D0AC55800B7529E /* Shake.storyboard in Resources */,
 				C014B7601DAC1DAD00F0C1CE /* Keyboard.storyboard in Resources */,
+				2D5ED09F1ED2D344005312FE /* DynamicType.storyboard in Resources */,
 				62220A821D3D13CE00D87438 /* BlurredTransition.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -632,6 +662,7 @@
 			files = (
 				627E02AF1D0AC7C200B7529E /* ShakeViewModel.swift in Sources */,
 				C014B75D1DAC1D5900F0C1CE /* KeyboardViewController.swift in Sources */,
+				2D91FE111ED421C9003489D0 /* DeliriumTableViewController.swift in Sources */,
 				62220A841D3D140900D87438 /* BlurredTransitionViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 				6297F4131D0EA7BB00645AB9 /* CustomPinViewController.swift in Sources */,
@@ -639,7 +670,11 @@
 				627E02AD1D0AC6C000B7529E /* ShakeViewController.swift in Sources */,
 				62CDEC9F1D6C8A6F005A0CEF /* PieChartViewController.swift in Sources */,
 				627E02D61D0AD9DF00B7529E /* AlertViewModel.swift in Sources */,
+				2D5ED0A11ED2D3A9005312FE /* FontFamilyViewController.swift in Sources */,
 				627E02D41D0AD9BE00B7529E /* AlertViewController.swift in Sources */,
+				2D80C10A1EDE97620046B061 /* FontFamilyViewModel.swift in Sources */,
+				2D80C1081EDE972C0046B061 /* UIFont+ChalkboardPreferred.swift in Sources */,
+				2D80C1061EDE96A30046B061 /* FontFamilyHeader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -650,6 +685,7 @@
 				0427A3721DB0984C0014970B /* PinViewSpec.swift in Sources */,
 				6294A9321D6EE2040088E18C /* QuickSpec+Snapshot.swift in Sources */,
 				627E02B31D0AC8B700B7529E /* PieChartSpec.swift in Sources */,
+				2D39337B1ED56C7B009780D1 /* FontSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -741,11 +777,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TVOS_DEPLOYMENT_TARGET = 9.0;
 			};
 			name = Debug;
 		};
@@ -781,10 +818,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TVOS_DEPLOYMENT_TARGET = 9.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -795,8 +833,8 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Example for Delirium/Supporting Files/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = com.icapps.delirium.example.ios;
@@ -811,8 +849,8 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Example for Delirium/Supporting Files/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = com.icapps.delirium.example.ios;
@@ -826,6 +864,7 @@
 			baseConfigurationReference = E05AFDD5EC1C0DAE2F95E78B /* Pods-Delirium_Tests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -837,6 +876,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Delirium_Example.app/Delirium_Example";
 			};
 			name = Debug;
 		};
@@ -845,6 +885,7 @@
 			baseConfigurationReference = 394FFD2BAE8BFA333FA55B1B /* Pods-Delirium_Tests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "Tests/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -852,6 +893,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Delirium_Example.app/Delirium_Example";
 			};
 			name = Release;
 		};
@@ -865,14 +907,12 @@
 				CLANG_ANALYZER_NONNULL = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				INFOPLIST_FILE = "Example for tvOS Delirium/Supporting Files/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.icapps.delirium.example.tvos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 9.0;
 			};
 			name = Debug;
 		};
@@ -885,14 +925,12 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ANALYZER_NONNULL = YES;
 				INFOPLIST_FILE = "Example for tvOS Delirium/Supporting Files/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.icapps.delirium.example.tvos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 9.0;
 			};
 			name = Release;
 		};

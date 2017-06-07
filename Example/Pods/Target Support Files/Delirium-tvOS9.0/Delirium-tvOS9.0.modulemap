@@ -1,6 +1,0 @@
-framework module Delirium {
-  umbrella header "Delirium-tvOS9.0-umbrella.h"
-
-  export *
-  module * { export * }
-}
