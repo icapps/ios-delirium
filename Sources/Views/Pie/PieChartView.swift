@@ -36,7 +36,7 @@ open class PieChartView: UIView {
     
     // MARK: - Internals
     
-    fileprivate var startAngle = -Float(M_PI * 0.5)
+    fileprivate var startAngle = -Float(.pi * 0.5)
     fileprivate var slices = [PieChartSlice]()
     
     // MARK: - Slices
@@ -73,7 +73,7 @@ open class PieChartView: UIView {
         
         for slice in slices {
             // Calculate the endAngle
-            let endAngle = currentStartAngle + Float(M_PI * 2.0) * (slice.value / valueCount)
+            let endAngle = currentStartAngle + Float(.pi * 2.0) * (slice.value / valueCount)
             
             // Draw the slice.
             context?.setFillColor(slice.color.cgColor)
@@ -89,7 +89,7 @@ open class PieChartView: UIView {
             currentStartAngle = startAngle
             for slice in slices {
                 // Calculate the endAngle
-                let endAngle = currentStartAngle + Float(M_PI * 2.0) * (slice.value / valueCount)
+                let endAngle = currentStartAngle + Float(.pi * 2.0) * (slice.value / valueCount)
                 
                 // Draw the line.
                 context?.setStrokeColor(strokeColor.cgColor)
