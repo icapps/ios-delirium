@@ -1,5 +1,9 @@
 # Delirium
 
+## Version 2.2.1
+
+- Fixed the deprecation warnings.
+
 ## Version 2.2.0
 
 - Added dynamic type support for custom fonts.
