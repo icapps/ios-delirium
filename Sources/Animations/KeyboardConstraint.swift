@@ -21,7 +21,7 @@ open class KeyboardConstraint: NSLayoutConstraint {
                                                queue: OperationQueue.main)
                     { [weak self] (notification) in
                         let userInfo = notification.userInfo
-                        let frameInfo = userInfo?[UIKeyboardFrameBeginUserInfoKey]
+                        let frameInfo = userInfo?[UIKeyboardFrameEndUserInfoKey]
                         if let keyboardSize = (frameInfo as? NSValue)?.cgRectValue {
                             let offset = self?.aboveKeyboard != nil ? self!.aboveKeyboard : 0
                             self?.animate(to: (keyboardSize.height + offset), userInfo: userInfo)
