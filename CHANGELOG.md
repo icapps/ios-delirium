@@ -1,5 +1,9 @@
 # Delirium
 
+## Version 2.2.2
+
+- Fixed the keyboard constraint implementation on iOS 11.
+
 ## Version 2.2.1
 
 - Fixed the deprecation warnings.
