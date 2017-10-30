@@ -1,5 +1,17 @@
 # Delirium
 
+## Version 2.2.2
+
+- Fixed the keyboard constraint implementation on iOS 11.
+
+## Version 2.2.1
+
+- Fixed the deprecation warnings.
+
+## Version 2.2.0
+
+- Added dynamic type support for custom fonts.
+
 ## Version 2.1.1
 - Clear function public
 - minor changes

@@ -20,7 +20,15 @@ class QuickSnapshotSpec: QuickSpec {
         } else {
             expect(view) == snapshot()
         }
-        
+    }
+    
+    func expect📷ToHaveValidSnapshot(_ view: UIView, _ name: String, _ category: UIContentSizeCategory) {
+        let dynamicTypeSnapshotName = name + "-\(category.rawValue)"
+        if self.record {
+            expect(view) == recordDynamicTypeSnapshot(dynamicTypeSnapshotName, sizes: [category])
+        } else {
+            expect(view) == dynamicTypeSnapshot(dynamicTypeSnapshotName, sizes: [category])
+        }
     }
     
 }
