@@ -1,44 +1,31 @@
-import Quick
 import Nimble
 import UIKit
-import FBSnapshotTestCase
 
-func allContentSizeCategories() -> [UIContentSizeCategory] {
-    #if swift(>=3.0)
-        return [
-            .extraSmall, .small, .medium,
-            .large, .extraLarge, .extraExtraLarge,
-            .extraExtraExtraLarge, .accessibilityMedium,
-            .accessibilityLarge, .accessibilityExtraLarge,
-            .accessibilityExtraExtraLarge, .accessibilityExtraExtraExtraLarge
-        ]
-    #else
-        return [
-            UIContentSizeCategoryExtraSmall, UIContentSizeCategorySmall, UIContentSizeCategoryMedium,
-            UIContentSizeCategoryLarge, UIContentSizeCategoryExtraLarge, UIContentSizeCategoryExtraExtraLarge,
-            UIContentSizeCategoryExtraExtraExtraLarge, UIContentSizeCategoryAccessibilityMedium,
-            UIContentSizeCategoryAccessibilityLarge, UIContentSizeCategoryAccessibilityExtraLarge,
-            UIContentSizeCategoryAccessibilityExtraExtraLarge, UIContentSizeCategoryAccessibilityExtraExtraExtraLarge
-        ]
-    #endif
+public func allContentSizeCategories() -> [UIContentSizeCategory] {
+    return [
+        .extraSmall, .small, .medium,
+        .large, .extraLarge, .extraExtraLarge,
+        .extraExtraExtraLarge, .accessibilityMedium,
+        .accessibilityLarge, .accessibilityExtraLarge,
+        .accessibilityExtraExtraLarge, .accessibilityExtraExtraExtraLarge
+    ]
 }
 
 func shortCategoryName(_ category: UIContentSizeCategory) -> String {
-    #if swift(>=3.0)
-        return category.rawValue.replacingOccurrences(of: "UICTContentSizeCategory", with: "")
-    #else
-        return category.stringByReplacingOccurrencesOfString("UICTContentSizeCategory", withString: "")
-    #endif
+    return category.rawValue.replacingOccurrences(of: "UICTContentSizeCategory", with: "")
 }
 
-func combineMatchers<T>(_ matchers: [MatcherFunc<T>], ignoreFailures: Bool = false, deferred: (() -> Void)? = nil) -> MatcherFunc<T> {
-    return MatcherFunc { actualExpression, failureMessage in
+func combinePredicates<T>(_ predicates: [Predicate<T>], ignoreFailures: Bool = false,
+                          deferred: (() -> Void)? = nil) -> Predicate<T> {
+    return Predicate.fromDeprecatedClosure { actualExpression, failureMessage in
         defer {
             deferred?()
         }
 
-        return try matchers.reduce(true) { acc, matcher -> Bool in
-            guard acc || ignoreFailures else { return false }
+        return try predicates.reduce(true) { acc, matcher -> Bool in
+            guard acc || ignoreFailures else {
+                return false
+            }
 
             let result = try matcher.matches(actualExpression, failureMessage: failureMessage)
             return result && acc
@@ -46,62 +33,88 @@ func combineMatchers<T>(_ matchers: [MatcherFunc<T>], ignoreFailures: Bool = fal
     }
 }
 
-public func haveValidDynamicTypeSnapshot(named name: String? = nil, usesDrawRect: Bool = false, tolerance: CGFloat? = nil, sizes: [UIContentSizeCategory] = allContentSizeCategories(), isDeviceAgnostic: Bool = false) -> MatcherFunc<Snapshotable> {
+public func haveValidDynamicTypeSnapshot(named name: String? = nil, usesDrawRect: Bool = false,
+                                         tolerance: CGFloat? = nil,
+                                         sizes: [UIContentSizeCategory] = allContentSizeCategories(),
+                                         isDeviceAgnostic: Bool = false) -> Predicate<Snapshotable> {
     let mock = NBSMockedApplication()
 
-    let matchers: [MatcherFunc<Snapshotable>] = sizes.map { category in
-        let sanitizedName = _sanitizedTestName(name)
+    let predicates: [Predicate<Snapshotable>] = sizes.map { category in
+        let sanitizedName = sanitizedTestName(name)
         let nameWithCategory = "\(sanitizedName)_\(shortCategoryName(category))"
 
-        return MatcherFunc { actualExpression, failureMessage in
-            #if swift(>=3.0)
-                mock.mockPrefferedContentSizeCategory(category)
-            #else
-                mock.mockPrefferedContentSizeCategory(category as String)
-            #endif
+        return Predicate.fromDeprecatedClosure { actualExpression, failureMessage in
+            mock.mockPreferredContentSizeCategory(category)
+            updateTraitCollection(on: actualExpression)
 
-            let matcher: MatcherFunc<Snapshotable>
+            let predicate: Predicate<Snapshotable>
             if isDeviceAgnostic {
-                matcher = haveValidDeviceAgnosticSnapshot(named: nameWithCategory, usesDrawRect: usesDrawRect, tolerance: tolerance)
+                predicate = haveValidDeviceAgnosticSnapshot(named: nameWithCategory,
+                                                          usesDrawRect: usesDrawRect, tolerance: tolerance)
             } else {
-                matcher = haveValidSnapshot(named: nameWithCategory, usesDrawRect: usesDrawRect, tolerance: tolerance)
+                predicate = haveValidSnapshot(named: nameWithCategory, usesDrawRect: usesDrawRect, tolerance: tolerance)
             }
 
-            return try matcher.matches(actualExpression, failureMessage: failureMessage)
+            return try predicate.matches(actualExpression, failureMessage: failureMessage)
         }
     }
 
-    return combineMatchers(matchers) {
-        mock.stopMockingPrefferedContentSizeCategory()
+    return combinePredicates(predicates) {
+        mock.stopMockingPreferredContentSizeCategory()
     }
 }
 
-public func recordDynamicTypeSnapshot(named name: String? = nil, usesDrawRect: Bool = false, sizes: [UIContentSizeCategory] = allContentSizeCategories(), isDeviceAgnostic: Bool = false) -> MatcherFunc<Snapshotable> {
+public func recordDynamicTypeSnapshot(named name: String? = nil, usesDrawRect: Bool = false,
+                                      sizes: [UIContentSizeCategory] = allContentSizeCategories(),
+                                      isDeviceAgnostic: Bool = false) -> Predicate<Snapshotable> {
     let mock = NBSMockedApplication()
 
-    let matchers: [MatcherFunc<Snapshotable>] = sizes.map { category in
-        let sanitizedName = _sanitizedTestName(name)
+    let predicates: [Predicate<Snapshotable>] = sizes.map { category in
+        let sanitizedName = sanitizedTestName(name)
         let nameWithCategory = "\(sanitizedName)_\(shortCategoryName(category))"
 
-        return MatcherFunc { actualExpression, failureMessage in
-            #if swift(>=3.0)
-                mock.mockPrefferedContentSizeCategory(category)
-            #else
-                mock.mockPrefferedContentSizeCategory(category as String)
-            #endif
+        return Predicate.fromDeprecatedClosure { actualExpression, failureMessage in
+            mock.mockPreferredContentSizeCategory(category)
+            updateTraitCollection(on: actualExpression)
 
-            let matcher: MatcherFunc<Snapshotable>
+            let predicate: Predicate<Snapshotable>
             if isDeviceAgnostic {
-                matcher = recordDeviceAgnosticSnapshot(named: nameWithCategory, usesDrawRect: usesDrawRect)
+                predicate = recordDeviceAgnosticSnapshot(named: nameWithCategory, usesDrawRect: usesDrawRect)
             } else {
-                matcher = recordSnapshot(named: nameWithCategory, usesDrawRect: usesDrawRect)
+                predicate = recordSnapshot(named: nameWithCategory, usesDrawRect: usesDrawRect)
             }
 
-            return try matcher.matches(actualExpression, failureMessage: failureMessage)
+            return try predicate.matches(actualExpression, failureMessage: failureMessage)
         }
     }
 
-    return combineMatchers(matchers, ignoreFailures: true) {
-        mock.stopMockingPrefferedContentSizeCategory()
+    return combinePredicates(predicates, ignoreFailures: true) {
+        mock.stopMockingPreferredContentSizeCategory()
+    }
+}
+
+private func updateTraitCollection(on expression: Expression<Snapshotable>) {
+    // swiftlint:disable:next force_try force_unwrapping
+    let instance = try! expression.evaluate()!
+    updateTraitCollection(on: instance)
+}
+
+private func updateTraitCollection(on element: Snapshotable) {
+    if let environment = element as? UITraitEnvironment {
+        if let vc = environment as? UIViewController {
+            vc.beginAppearanceTransition(true, animated: false)
+            vc.endAppearanceTransition()
+        }
+
+        environment.traitCollectionDidChange(nil)
+
+        if let view = environment as? UIView {
+            view.subviews.forEach(updateTraitCollection(on:))
+        } else if let vc = environment as? UIViewController {
+            vc.childViewControllers.forEach(updateTraitCollection(on:))
+            if vc.isViewLoaded {
+                updateTraitCollection(on: vc.view)
+            }
+        }
     }
 }

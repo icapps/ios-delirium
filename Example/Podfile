@@ -23,10 +23,10 @@ abstract_target 'Delirium' do
                               commit: '6a3f71f'
 
     # The test frameworks
-    pod 'Quick',            '~> 0.10'
-    pod 'Nimble',           '~> 5.0'
-    pod 'Nimble-Snapshots', '~> 4.4'
-    pod 'Nimble-Snapshots/DynamicType', '~> 4.4'
+    pod 'Quick',            '~> 1.2'
+    pod 'Nimble',           '~> 7.0'
+    pod 'Nimble-Snapshots', '~> 6.3'
+    pod 'Nimble-Snapshots/DynamicType', '~> 6.3'
   end
 end
 
@@ -34,7 +34,7 @@ post_install do |installer|
   # Make sure all targets have the right swift version set
   installer.pods_project.targets.each do |target|
     target.build_configurations.each do |config|
-      config.build_settings['SWIFT_VERSION'] = '3.0'
+      config.build_settings['SWIFT_VERSION'] = '4.0'
       config.build_settings['ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES'] = '$(inherited) YES'
     end
   end
