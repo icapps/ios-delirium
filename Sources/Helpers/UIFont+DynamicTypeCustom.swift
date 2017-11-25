@@ -13,8 +13,8 @@ extension UIFont {
     /// Uses the `descriptor` and `family` provided to return a custom UIFont compatible with the Dynamic Type selected in the user's settings.
     private class func preferredFont(for descriptor: UIFontDescriptor, with family: String) -> UIFont {
         let customFontDescriptor = UIFontDescriptor.init(fontAttributes: [
-            UIFontDescriptorFamilyAttribute: family,
-            UIFontDescriptorSizeAttribute: descriptor.pointSize
+            UIFontDescriptor.AttributeName.family: family,
+            UIFontDescriptor.AttributeName.size: descriptor.pointSize
             ])
         return UIFont(descriptor: customFontDescriptor, size: 0)
     }

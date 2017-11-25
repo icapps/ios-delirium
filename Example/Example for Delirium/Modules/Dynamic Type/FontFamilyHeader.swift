@@ -22,7 +22,7 @@ class FontFamilyHeader: UITableViewHeaderFooterView {
         label.numberOfLines = 0
         label.backgroundColor = .clear
         label.textAlignment = .center
-        label.font = UIFont.systemFont(ofSize: 20, weight: UIFontWeightThin)
+        label.font = UIFont.systemFont(ofSize: 20, weight: UIFont.Weight.thin)
         contentView.addSubview(label)
         label.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20).isActive = true
         label.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -20).isActive = true

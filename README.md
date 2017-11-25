@@ -4,7 +4,7 @@
 [![License](https://img.shields.io/cocoapods/l/Delirium.svg?style=flat)](http://cocoapods.org/pods/Delirium)
 [![Platform](https://img.shields.io/cocoapods/p/Delirium.svg?style=flat)](http://cocoapods.org/pods/Delirium)
 [![Version](https://img.shields.io/cocoapods/v/Delirium.svg?style=flat)](http://cocoapods.org/pods/Delirium)
-[![Language Swift 3.0](https://img.shields.io/badge/Language-Swift%203.0-orange.svg?style=flat)](https://swift.org)
+[![Language Swift 4.0](https://img.shields.io/badge/Language-Swift%204.0-orange.svg?style=flat)](https://swift.org)
 
 > Delirium contains a set of UI components that can be reused during development.
 
@@ -283,7 +283,7 @@ Available parameters:
 _Example Usage:_
 
 ```swift
-// Without using TraitCollection:  
+// Without using TraitCollection:
 let fontFamilyHeitiSC = "Heiti SC"
 let font = UIFont.preferredFont(with: fontFamilyHeitiSC, for: .body)
 

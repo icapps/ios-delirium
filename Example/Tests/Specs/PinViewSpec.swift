@@ -43,7 +43,7 @@ class PinViewSpec: QuickSnapshotSpec {
 
             it("should show the correct button font") {
                 var configuration = PinConfiguration()
-                configuration.buttonFont = UIFont.systemFont(ofSize: 20.0, weight: UIFontWeightHeavy)
+                configuration.buttonFont = UIFont.systemFont(ofSize: 20.0, weight: UIFont.Weight.heavy)
                 view.configuration = configuration
                 self.expect📷ToHaveValidSnapshot(view)
             }
