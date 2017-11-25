@@ -41,7 +41,7 @@ class ActionPresentationAnimationController: NSObject, UIViewControllerAnimatedT
         let containerView = transitionContext.containerView
         
         let horizontalConstraint: NSLayoutConstraint = presentedControllerView.centerYAnchor.constraint(lessThanOrEqualTo: (presentedControllerView.superview?.centerYAnchor)!)
-        horizontalConstraint.priority = 600
+        horizontalConstraint.priority = UILayoutPriority(rawValue: 600)
         horizontalConstraint.isActive = true
         horizontalConstraint.constant = containerView.frame.size.height
         presentedControllerView.centerXAnchor.constraint(lessThanOrEqualTo: (presentedControllerView.superview?.centerXAnchor)!).isActive = true
