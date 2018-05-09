@@ -8,7 +8,8 @@
 import Foundation
 import UIKit
 
-class RoundedShadowLayer: RoundedLayer {
+@available(iOS 9, *)
+public class RoundedShadowLayer: RoundedLayer {
 
     private var _shadowColor: UIColor = UIColor.black
     private var _shadowOffset: CGSize = CGSize(width: 0, height: 15)
@@ -27,14 +28,14 @@ class RoundedShadowLayer: RoundedLayer {
         setupShadow()
     }
 
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setupShadow()
     }
 
     // MARK: - UI
 
-    override func layoutSublayers() {
+    override public func layoutSublayers() {
         super.layoutSublayers()
 
         shadowPath = UIBezierPath(roundedRect: bounds, cornerRadius: cornerRadius).cgPath

@@ -17,6 +17,7 @@ class PinViewSpec: QuickSnapshotSpec {
         describe("pin view") {
             var view: PinView!
             beforeEach{
+                self.record = false
                 let bundle = Bundle(for: self.classForCoder)
                 let storyboard = UIStoryboard(name: "PinSpec", bundle: bundle)
                 let controller = storyboard.instantiateInitialViewController()!

@@ -7,13 +7,14 @@
 
 import Foundation
 
-class RoundedLayer: CALayer {
+@available(iOS 9, *)
+public class RoundedLayer: CALayer {
     /**
      When the rounding value is nil, the layer will be rounded as a complete circle
      */
-    var rounding: CGFloat?
+    public var rounding: CGFloat?
 
-    override func layoutSublayers() {
+    override public func layoutSublayers() {
         super.layoutSublayers()
 
         if let rounding = rounding {
