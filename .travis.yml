@@ -9,7 +9,7 @@ before_install:
 
 script:
   - set -o pipefail
-  - xcodebuild test -workspace Example/Delirium.xcworkspace -scheme Delirium-Example -destination 'platform=iOS Simulator,name=iPad Air 2,OS=10.2' | xcpretty
+  - xcodebuild test -workspace Example/Delirium.xcworkspace -scheme Delirium-Example -destination 'platform=iOS Simulator,name=iPhone 8 Plus,OS=11.3' | xcpretty
 
 deploy:
   skip_cleanup: true
