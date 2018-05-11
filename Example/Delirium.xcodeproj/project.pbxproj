@@ -40,6 +40,8 @@
 		6297F4131D0EA7BB00645AB9 /* CustomPinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6297F4121D0EA7BB00645AB9 /* CustomPinViewController.swift */; };
 		62CDEC9D1D6C8A31005A0CEF /* PieChart.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62CDEC9C1D6C8A31005A0CEF /* PieChart.storyboard */; };
 		62CDEC9F1D6C8A6F005A0CEF /* PieChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62CDEC9E1D6C8A6F005A0CEF /* PieChartViewController.swift */; };
+		8479717220A33C2300DF636C /* RoundedViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8479717120A33C2300DF636C /* RoundedViewSpec.swift */; };
+		848E4F8E20A333E7000EB50D /* RoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848E4F8D20A333E7000EB50D /* RoundedView.swift */; };
 		8CB2E944415C20A8CD14AB02 /* Pods_Delirium_Delirium_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A876D93EC1B6F361EF6C57E /* Pods_Delirium_Delirium_Example.framework */; };
 		C014B75D1DAC1D5900F0C1CE /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C014B75C1DAC1D5900F0C1CE /* KeyboardViewController.swift */; };
 		C014B7601DAC1DAD00F0C1CE /* Keyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C014B75F1DAC1DAD00F0C1CE /* Keyboard.storyboard */; };
@@ -97,6 +99,8 @@
 		6297F4121D0EA7BB00645AB9 /* CustomPinViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPinViewController.swift; sourceTree = "<group>"; };
 		62CDEC9C1D6C8A31005A0CEF /* PieChart.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PieChart.storyboard; sourceTree = "<group>"; };
 		62CDEC9E1D6C8A6F005A0CEF /* PieChartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PieChartViewController.swift; sourceTree = "<group>"; };
+		8479717120A33C2300DF636C /* RoundedViewSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedViewSpec.swift; sourceTree = "<group>"; };
+		848E4F8D20A333E7000EB50D /* RoundedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedView.swift; sourceTree = "<group>"; };
 		85692D5D4B6A3CF4C61EF6FE /* Pods-Delirium-Delirium_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Delirium-Delirium_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Delirium-Delirium_Example/Pods-Delirium-Delirium_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		9A876D93EC1B6F361EF6C57E /* Pods_Delirium_Delirium_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Delirium_Delirium_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C014B75C1DAC1D5900F0C1CE /* KeyboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KeyboardViewController.swift; path = Keyboard/KeyboardViewController.swift; sourceTree = "<group>"; };
@@ -240,6 +244,7 @@
 		627E02A71D0ABF4100B7529E /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				848E4F8C20A333CE000EB50D /* Layer */,
 				2D5ED09D1ED2D314005312FE /* Dynamic Type */,
 				627E02D01D0AD9A200B7529E /* Alert */,
 				62220A801D3D13B800D87438 /* Blurred Transition */,
@@ -278,6 +283,7 @@
 				2D3933781ED56C64009780D1 /* FontSpec.swift */,
 				627E02B11D0AC8A400B7529E /* PieChartSpec.swift */,
 				0427A3701DB097C00014970B /* PinViewSpec.swift */,
+				8479717120A33C2300DF636C /* RoundedViewSpec.swift */,
 			);
 			path = Specs;
 			sourceTree = "<group>";
@@ -351,6 +357,14 @@
 				62CDEC9E1D6C8A6F005A0CEF /* PieChartViewController.swift */,
 			);
 			path = "Pie Chart";
+			sourceTree = "<group>";
+		};
+		848E4F8C20A333CE000EB50D /* Layer */ = {
+			isa = PBXGroup;
+			children = (
+				848E4F8D20A333E7000EB50D /* RoundedView.swift */,
+			);
+			path = Layer;
 			sourceTree = "<group>";
 		};
 		C014B75E1DAC1D8A00F0C1CE /* Keyboard */ = {
@@ -524,9 +538,12 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Delirium-Delirium_Example/Pods-Delirium-Delirium_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Delirium/Delirium.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Delirium.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -539,9 +556,22 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Delirium_Tests/Pods-Delirium_Tests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Delirium/Delirium.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSnapshotTestCase/FBSnapshotTestCase.framework",
+				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
+				"${BUILT_PRODUCTS_DIR}/Nimble-Snapshots/Nimble_Snapshots.framework",
+				"${BUILT_PRODUCTS_DIR}/OCMock/OCMock.framework",
+				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Delirium.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSnapshotTestCase.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble_Snapshots.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OCMock.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -554,9 +584,12 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Delirium-Delirium_tvExample/Pods-Delirium-Delirium_tvExample-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Delirium/Delirium.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Delirium.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -614,13 +647,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Delirium-Delirium_tvExample-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		CA478D4C12A8D178A3AECB5D /* [CP] Check Pods Manifest.lock */ = {
@@ -629,13 +665,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Delirium-Delirium_Example-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		EB3F4D8EF2CD5E2FCD15D080 /* [CP] Check Pods Manifest.lock */ = {
@@ -644,13 +683,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Delirium_Tests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -668,6 +710,7 @@
 				6297F4131D0EA7BB00645AB9 /* CustomPinViewController.swift in Sources */,
 				625D37071D3D1FE900B51EF5 /* BlurredPopupViewController.swift in Sources */,
 				627E02AD1D0AC6C000B7529E /* ShakeViewController.swift in Sources */,
+				848E4F8E20A333E7000EB50D /* RoundedView.swift in Sources */,
 				62CDEC9F1D6C8A6F005A0CEF /* PieChartViewController.swift in Sources */,
 				627E02D61D0AD9DF00B7529E /* AlertViewModel.swift in Sources */,
 				2D5ED0A11ED2D3A9005312FE /* FontFamilyViewController.swift in Sources */,
@@ -686,6 +729,7 @@
 				6294A9321D6EE2040088E18C /* QuickSpec+Snapshot.swift in Sources */,
 				627E02B31D0AC8B700B7529E /* PieChartSpec.swift in Sources */,
 				2D39337B1ED56C7B009780D1 /* FontSpec.swift in Sources */,
+				8479717220A33C2300DF636C /* RoundedViewSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
