@@ -17,7 +17,7 @@ class BlurredPopupViewController: UIViewController {
     
     // MARK: - Configuration
     
-    var blurEffectStyle: UIBlurEffectStyle? {
+    var blurEffectStyle: UIBlurEffect.Style? {
         didSet {
             guard let blurEffectStyle = blurEffectStyle, #available(iOS 9, *) else { return }
             

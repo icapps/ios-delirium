@@ -16,19 +16,19 @@ open class KeyboardConstraint: NSLayoutConstraint {
     override open func awakeFromNib() {
         //swiftlint:disable opening_brace
         normalConstant = constant
-        let keyboardWillShow = NotificationCenter.default.addObserver(forName: NSNotification.Name.UIKeyboardWillShow,
+        let keyboardWillShow = NotificationCenter.default.addObserver(forName: UIResponder.keyboardWillShowNotification,
                                                object: nil,
                                                queue: OperationQueue.main)
                     { [weak self] (notification) in
                         let userInfo = notification.userInfo
-                        let frameInfo = userInfo?[UIKeyboardFrameEndUserInfoKey]
+                        let frameInfo = userInfo?[UIResponder.keyboardFrameEndUserInfoKey]
                         if let keyboardSize = (frameInfo as? NSValue)?.cgRectValue {
                             let offset = self?.aboveKeyboard != nil ? self!.aboveKeyboard : 0
                             self?.animate(to: (keyboardSize.height + offset), userInfo: userInfo)
                         }
                     }
 
-        let keyboardWillHide = NotificationCenter.default.addObserver(forName: NSNotification.Name.UIKeyboardWillHide,
+        let keyboardWillHide = NotificationCenter.default.addObserver(forName: UIResponder.keyboardWillHideNotification,
                                                           object: nil,
                                                           queue: OperationQueue.main)
                     { [weak self] (notification) in
@@ -43,8 +43,8 @@ open class KeyboardConstraint: NSLayoutConstraint {
 
     private func animate(to newConstant: CGFloat?, userInfo: [AnyHashable : Any]?) {
         guard let newConstant = newConstant,
-            let duration = (userInfo?[UIKeyboardAnimationDurationUserInfoKey] as? NSNumber)?.doubleValue,
-            let curve = (userInfo?[UIKeyboardAnimationCurveUserInfoKey] as? NSNumber)?.uintValue else {
+            let duration = (userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as? NSNumber)?.doubleValue,
+            let curve = (userInfo?[UIResponder.keyboardAnimationCurveUserInfoKey] as? NSNumber)?.uintValue else {
             return
         }
 
@@ -53,7 +53,7 @@ open class KeyboardConstraint: NSLayoutConstraint {
     }
 
     private func animateConstraintChange(curve: UInt, duration: TimeInterval) {
-        UIView.animate(withDuration: duration, delay: 0, options: UIViewAnimationOptions(rawValue: curve), animations: {
+        UIView.animate(withDuration: duration, delay: 0, options: UIView.AnimationOptions(rawValue: curve), animations: {
             guard   let view = self.firstItem as? UIView,
                     let view2 = self.firstItem as? UIView else {
                     return

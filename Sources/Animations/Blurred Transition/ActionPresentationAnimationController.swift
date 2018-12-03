@@ -41,7 +41,7 @@ class ActionPresentationAnimationController: NSObject, UIViewControllerAnimatedT
         let containerView = transitionContext.containerView
         
         let horizontalConstraint: NSLayoutConstraint = presentedControllerView.centerYAnchor.constraint(lessThanOrEqualTo: (presentedControllerView.superview?.centerYAnchor)!)
-        horizontalConstraint.priority = 600
+        horizontalConstraint.priority = UILayoutPriority(rawValue: 600)
         horizontalConstraint.isActive = true
         horizontalConstraint.constant = containerView.frame.size.height
         presentedControllerView.centerXAnchor.constraint(lessThanOrEqualTo: (presentedControllerView.superview?.centerXAnchor)!).isActive = true
@@ -52,7 +52,7 @@ class ActionPresentationAnimationController: NSObject, UIViewControllerAnimatedT
         
         // Start animation
         horizontalConstraint.constant = 0
-        UIView.animate(withDuration: 0.75, delay: 0.0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.3, options: UIViewAnimationOptions(), animations: {
+        UIView.animate(withDuration: 0.75, delay: 0.0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.3, options: UIView.AnimationOptions(), animations: {
             presentedControllerView.superview?.layoutIfNeeded()
             }, completion: { (completed) -> Void in
                 transitionContext.completeTransition(true)
@@ -69,7 +69,7 @@ class ActionPresentationAnimationController: NSObject, UIViewControllerAnimatedT
         
         // Start animation
         horizontalConstraint?.constant = -containerView.frame.size.height
-        UIView.animate(withDuration: 0.75, delay: 0.0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.3, options: UIViewAnimationOptions(), animations: {
+        UIView.animate(withDuration: 0.75, delay: 0.0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.3, options: UIView.AnimationOptions(), animations: {
             presentedControllerView.superview?.layoutIfNeeded()
             }, completion: { (completed) -> Void in
                 transitionContext.completeTransition(true)

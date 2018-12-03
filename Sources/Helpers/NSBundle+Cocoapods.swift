@@ -30,9 +30,9 @@ extension Bundle {
     
 }
 
-extension String {
+public extension String {
     
-    var localizedString: String {
+    public var localizedString: String {
         return NSLocalizedString(self, tableName: "DeliriumLocalizable", bundle: Bundle.localeBundle(), comment: "")
     }
     
