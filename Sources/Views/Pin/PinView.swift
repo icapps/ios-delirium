@@ -176,7 +176,7 @@ open class PinView: UIView {
     }
     
     private func reloadDotView() {
-        dotView.currentSize = codeString.characters.count
+        dotView.currentSize = codeString.count
     }
     
     // MARK: - Code
