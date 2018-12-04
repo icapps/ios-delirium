@@ -1,5 +1,9 @@
 # Delirium
 
+## Version 2.3
+
+- Updated to Swift 4.2
+
 ## Version 2.2.2
 
 - Fixed the keyboard constraint implementation on iOS 11.
