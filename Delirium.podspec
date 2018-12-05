@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'Delirium'
-  s.version          = '2.3'
+  s.version          = '2.3.1'
   s.summary          = 'A set of UI components that we tend to reuse at iCapps.'
   s.description      = <<-DESC
 Delirium contains a set of UI components for reuse.
@@ -27,8 +27,8 @@ Here are the components we currently support:
   s.social_media_url = 'https://twitter.com/icapps'
 
   # The platform definition.
-  s.ios.deployment_target = '10.0'
-  s.tvos.deployment_target = '10.0'
+  s.ios.deployment_target = '9.0'
+  s.tvos.deployment_target = '9.0'
 
   # The source files.
   s.source_files = 'Sources/**/*'

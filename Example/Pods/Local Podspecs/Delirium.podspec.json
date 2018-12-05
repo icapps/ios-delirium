@@ -17,8 +17,8 @@
   },
   "social_media_url": "https://twitter.com/icapps",
   "platforms": {
-    "ios": "10.0",
-    "tvos": "10.0"
+    "ios": "9.0",
+    "tvos": "9.0"
   },
   "source_files": "Sources/**/*",
   "resource_bundles": {
