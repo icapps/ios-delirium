@@ -1,6 +1,6 @@
 {
   "name": "Delirium",
-  "version": "2.1.1",
+  "version": "2.3",
   "summary": "A set of UI components that we tend to reuse at iCapps.",
   "description": "Delirium contains a set of UI components for reuse.\n\nHere are the components we currently support:\n- Alerts\n- Custom animations\n- Pie Chart\n- Pin View",
   "homepage": "https://github.com/icapps/ios-delirium",
@@ -13,12 +13,12 @@
   },
   "source": {
     "git": "https://github.com/icapps/ios-delirium.git",
-    "tag": "2.1.1"
+    "tag": "2.3"
   },
   "social_media_url": "https://twitter.com/icapps",
   "platforms": {
-    "ios": "9.0",
-    "tvos": "9.0"
+    "ios": "10.0",
+    "tvos": "10.0"
   },
   "source_files": "Sources/**/*",
   "resource_bundles": {

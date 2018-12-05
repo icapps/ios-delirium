@@ -155,7 +155,7 @@ open class PinView: UIView {
     
     // MARK: - Actions
     
-    func tapNumber(sender: PinButton) {
+    @objc func tapNumber(sender: PinButton) {
         guard
             let value = sender.type.value,
             code.count < configuration.numberOfDigits else {
@@ -170,13 +170,13 @@ open class PinView: UIView {
         }
     }
     
-    public func clear() {
+    @objc public func clear() {
         code.removeAll()
         reloadDotView()
     }
     
     private func reloadDotView() {
-        dotView.currentSize = codeString.characters.count
+        dotView.currentSize = codeString.count
     }
     
     // MARK: - Code

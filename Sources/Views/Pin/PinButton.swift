@@ -61,7 +61,7 @@ public class PinButton: UIButton {
     /// Set the configuration.
     var configuration = PinConfiguration() {
         didSet {
-            setTitleColor(type.titleColor(for: configuration), for: UIControlState())
+            setTitleColor(type.titleColor(for: configuration), for: UIControl.State())
             titleLabel?.font = configuration.buttonFont
             setNeedsDisplay()
         }
