@@ -8,19 +8,6 @@
 
 import UIKit
 
-//extension String {
-//
-//    /// Returns a localized string using the main bundle.
-//    var translatedString: String {
-//        guard
-//            let resourcePath = Bundle.main.path(forResource: "en", ofType: "lproj"),
-//            let bundle = Bundle(path: resourcePath) else { return self }
-//
-//        return bundle.localizedString(forKey: self, value: nil, table: nil)
-//    }
-//
-//}
-
 /// When you want to display an `ErrorType` in an `UIAlertController`, than you'll need some more data you want to display. The alert needs a title and a description.
 public protocol AlertError: Error {
     
