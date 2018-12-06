@@ -31,7 +31,7 @@
 Delirium is available through [CocoaPods](http://cocoapods.org). To install it, simply add the following line to your `Podfile`:
 
 ```ruby
-pod 'Delirium', '~> 2.2'
+    pod 'Delirium', :git => 'https://github.com/icapps/ios-delirium.git', :commit => '....'
 ```
 
 ## Features

@@ -1,5 +1,9 @@
 # Delirium
 
+## Version 2.3.1
+
+- Support iOS 9
+
 ## Version 2.3
 
 - Updated to Swift 4.2
