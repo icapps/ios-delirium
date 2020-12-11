@@ -212,6 +212,8 @@ configuration.numberOfDigits = 4
 configuration.title = "Enter your pin"
 // The color of the filled dot at the top of the pin view.
 configuration.dotColor = UIColor(red:0.11, green:0.68, blue:0.93, alpha:1.00)
+// The color of the empty dot at the top of the pin view.
+configuration.emptyDotColor = UIColor.white
 // The color of the stroked dot at the top of the pin view.
 configuration.dotStrokeColor = UIColor(red:0.73, green:0.77, blue:0.81, alpha:1.00)
 // The color of the stroked pin number button.

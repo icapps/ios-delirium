@@ -55,9 +55,9 @@ class PinDotView: UIView {
             previousBubbleRect = rect
             
             if index >= currentSize {
-                context?.setFillColor(configuration.dotStrokeColor.cgColor)
-                context?.fillEllipse(in: rect)
-                context?.setFillColor(UIColor.white.cgColor)
+                context?.setStrokeColor(configuration.dotStrokeColor.cgColor)
+                context?.strokeEllipse(in: rect)
+                context?.setFillColor(configuration.emptyDotColor.cgColor)
                 context?.fillEllipse(in: rect.insetBy(dx: 0.5, dy: 0.5))
             } else {
                 context?.setFillColor(configuration.dotColor.cgColor)
