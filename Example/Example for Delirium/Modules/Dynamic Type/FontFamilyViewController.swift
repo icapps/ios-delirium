@@ -16,9 +16,9 @@ class FontFamilyViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = viewModel.title
-        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 20
-        tableView.sectionHeaderHeight = UITableViewAutomaticDimension
+        tableView.sectionHeaderHeight = UITableView.automaticDimension
         tableView.estimatedSectionHeaderHeight = 40
         tableView.register(FontFamilyHeader.self, forHeaderFooterViewReuseIdentifier: FontFamilyHeader.reuseIdentifier)
     }

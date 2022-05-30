@@ -13,12 +13,12 @@ extension UIFont {
     
     @nonobjc static var fontFamily = "Chalkboard SE" // Don't use this font family, ever.
     
-    class func preferredCustomFont(for style: UIFontTextStyle) -> UIFont {
+    class func preferredCustomFont(for style: UIFont.TextStyle) -> UIFont {
         return UIFont.preferredFont(with: fontFamily, for: style)
     }
     
     @available(iOS 10.0, *)
-    class func preferredCustomFont(for style: UIFontTextStyle, compatibleWith traitCollection: UITraitCollection?) -> UIFont {
+    class func preferredCustomFont(for style: UIFont.TextStyle, compatibleWith traitCollection: UITraitCollection?) -> UIFont {
         return UIFont.preferredFont(with: fontFamily, for: style, compatibleWith: traitCollection)
     }
 }
