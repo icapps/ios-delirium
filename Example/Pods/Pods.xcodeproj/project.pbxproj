@@ -199,7 +199,7 @@
 		46EB2E00002200 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46EB2E00000CA0 /* Foundation.framework */; };
 		46EB2E00002270 /* Pods-Delirium_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 46EB2E00002260 /* Pods-Delirium_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		46EB2E000022C0 /* Pods-Delirium_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E000022B0 /* Pods-Delirium_Tests-dummy.m */; };
-		46EB2E000023F0 /* Delirium-Delirium in Resources */ = {isa = PBXBuildFile; fileRef = 94837927E825576F0BD3AD20303DBFB3 /* Delirium-Delirium */; };
+		46EB2E000023F0 /* Delirium.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 94837927E825576F0BD3AD20303DBFB3 /* Delirium.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -283,8 +283,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0D631E9908483F9525A6B3F36F16CC61 /* Quick */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Quick; path = Quick.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3DD2E76ACDA068CE6C9C7DB100519AD0 /* Pods-Delirium-Delirium_Example */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-Delirium-Delirium_Example"; path = Pods_Delirium_Delirium_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0D631E9908483F9525A6B3F36F16CC61 /* Quick.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Quick.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3DD2E76ACDA068CE6C9C7DB100519AD0 /* Pods_Delirium_Delirium_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Delirium_Delirium_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		46EB2E00000110 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		46EB2E00000140 /* ActionPresentationAnimationController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ActionPresentationAnimationController.swift; sourceTree = "<group>"; };
 		46EB2E00000150 /* ActionPresentationController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ActionPresentationController.swift; sourceTree = "<group>"; };
@@ -521,13 +521,13 @@
 		46EB2E000022A0 /* Pods-Delirium_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Delirium_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		46EB2E000022B0 /* Pods-Delirium_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Delirium_Tests-dummy.m"; sourceTree = "<group>"; };
 		52C1B30CC4697E1933141720223103BC /* Nimble_Snapshots.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Nimble_Snapshots.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5C4F31330DFA99D699E4BDC8C3573D73 /* FBSnapshotTestCase */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = FBSnapshotTestCase; path = FBSnapshotTestCase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6EE25C92DFAB0C1F13DEA962F79E5F9C /* Pods-Delirium-Delirium_tvExample */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-Delirium-Delirium_tvExample"; path = Pods_Delirium_Delirium_tvExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		94837927E825576F0BD3AD20303DBFB3 /* Delirium-Delirium */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "Delirium-Delirium"; path = Delirium.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
-		A36F50A8F9414671DE48A9411BDF8755 /* Pods-Delirium_Tests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-Delirium_Tests"; path = Pods_Delirium_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C4F31330DFA99D699E4BDC8C3573D73 /* FBSnapshotTestCase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FBSnapshotTestCase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6EE25C92DFAB0C1F13DEA962F79E5F9C /* Pods_Delirium_Delirium_tvExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Delirium_Delirium_tvExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		94837927E825576F0BD3AD20303DBFB3 /* Delirium.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Delirium.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		A36F50A8F9414671DE48A9411BDF8755 /* Pods_Delirium_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Delirium_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B91B00F8BE943329D633234BD67AE0AC /* FBSnapshotTestCase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FBSnapshotTestCase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAE263041362D074978BB3B577DF0A05 /* Nimble.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Nimble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D58CD8D7A908182BFA470BA6B1FAC1CA /* Delirium */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Delirium; path = Delirium.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D58CD8D7A908182BFA470BA6B1FAC1CA /* Delirium.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Delirium.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -637,16 +637,16 @@
 		46EB2E00000020 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D58CD8D7A908182BFA470BA6B1FAC1CA /* Delirium */,
-				94837927E825576F0BD3AD20303DBFB3 /* Delirium-Delirium */,
-				5C4F31330DFA99D699E4BDC8C3573D73 /* FBSnapshotTestCase */,
+				D58CD8D7A908182BFA470BA6B1FAC1CA /* Delirium.framework */,
+				94837927E825576F0BD3AD20303DBFB3 /* Delirium.bundle */,
+				5C4F31330DFA99D699E4BDC8C3573D73 /* FBSnapshotTestCase.framework */,
 				B91B00F8BE943329D633234BD67AE0AC /* FBSnapshotTestCase.framework */,
 				BAE263041362D074978BB3B577DF0A05 /* Nimble.framework */,
 				52C1B30CC4697E1933141720223103BC /* Nimble_Snapshots.framework */,
-				3DD2E76ACDA068CE6C9C7DB100519AD0 /* Pods-Delirium-Delirium_Example */,
-				6EE25C92DFAB0C1F13DEA962F79E5F9C /* Pods-Delirium-Delirium_tvExample */,
-				A36F50A8F9414671DE48A9411BDF8755 /* Pods-Delirium_Tests */,
-				0D631E9908483F9525A6B3F36F16CC61 /* Quick */,
+				3DD2E76ACDA068CE6C9C7DB100519AD0 /* Pods_Delirium_Delirium_Example.framework */,
+				6EE25C92DFAB0C1F13DEA962F79E5F9C /* Pods_Delirium_Delirium_tvExample.framework */,
+				A36F50A8F9414671DE48A9411BDF8755 /* Pods_Delirium_Tests.framework */,
+				0D631E9908483F9525A6B3F36F16CC61 /* Quick.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1279,7 +1279,7 @@
 			);
 			name = "Delirium-Delirium";
 			productName = Delirium;
-			productReference = 94837927E825576F0BD3AD20303DBFB3 /* Delirium-Delirium */;
+			productReference = 94837927E825576F0BD3AD20303DBFB3 /* Delirium.bundle */;
 			productType = "com.apple.product-type.bundle";
 		};
 		54AEDB6828F20A783D1EA7102C2F310C /* Pods-Delirium-Delirium_tvExample */ = {
@@ -1298,7 +1298,7 @@
 			);
 			name = "Pods-Delirium-Delirium_tvExample";
 			productName = Pods_Delirium_Delirium_tvExample;
-			productReference = 6EE25C92DFAB0C1F13DEA962F79E5F9C /* Pods-Delirium-Delirium_tvExample */;
+			productReference = 6EE25C92DFAB0C1F13DEA962F79E5F9C /* Pods_Delirium_Delirium_tvExample.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		6F13695E06195A78EA8A95F8C7ED0D2F /* Nimble */ = {
@@ -1334,7 +1334,7 @@
 			);
 			name = FBSnapshotTestCase;
 			productName = FBSnapshotTestCase;
-			productReference = 5C4F31330DFA99D699E4BDC8C3573D73 /* FBSnapshotTestCase */;
+			productReference = 5C4F31330DFA99D699E4BDC8C3573D73 /* FBSnapshotTestCase.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		99071A7861AFAEA965F6FA88A3556434 /* Pods-Delirium_Tests */ = {
@@ -1358,7 +1358,7 @@
 			);
 			name = "Pods-Delirium_Tests";
 			productName = Pods_Delirium_Tests;
-			productReference = A36F50A8F9414671DE48A9411BDF8755 /* Pods-Delirium_Tests */;
+			productReference = A36F50A8F9414671DE48A9411BDF8755 /* Pods_Delirium_Tests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		9A11AADF6C4AF4CC146EC9954D20EF3D /* Pods-Delirium-Delirium_Example */ = {
@@ -1377,7 +1377,7 @@
 			);
 			name = "Pods-Delirium-Delirium_Example";
 			productName = Pods_Delirium_Delirium_Example;
-			productReference = 3DD2E76ACDA068CE6C9C7DB100519AD0 /* Pods-Delirium-Delirium_Example */;
+			productReference = 3DD2E76ACDA068CE6C9C7DB100519AD0 /* Pods_Delirium_Delirium_Example.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		C393038B0BEF088C1B93E6528005862D /* iOSSnapshotTestCase */ = {
@@ -1413,7 +1413,7 @@
 			);
 			name = Quick;
 			productName = Quick;
-			productReference = 0D631E9908483F9525A6B3F36F16CC61 /* Quick */;
+			productReference = 0D631E9908483F9525A6B3F36F16CC61 /* Quick.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		D018B4136ED85D5E5C3AE9AECBB291C6 /* Delirium */ = {
@@ -1432,7 +1432,7 @@
 			);
 			name = Delirium;
 			productName = Delirium;
-			productReference = D58CD8D7A908182BFA470BA6B1FAC1CA /* Delirium */;
+			productReference = D58CD8D7A908182BFA470BA6B1FAC1CA /* Delirium.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		EE19095A8C98E0BC5774005673495238 /* Nimble-Snapshots */ = {
@@ -1462,7 +1462,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1240;
-				LastUpgradeCheck = 1240;
+				LastUpgradeCheck = 1320;
 			};
 			buildConfigurationList = 46EB2E00000030 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -1497,7 +1497,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				46EB2E000023F0 /* Delirium-Delirium in Resources */,
+				46EB2E000023F0 /* Delirium.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1911,7 +1911,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1974,7 +1974,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -2001,7 +2001,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/Delirium/Delirium-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/Delirium/Delirium-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/Delirium/Delirium.modulemap";
 				PRODUCT_MODULE_NAME = Delirium;
@@ -2033,7 +2033,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/Delirium/Delirium-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/Delirium/Delirium-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/Delirium/Delirium.modulemap";
 				PRODUCT_MODULE_NAME = Delirium;
@@ -2056,7 +2056,7 @@
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Delirium";
 				IBSC_MODULE = Delirium;
 				INFOPLIST_FILE = "Target Support Files/Delirium/ResourceBundle-Delirium-Delirium-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				PRODUCT_NAME = Delirium;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -2074,7 +2074,7 @@
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Delirium";
 				IBSC_MODULE = Delirium;
 				INFOPLIST_FILE = "Target Support Files/Delirium/ResourceBundle-Delirium-Delirium-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				PRODUCT_NAME = Delirium;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -2100,7 +2100,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/FBSnapshotTestCase/FBSnapshotTestCase-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/FBSnapshotTestCase/FBSnapshotTestCase-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/FBSnapshotTestCase/FBSnapshotTestCase.modulemap";
 				PRODUCT_MODULE_NAME = FBSnapshotTestCase;
@@ -2132,7 +2132,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/FBSnapshotTestCase/FBSnapshotTestCase-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/FBSnapshotTestCase/FBSnapshotTestCase-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/FBSnapshotTestCase/FBSnapshotTestCase.modulemap";
 				PRODUCT_MODULE_NAME = FBSnapshotTestCase;
@@ -2163,7 +2163,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/Nimble/Nimble-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/Nimble/Nimble-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/Nimble/Nimble.modulemap";
 				OTHER_LDFLAGS = (
@@ -2201,7 +2201,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/Nimble/Nimble-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/Nimble/Nimble-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/Nimble/Nimble.modulemap";
 				OTHER_LDFLAGS = (
@@ -2238,7 +2238,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/Nimble-Snapshots/Nimble-Snapshots-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/Nimble-Snapshots/Nimble-Snapshots-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/Nimble-Snapshots/Nimble-Snapshots.modulemap";
 				PRODUCT_MODULE_NAME = Nimble_Snapshots;
@@ -2270,7 +2270,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/Nimble-Snapshots/Nimble-Snapshots-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/Nimble-Snapshots/Nimble-Snapshots-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/Nimble-Snapshots/Nimble-Snapshots.modulemap";
 				PRODUCT_MODULE_NAME = Nimble_Snapshots;
@@ -2300,7 +2300,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/Quick/Quick-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/Quick/Quick-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/Quick/Quick.modulemap";
 				PRODUCT_MODULE_NAME = Quick;
@@ -2331,7 +2331,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/Quick/Quick-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/Quick/Quick-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/Quick/Quick.modulemap";
 				PRODUCT_MODULE_NAME = Quick;
@@ -2362,7 +2362,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/iOSSnapshotTestCase/iOSSnapshotTestCase-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/iOSSnapshotTestCase/iOSSnapshotTestCase-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/iOSSnapshotTestCase/iOSSnapshotTestCase.modulemap";
 				PRODUCT_MODULE_NAME = FBSnapshotTestCase;
@@ -2394,7 +2394,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/iOSSnapshotTestCase/iOSSnapshotTestCase-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/iOSSnapshotTestCase/iOSSnapshotTestCase-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/iOSSnapshotTestCase/iOSSnapshotTestCase.modulemap";
 				PRODUCT_MODULE_NAME = FBSnapshotTestCase;
@@ -2424,7 +2424,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-Delirium-Delirium_Example/Pods-Delirium-Delirium_Example-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-Delirium-Delirium_Example/Pods-Delirium-Delirium_Example.modulemap";
@@ -2458,7 +2458,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-Delirium-Delirium_Example/Pods-Delirium-Delirium_Example-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-Delirium-Delirium_Example/Pods-Delirium-Delirium_Example.modulemap";
@@ -2491,7 +2491,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-Delirium-Delirium_tvExample/Pods-Delirium-Delirium_tvExample-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-Delirium-Delirium_tvExample/Pods-Delirium-Delirium_tvExample.modulemap";
@@ -2525,7 +2525,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-Delirium-Delirium_tvExample/Pods-Delirium-Delirium_tvExample-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-Delirium-Delirium_tvExample/Pods-Delirium-Delirium_tvExample.modulemap";
@@ -2558,7 +2558,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-Delirium_Tests/Pods-Delirium_Tests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-Delirium_Tests/Pods-Delirium_Tests.modulemap";
@@ -2592,7 +2592,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-Delirium_Tests/Pods-Delirium_Tests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-Delirium_Tests/Pods-Delirium_Tests.modulemap";
