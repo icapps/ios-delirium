@@ -59,10 +59,10 @@ public class PinButton: UIButton {
     public internal(set) var type = PinButtonType.clear
     
     /// Set the configuration.
-    var configuration = PinConfiguration() {
+    var pinConfiguration = PinConfiguration() {
         didSet {
-            setTitleColor(type.titleColor(for: configuration), for: UIControlState())
-            titleLabel?.font = configuration.buttonFont
+            setTitleColor(type.titleColor(for: pinConfiguration), for: UIControl.State())
+            titleLabel?.font = pinConfiguration.buttonFont
             setNeedsDisplay()
         }
     }
@@ -89,12 +89,12 @@ public class PinButton: UIButton {
     override public func draw(_ rect: CGRect) {
         let context = UIGraphicsGetCurrentContext()
         
-        context?.setFillColor(type.strokeColor(for: configuration).cgColor)
+        context?.setFillColor(type.strokeColor(for: pinConfiguration).cgColor)
         context?.fillEllipse(in: rect)
-        if isHighlighted && configuration.allowSelectionFeedback {
-            context?.setFillColor(type.selectionBackgroundColor(for: configuration).cgColor)
+        if isHighlighted && pinConfiguration.allowSelectionFeedback {
+            context?.setFillColor(type.selectionBackgroundColor(for: pinConfiguration).cgColor)
         } else {
-            context?.setFillColor(configuration.backgroundColor.cgColor)
+            context?.setFillColor(pinConfiguration.backgroundColor.cgColor)
         }
         context?.fillEllipse(in: rect.insetBy(dx: 0.5, dy: 0.5))
     }

@@ -33,7 +33,7 @@ open class PinView: UIView {
     public var configuration = PinConfiguration() {
         didSet {
             dotView.configuration = configuration
-            buttons.forEach { $0.configuration = configuration }
+            buttons.forEach { $0.pinConfiguration = configuration }
             buttonWidthConstraints.forEach { $0.constant = configuration.buttonSize }
         }
     }
@@ -139,7 +139,7 @@ open class PinView: UIView {
         button.type = type
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle(text, for: .normal)
-        button.configuration = configuration
+        button.pinConfiguration = configuration
         button.addTarget(self, action: action, for: .touchUpInside)
         buttons.append(button)
         addSubview(button)
@@ -176,7 +176,7 @@ open class PinView: UIView {
     }
     
     private func reloadDotView() {
-        dotView.currentSize = codeString.characters.count
+        dotView.currentSize = codeString.count
     }
     
     // MARK: - Code

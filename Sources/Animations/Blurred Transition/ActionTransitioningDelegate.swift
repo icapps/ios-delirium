@@ -21,7 +21,7 @@ open class ActionTransitioningDelegate: NSObject, UIViewControllerTransitioningD
     /// The blurred effect style of the background view can be set with this property.
     ///
     /// The possible values can be found in the `UIBlurEffectStyle` docs.
-    open var blurEffectStyle: UIBlurEffectStyle = .light
+    open var blurEffectStyle: UIBlurEffect.Style = .light
     
     // MARK: - UIViewControllerTransitioningDelegate
     

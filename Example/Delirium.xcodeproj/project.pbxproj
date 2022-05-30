@@ -384,7 +384,6 @@
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
 				00395A427329117A67F4A6DD /* [CP] Embed Pods Frameworks */,
-				6EACC88BCB87C53995A5B19D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -404,7 +403,6 @@
 				607FACE21AFB9204008FA782 /* Frameworks */,
 				607FACE31AFB9204008FA782 /* Resources */,
 				2E55D6AE2E274C900B2B8B38 /* [CP] Embed Pods Frameworks */,
-				6B3AFA2D697BD9E1E2DC82DF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -425,7 +423,6 @@
 				627E02B51D0ACC0A00B7529E /* Frameworks */,
 				627E02B61D0ACC0A00B7529E /* Resources */,
 				3CF89C15FACF53D0F5C4C08B /* [CP] Embed Pods Frameworks */,
-				A7231ACE7FD34667A52C507A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -525,7 +522,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Delirium-Delirium_Example/Pods-Delirium-Delirium_Example-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-Delirium-Delirium_Example/Pods-Delirium-Delirium_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Delirium/Delirium.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -534,7 +531,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Delirium-Delirium_Example/Pods-Delirium-Delirium_Example-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Delirium-Delirium_Example/Pods-Delirium-Delirium_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		2E55D6AE2E274C900B2B8B38 /* [CP] Embed Pods Frameworks */ = {
@@ -543,12 +540,13 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Delirium_Tests/Pods-Delirium_Tests-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-Delirium_Tests/Pods-Delirium_Tests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Delirium/Delirium.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSnapshotTestCase/FBSnapshotTestCase.framework",
 				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
 				"${BUILT_PRODUCTS_DIR}/Nimble-Snapshots/Nimble_Snapshots.framework",
 				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
+				"${BUILT_PRODUCTS_DIR}/iOSSnapshotTestCase/FBSnapshotTestCase.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -560,7 +558,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Delirium_Tests/Pods-Delirium_Tests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Delirium_Tests/Pods-Delirium_Tests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		3CF89C15FACF53D0F5C4C08B /* [CP] Embed Pods Frameworks */ = {
@@ -569,7 +567,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Delirium-Delirium_tvExample/Pods-Delirium-Delirium_tvExample-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-Delirium-Delirium_tvExample/Pods-Delirium-Delirium_tvExample-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Delirium/Delirium.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -578,52 +576,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Delirium-Delirium_tvExample/Pods-Delirium-Delirium_tvExample-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		6B3AFA2D697BD9E1E2DC82DF /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Delirium_Tests/Pods-Delirium_Tests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		6EACC88BCB87C53995A5B19D /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Delirium-Delirium_Example/Pods-Delirium-Delirium_Example-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A7231ACE7FD34667A52C507A /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Delirium-Delirium_tvExample/Pods-Delirium-Delirium_tvExample-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Delirium-Delirium_tvExample/Pods-Delirium-Delirium_tvExample-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		BD99A3B10ADF74EB6D346336 /* [CP] Check Pods Manifest.lock */ = {

@@ -52,7 +52,7 @@ class ActionPresentationAnimationController: NSObject, UIViewControllerAnimatedT
         
         // Start animation
         horizontalConstraint.constant = 0
-        UIView.animate(withDuration: 0.75, delay: 0.0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.3, options: UIViewAnimationOptions(), animations: {
+        UIView.animate(withDuration: 0.75, delay: 0.0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.3, options: UIView.AnimationOptions(), animations: {
             presentedControllerView.superview?.layoutIfNeeded()
             }, completion: { (completed) -> Void in
                 transitionContext.completeTransition(true)
@@ -69,7 +69,7 @@ class ActionPresentationAnimationController: NSObject, UIViewControllerAnimatedT
         
         // Start animation
         horizontalConstraint?.constant = -containerView.frame.size.height
-        UIView.animate(withDuration: 0.75, delay: 0.0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.3, options: UIViewAnimationOptions(), animations: {
+        UIView.animate(withDuration: 0.75, delay: 0.0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.3, options: UIView.AnimationOptions(), animations: {
             presentedControllerView.superview?.layoutIfNeeded()
             }, completion: { (completed) -> Void in
                 transitionContext.completeTransition(true)

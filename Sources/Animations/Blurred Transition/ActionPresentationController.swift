@@ -16,7 +16,7 @@ class ActionPresentationController: UIPresentationController {
     
     // MARK: - Configuration
     
-    var blurEffectStyle: UIBlurEffectStyle = .light
+    var blurEffectStyle: UIBlurEffect.Style = .light
     
     // MARK: - Presentation
     

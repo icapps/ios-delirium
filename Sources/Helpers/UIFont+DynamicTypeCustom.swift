@@ -23,7 +23,7 @@ extension UIFont {
     /// - Parameters: 
     ///     - family: The font family to be used.
     ///     - style: The font text style to be used. For a list of available fonts, print `UIFont.familyNames`.
-    public class func preferredFont(with family:String, for style: UIFontTextStyle) -> UIFont {
+    public class func preferredFont(with family:String, for style: UIFont.TextStyle) -> UIFont {
         let systemFontDescriptor = UIFontDescriptor.preferredFontDescriptor(withTextStyle: style)
         return preferredFont(for: systemFontDescriptor, with: family)
     }
@@ -34,7 +34,7 @@ extension UIFont {
     ///     - family: The font family to be used.
     ///     - style: The font text style to be used. For a list of available fonts, print `UIFont.familyNames`.
     @available(iOS 10.0, tvOS 10.0, *)
-    public class func preferredFont(with family:String, for style: UIFontTextStyle, compatibleWith traitCollection: UITraitCollection?) -> UIFont {
+    public class func preferredFont(with family:String, for style: UIFont.TextStyle, compatibleWith traitCollection: UITraitCollection?) -> UIFont {
         let systemFontDescriptor = UIFontDescriptor.preferredFontDescriptor(withTextStyle: style, compatibleWith: traitCollection)
         return preferredFont(for: systemFontDescriptor, with: family)
     }
